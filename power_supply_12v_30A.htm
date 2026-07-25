@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SWITCHING POWER SUPPLY ATX Come realizzare un SPS da laboratorio. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply Da 1,0V a 15V e da 0,15A a 15A (20A) by Roberto Chirio</title>
+<meta content="SWITCHING POWER SUPPLY ATX Come ottenere un SPS da laboratorio. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply Da 1,0V a 15V e da 0,15A a 15A (20A) by Roberto Chirio" name="description"/>
+<meta content="electronics design, switching power supply, step-down, step-up, buck converter, current mode supply, led driver, power led driver, led driver design, led driver pump, led driver flash" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="assets/site.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Archivio tecnico</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Cerca nell’archivio</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>Categorie</span></button>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Categorie dell’archivio">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Antenne attive, generatori RF, misure di campo</span></span><span class="count">17</span></a></li>
+<li><a aria-current="true" href="index.html#alimentatori"><span><span class="n-label">Alimentatori</span><span class="n-desc">Switching da laboratorio, ATX, step-up, carichi</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batterie</span><span class="n-desc">Capacità, caricabatterie, BMS, energia in casa</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">LED di potenza, torce, proiettori, dimmer, prove</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioattività</span><span class="n-desc">Contatori Geiger, alta tensione, calibrazione</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Misure</span><span class="n-desc">Strumenti autocostruiti e fondamenti</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Progetti</span><span class="n-desc">Fotografia, stampa 3D, meccanica</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Archivio storico della Batteria</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Percorso di navigazione" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#alimentatori">Alimentatori</a></li><li aria-current="page">Alimentatore ATX 12 V 30 A</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Alimentatori</p>
+<h1>POWER SUPPLY 13,8V 30A</h1>
+<p class="subtitle">Alimentatore lineare a basso rumore "Electronics design" di R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#alimentatori">Alimentatori</a></span><span>Roberto Chirio</span></p>
+</header>
+<div class="prose">
+
+<hr/>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><tr>
+<td colspan="3">
+<p class="center">In
+preparazione</p>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<p class="MsoNormal center"><span class="hl"><strong> La
+costruzione di un alimentatore comporta avere delle buone conoscenze di
+elettronica, </strong></span></p>
+<p class="MsoNormal center"><span class="hl"><strong> è necessaria un'attrezzatura ed esperienza nei
+montaggi elettronici. </strong></span></p>
+<p class="MsoNormal center"><span class="hl"><strong> E
+chiare competenze nell'uso dei dispositivi a 220V.</strong></span></p>
+<p class="MsoNormal center"><strong><span class="hl">Non si risponde
+per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+</td>
+</tr>
+<tr>
+<td colspan="3">
+
+</td>
+</tr>
+<tr>
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td colspan="3">
+
+</td>
+</tr>
+<tr>
+<td colspan="2" rowspan="3">
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td colspan="3">
+
+</td>
+</tr>
+<tr>
+<td colspan="3">
+
+</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto
+Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Altre pagine in “Alimentatori”</h2>
+<ul>
+<li><a href="switching_power_supply_atx.htm"><span class="r-sec">Alimentatori</span>ATX lab power supply</a></li>
+<li><a href="atx_14_volt.htm"><span class="r-sec">Alimentatori</span>ATX 13.8V power supply</a></li>
+<li><a href="step_up_10a.htm"><span class="r-sec">Alimentatori</span>Step-up 10A 16V</a></li>
+<li><a href="push_pull_20_16.htm"><span class="r-sec">Alimentatori</span>Push-pull DC-DC 12V 20A 16V 250W</a></li>
+<li><a href="electronic_load.htm"><span class="r-sec">Alimentatori</span>Electronic Load 20A 40V</a></li>
+</ul>
+</section>
+</main></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Archivio tecnico di Roberto Chirio: elettronica, radio e antenne,
+          alimentatori, batterie, illuminazione a LED, misure di laboratorio, e
+          l’archivio storico della Batteria dello Chaberton.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archivio</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure</a></li>
+<li><a href="index.html#progetti">Progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle
+        immagini, degli schemi e dei testi. Photos and videos are copyright
+        © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Torna all’inizio della pagina" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="assets/site.js"></script>
+</body>
+</html>

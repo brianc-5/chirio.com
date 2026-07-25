@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple 2 FET VFO RF generator, HF band by Roberto Chirio</title>
+  <meta name="description" content="Generatore VFO a FET - by Roberto Chirio">
+  <meta name="keywords" content="RF, FET, VFO generator, quarzo, harmonic generator, xtal">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio" aria-current="true">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">RF VFO Oscillator a 2 FET</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radio &amp; antenne</p>
+        <h1>VFO Generatore RF 100khz - 30Mhz</h1>
+        <p class="subtitle">Simple VFO RF generator, HF band.</p>
+        <p class="meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>“Radio Corner&quot; di R.Chirio” di R. Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-chema-elettrico">S chema elettrico</a></li>
+<li><a href="#frequenza-in-funzione-dei-valori-lx-cx">Frequenza in funzione dei valori LX + CX</a></li>
+<li><a href="#costuzione-bobine-di-accordo">Costuzione Bobine di accordo.</a></li>
+<li><a href="#segnale-uscita">Segnale Uscita</a></li>
+<li><a href="#applicazioni">Applicazioni</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p>
+<hr color="#336699"/>
+
+  
+  <h2 id="premessa">Premessa</h2><p>Luglio
+      2015</p><p>Questo
+      circuito è
+      un generatore RF a frequenza variabile. Il campo di utilizzo va dalle VLF
+      a oltre i 50 Mhz.</p><p>Lo
+      schema è molto semplice da realizzare utilizzando componenti discreti
+      tradizionali, che possono essere facilmente reperiti o addirittura
+      recuperati da vecchie schede o in fondo al cassetto del laboratorio.</p><p>L'oscillatore
+      è un circuito accordato composto da induttore e condensatore, che
+      determinano la frequenza di oscillazione. Due FET in cascata compongono la
+      parte attiva dell'oscillatore variabile. La configurazione è poco nota,
+      ma presenta una stabilità di frequenza a dir poco eccezionale, a regime
+      la variazione di frequenza è di pochi Hz/Mhz vicina a un oscillatore a
+      quarzo. Importante una fonte di alimentazione stabile e l'uso di
+      componenti di qualità.</p><p>Diciamo
+      che la frequenza non risente della variazione di tensione di
+      alimentazione, la tensione è importante se si vuole ottenere la massima
+      potenza in uscita che a 12V supera i 100mW su 50 ohm load.</p><p class="center"><img alt="" decoding="async" height="339" loading="lazy" src="IMAGES/vfo_001.jpg" width="508"/></p><p>Questo
+      è il prototipo su basetta del generatore VFO, è collegata la bobina con
+      20 spire, di fianco la 90 spire, i componenti e lo schema
+      sono ottimizzati per avere la massima potenza in uscita con un solo
+      transistor RF tipo 2N2222A, al posto del condensatore variabile si possono
+      impiegare Varicap. Il tutto va montato all'interno di una scatola anche
+      non in metallo, lasciare spazio per le bobine.</p>
+  
+
+
+
+  
+  <h2 id="s-chema-elettrico">S chema elettrico</h2><p class="center"><img alt="" decoding="async" height="395" loading="lazy" src="IMAGES/vfo_schema_000.gif" width="886"/></p><p>-
+      Il circuito può essere alimentato da 5V a 12V. Funziona ancora
+      discretamente fino a
+      2,4V.</p><p>-
+      Il circuito accordato è composto da un condensatore variabile e da una
+      bobina di accordo, con solo tre tipi di bobine è possibile coprire le
+      frequenze da 100kHz a 30Mhz (vedi tabella più avanti per i valori dei
+      componenti).</p><p>-
+      Con alimentazione 12V, lo stadio oscillatore FET fornisce in uscita 
+      una potenza di circa 2mW pari a  0dBm.</p><p>-
+      Lo stadio composto dal 2N2222A ha la funzione di disaccoppiare
+      l'oscillatore dall'uscita e amplificare il segnale di
+      15-20dB portando l'uscita a +18dBm in condizioni ottimali su carico 50
+      Ohm </p><p>-
+      Con alimentazione 12V è consigliabile avere sempre un carico di 50 ohm
+      sull'uscita in quanto a vuoto il transistor Q3 si surriscalda parecchio.</p><p>- 
+      L1 ed L3 sono induttori da 1mH ma per scendere sotto ai
+      500khz è consigliabile aumentare il valore fino a 10mH per non avere
+      riduzioni sul valore del segnale in uscita.</p><p>-
+      Condensatore variabile CX ho usato un vecchio regolabile in aria a doppia
+      sezione per AM da 350+350pF collegate in parallelo o a sezione singola per
+      le frequenze più alte.</p><p>....</p>
+
+
+
+  
+        <h2 id="frequenza-in-funzione-dei-valori-lx-cx">Frequenza in funzione dei valori LX + CX</h2><p class="center">Gamma</p><p class="center">
+              LX</p><p class="center">CX</p><p class="center">100khz 
+              -  1Mhz</p><p class="center">
+              150 spire</p><p class="center">350+350
+              pF  + 1nf</p><p class="center">200khz
+              - 2.7Mhz</p><p class="center">
+              90 spire</p><p class="center">350+350
+              pF  + 470pf</p><p class="center">2.0Mhz
+              - 8.0Mhz</p><p class="center">
+              20 spire</p><p class="center">350pF
+              (1 sezione)</p><p class="center">6.0Mhz
+              - 30Mhz</p><p class="center">
+              6 spire</p><p class="center">350pF
+              (1 sezione)</p><p>La formula
+              per il calcolo della risonanza parallelo è la seguente: </p><p class="center"> <img alt="" decoding="async" height="94" loading="lazy" src="IMAGES/vfo_00x.jpg" width="471"/></p><p>Dove
+              la F è in Hertz, la C in Farads e la L in Henrys</p>
+
+
+
+
+        
+          <h2 id="costuzione-bobine-di-accordo">Costuzione Bobine di accordo.</h2><p>-
+              Per avere una buona stabilità nell'oscillatore le bobine di
+              accordo devono avere un alto "Q", vanno pertanto realizzate
+              con una dimensione tale da avere una bassa resistenza.</p><p>-
+      Nella prova sono stati realizzati tre avvolgimenti per coprire le
+      frequenze da 200Khz a 30Mhz.</p><p>-
+      Per le frequenze più basse 90 spire di filo diam. 0,45 su diametro 32mm.
+      Si può arrivare a 150 spire per scendere a 100khz.</p><p>-
+      Frequenze intermedie ottenute con 20 spire su diam. 32mm</p><p>-
+      Frequenze fino a 30Mhz con 6 spire su diametro 32mm.</p><p>-
+      Una sola bobina di 90, o meglio 150 spire con prese alla 6 e 20ma spira
+      può ridurre le dimensioni nel caso di inserimento in contenitore finale,
+      un commutatore deviatore permetterà di inserire la parte di bobina
+      desiderata. </p><p> Per comodità il condensatore variabile rimane lo stesso per
+      tutte le frequenze, vengono aggiunti dei condensatori in parallelo per
+              scendere a frequenze più basse.</p><p>
+              <img alt="" decoding="async" height="369" loading="lazy" src="IMAGES/vfo_002.jpg" width="192"/></p>
+  
+
+
+
+  <h2 id="segnale-uscita">Segnale Uscita</h2><p class="center"><img alt="" decoding="async" height="478" loading="lazy" src="IMAGES/vfo_008_12v.jpg" width="717"/></p><p>Questo
+      è il segnale 5Mhz presente in uscita,  otteniamo 16.5 dB a 12V
+      alimentazione.</p><p class="center"><img alt="" decoding="async" height="475" loading="lazy" src="IMAGES/vfo_008_5v.jpg" width="713"/></p><p>Questo
+      è il segnale 5Mhz presente in uscita,  otteniamo 12 dB a 5V
+      alimentazione.</p><p class="center"><img alt="" decoding="async" height="476" loading="lazy" src="IMAGES/vfo_007.jpg" width="714"/></p><p> Qua
+      si vede molto bene, la ripetizione delle armoniche una ogni 5Mhz, per una
+      frequenza di uscita fissa senza armoniche è bene adottare un filtro passa
+      basso a tre celle, tarato sulla frequenza che serve.</p><h2 id="applicazioni">Applicazioni</h2><p>
+      Per chi è all'inizio e non
+      ha un generatore, il RF VFO generatore è utile in
+      molti casi, serve a testare l'ingresso di un ricevitore per verificare la
+      banda di funzionamento, per applicare il segnale a un ingresso ricevitore è
+      necessario ridurre il segnale a valori di -90dBm tramite un attenuatore o
+      anche solo un partitore resistivo antiinduttivo.</p><p>Applicando
+      il segnale in uscita a una antenna, interna o esterna è possibile
+      irradiare il segnale generato, ci va sempre una antenna accordata per il carico di 50 ohm per non sollecitare il transistor amplificatore.</p><p>Aggiungendo un ulteriore
+      stadio o più stadi amplificatori è possibile arrivare facilmente a 1,
+      10W in uscita già sufficiente per una attività di trasmissione CW.</p><p>E' facile modulare il segnale tramite uscita audio di un PC realizzando
+      così un trasmettitore per fonia o musica, entrando per esempio su una
+      vecchia radio a valvole in gamma Onde medie o banda onda corta.</p>
+
+
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+      <ul class="card-grid">
+<li><a href="mini_whip.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — antenna attiva HF/VLF</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR — antenna attiva</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2014.htm"><span class="c-sec">Radio &amp; antenne</span>RF Oscillator — generatore 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="c-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-chema-elettrico">S chema elettrico</a></li>
+<li><a href="#frequenza-in-funzione-dei-valori-lx-cx">Frequenza in funzione dei valori LX + CX</a></li>
+<li><a href="#costuzione-bobine-di-accordo">Costuzione Bobine di accordo.</a></li>
+<li><a href="#segnale-uscita">Segnale Uscita</a></li>
+<li><a href="#applicazioni">Applicazioni</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

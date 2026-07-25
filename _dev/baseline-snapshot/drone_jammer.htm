@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drone Jammer by Roberto Chirio</title>
+  <meta name="description" content="Drone Jammer by Roberto Chirio">
+  <meta name="keywords" content="drone, drone defender, abbattere drone, quadricottero">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio" aria-current="true">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">Anti drone / drone jammer</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radio &amp; antenne</p>
+        <h1>DRONE JAMMER</h1>
+        <p class="subtitle">sistema anti UAV - APR</p>
+        <p class="meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>“Radio Corner&quot; di R.Chirio” di R. Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#drone-giocattolo-in-volo">Drone giocattolo in volo.</a></li>
+<li><a href="#descrizione-caratteristiche-elettroniche-droni-commerciali">Descrizione caratteristiche elettroniche droni commerciali....</a></li>
+<li><a href="#dimensione-peso">Dimensione/peso</a></li>
+<li><a href="#fx-radiocomando">Fx radiocomando</a></li>
+<li><a href="#gps">GPS</a></li>
+<li><a href="#fpv">FPV</a></li>
+<li><a href="#range">Range</a></li>
+<li><a href="#autonomia">Autonomia</a></li>
+<li><a href="#assicurazione">Assicurazione</a></li>
+<li><a href="#a">A</a></li>
+<li><a href="#b">B</a></li>
+<li><a href="#c">C</a></li>
+<li><a href="#contromisure">Contromisure</a></li>
+<li><a href="#articoli-in-rete">Articoli in rete</a></li>
+<li><a href="#video-relativi-a-sistemi-antidrone">Video relativi a sistemi antidrone</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p>
+<hr color="#336699"/>
+
+  
+  <h2 id="premessa">Premessa</h2><p>Dicembre
+      2016-Gennaio 2021</p><p>Cominciano
+      a vedersi in giro, sono i Droni volanti per impiego civile, utilizzano in
+      genere 4 eliche pilotate da altrettanti motori elettrici, si va dal
+      piccolo giocattolo al sofisticato Drone per riprese video in grado di
+      trasportare 25Kg di attrezzatura. </p><p>Per
+      regolamentare questo potenziale traffico aereo di APR (Aeromobili a
+      Pilotaggio Remoto) sono state emesse parecchie norme di volo e
+      regolamentazioni, sia per le caratteristiche dei velivoli sia per chi li
+      deve pilotare.</p><p>Vedi
+      sito ENAC <a href="https://www.enac.gov.it/La_Regolazione_per_la_Sicurezza/Navigabilit-13-/Sistemi_Aeromobili_a_Pilotaggio_Remoto_(Droni)/index.html" rel="noopener">Sistemi
+      Aeromobili a Pilotaggio Remoto</a></p><p>Chiaramente
+      la tecnologia utilizzata per la costruzione dei droni giocattolo è molto
+      semplificata ma prende spunto dai UAV militari utilizzati già da tempo
+      sui campi di battaglia o per sorveglianza. Droni con dimensioni anche
+      notevoli, ma la tecnologia ha sviluppato droni militari dalle dimensioni
+      ridotte simili alla fascia alta dei droni giocattolo o meglio dire per
+      hobbistica...!</p><p>Il
+      desiderio di molti bambini è avere in regalo un Drone ma anche il
+      desiderio di molti genitori rimasti bambini....</p><p>Quasi
+      tutti i droni portano a bordo una videocamera e il desiderio di andare a
+      curiosare in giro è forte e li si va invadere la Privacy del
+      vicinato.......E' vietato sorvolare e riprendere soggetti privati,
+      pertanto da buon radioamatore posso dare qualche consiglio su come sarebbe
+      possibile difendersi dall'invasione dei droni........</p>
+  
+
+
+
+  
+  <h2 id="drone-giocattolo-in-volo">Drone giocattolo in volo.</h2><p class="center"><img alt="" decoding="async" height="363" loading="lazy" src="https://1.bp.blogspot.com/-S_DhX52HWXo/Vv0R9Veuy4I/AAAAAAAAApE/n66yDXEg9Nkm_2fDaHTE9dEyHD3gXhQrQ/s1600/Helicute+X-Drone+Scout+-+Spekdrone+%25282%2529.jpg" width="640"/>  </p><p>La
+      guida di un Drone 4 eliche è molto più facile di una volta, ricordo chi faceva aeromodellismo anni fa
+      e passava mesi per costruire un elicottero per poi vederlo cadere quasi
+      sempre alle prime prove di volo. Adesso i Droni  sono auto livellanti
+      grazie agli accelerometri, procedono su una rotta stabile (GPS), rimangono
+      anche fermi in volo compensando il vento contrario e si proteggono dalla
+      scarica delle batteria, scendendo o ritornando al punto di partenza prima
+      che la batteria sia completamente scarica. (Si parla di Droni fascia
+      300-1000€)
+      </p>
+
+
+
+  <h2 id="descrizione-caratteristiche-elettroniche-droni-commerciali">Descrizione caratteristiche elettroniche droni commerciali....</h2><p>La
+      seguente tabelle ci aiuta a capire dimensioni e prestazioni dei vari droni
+      in commercio, giocattoli, giocattoli seri e droni semiprofessionali e
+      professionali....
+      </p><h2 id="dimensione-peso">Dimensione/peso</h2><h2 id="fx-radiocomando">Fx radiocomando</h2><h2 id="gps">GPS</h2><h2 id="fpv">FPV</h2><h2 id="range">Range</h2><h2 id="autonomia">Autonomia</h2><h2 id="assicurazione">Assicurazione</h2><h2 class="center" id="a">A</h2><p class="center"><a class="zoom-link" href="IMAGES/drone_01.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="100" loading="lazy" src="IMAGES/drone_01_small.jpg" width="100"/></a></p><p class="center">&lt;200g</p><p class="center">
+              2.4Ghz
+              </p><p>WiFI</p><p class="center">NO</p><p class="center">No </p><p class="center">YES
+              WiFi</p><p class="center">30mt</p><p class="center">5-15min</p><p class="center">non
+              obbligatoria</p><h2 class="center" id="b">B</h2><p class="center">
+            <a class="zoom-link" href="IMAGES/drone_04.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="66" loading="lazy" src="IMAGES/drone_04_small.jpg" width="100"/></a>
+            </p><p class="center">&lt;249g
+            </p><p class="center">
+              2.4Ghz
+              </p><p>5.8Ghz
+            </p><p class="center">Yes</p><p class="center">5.8Ghz</p><p class="center">300mt</p><p class="center">10-20min</p><p class="center">Yes</p><h2 class="center" id="c">C</h2><p class="center"><a class="zoom-link" href="http://www.radiomodelli.com/1827-large_default/walkera-scout-x4-drone-fpv-rtr-ilook-g3d-f12e-ground-station-mode2.jpg" rel="noopener" title="Apri l'immagine a piena risoluzione"><img alt="Risultati immagini per droneFPV" decoding="async" height="100" loading="lazy" src="IMAGES/walkera-scout-x4-drone-fpv-rtr-ilook-g3d-f12e-ground-station-mode2_small.jpg" width="100"/></a>
+            </p><p class="center">&gt;250g
+            </p><p class="center">
+              2.4Ghz
+              </p><p>5.8Ghz</p><p class="center">Yes</p><p class="center">5.8Ghz</p><p class="center">3000mt</p><p class="center">20-40min</p><p class="center">Yes</p><p class="center">+
+              patente ENAC</p><p>Dalla tabella si possono
+      rilevare le caratteristiche tecniche sommarie di ogni categoria di Droni, esistono
+      anche Droni a 3 eliche come pure a 6 eliche, stanno arrivando anche Droni
+      Aereo, quindi con ali e solo 1 o 2 motori, caratterizzati dalla lunga
+      autonomia, in quanto 1 solo motore e la portanza delle ali allungano
+      parecchio l'autonomia, modelli con oltre 1 metro di apertura alare possono
+      volare per parecchie ore anche grazie a pannelli fotovoltaici (molto
+      leggeri) piazzati sulle ali, è comunque una categoria professionale
+      dedicata al controllo del territorio.</p><p>Il<span class="hl-g"><strong> Gruppo A</strong> 
+      </span> sono
+      Droni giocattolo di costo inferiore ai 100€, con un range di volo di
+      alcune decine di metri, Cadono facilmente da soli e le batterie sono poco preformanti, per molti
+      rappresentano il primo acquisto  e vengono spesso abbandonati per
+      un acquisto più serio. Non richiedono permessi e possono volare in casa e
+      giardini e posti aperti. Sempre da fare attenzione in quanto possono
+      cadere su proprietà private e peggio in testa a persone e veicoli. Meglio
+      usarli in posti aperti e lontani da infrastrutture, dal momento che si
+      esce dalla propria casa sempre consigliabile un minimo di assicurazione.</p><p>Il <span class="hl-g"> <strong> Gruppo
+      B</strong>
+      </span>
+      sono giocattoli dal costo di anche 600€, rappresentano il secondo passo
+      negli acquisti di Droni, possono portare a bordo una piccola fotocamera o
+      Videocamera anche formato 4K, le batterie di maggiore dimensione permettono discrete
+      autonomie e il range di volo inizia a diventare di parecchie decine di
+      metri orizzontali e verticali. In quanto a peso, dimensione e velocità di
+      volo rappresentano un pericolo maggiore della categoria A e
+      l'assicurazione è obbligatoria, non è richiesta la patente ENAC</p><p>Il
+      <span class="hl-g"> <strong> Gruppo C</strong> </span> non
+      sono più giocattoli ma aeromodelli per Hobbistica o per impieghi di
+      utilizzo professionale, i costi vanno dalle 500€ in su, è necessario
+      prendere il patentino di volo ENAC e fare una costosa assicurazione obbligatoria. Possono
+      montare Videocamere GoPro o di maggiori dimensioni, l'autonomia di volo
+      può superare i 30 minuti. Con radiocomandi potenti, volo GPS e batterie
+      maggiorate possono coprire lunghezze di volo anche di qualche Km. 
+      </p>
+
+
+
+  
+  <h2 id="contromisure">Contromisure</h2><p class="center">
+      <img alt="" decoding="async" height="333" loading="lazy" src="IMAGES/drone_03.jpg" width="500"/>
+      </p><p class="center"><strong>Il
+      cacciatore di Droni</strong>
+      </p><p>
+      Giusto per ridere!
+      </p><p>
+       il primo sistema per abbattere
+      un drone che viene in mente, è l'utilizzo di un fucile da caccia, direi a
+      pallini piccoli, importante è colpire la batteria o le eliche.
+      </p><p>
+      Dipende anche dalla
+      distanza, ma meno efficace l'utilizzo di un carabina oppure ancora meno di
+      un fucile ad aria compressa.
+      </p><p>
+      A breve distanza potrebbe
+      essere efficace un fucile da PaintBall, per contro pistole e fucili a
+      pallini gialli sono del tutto inefficaci.
+      </p><hr color="#336699"/><p class="center"><strong>Fili
+      di Nylon appesi</strong></p><p>Una efficace
+      contromisura di natura meccanica per bloccare e fare cadere un drone a 4
+      eliche, può essere quella di agganciare un sottile filo di nylon da
+      pesca, sotto ad un altro drone magari tipo giocattolo più piccolo ma più
+      maneggevole e veloce. Avvicinandosi al drone "invasore" è molto
+      probabile che il filo finisca nelle eliche bloccandole, con la inevitabile
+      caduta. Chi manovra il drone invasore è più lontano e non può vedere il
+      sottile filo. L'astuzia è fissare il filo con un piccolo elastico che al
+      minimo strattone si spezza così da permettere la fuga del drone
+      difensore....</p><p>Anche solo
+      appendere i fili di Nylon a cavi della luce o ad alti alberi può già
+      essere un deterrente per fermare droni invasori nelle proprietà private.
+      Finendo in mezzo ai fili inevitabile la caduta...</p><hr color="#336699"/><p class="center"><strong>Drone
+      Kamikaze</strong>
+      </p><p>Una
+      altra efficace
+      contromisura è quella di utilizzare un drone kamikaze, magari montandogli
+      sopra una bacchetta metallica o delle stecche in vetroresina, poi si manda
+      il drone in una missione da Kamikaze,  contro l'invasore sperando di
+      colpire le batterie con la bacchetta metallica appuntita, oppure si cerca
+      di spezzare le eliche.</p><p>Bisogna
+      comunque tenere pronti più di un drone per la difesa, in quanto
+      potrebbero arrivarne di altri.
+      </p><hr color="#336699"/><p class="center"><strong>Reti
+      da pesca</strong>
+      </p><p>In uno dei
+      filmati segnalati sotto si può vedere come vengano usati dei droni
+      (speciali) muniti di rete di nylon sempre appesa oppure muniti di speciali
+      lanciatori, il Drone imprigionato nella rete non ha possibilità di fuga,
+      viene catturato dalla polizia e facilmente si individua il proprietario,
+      almeno così succede all'estero...
+      </p><hr color="#336699"/><p class="center"><strong>Batelle
+      Drone Defender
+      (radiocomando remoto)</strong>
+      </p><p class="center"><img alt="Immagine correlata" decoding="async" height="362" loading="lazy" src="https://i.ytimg.com/vi/k6k9Y3glkRk/maxresdefault.jpg" width="640"/>
+      </p><p>Una delle
+      contromisure elettroniche è quella di prendere il controllo del Drone
+      tramite un radiocomando più potente dell'originale, e di solito più
+      vicino al drone di quello originale. Non è facile da fare in quanto
+      lavorano tutti su frequenze da 2400 a 2500Mhz ma cambiano le istruzioni
+      interne e le codifiche di trasmissione digitale. Drone Defender inoltre
+      con la seconda antenna inibisce i segnali GPS mandando in Recovery il
+      Drone. Da uno dei filmati
+      segnalati più avanti si vede chiaramente un dispositivo che intercetta e
+      porta a terra un drone. Non si sa se sia simulato o realmente efficace. In
+      pratica il dispositivo dovrebbe avere in memoria i protocolli di tutti i
+      droni in commercio e la possibilità di fare frequenti aggiornamenti. Non
+      lo vedo un prodotto così efficace, si rischia di spendere parecchio e di
+      non poter fermare un drone da 100 euro.... 
+      </p><hr color="#336699"/><p class="center"><strong>Jammer
+      2400-5800Mhz (radiocomando)</strong>
+      </p><p>Una efficace
+      contromisura elettronica anti drone, è quella di creare un disturbo al radiocomando con Jammer
+      specifico. La frequenza dei radiocomandi spazia da 2400 ai 5800Mhz circa.
+      La trasmissione avviene in forma digitale e bidirezionale un po come
+      avviene con i WiFi.
+      </p><p>Da prove si
+      è visto che i radiocomandi fascia A, non superano i 3-50mW, mentre la
+      fascia B arriva ai 100mW, e la fascia C va dai 100mW in su.</p><p>Il
+      circuito Jammer deve sweeppare su tutto il range delle frequenza in uso, e
+      il tempo di sweep deve essere di 1000hz o superiore, vuol dire che si
+      copre tutta gamma da 2400 a 2500Mhz, 1000 volte al secondo. Frequenze di
+      sweep inferiori sono poco efficaci.</p><p>Utilizzando
+      potenze simili al trasmettitore radiocomando si ottengono scarsi
+      risultati, ci va innanzi tutto una buona antenna direttiva tipo Yagi o
+      riflettore paraboloide il tutto da puntare sul drone in volo. </p><p>Per
+      risultati sicuri bisogna avere almeno +30dB di segnale sull'antenna,
+      pertanto 1W o meglio 5W in antenna ci danno un efficace segnale che
+      dovrebbe bloccare la trasmissione a oltre 100m.</p><p>Questo
+      sistema può andare bene su Droni fascia A e qualcuno della fascia B,
+      però molti usano anche la navigazione con GPS e nel caso di mancanza
+      segnale radiocomando vanno in recovery (go home) portano a terra il drone
+      da dove era partito.
+      </p><hr color="#336699"/><p class="center"><strong>Jammer
+      1227-1575Mhz (GPS)</strong></p><p>Per bloccare
+      Droni fascia B e C muniti di navigazione GPS, è necessario adottare
+      sistemi Jammer multi frequenza. Quindi jammer 2400-2500Mhz e poi un
+      secondo Jammer con antenna dedicata per inibire il segnale GPS che lavora
+      su due frequenze L1 (1575,42MHz) e L2 (1227,60MHz). Ci va pertanto un
+      secondo generatore sweep che copra tali frequenze e una volta amplificate
+      sempre a 1W almeno applicate a una seconda antenna direttiva che essendo
+      di frequenza più bassa avrà una dimensione maggiore di quella 2400Mhz.</p><p>Essendo
+      le frequenze GPS due frequenze fisse, è pensabile che il jammer si muova
+      solo sui due valori senza cioè trasmettere sulle frequenze intermedie.
+      Sempre importante una buona antenna direttiva.
+      </p><hr color="#336699"/><p class="center"><strong>Jammer
+      5.8Ghz (FPV)</strong>
+      </p><p>Per inibire
+      tutte le possibilità di volo di un drone è necessario bloccare anche la
+      frequenza di trasmissione della videocamera a bordo, che permette al
+      pilota in tempo reale di vedere dove sta volando. Al momento un po' tutti
+      gli FPV stanno utilizzando la frequenza di 5.8Ghz. Facendo uno sweep di
+      +/- 200Mhz attorno al valore centrale di 5.8Ghz dovremmo coprire tutte le
+      varianti di banda.</p><p class="center"><a href="http://www.wired.it/gadget/accessori/2016/12/29/pistola-anti-drone/" rel="noopener" target="_blank"><img alt="Risultati immagini per jammer anti drone" decoding="async" height="334" loading="lazy" src="http://images.wired.it/wp-content/uploads/2016/12/06105342/1481014422_DroneShield-DroneGun-.jpg" width="564"/></a></p><p class="center">Efficace
+      sistema tribanda della DroneShield, per uso militare. (Copre tutte le bande radio citate
+      sopra.)</p><p>Però
+      per inibire la trasmissione FPV dovremmo operare diversamente. In questo
+      caso la trasmissione avviene dal drone (in volo) verso l'operatore a
+      terra, quindi il drone si trova in posizione privilegiata per trasmettere
+      verso terra e per disturbare la ricezione dovremmo puntare l'antenna non
+      verso il drone, ma verso il ricevitore, non sapendo dove è bisogna
+      posizionare l'antenna trasmittente, più alto possibile e utilizzare un
+      tipo di antenna omnidirezionale a doppia polarizzazione. Non avendo il
+      vantaggio delle antenne direzionali l'unica è incrementare la potenza, bisogna
+      arrivare almeno a 10W recuperando altri 10dB, che non sono così facili da realizzare a queste frequenze.
+      L'alternativa è mandare in volo un piccolo drone con a bordo un
+      disturbatore Jammer FPV.
+      </p><hr color="#336699"/><p>
+      Proprio per evitare i
+      sistemi Jammer molti droni di nuova generazione stanno montando a bordo
+      oltre ai soliti dispositivi, anche sistemi AntiJammer e l'utilizzo di
+      bussola elettronica, sensore barometrico (altimetro) e sensori a
+      ultrasuoni, tutti non disturbabili, permettono di continuare a volare benché
+      con meno precisione e scendere lentamente grazie ai sensori a
+      ultrasuoni o infrarossi che individuano gli ostacoli sia in verticale che orizzontale,
+      il tutto in presenza di forti disturbi Jammer.
+      </p>
+
+
+
+  <h2 id="articoli-in-rete">Articoli in rete</h2><p><a href="https://www.dronezine.it/76331/come-funziona-un-sistema-anti-drone-per-identificare-e-bloccare-i-droni-sopra-agli-aeroporti/" rel="noopener">https://www.dronezine.it/76331/come-funziona-un-sistema-anti-drone-per-identificare-e-bloccare-i-droni-sopra-agli-aeroporti/</a></p><p><a href="https://www.aerial-shop.com/it/accueil/1012-sistema-di-neutralizzante-anti-drone.html" rel="noopener">https://www.aerial-shop.com/it/accueil/1012-sistema-di-neutralizzante-anti-drone.html</a></p><p><a href="http://www.qrz.ru/schemes/contribute/security/jammers/drone-jammer.pdf" rel="noopener">http://www.qrz.ru/schemes/contribute/security/jammers/drone-jammer.pdf</a></p><p><a href="http://www.dday.it/redazione/18781/tutti-i-modi-anche-i-piu-bizzarri-per-difendersi-dai-droni" rel="noopener">http://www.dday.it/redazione/18781/tutti-i-modi-anche-i-piu-bizzarri-per-difendersi-dai-droni</a></p><p><a href="http://leganerd.com/2016/05/18/dronedefender-il-fucile-anti-drone/" rel="noopener">http://leganerd.com/2016/05/18/dronedefender-il-fucile-anti-drone/</a></p><p><a href="http://www.wired.it/gadget/accessori/2016/12/29/pistola-anti-drone/" rel="noopener">http://www.wired.it/gadget/accessori/2016/12/29/pistola-anti-drone/</a></p><h2 id="video-relativi-a-sistemi-antidrone">Video relativi a sistemi antidrone</h2><p><a href="https://youtu.be/zX4XXLb_Vuw" rel="noopener">https://youtu.be/zX4XXLb_Vuw</a> 
+      (Batelle Drone Defender)</p><p><a href="https://youtu.be/mi3Ed-paCE4" rel="noopener">https://youtu.be/mi3Ed-paCE4</a></p><p><a href="https://youtu.be/X27-2WDIZR0" rel="noopener">https://youtu.be/X27-2WDIZR0</a></p><p><a href="https://www.youtube.com/watch?v=SB37PUkIT-s" rel="noopener">https://youtu.be/SB37PUkIT-s</a></p><p><a href="https://youtu.be/OQwl0poN9l4" rel="noopener">https://youtu.be/OQwl0poN9l4</a></p><p><a href="https://youtu.be/kDRgoFLqQac" rel="noopener">https://youtu.be/kDRgoFLqQac</a></p>
+
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+      <ul class="card-grid">
+<li><a href="mini_whip.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — antenna attiva HF/VLF</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR — antenna attiva</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2014.htm"><span class="c-sec">Radio &amp; antenne</span>RF Oscillator — generatore 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="c-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#drone-giocattolo-in-volo">Drone giocattolo in volo.</a></li>
+<li><a href="#descrizione-caratteristiche-elettroniche-droni-commerciali">Descrizione caratteristiche elettroniche droni commerciali....</a></li>
+<li><a href="#dimensione-peso">Dimensione/peso</a></li>
+<li><a href="#fx-radiocomando">Fx radiocomando</a></li>
+<li><a href="#gps">GPS</a></li>
+<li><a href="#fpv">FPV</a></li>
+<li><a href="#range">Range</a></li>
+<li><a href="#autonomia">Autonomia</a></li>
+<li><a href="#assicurazione">Assicurazione</a></li>
+<li><a href="#a">A</a></li>
+<li><a href="#b">B</a></li>
+<li><a href="#c">C</a></li>
+<li><a href="#contromisure">Contromisure</a></li>
+<li><a href="#articoli-in-rete">Articoli in rete</a></li>
+<li><a href="#video-relativi-a-sistemi-antidrone">Video relativi a sistemi antidrone</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

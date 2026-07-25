@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini-Whip active antenna 10khz - 30Mhz by Roberto Chirio</title>
+  <meta name="description" content="Mini-Whip active antenna 10khz - 30Mhz by Roberto Chirio">
+  <meta name="keywords" content="Best Scanner Radio Antenna, tecsun pl660 ,ICOM IC-R5, ICOM IC-R6, ICOM IC-R10, ICOM IC-R20, HF receiver, ICOM radio, Yaesu, radioamatori, antenna, antenna attiva, mini antenna, banda HF, radio am, Mini-Whip, VLF, propagazione, macchie solari, HF band">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio" aria-current="true">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">Mini Whip — antenna attiva HF/VLF</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radio &amp; antenne</p>
+        <h1>Chirio Mini Whip 10khz - 30Mhz</h1>
+        <p class="subtitle">Antenna Attiva per banda HF e VLF</p>
+        <p class="meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>“Radio Corner&quot; di R.Chirio” di R. Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#mini-whip-pcb">MINI-WHIP-PCB</a></li>
+<li><a href="#versione-smd-basetta-pcb-presa-9v-e-bnc-f">Versione SMD + basetta PCB + presa 9V e BNC-F</a></li>
+<li><a href="#versione-smd-basetta-pcb-presa-9v-e-sma-f">Versione SMD + basetta PCB + presa 9V e SMA-F</a></li>
+<li><a href="#caratteristiche-comuni">Caratteristiche comuni</a></li>
+<li><a href="#mini-whip-sr-black-cap-versione-connettore-bnc-per-communica">MINI-WHIP-SR (Black cap) Versione connettore BNC per Communications Receiver ICOM IC-R20 e tutti gli scanner portatili.</a></li>
+<li><a href="#mini-whip-xp-ii-versione-tubo-20mm-per-palo-pvc-32mm-cavo-6m">MINI-WHIP-XP II Versione tubo 20mm per palo PVC 32mm cavo 6m Adatta per montaggio esterno.</a></li>
+<li><a href="#mini-whip-xp-ii-prova-di-ascolto">MINI-WHIP-XP-II prova di ascolto</a></li>
+<li><a href="#prova-di-ascolto-hf-e-vlf-con-wandel-goltermann-spm-15-selec">Prova di ascolto HF e VLF con WANDEL &amp; GOLTERMANN SPM 15 SELECTIVE LEVEL METER</a></li>
+<li><a href="#prova-di-ascolto-con-communications-receiver-icom-ic-r20">Prova di ascolto con Communications Receiver ICOM IC-R20</a></li>
+<li><a href="#video-prova-di-ascolto-con-icom-ic-r5">Video: prova di ascolto con ICOM IC-R5</a></li>
+<li><a href="#come-dare-nuova-vita-alle-radio-lasciate-nel-cassetto">Come dare nuova vita alle radio lasciate nel cassetto...</a></li>
+<li><a href="#consigli-per-montare-la-miniwhip">Consigli per montare la MiniWhip:</a></li>
+<li><a href="#consigli-per-ascolto-stazioni-bande-frequenze-orari-e-stagio">Consigli per ascolto: stazioni, bande, frequenze, orari e stagioni.</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p>
+<hr/>
+
+  
+  <p>Agosto
+        2013 - Febbraio 2018</p><p>Antenna
+        Attiva, di piccole dimensioni adatta alla ricezione di segnali in banda
+        HF, navtex e meteofax a bordo di barche e anche per frequenze più basse
+        VLF fino a 10Khz.</p><p>Ottima
+        ricezione per AM, e bande Radioamatori SSB e CW. Adatta per tutti i ricevitori per banda HF tipo
+        ICOM, ALINCO, YUPITERU, YAESU, KENWOOD, Tecsun....</p><p>La
+        MiniWhip è ottima per le ricezione delle frequenze
+        VLF sotto ai 100kHz dove da tutta l'Europa è stato possibile ricevere i
+        segnali di GRIMETON RADIO/SAQ  a 17.2Khz.</p><p>La
+        tipologia di funzionamento è quello di un'antenna capacitiva,
+        elettrostatica. Le due armature sono rappresentate, la prima dalla piastra
+        ricevente posta sulla basetta fornita, mentre la seconda armatura è
+        riferita al  collegamento a terra. La sensibilità di ricezione è
+        data dalla distanza tra la piastra attiva e la terra. Allontanandosi da
+        terra migliora il segnale d'ingresso come pure la banda passante verso il
+        basso. Sistemazioni a 3-4 metri dal piano di terra danno già
+        significativi risultati in ricezione. Non si ottengono vantaggi ad
+        aumentare la superficie della piastra ricevente oltre al valore
+        indicato.</p><p>La
+        MiniWhip è disponibile semplice su circuito PCB, compatta per uso su
+        scanner e le versioni per base fissa da montare all'esterno su palo in
+        PVC con cavo separato come la SDR e la XP II  e la
+        CX/F</p><p>Disponibili
+        modifiche e personalizzazioni per andare incontro alle esigenze degli
+        appassionati delle ricezioni segnali radio. ( Scrivete e mandate un'email con le
+        vostre richieste.)</p>
+
+
+
+  
+  <h2 id="mini-whip-pcb">MINI-WHIP-PCB</h2><p class="center"><img alt="" decoding="async" height="242" loading="lazy" src="IMAGES/mini_whip_000.jpg" width="676"/></p><p>Schema
+        elettrico circuito base amplificatore/adattatore di impedenza
+        consigliato per chi vuole fare prove (versione 2013)</p><h2 id="versione-smd-basetta-pcb-presa-9v-e-bnc-f">Versione SMD + basetta PCB + presa 9V e BNC-F</h2><p class="center">
+      <img alt="" decoding="async" height="353" loading="lazy" src="IMAGES/mini_whip_034.jpg" width="594"/></p><p>-
+        Basetta SMD montata sulla piastra antenna, completa di connettore
+        BNC (femmina) e presa batteria 9V.</p><p>-
+        Assorbimento 5mA (9V)</p><p>-
+        Dimensioni totali 30 x 110mm, superficie sensibile 30 x 80mm</p><h2 id="versione-smd-basetta-pcb-presa-9v-e-sma-f">Versione SMD + basetta PCB + presa 9V e SMA-F</h2><p class="center"><img alt="" decoding="async" height="399" loading="lazy" src="IMAGES/mini_whip_pcb_5v.jpg" width="600"/></p><p>-
+        Basetta SMD montata sulla piastra antenna, completa di connettore SMA-F 
+        (femmina) e presa batteria 9V.</p><p>-
+        Assorbimento 10mA (5V)</p><p>-
+        Dimensioni totali 17 x 200mm, superficie sensibile 17 x 160mm
+        </p><h2 id="caratteristiche-comuni">Caratteristiche comuni</h2><p>-
+        Banda passante da 10khz a 30Mhz  (-30dB), a -80dB si riceve ancora
+        fino a 150Mhz</p><p>-
+        Impedenza uscita è di 200 ohm adatta un po’ per tutti gli ingressi
+        ricevitore.</p><p>-
+        Tutte le MiniWhip possono essere alimentate da 5 a 9V.</p><p>
+        
+      Segnale presente sulla <strong>
+      Chirio Mini-Whip PCB </strong>(2013), si vedono tutte le frequenze da 0 a 20Mhz. Il segnale è
+      più forte ed escono molte emittenti non ascoltabili con una antenna
+      convenzionale filare. Molto presenti tutti i segnali fino a poche decine di
+      Khz.
+      L'antenna è stata
+      montata esterno casa su un palo in PVC da 3mt.
+        
+      </p><p class="center"><a class="zoom-link" href="IMAGES/mini_whip_008.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="74" loading="lazy" src="IMAGES/mini_whip_008_small.jpg" width="100"/></a>
+      </p><p>
+        Posizione corretta per
+        utilizzo della MiniWhip-PCB con scanner portatili, la batteria va sempre
+        posizionata più bassa del connettore per non interferire con il segnale
+        entrante, inoltre la mano e il corpo dell'operatore ha l'effetto di terra per il piccolo scanner.
+        </p><p>Lo scanner posizionato
+        da solo su un tavolo o un appoggio lontano dal corpo dell'operatore può
+        non ricevere bene o con segnale attenuato. In questo caso prevedere una
+        connessione di terra verso il BNC dell'antenna/radio.</p><p>Il migliore ascolto si
+        ottiene in posizione eretta con scanner in mano e antenna innestata.</p><p class="center"><a class="zoom-link" href="IMAGES/mini_whip_057.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="165" loading="lazy" src="IMAGES/mini_whip_057_small.jpg" width="100"/></a>
+      </p><hr color="#336699"/>
+
+
+
+
+
+  
+  <h2 id="mini-whip-sr-black-cap-versione-connettore-bnc-per-communica">MINI-WHIP-SR (Black cap) Versione connettore BNC per Communications Receiver ICOM IC-R20 e tutti gli scanner portatili.</h2><p class="center">
+      <img alt="Chirio Mini Whip 2014 scanner version" decoding="async" height="485" loading="lazy" src="IMAGES/mini_whip_031_icom_icr20.jpg" width="150"/>
+      </p><p>
+      <strong>Marzo 2015</strong>
+        </p><p>- Questa
+        nuova versione è studiata per applicare la Mini-Whip direttamente al
+        connettore BNC dell' ICOM IC-R20, va bene comunque con tutti gli scanner,
+        ricevitori per banda HF tipo ICOM, ALINCO, YUPITERU, YAESU, KENWOOD....</p><p>-
+        Il circuito è modificato per ridurre il rumore ed è stato
+        ridotto per inserirlo a metà
+        corpo di antenna.</p><p>-
+        Il robusto tubetto in ottone e il connettore BNC di buona qualità,
+        permettono di maneggiare tranquillamente lo
+        scanner, tenendo in mano la batteria.</p><p>-
+        Per segnali bassi portare il GAIN dell'ICOM IC-R20 fino al valore MAX</p><p>-
+        Ascolto molto buono su tutta la HF. Specialmente per le Onde Lunghe e
+        Onde Medie con significativi segnali anche durante le ore diurne.</p><p>-
+        La parte ricevente attiva è protetta dalle scariche elettrostatiche in
+        quanto è stata inserite all'interno del tubetto isolato, come già
+        avviene per la Mini Whip XP II per base fissa.
+        </p><p>-
+        Alimentazione 9V  consumo nom 4.0mA max 6mA
+        </p><p>-
+        Lunghezza 160mm, diametro 16mm  peso 40g
+        </p><p>-
+        Costruzione robusta per uso professionale della antenna.
+        </p><p>- Non
+        consigliabile fare ricezioni con RTX in quanto alcuni modelli
+        all'accensione mandano un impulso RF in uscita, che può bruciare il
+        circuito della MiniWhip.
+        </p>
+
+
+
+  
+  <p>
+        Posizione corretta per
+        utilizzo con scanner portatili, la batteria va sempre posizionata più
+        bassa del connettore per non interferire con il segnale entrante,
+        inoltre la mano ha l'effetto di terra per il piccolo scanner.
+        </p><p>Lo scanner posizionato
+        da solo su un tavolo o un appoggio lontano dal corpo dell'operatore può
+        non ricevere bene o con segnale attenuato. In questo caso prevedere una
+        connessione di terra verso il BNC dell'antenna/radio.</p><p>Il migliore ascolto si
+        ottiene in posizione eretta con scanner in mano e antenna innestata.
+        Sempre in posizione aperta e lontana da ostacoli.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/mini_whip_056.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="176" loading="lazy" src="IMAGES/mini_whip_056_small.jpg" width="100"/></a>
+      </p><hr color="#336699"/>
+  
+
+
+
+
+  
+  <h2 id="mini-whip-xp-ii-versione-tubo-20mm-per-palo-pvc-32mm-cavo-6m">MINI-WHIP-XP II Versione tubo 20mm per palo PVC 32mm cavo 6m Adatta per montaggio esterno.</h2><p class="MsoNormal center"><strong>  <img alt="" decoding="async" height="532" loading="lazy" src="IMAGES/mini_whip_xp_6m.jpg" width="531"/></strong>
+        </p><p>
+      <strong>Gennaio 2015</strong>
+        </p><p>- In
+        questa ultima versione, il circuito amplificatore e la piastra
+        ricevente, sono protetti all'interno del tubo da 20mm. Il tutto viene completamente chiuso e
+        sigillato con resina per resistere alle intemperie.</p><p>-
+        Va posizionata a minimo 2-4 metri di altezza, tramite tubo PVC 32mm per uso elettrico.
+        Eventualmente usare 3 cavi nylon per i fissaggio controvento.</p><p>-
+        Il gruppo è
+        completamente sigillato, lo sfiato umidità avviene verso il basso attraverso il passaggio cavi.</p><p>-
+        Con la XP II la discesa segnale avviene con cavo RG58/U  standard
+        lunghezza 6mt. ed alimentazione
+        separata con cavo schermato multiplo, soluzione questa adatta per
+        arrivare fino a 30 - 50 metri di cavo discesa (a richiesta).</p><p>-
+        Presenta sempre una ottima sensibilità, su tutte le
+        frequenze da 0.10 - 30 Mhz migliorata la gamma bassa delle LW e MW.</p><p>-
+        Sono facilmente ascoltabili segnali medi e forti fino a 150Mhz.
+        </p><p>- E'
+        consigliato alimentare con batteria 12V ricaricabile, tipicamente con una 12V 7Ah si
+        ha oltre 1 mese di autonomia. Oppure mediante
+        il cavo multiplo è possibile portare l'alimentazione in casa, sempre usare
+        solo batteria 9-12V.
+        </p><p>- Molto
+        sconsigliato alimentare la MiniWhip con un alimentatore rete, del tipo
+        lineare o switching, vengono introdotti troppi disturbi alla ricezione.
+        </p><p>- Non
+        consigliabile la connessione a RTX in quanto alcuni modelli
+        all'accensione mandano un impulso RF in uscita, che può bruciare il
+        circuito della MiniWhip.
+      </p><p class="center"><img alt="" decoding="async" height="510" loading="lazy" src="IMAGES/mini_whip_037.jpg" width="335"/>
+      </p><p class="center"><img alt="" decoding="async" height="486" loading="lazy" src="IMAGES/mini_whip_026.jpg" width="730"/>
+        </p><p>- Questa
+        è lo
+        spettro della MiniWhip XP II, alimentata a 12V, rappresenta tutte le frequenze da 10Khz a 20Mhz, ogni divisione orizzontale
+        rappresenta 2Mhz, mentre le divisioni verticali rappresentano
+        l'intensità dei segnali,
+        si
+        nota un netto miglioramento su tutta la gamma ricevuta, inoltre il
+        miglioramento è più marcato per le frequenze sotto i 2Mhz.</p><p>- La
+        ricezione è stata fatta alle ore 22:00 e si notano chiaramente tutte le
+        gamme sotto i 20Mhz delle onde corte SW e la loro intensità.</p><p>- da
+        100Khz a 2 Mhz MW e LW
+        ricevute con ottimo segnale.</p><p>- da 2 a
+        5Mhz  bande tropicali</p><p>- I picchi
+        più altri rappresentano le bande dei 49 metri, 41 metri, 31 metri, 25
+        metri, 22 metri, 19 metri. Gli ultimi due picchi più piccoli
+        rappresentano le bande dei 16 e 15 metri.</p><p>- Non
+        rappresentate dallo spettro possiamo ancora sentire bene le bande dei
+        21Mhz, 25 Mhz, la banda 27 Mhz dei CB e e 28 Mhz radioamatoriale. (Tutte
+        bande più adatte ad essere ascoltate durante il giorno)</p><h2 id="mini-whip-xp-ii-prova-di-ascolto">MINI-WHIP-XP-II prova di ascolto</h2><p class="center"><a href="MiniWhip_VLF_2018.mp4"><img alt="" decoding="async" height="234" loading="lazy" src="IMAGES/mini_whip_VLF_002.jpg" width="351"/></a>
+        </p><p>
+         Gennaio 2018. Questa video dimostra
+        come sia facile ricevere buoni segnali anche senza montare una miniWhip
+        II in alto e su palo e con solo una batteria da 9V. Segnale RAI 2 in AM
+        a 1.00Mhz e segnale OM in banda 40m.
+      </p>
+
+
+
+
+  
+  <div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+    <tbody><thead><tr>
+      <th colspan="2" scope="col">
+        <p><strong><em> MINI-WHIP-XP-II 
+        </em></strong><strong><em>Ascolto delle
+        VLF</em></strong>
+      </p></th>
+    </tr></thead>
+    <tr>
+      <td colspan="2">
+        <p>
+      <strong>Settembre 2014</strong>
+        </p><p>- Con
+        tutte le MiniWhip 2015 è possibile ascoltare le VLF.</p><p>-
+        Download Software per ricezione VLF  <a href="http://dl1dbc.net/SAQ/" rel="noopener">http://dl1dbc.net/SAQ/</a></p><p>-
+        ELENCO STAZIONI VLF :</p><p class="center"><a href="http://ja5fp.org/VLFList.pdf" rel="noopener">http://ja5fp.org/VLFList.pdf</a></p><p class="center"><a href="http://www.ltpaobserverproject.com/uploads/3/0/2/0/3020041/vlf_transmitters_list_for_sid_monitor.pdf" rel="noopener">http://www.ltpaobserverproject.com/uploads/3/0/2/0/3020041/vlf_transmitters_list_for_sid_monitor.pdf</a></p><p>-
+        Un esempio di cosa si può ricevere sotto ai 25Khz utilizzando
+        l'ingresso scheda audio del pC:    </p><p class="center">         
+        <a class="zoom-link" href="IMAGES/VLF%20mini%20whip.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="71" loading="lazy" src="IMAGES/VLF_mini_whip_small.jpg" width="100"/></a></p></td>
+    </tr>
+  
+  <tr>
+      <td>
+        <p>   <em><strong>Venerdì
+        13 febbraio  2015 appuntamento con il GRIMETON RADIO/SAQ  17.2Khz</strong></em>
+      </p></td>
+  </tr>
+  <tr>
+      <td>
+        
+        <p class="center"><a class="zoom-link" href="IMAGES/SAQ%20starting.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="87" loading="lazy" src="IMAGES/SAQ_starting_small.jpg" width="100"/></a></p>
+        </td>
+      <td>
+        - Segnale ricevuto
+        dalle  14.44.44 UTC utilizzo del programma Spectravue 3.28
+      </td>
+  </tr>
+  <tr>
+      <td>
+        
+        <p class="center"><a class="zoom-link" href="IMAGES/SAQ%20sv+v94.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="87" loading="lazy" src="IMAGES/SAQ_svv94_small.jpg" width="100"/></a></p>
+        </td>
+      <td>
+        - Segnale ricevuto anche
+        con il programma SAQ Panoramic VLF receiver 0.94
+      </td>
+  </tr>
+  <tr>
+      <td>
+        
+        <p class="center"><a class="zoom-link" href="IMAGES/SAQ%20cw%20decoded.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="70" loading="lazy" src="IMAGES/SAQ_cw_decoded_small.jpg" width="100"/></a></p>
+        </td>
+      <td>
+        - Traduzione del codice CW
+        ricevuto
+      </td>
+  </tr>
+  </tbody></table></div>
+
+
+
+<hr color="#336699"/>
+
+
+
+  
+  <h2 id="prova-di-ascolto-hf-e-vlf-con-wandel-goltermann-spm-15-selec">Prova di ascolto HF e VLF con WANDEL &amp; GOLTERMANN SPM 15 SELECTIVE LEVEL METER</h2><p class="center"><img alt="" decoding="async" height="483" loading="lazy" src="IMAGES/SPM_15_02.jpg" width="722"/></p><p>Segnali ricevuti 
+        in Banda 40 metri,
+        e in VLF, antenna Chirio Mini Whip XP II montata all'esterno su
+        canna da pesca 10mt,
+        alimentazione batteria 12V. Discesa cavo RG58/U lung. 35 metri:</p><p>-
+        Segnale a 7.1555 Mhz 40 metri ricevuto il 18/03/2015  17:22  (
+        <a class="download" href="MVI_0452.MP4">Video MP4 14MB </a> )</p><p>  <strong>
+        Russian RSDN-20 Navigation System “Alpha” </strong></p><p>- 
+        Segnale -55 dBm  a 11.905 khz ricevuto il 29/03/2015 
+        15:17  ( <a class="download" href="11905.MP4"> Video MP4 11MB </a> )</p><p>- 
+        Segnale -54 dBm a 12.649 khz ricevuto il 29/03/2015  15:22  ( <a class="download" href="12649.MP4"> Video MP4
+        8MB </a> )</p><p>- 
+        Segnale -58 dBm a 14.881 khz ricevuto il 29/03/2015  15:37  ( <a class="download" href="14881.MP4"> Video MP4
+        8MB </a> )</p><p><strong>  
+        SS/TS   </strong></p><p>- 
+        Segnale -68 dBm a 60.000 khz <strong>
+        from UK </strong>ricevuto
+        il 29/03/2015  15:47  ( <a class="download" href="60000.MP4"> Video MP4 8MB </a> )</p><p>- 
+        Segnale -52 dBm a 77.500 khz <strong>
+        from Germany </strong>ricevuto
+        il 29/03/2015  15:50  ( <a class="download" href="77500.MP4"> Video MP4 9MB </a> )</p><p class="center"><img alt="" decoding="async" height="298" loading="lazy" src="IMAGES/mini_whip_067.jpg" width="552"/></p><p>- 
+        Segnale -27 dBm a 77.500 khz <strong>
+        from Germany </strong>ricevuto
+        il 16/03/2017  10:00  ( <a class="download" href="vlf_775.MP4"> Video MP4 20MB </a> )</p><hr color="#336699"/><p class="center"><img alt="" decoding="async" height="412" loading="lazy" src="IMAGES/spm_15_spina.jpg" width="552"/>
+        </p><p>Dall'immagine
+        si indica come prelevare il segnale audio bassa frequenza, per portarlo
+        ad un amplificatore esterno, in quanto lo speaker interno è molto
+        sacrificato e vanifica la buona qualità della ricezione. 
+        </p><p>In
+        questo caso oltre alle spine è stato inserito anche un potenziometro da
+        1K per la regolazione del volume.
+        </p><h2 id="prova-di-ascolto-con-communications-receiver-icom-ic-r20">Prova di ascolto con Communications Receiver ICOM IC-R20</h2><p class="center"><a href="icom_ic_r20_19_10_2013.wav"><img alt="Ascolta la ricezione in banda 40 metri LSB a 7.075 Mhz, vari OM si parlano tra loro da diverse località del Nord Italia." decoding="async" height="292" loading="lazy" src="IMAGES/mini_whip_030_icom_icr20.jpg" width="441"/></a></p><p>- File
+        audio (Wav) registrato direttamente con ICOM IC-R20 alle ore 15:10 del
+        19 ottobre 2013. 
+        </p><p> Ottima ricezione in Banda 40 metri, 7.075Mhz da varie
+        località del Nord italia, antenna Chirio Mini Whip XP montata
+        all'esterno,
+        alimentazione batteria 12V.
+        </p><h2 id="video-prova-di-ascolto-con-icom-ic-r5">Video: prova di ascolto con ICOM IC-R5</h2><p class="center"> <a href="mini_whip_icom.avi"><img alt="VIDEO AVI  Prova di ascolto con ICOM IC-R5 con antenna Chirio Mini Whip 9V battery " decoding="async" height="272" loading="lazy" src="IMAGES/mini_whip_029.jpg" width="367"/></a></p><p class="center">( Video
+        Avi 40MB )</p><p> Settembre
+        2013. Ottima ricezione
+        da 150Khz a 30Mhz, antenna Chirio Mini Whip, prototipo per scanner alimentazione
+        batteria 9V.
+        </p>
+
+
+<hr color="#336699"/>
+
+
+
+  
+  <h2 id="come-dare-nuova-vita-alle-radio-lasciate-nel-cassetto">Come dare nuova vita alle radio lasciate nel cassetto...</h2><p class="MsoNormal">-
+        Molte radio economiche pur avendo bande di onda corta non hanno
+        l'ingresso antenna esterna, ma solo lo stilo estensibile.</p><p class="MsoNormal">-
+        Utilizzando la <strong>Chirio Mini-Whip </strong>posizionata sul tetto, si scende con cavo RG-58, il
+        cavo centrale si salda a un coccodrillo e lo si collega all'antenna a
+        stilo, la calza schermata va collegata a una piastra di alluminio o rame
+        delle dimensioni 20x30 che farà da base appoggio per la radio.</p><p class="MsoNormal">Eventualmente
+        si può collegare il negativo della radio alla piastra con un
+        condensatore da 0,1uF, però in pratica si è visto che è più che
+        sufficiente il piano di massa.</p><p class="center">
+      <a class="zoom-link" href="IMAGES/mini_whip_018.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="66" loading="lazy" src="IMAGES/mini_whip_018_small.jpg" width="100"/></a>
+        </p><p class="center">
+      Sony ICF SW40
+        </p><p>
+        - Il segnale a volte è
+        parecchio forte che tende  saturare  l'ingresso, usando il
+        deviatore DX/Local si può riportare a valori normali, ottimo l'ascolto
+        dei CW a 7,020Mhz, la sintonia fine a passi di 1khz aiuta a centrare
+        bene le stazioni.
+        </p><p>- Vista la possibilità
+        di ricevere le bande di 7 e 14Mhz si sente la mancanza della conversione
+        SSB.</p><p>- Le stazioni
+        commerciali  vengono ricevute bene su tutte le bande, purtroppo le
+        Onde Medie hanno l'antenna interna in ferrite e non possono beneficiare
+        del buon segnale esterno.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/mini_whip_017.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="66" loading="lazy" src="IMAGES/mini_whip_017_small.jpg" width="100"/></a></p><p class="center">Sony
+        ICF 4900
+      </p><p>
+        - Anche qua le stazioni
+        più forti hanno tendenza a saturare l'ingresso, usando il deviatore DX/Local
+        si migliora la ricezione.
+        </p><p>- Ottima radio anni 80
+        con sintonia manuale, buona ricezione su tutte le bande SW, male per
+        Onde Medie non collegate all'antenna.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/mini_whip_019.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="66" loading="lazy" src="IMAGES/mini_whip_019_small.jpg" width="100"/></a></p><p class="center">Silver
+        Crest SWE100 B1
+      </p><p>
+        - Questa radiolina dal
+        costo di 9,9 euro venduta nei supermercati LIDL stupisce per l'ottima qualità dell'audio, e le 6
+        bande SW permettono una buona ricezione delle stazioni di onda corta.
+        Bene per MW collegate all'antenna.
+        </p><p>- Purtroppo  la
+        sintonia è poco demoltiplicata, non permette un preciso centraggio
+        dell'emittente....
+      </p>
+
+
+
+
+  <h2 id="consigli-per-montare-la-miniwhip">Consigli per montare la MiniWhip:</h2><p>
+      - Posizionare l'antenna in
+      alto, minimo 4 metri lontano da cavi e fonti elettriche, per discesa va bene il cavo
+      RG58/U, anche per lunghezze di 15-30metri. Anche con cavi TV 75 ohm o cavi
+      schermati per audio si ottengono buoni risultati.
+      </p><p>- Più si sale, più
+      l'antenna recupera guadagno sul segnale. Indicativamente una altezza di
+      10-12 metri dà un incremento di +10dB rispetto a 2 metri.</p><p>- Non ci sono grandi differenze
+      ad usare un palo in ferro o in materiale plastico, in quanto il cavo
+      coassiale in discesa da le stesse caratteristiche di un palo metallico...
+      importante
+      che sia di piccolo diametro con cavi tiranti controvento di nylon.</p><p>- Importante avere un
+      buon collegamento di terra, ideale dedicato solo per questa antenna e non
+      facente punto comune con l'impianto di casa. Un palo di ferro lungo 1
+      metro piantato nella terra umida va benissimo, la connessione verso
+      l'antenna deve essere il più corta possibile, evitare loop e lunghi giri
+      di cavo. </p><p>- Migliore Terra andrebbe
+      realizzata con 4 paletti acciaio/rame piantati nella terra umida dove
+      scolano le canaline dell'acqua piovana o del rubinetto del giardino. Unire
+      i 4 pali con cavo rame 16mm e portare con un unico cavo a una morsettiera
+      comune, collegare tutto a terra comprese le strutture metalliche del tetto,
+      grondaie in rame e pali in ferro.</p><p>- Evitare il più
+      possibile fonti di disturbo nelle vicinanze dell'antenna, come lampade
+      neon/led, cavi elettrici, motori a spazzole.</p><p>
+      <img alt="Ottima installazione di MiniWhip fatta da un radioamatore" decoding="async" height="451" loading="lazy" src="IMAGES/mini_whip_041.jpg" width="305"/>
+      </p><p>
+      - Come da foto per tenere
+      in posizione la MiniWhip XP II sul tubo PVC 32 mm, utilizzare silicone
+      trasparente, altre colle più tenaci potrebbero bloccare troppo la boccola
+      per eventuali rimozioni.
+      </p><p>- Il silicone evita
+      inoltre l'ingresso di acqua e pioggia all'interno del tubo PVC proteggendo
+      i connettori BNC e alimentazione.</p><p>- E' sempre consigliabile
+      posizionare la MiniWhip in posizione verticale anche se il funzionamento
+      è buono anche in posizione orizzontale.</p><p class="center"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/mini_whip_047.jpg" width="300"/>
+      </p><p>
+      - Ci sono spesso durante
+      l'anno condizioni di scarsa propagazione, dovuto
+      alle "Macchie Solari" che potrebbero annullare i segnali
+      ricevibili dalla MiniWhip, è consigliabile consultare il sito <a href="http://www.hamqsl.com/solar.html" rel="noopener">http://www.hamqsl.com/solar.html</a>
+      per verificare  le condizioni della propagazione per le varie bande.
+      </p><p>
+<a href="http://www.hamqsl.com/solar.html" rel="noopener" title="Click to add Solar-Terrestrial Data to your website!"><img alt="" decoding="async" loading="lazy" src="http://www.hamqsl.com/solarbc.php"/></a>
+
+
+      </p><hr color="#336699"/><p class="center"><img alt="" decoding="async" height="379" loading="lazy" src="IMAGES/mini_whip_040.jpg" width="731"/></p><p>- Il disegno
+      illustra come meglio posizionare la Mini Whip XP II con doppia discesa.</p><p>-
+      Il palo in PVC deve essere posizionato lontano da ostacoli come muri,
+      recinzioni ed alberi ad alto fusto.</p><p>-
+      Usare cavi tiranti in Nylon tipo filo da pesca o treccia.</p><p>-
+      Fare correre i cavi sul terreno per evitare ingressi di RF</p><p>-
+      Collegando a Terra il cavo schermato di alimentazione, in genere si
+      riducono i disturbi.</p><p>-
+      Per non bruciare il FET sull'ingresso, tutte le MiniWhip vanno tenute ad
+      almeno 10 metri da una antenna trasmittente.</p><hr color="#336699"/><p>Sulle onde corte una antenna direttiva ed accordata ha sicuramente un segnale più centrato
+      e pulito, ma vuoi mettere il costo e la dimensione.....
+      <br/>
+      Stiamo parlando di una antennina che  mio figlio usa con lo scanner per ascoltare le stazioni
+      straniere..... ti permette di ascoltare durante il giorno un 50-100 emittenti a fondo scala tra i 100kz e i 30Mhz   mentre di sera/notte  sono oltre
+      500 emittenti da tutto il
+      mondo...!!!
+      
+      </p><p>L'unica accortezza è
+      uscire di casa e allontanarsi da qualsiasi tipo di struttura e cavi
+      elettrici, pure gli alberi con foglie assorbono segnale, ci va un posto
+      aperto e in alto.....e il cellulare spento!
+      <br/>
+      Questa antenna MiniWhip da la possibilità agli appassionati di ricevere
+      segnali deboli senza montare tralicci sul tetto, o meglio fare una
+      escursione in montagna ed ascoltare radioamatori ed emittenti magari dalla
+      New Zealand....il tutto valorizzando una radiolina a onde corte rimasta
+      nel cassetto che riceveva ben poco con il suo stilino.....
+      <br/>
+      Le stazioni cinesi stanno aumentando la potenza di emissione sulle onde
+      corte per portare notizie in tutto il mondo ai loro connazionali, una
+      buona antenna compatta completa l'opera...
+      
+      </p><p class="center">
+      <img alt="2013 Prime prove con antenna Chirio Mini Whip" decoding="async" height="417" loading="lazy" src="IMAGES/mini_whip_002.jpg" width="278"/>
+      </p><hr color="#336699"/><p>MiniWhip SR 2016 note del costruttore.
+      <br/>
+      Dopo 4 anni dall’ideazione, continuo miglioramento e il raggiungimento del prodotto attuale, si può affermare che questa antenna si è rivelata un ottimo prodotto, è stata spedita un po’ in tutte le regioni del mondo, utilizzata da tecnici e  Radioamatori in Oceania, America e Canada come pure in SudAmerica e Siberia, Una antenna è finita anche su nave verso le basi del Polo Sud ed un po’ in tutti gli stati Europei.<br/>
+      La MiniWhip SR ha dimostrato di essere sempre all’altezza per dare soddisfacenti ricezioni su tutte le Bande HF, quando presenti le condizioni di propagazione.<br/>
+      Di eccezionale robustezza non si sono lamentate rotture meccaniche come pure inconvenienti elettrici. Il funzionamento è ancora garantito con batteria scarica fino a 3V e con basse temperature esterne. L’autonomia reale di funzionamento è di oltre 200 ore con una batteria 9V Duracell.<br/>
+      L’utilizzo in montagna rappresenta la migliore soluzione per questa antenna, lontano da fonti di disturbo e accoppiata a ricevitori scanner portatili, permette delle ricezioni quasi impossibili con antenne filari posizionate nei centri abitati.<br/>
+      Difficilmente migliorabile è stata copiata da alcuni ma l’unica e originale è questa venduta 
+      su www.chirio.com.
+      <br/>
+      Torino giugno 2016        by R.Chirio
+      
+      <br/>
+      MiniWhip SR 2016 notes of the manufacturer.
+      <br/>
+      After 4 years from ideation, continuous improvement and the achievement of current product, it can be said that this antenna has proved to be a great product, has sent to all part of the world, used by technicians and radio amateurs in Oceania, America and Canada as well as in South America and Siberia. An antenna is also finished on the ship towards some bases of South Pole and a bit 'in all European countries.
+      <br/>
+      The MiniWhip SR has been shown to be always up to give satisfactory receptions on all HF bands, when present the propagation conditions.<br/>
+      Highly robust did not complain mechanical failures as well as electrical problems. The operation is guaranteed even with discharged battery up to 3V and with low outdoor temperatures. The real authonomy of operation is over 200 hours with a 9V Duracell battery.<br/>
+      The use in the mountains is the best solution for this antenna, far away from interference sources and couple with portable scanners receivers, allows receptions almost impossible with wire antennas positioned in residential areas.<br/>
+      Difficult to improve has been copied by some but the unique and original, this is sold
+      directly on www.chirio.com .
+      <br/>
+      Turin June 2016 by R.Chirio
+      <br/>
+      
+      </p>
+
+
+
+
+  <h2 id="consigli-per-ascolto-stazioni-bande-frequenze-orari-e-stagio">Consigli per ascolto: stazioni, bande, frequenze, orari e stagioni.</h2><p>-
+      Associazione Italiana Radioascolto <a href="http://www.air-radio.it/" rel="noopener">http://www.air-radio.it/</a></p><p>-
+      International Shortwave Broadcast Bands  <a href="http://www.hamuniverse.com/shortwavebandfreqs.html" rel="noopener">http://www.hamuniverse.com/shortwavebandfreqs.html</a></p><p>-
+      RADIO NEW ZEALAND INTERNATIONAL  <a href="http://www.rnzi.com/pages/listen.php" rel="noopener">http://www.rnzi.com/pages/listen.php</a></p><p>-
+      Manuali e schemi per radioamatori, CB e BCL    
+        <a href="http://www.radiomanual.eu/" rel="noopener" target="_blank">http://www.radiomanual.eu/</a></p>
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"> © Roberto
+Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+      <ul class="card-grid">
+<li><a href="mini_whip_sdr.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR — antenna attiva</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2014.htm"><span class="c-sec">Radio &amp; antenne</span>RF Oscillator — generatore 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="c-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+<li><a href="rf_gen_VHF.htm"><span class="c-sec">Radio &amp; antenne</span>VHF generator 70–500 MHz</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#mini-whip-pcb">MINI-WHIP-PCB</a></li>
+<li><a href="#versione-smd-basetta-pcb-presa-9v-e-bnc-f">Versione SMD + basetta PCB + presa 9V e BNC-F</a></li>
+<li><a href="#versione-smd-basetta-pcb-presa-9v-e-sma-f">Versione SMD + basetta PCB + presa 9V e SMA-F</a></li>
+<li><a href="#caratteristiche-comuni">Caratteristiche comuni</a></li>
+<li><a href="#mini-whip-sr-black-cap-versione-connettore-bnc-per-communica">MINI-WHIP-SR (Black cap) Versione connettore BNC per Communications Receiver ICOM IC-R20 e tutti gli scanner portatili.</a></li>
+<li><a href="#mini-whip-xp-ii-versione-tubo-20mm-per-palo-pvc-32mm-cavo-6m">MINI-WHIP-XP II Versione tubo 20mm per palo PVC 32mm cavo 6m Adatta per montaggio esterno.</a></li>
+<li><a href="#mini-whip-xp-ii-prova-di-ascolto">MINI-WHIP-XP-II prova di ascolto</a></li>
+<li><a href="#prova-di-ascolto-hf-e-vlf-con-wandel-goltermann-spm-15-selec">Prova di ascolto HF e VLF con WANDEL &amp; GOLTERMANN SPM 15 SELECTIVE LEVEL METER</a></li>
+<li><a href="#prova-di-ascolto-con-communications-receiver-icom-ic-r20">Prova di ascolto con Communications Receiver ICOM IC-R20</a></li>
+<li><a href="#video-prova-di-ascolto-con-icom-ic-r5">Video: prova di ascolto con ICOM IC-R5</a></li>
+<li><a href="#come-dare-nuova-vita-alle-radio-lasciate-nel-cassetto">Come dare nuova vita alle radio lasciate nel cassetto...</a></li>
+<li><a href="#consigli-per-montare-la-miniwhip">Consigli per montare la MiniWhip:</a></li>
+<li><a href="#consigli-per-ascolto-stazioni-bande-frequenze-orari-e-stagio">Consigli per ascolto: stazioni, bande, frequenze, orari e stagioni.</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

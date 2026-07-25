@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generatore VHF 70-500Mhz by Roberto Chirio</title>
+  <meta name="description" content="Generatore VHF 70-500Mhz by Roberto Chirio">
+  <meta name="keywords" content="RF, generator, quarzo, FM tx, 70Mhz, 100Mhz, 2000Mhz, 430Mhz,446Mhz, spybug, microspia">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio" aria-current="true">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">VHF generator 70–500 MHz</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radio &amp; antenne</p>
+        <h1>Simple RF generator 70-400Mhz con 2N2222A</h1>
+        
+        <p class="meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>“Radio Corner&quot; di R.Chirio” di R. Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-chema-elettrico">S chema elettrico</a></li>
+<li><a href="#segnale-uscita">Segnale Uscita</a></li>
+<li><a href="#schema-elettrico-con-xtal">Schema elettrico con Xtal</a></li>
+<li><a href="#miglioramenti">Miglioramenti</a></li>
+<li><a href="#applicazioni">Applicazioni</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p>
+<hr color="#336699"/>
+
+  
+  <h2 id="premessa">Premessa</h2><p>Gennaio
+      2018 </p><p>Questo
+      è lo schema di un multivibratore astabile, usato per generare RF. I risultati in
+      banda VHF sono ottimi, con i transistor 2N2222A metallo si arriva
+      tranquillamente a 22dBm in uscita, inoltre è facile salire fino a 500Mhz.</p><p>Portando
+      un segnale armonico sulla base di uno dei due transistor si può
+      facilmente ottenere un aggancio a  frequenza stabile.</p><p>Utilizzando
+      diodi Varicap è possibile modulare il segnale per ottenere un
+      trasmettitore in banda FM.</p><p>Pertanto
+      un buon oscillatore con segnale di uscita a livelli importanti per fare
+      prove di trasmissione o tarature  su antenne e su apparati
+      sperimentali.</p>
+
+
+  
+  <h2 id="s-chema-elettrico">S chema elettrico</h2><p class="center"><img alt="" decoding="async" height="417" loading="lazy" src="IMAGES/rf_gen_vhf_01.jpg" width="565"/></p><p>-
+      Lo schema del generatore è molto semplice, si tratta di un oscillatore
+      astabile simmetrico, la particolarità è che  viene fatto lavorare in RF.</p><p>La
+      bobina L2 viene realizzata con 5 spire di filo argentato diametro 1mm
+      avvolte spaziate su diametro 6mm.</p><p>-
+      Il segnale in uscita è ottenibile con un secondo avvolgimento
+      con filo isolato (Teflon), realizzato con 4 spire posizionato simmetrico sopra L2,
+      con un buon acccopiamento il segnale in uscita arriva a 22dBm.</p><p>-
+      Il condensatori C8 e C9  riportano il segnale invertito al transistor
+      opposto, avviando così un'oscillazione continua. Il loro valore determina
+      la frequenza di oscillazione assieme alle resistenze R3 e R4.</p><p>-
+      Le resistenze R3 e R4 determinano la polarizzazione del transistor e
+      concorrono anche al valore della frequenza, per arrivare al limite delle
+      frequenza in alto, dobbiamo usare il valore più basso possibile, con 10K si ha il funzionamento
+      migliore.</p><p>-
+      Valori dei componenti per le varie bande:</p><p class="center">f=70Mhz 
+      C8/C9 = 47pF  L2= 7-9spire</p><p class="center">f=100Mhz 
+      C8/C9 = 22pF  L2= 5spire</p><p class="center">f=430Mhz 
+      C8/C9 = 4.7pF  L2= 3spire</p><p>sono
+      valori di massima che portano le oscillazioni alle frequenze elencate, in
+      funzione del tipo di assemblaggio e disposizioni dei componenti può
+      essere necessario variare il valore dei condensatori. Importante la L2, deve essere sempre con le spire dispari per avere la presa centrale
+      simmetrica.</p><p>Anche
+      per l'avvolgimento di uscita si rende necessario variare i valori, in
+      questo caso spire in numero pari per restare centrati (simmetrici) sul primario L2.</p><p>-
+      Il
+      condensatore variabile C4 permette delle piccole tarature sulla frequenza
+      di lavoro, è possibile anche non montarlo e o mettere al posto dei
+      Varicap sia per controllare la frequenza che per modulare il segnale
+      tramite un circuito ingresso Bassa Frequenza (segnale audio).</p><p>-
+      Le resistenze R1 e R2 limitano la corrente del Q1 a un max di 30mA con
+      alimentazione 9V, durante le prove consiglio di non superare i 9V altrimenti
+      si rischia di bruciare il transistor. La resistenza in serie
+      all'emettitore ha  diverse funzioni: aumenta la linearità e aiuta a prevenire il sovraccarico del transistor. Inoltre, "uniforma" il guadagno dei transistor
+      come nel nostro caso, i dispositivi push-pull funzionanti in tandem forniscano parti uguali del carico in uscita. Il resistore è normalmente calcolato per fornire circa 1 volt di caduta con pieno carico di corrente. </p><p>-
+      Per induttore di arresto L1 si utilizza una VK200,  vanno bene anche 10
+      spire avvolte su una barretta di ferrite.</p><p>-
+      Il tutto va inserito in un contenitore metallico per evitare irradiazioni
+      dirette, che possono disturbare le trasmissioni FM  su questo range di frequenze.</p><p>-
+      Regolando C2 e C3 si ottiene il migliore accoppiamento per l'uscita su 50
+      Ohm. Per visualizzare la potenza in uscita molto utile lo schema del Power
+      Meter realizzato con strumento analogico, modificare i valori per leggere
+      500mW o 1W in uscita, <a href="fm_spy_bug.htm">Spy Bug FM</a> .</p><p class="center">    <a class="zoom-link" href="IMAGES/rf_gen_vhf_02.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="100" loading="lazy" src="IMAGES/rf_gen_vhf_02_small.jpg" width="100"/></a></p><p>Questo è il
+      circuito sperimentale, funzionante, si nota l'avvolgimento del secondario
+      L3 in rame smaltato, avvolto sulla L2 e sulla destra i due trimmer per regolare il migliore
+      segnale  in uscita. In alto la VK200.</p><p class="center"><a class="zoom-link" href="IMAGES/rf_gen_vhf_03.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="100" loading="lazy" src="IMAGES/rf_gen_vhf_03_small.jpg" width="100"/></a></p><p>Questo è il
+      circuito visto da dietro, il grosso compensatore è C4 che permette le
+      piccole variazioni di frequenza. Uscita con terminale SMA-F.
+      </p>
+
+
+
+  <h2 id="segnale-uscita">Segnale Uscita</h2><p class="center"><img alt="" decoding="async" height="480" loading="lazy" src="IMAGES/rf_gen_vhf_04.jpg" width="720"/></p><p>Questo
+      esempio, è il segnale in uscita su carico 50 ohm, siamo a 96Mhz con 21.6dBm, la
+      frequenza si può regolare in modo fine tramite il compensatore C4.
+      Maggiore campo di regolazione modificando il
+      valore dei condensatori C8 e C9. 
+      Per rientrare con il funzionamento regolare è necessare adeguare il numero di spire della L2.</p><h2 id="schema-elettrico-con-xtal">Schema elettrico con Xtal</h2><p class="center"><img alt="" decoding="async" height="445" loading="lazy" src="IMAGES/rf_gen_vhf_07.jpg" width="785"/></p><p>
+      Questo
+      è lo schema consigliato per aumentare la stabilità in frequenza
+      dell'oscillatore, la frequenza di lavoro viene agganciata ai battimenti in
+      armonica partendo dalla frequenza fondamentale dell'oscillatore quarzato
+      vedi <a href="rf_gen_2014.htm">RF generatore armoniche</a>.
+      </p><p>Nel caso del circuito in
+      prova è stato utilizzato un oscillatore U2  da 25Mhz, pertanto avremo le
+      armoniche a 75, 100, 125MHz, per avere un numero maggiore di armoniche è
+      da usare un quarzo con frequenza più bassa tipo 10Mhz, così da avere
+      battimenti stabili a 90, 100, e 110...ecc.  Per chi vuole passi
+      ancora più
+      stretti, un quarzo da 1Mhz permette di avere la possibilità di agganciare
+      le frequenze a passo di 1Mhz tipo 90,91, 92...Mhz, diventa però più
+      difficile la taratura fine con C4 e c'è il rischio che l'oscillatore sia
+      instabile saltando tra due frequenze vicine.</p><p>L'aggangio alle varie
+      frequenze armoniche va fatto ruotando il condensatore variabile
+      (compensatore) C4 modificando l'accordo. La frequenza in uscita sarà quella di maggiore
+      ampiezza, il tutto si può anche solo leggere con un frequenzimetro e/o
+      oscilloscopio,
+      ma visualizzare il segnale con un Analizzatore di Spettro è sempre la
+      soluzione migliore.</p><p>Attenzione che alcuni
+      moduli a quarzo lavorano a 3.3V pertanto il regolatore di tensione U1
+      va sostituito con uno da 3.3V 100mA.</p><p class="center"><img alt="" decoding="async" height="352" loading="lazy" src="IMAGES/rf_gen_vhf_06.jpg" width="476"/></p><p>Si vede
+      l'oscillatore a quarzo collegato sul circuito. L'aggancio di frequenza si
+      ottiene portando il segnale sulla base di uno dei due transistor. Il tutto è molto sperimentale, ma funziona egregiamente bene,
+      appena possibile si farà una versione su pcb, più bella da vedere.</p><p class="center"><img alt="" decoding="async" height="480" loading="lazy" src="IMAGES/rf_gen_vhf_05.jpg" width="720"/></p><p>Questo
+      è il segnale in uscita su carico 50 ohm stabilizzato con quarzo, siamo a
+      75Mhz con 22dBm, la frequenza di aggancio si può regolare tramite il compensatore C4. La variazione di C4 porterà a 100Mhz oppure
+      indietro a 50Mhz sempre che l'oscillazione sia ancore in range di lavoro
+      stabile tramite il
+      valore della bobina L2 e la coppia C8 e C9. </p><h2 id="miglioramenti">Miglioramenti</h2><p class="center"><img alt="" decoding="async" height="428" loading="lazy" src="IMAGES/rf_gen_vhf_08.jpg" width="645"/>
+      </p><p>
+      Con questo schema otteniamo
+      dei miglioramenti circuitali, i transistor vengono collegati di emettitore
+      direttamente a massa e le due resistenze limitatrici di corrente vengono
+      sostituite dalla R1 direttamente in serie al comune di alimentazione.
+      </p><p>Otteniamo vantaggi nel
+      montaggio SMD, i transistor possono dissipare meglio il calore attraverso la piazzola
+      comune di massa, e variando la R1  con un trimmer da 1000 ohm,
+      possiamo regolare la potenza in uscita. Questa configurazione
+      più compatta si presta meglio per salire di frequenza.</p><p>Attenzione che i
+      transistor siano dello stesso lotto e tutto va montato il più simmetrico
+      possibile, la mancanza delle resistenze di emettitore può creare
+      instabilità.</p><p>Con un segnale bassa
+      frequenza di 200-400mV applicato sui due diodi Varicap D1 e D2, possiamo dare
+      una modulazione di Frequenza al segnale in uscita. Eventualmente
+      aggiungere uno stadio amplificatore bf.</p><p>Avendo un valore minore
+      di tensione sul collettore anche la potenza di uscita risulterà più
+      bassa, dove con 9V avevamo +22dBm sull'uscita adesso sono solo più +20dBm.</p><p>Sempre possibile
+      l'aggancio in frequenza dall'oscillatore a quarzo, come mostrato più in
+      alto di questa pagina, utile uno stadio
+      amplificatore RF alimentato a 12V con 2N3866 per portare l'uscita a +25 dBm. Vedi <a href="fm_spy_bug.htm">FM
+      Spy bug</a>.
+      </p><p>Da come si vede nella
+      foto successiva nel prototipo manca la L1, mentre la L2 con la presa centrale
+      perfettamente simmetrica e condensatore C1 saldato il più corto e vicino
+      possibile possiamo fare a meno dell'induttore, i risultati in uscita sono
+      sempre quelli con valori di alimentazione 9.0V uscita +20dBm a 100Mhz, quindi un componente
+      ingombrante in meno. In alto vicino al condensatore variabile si notano i
+      due Varicap e la resistenza da 100k per la modulazione.
+      </p><p>Applicando una tensione
+      variabile all'ingresso Varicap possiamo ottenere un oscillatore Sweep,
+      ideale è una forma a dente di sega, ma va anche bene la forma sinusoidale
+      e triangolare. Non va bene la forma d'onda quandra in quanto riporta solo
+      i valori estremi senza rimanere all'interno del range di oscillazione.
+      </p><p class="center"><img alt="" decoding="async" height="378" loading="lazy" src="IMAGES/rf_gen_vhf_09.jpg" width="581"/></p><h2 id="applicazioni">Applicazioni</h2><p>
+      Visto il largo spettro di
+      frequenze che si possono generare le applicazioni sono molte:
+      </p><p>- Prove di trasmissione.</p><p>- Prove su antenne.</p><p>- Verifiche su componenti
+      tipo filtri o amplificatori.</p><p>- Grazie alla
+      configurazione quarzo, stabili  Beacon generator o simili...</p>
+
+
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+      <ul class="card-grid">
+<li><a href="mini_whip.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — antenna attiva HF/VLF</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR — antenna attiva</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2014.htm"><span class="c-sec">Radio &amp; antenne</span>RF Oscillator — generatore 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="c-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-chema-elettrico">S chema elettrico</a></li>
+<li><a href="#segnale-uscita">Segnale Uscita</a></li>
+<li><a href="#schema-elettrico-con-xtal">Schema elettrico con Xtal</a></li>
+<li><a href="#miglioramenti">Miglioramenti</a></li>
+<li><a href="#applicazioni">Applicazioni</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

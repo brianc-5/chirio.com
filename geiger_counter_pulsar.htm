@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Calibratore per Geiger Counter by Roberto Chirio</title>
+<meta content="Calibratore per Geiger Counter by Roberto Chirio" name="description"/>
+<meta content="geiger, geiger counter, misura radiazioni" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="assets/site.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Archivio tecnico</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Cerca nell’archivio</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>Categorie</span></button>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Categorie dell’archivio">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Antenne attive, generatori RF, misure di campo</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Alimentatori</span><span class="n-desc">Switching da laboratorio, ATX, step-up, carichi</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batterie</span><span class="n-desc">Capacità, caricabatterie, BMS, energia in casa</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">LED di potenza, torce, proiettori, dimmer, prove</span></span><span class="count">15</span></a></li>
+<li><a aria-current="true" href="index.html#radioattivita"><span><span class="n-label">Radioattività</span><span class="n-desc">Contatori Geiger, alta tensione, calibrazione</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Misure</span><span class="n-desc">Strumenti autocostruiti e fondamenti</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Progetti</span><span class="n-desc">Fotografia, stampa 3D, meccanica</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Archivio storico della Batteria</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Percorso di navigazione" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radioattivita">Radioattività</a></li><li aria-current="page">Calibratore per Geiger counter</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radioattività</p>
+<h1>GEIGER COUNTER Calibratore</h1>
+<p class="subtitle">Generatore di impulsi "Electronics design" di R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#radioattivita">Radioattività</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Indice della pagina</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#schema-elettrico">schema elettrico</a></li>
+<li><a href="#descrizione">Descrizione</a></li>
+<li><a href="#taratura">Taratura</a></li>
+<li><a href="#campioni-per-taratura-geiger">Campioni per taratura geiger</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<ul class="dash-list"><li>Per verificare il funzionamento di un contatore geiger bisogna anche
+essere sicuri che il conteggio degli impulsi generati dal tubo GM sia
+corretto e coerente.</li><li>Con questo semplice generatore è possibile mandare tutta la gamma di impulsi, tali da simulare la
+maggior parte di sonde GM,  anche di
+molti tubi scintillatori fino a 600000cpm.</li><li>Chi possiede già un generatore di impulsi TTL da laboratorio, può
+realizzare solamente il semplice circuito finale composto dal MosFet e
+resistenza di load.</li><li>La precisione di questo calibratore deve essere letta su un
+Frequenzimetro, anche economico, da collegare all'uscita dell'oscillatore,
+cosi da leggere i valori in Hz e convertirli in CPM</li></ul>
+<h2 id="schema-elettrico">schema elettrico</h2><p class="center"><a class="zoom-link" href="IMAGES/geiger_pulse_000.gif" title="Apri l'immagine a piena risoluzione"><img alt="Clicca per ingrandire lo schema." class="is-photo" decoding="async" height="326" loading="lazy" src="IMAGES/geiger_pulse_000_sm.jpg" width="700"/></a>
+</p>
+<h2 id="descrizione">Descrizione</h2><ul class="dash-list"><li>Il circuito funziona a 5V prelevato per comodità da una presa USB, il
+consumo è di soli 10mA.  Può comunque funzionare tranquillamente a
+6V o anche con una batteria da 9V. La variazione di tensione non disturba
+la stabilità della frequenza generata.</li><li>Volutamente i componenti sono di facile reperibilità, senza usare
+complicati oscillatori quarzati. Si sono usati solo due integrati 555.</li><li>Il primo U1 è in configurazione astabile, genera le frequenze da 0,2 a
+10 kHz necessarie a simulare i CPM (count for minute)</li><li>La variazione di frequenza viene regolata con il potenziometro R2 mentre
+per il cambio di portata si utilizza il commutatore a 4 posizioni S1.</li><li>Il Range delle portate è stato scelto per meglio verificare i Geiger
+Counter con strumento ad indice, in maniera tale che ruotando il
+potenziometro R2 si possa fare muovere l'indice su tutta la scala.</li><li>Per la verifica di contatori digitali, bisognerà commutare tutte e 4 le
+portate e verificare la coerenza dei valori letti.</li><li>Sull'uscita Freq. Counter bisognerà collegare un frequenzimetro o un
+oscilloscopio digitale e leggere i valori con buona
+precisione, e' meglio usare un frequenzimetro, basta un modello economico
+per bassa frequenza.</li><li>Il secondo 555  denominato U2 serve per generare l'impulso che simula
+la durata di scarica che avviene dentro a un tubo GM, il tempo è
+regolabile tra 5 e 500uS. Verificare sul manuale del Counter quale range
+di impulsi accetta sull'ingresso.</li></ul><p>-
+L'uscita rappresentata dal Mosfet serve appunto a simulare il Tubo GM,
+cortocircuitando la HV verso massa tramite la resistenza da 4M7. E'
+necessario un mosfet a 1000V per verificare geiger con tensioni di uscita
+da 400 a 900V, se si vuole salire a 1300V per i tubi scintillatori è
+necessario un Mosfet da 1400V più difficile da trovare, la corrente
+nominale è molto bassa per cui sono sufficienti Mosfet da 1A. In mancanza
+di Mosfet è possibile usare transistor della serie MJE13000</p><p>-
+Il deviatore Stand-By permette di isolare l'uscita, magari per trovare i
+valori giusti prima di azionare il geiger counter sotto esame.</p>
+<h2 id="taratura">Taratura</h2><ul class="dash-list"><li>Collegare
+un voltmetro ad alta impedenza (300-1000Mohm) sull'uscita e dare alimentazione a
+5V.</li><li>Il circuito non richiede particolari tarature, deve funzionare subito,  la
+forma d'onda quadra generata è visibile collegando la sonda 10x
+dell'oscilloscopio sull'uscita del U1  piedino 3.</li><li>Girare il potenziometro R2 e verificare la variazione di frequenza, come
+pure cambiare posizione del S1 per il cambio di gamma frequenze.</li><li>Portare la sonda oscilloscopio sul piedino 3 dell'U2 e verificare la
+larghezza dell'impulso generato.</li><li>Collegare il geiger sotto esame tramite cavi isolati o con cavo RG58 e
+connettori BNC.</li><li>Verificare la tensione di uscita geiger con il voltmetro alta impedenza,
+portare a 400V</li><li>la chiusura del S5 farà partire il conteggio sul geiger, verificare
+coerenza tra generato e letto.</li><li>Eventuale prova a 900V</li></ul>
+<h2 id="campioni-per-taratura-geiger">Campioni per taratura geiger</h2><p>Disponibili
+campioni Pechblenda sotto piombo per la taratura Geiger Counter.</p><p>Contenitori
+diam. 29mm, valori a richiesta da 0,100 mRh a 2 mRh,
+emissione tipo: </p><ul class="dash-list"><li>Alpha, Beta + gamma (Minerale libero)</li><li>Beta + Gamma  (Minerale inglobato in resina)</li><li>Solo Gamma (Minerale schermato con alluminio 1mm)</li></ul><p class="right">Contattare: <a href="mailto:info@chirio.com">info@chirio.com</a></p><p class="center"><img alt="" class="is-photo" decoding="async" height="249" loading="lazy" src="IMAGES/me_campione_u.jpg" width="336"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="243" loading="lazy" src="IMAGES/campioni_pecbl_2.jpg" width="326"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="243" loading="lazy" src="IMAGES/sonda_pancake.jpg" width="365"/>
+</p><p>
+Due esempi di campioni con
+Minerale libero.
+</p><p>
+Tutti i campioni vengono
+testati con sonde Pancake tipo Eberline HP-260 oppure Ludlum 44-9
+</p>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto
+Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Altre pagine in “Radioattività”</h2>
+<ul>
+<li><a href="geiger_counter.htm"><span class="r-sec">Radioattività</span>Geiger Counter PC CDV</a></li>
+<li><a href="geiger_arduino.htm"><span class="r-sec">Radioattività</span>Geiger counter con Arduino</a></li>
+<li><a href="geiger_counter_voltmeter.htm"><span class="r-sec">Radioattività</span>HV Voltmeter 1000 MΩ</a></li>
+<li><a href="ram63.htm"><span class="r-sec">Radioattività</span>RAM 63 — miglioramenti</a></li>
+<li><a href="SV500.htm"><span class="r-sec">Radioattività</span>FAG SV500 — upgrade</a></li>
+</ul>
+</section>
+</main><aside aria-label="Indice della pagina" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#schema-elettrico">schema elettrico</a></li>
+<li><a href="#descrizione">Descrizione</a></li>
+<li><a href="#taratura">Taratura</a></li>
+<li><a href="#campioni-per-taratura-geiger">Campioni per taratura geiger</a></li></ol></nav></aside></div>
+
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Archivio tecnico di Roberto Chirio: elettronica, radio e antenne,
+          alimentatori, batterie, illuminazione a LED, misure di laboratorio, e
+          l’archivio storico della Batteria dello Chaberton.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archivio</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure</a></li>
+<li><a href="index.html#progetti">Progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle
+        immagini, degli schemi e dei testi. Photos and videos are copyright
+        © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Torna all’inizio della pagina" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="assets/site.js"></script>
+</body>
+</html>

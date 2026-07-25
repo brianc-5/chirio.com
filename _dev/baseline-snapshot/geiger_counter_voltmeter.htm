@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voltmeter HV 1000Mohm Geiger Counter by Roberto Chirio</title>
+  <meta name="description" content="Voltmeter HV 1000Mohm Geiger Counter by Roberto Chirio">
+  <meta name="keywords" content="geiger, geiger counter, misura radiazioni">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita" aria-current="true">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radioattivita">Radioattività</a></li><li aria-current="page">HV Voltmeter 1000 MΩ</li></ol></div></nav>
+<div class="wrap page">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radioattività</p>
+        <h1>Volt Meter 1000Mohm</h1>
+        <p class="subtitle">Preciso misuratore della HV di un Counter GM &quot;Electronics design&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#radioattivita">Radioattività</a></span><span>Roberto Chirio</span></p>
+      </header>
+      
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p><hr/>
+
+
+  
+  <p class="center"><img alt="" decoding="async" height="239" loading="lazy" src="IMAGES/voltmeter_1000_03.jpg" width="400"/></p><p>-
+      Per verificare il funzionamento di un contatore geiger bisogna anche
+      essere sicuri che l'alta tensione in uscita sia corretta, e del giusto
+      valore riferito alla sonda in uso.</p><p>-
+      In genere sonde Russe funzionano da 400 a 500V, sonde Americane 900V e
+      sonde Scintillatrici a 1200V.</p><p>-
+      La tensione in uscita è quasi statica, cioè non è in grado di fornire
+      potenza, serve pertanto un Voltmetro che abbia una impedenza interna il
+      più alto possibile così da non interferire caricando l'uscita e quindi abbassando la lettura
+      reale. </p><p>-
+      Si è visto che con 300Mohm  è già possibile una corretta lettura,
+      ma come consigliato da alcuni costruttori Americani, 1000Mohm sono il
+      valore ottimale per una precisa lettura dell'uscita.</p>
+
+
+
+  
+  <h2 id="voltmetro-ad-altissima-impedenza-di-ingresso-rapporto-1000-1">Voltmetro ad altissima impedenza di ingresso. Rapporto 1000:1 max 1999 Volt</h2><p class="center">
+      
+      <img alt="" decoding="async" height="403" loading="lazy" src="IMAGES/voltmeter_1000.gif" width="842"/>
+      
+      </p><p>
+      Con questo schema è possibile
+      misurare le tensioni applicate a dispositivi che funzionano ad alta
+      tensione tipo i tubi Geiger che vanno da 300 a 1500V  Con i normali
+      Multimetri digitali e i tester analogici, non è possibile misurare tali valori in quanto
+      con la bassa
+      impedenza di ingresso (10Mohm) tendono a caricare troppo il circuito
+      sotto misura falsando di molto i valori letti.
+      </p><p> - Il componente più
+      critico è la resistenza da 1000Mohm si può ordinare in internet :  code
+      <strong><a href="http://parts.digikey.co.uk/1/1/121576-res-thick-film-1000m-ohm-1-0w-1-sm102031007f.html" rel="noopener" target="_blank">SM102031007F</a></strong></p><p> - Diodi e zener sul
+      circuito di ingresso servono da protezione per impulsi e scariche che
+      potrebbero danneggiare l'ingresso dell'operazionale. Si possono anche
+      omettere.</p><p> - R3 e R5 compongono
+      la parte bassa del partitore con un rapporto da 990:1</p><p> - Operazionale in
+      configurazione inseguitore permette l'adattamento con alta impedenza di
+      ingresso e bassa impedenza di uscita. Si possono usare diversi tipi di
+      Operazionali, importante con basso valore di offset, o meglio offset
+      regolabile come il uA741. La configurazione ad inseguitore comporta
+      guadagno 1. Con il LM358 abbiamo un valore di offset di 3-5mV.</p><p>- Il trimmer R4 serve a
+      tarare esattamente il rapporto al valore di 1000:1, per la taratura utilizzare come
+      riferimento di tensione, un circuito raddrizzante del  220V e
+      misurare con multimetro il valore esatto tipicamente  310V DC
+      (prestare attenzione)   Collegare in uscita del circuito un voltmetro da
+      1,999 Vfs o un multimetro posizionato sulla medesima scala, leggere il
+      valore di ingresso e tarare R4 per avere lo stesso valore letto prima solo
+      con il multimetro.</p><p>- Il consumo dello
+      strumento è bassissimo, qualche mA pertanto le due batterie da 9V durano per molte centinaia
+      di ore. </p><p>- La tensione in ingresso
+      DC può avere una escursione di +/-2000Volt. E' possibile misurare
+      tensioni alternate AC fino a una frequenza di 100Kz.</p><p>- Se si vuole una maggiore
+      precisione consiglio l'uso di Amp Operazionali con la regolazione fine
+      dell'OFFSET, tipo il UA741 o altri più recenti.</p><p>- Se basta leggere solo
+      tensioni HV positive è possibile eliminare la batteria V2 e anche
+      sull'ingresso D1 e D2 , il piedino 4 va portato a massa, semplificando
+      tutto.</p><p>
+      - Si vedono le due batterie
+      da 9V uno per il circuito e la seconda solo per il milliVoltmetro LCD.
+      </p><p>- La resistenza da
+      1000Mohm è realizzata con la serie di 2 resistenze da 500Mohm</p><p>- Le resistenze sono
+      isolate tramite due fogli di mylar, per evitare scariche verso massa e
+      verso le batterie.</p><p>- Sul posteriore l'interruttore
+      e il connettore BNC, consiglio di montare BNC di qualità con isolante
+      teflon in quanto non tutti tengono 2000V.</p><p class="center"><img alt="" decoding="async" height="272" loading="lazy" src="IMAGES/voltmeter_1000_04.jpg" width="406"/>
+      </p><p class="center">  <a class="zoom-link" href="IMAGES/voltmeter_1000_01.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="66" loading="lazy" src="IMAGES/voltmeter_1000_01_small.jpg" width="100"/></a>
+      </p><p class="center">Il
+      Voltmetro
+      HV collegato ad uno Scaler, privo della lettura dell'HV.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/voltmeter_1000_02.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="50" loading="lazy" src="IMAGES/voltmeter_1000_02_small.jpg" width="100"/></a></p><p class="center">Resistenza
+      da 300Mohm realizzata con 30 resistenze SMD da 10Mohm. Le
+      resistenze sono protette da uno strato di Araldite. la costruzione, è
+      molto semplice e l'isolamento con la resina garantisce una tensione di
+      lavoro fino a 5000Volt.
+      
+      </p><p class="center"><img alt="" decoding="async" height="311" loading="lazy" src="IMAGES/voltmeter_1000_simple.gif" width="505"/></p><p class="center">Versione
+      semplificata del voltmetro HV, da collegare direttamente a un Multimetro (DMM).
+      Sulla portata 2V, leggeremo  x1000 quindi KVolt.  Il
+      trimmer cermet multigiri, serve per tarare preciso il rapporto 1000:1.
+      </p><p class="center">Importante:
+      il DDM deve avere 10Mohm di impedenza d'ingresso, alcuni di basso costo
+      hanno solo 1Mohm.
+      </p>
+  
+
+
+
+
+  
+  <h2 id="campioni-per-taratura-geiger">Campioni per taratura geiger</h2><p>Disponibili
+        campioni Pechblenda sotto piombo per la taratura Geiger Counter.</p><p>Contenitori
+        diam. 29mm, valori a richiesta da 0,100 mRh a 2 mRh,
+        emissione tipo: </p><p>-
+        Alpha, Beta + gamma (Minerale libero)</p><p>-
+        Beta + Gamma  (Minerale inglobato in resina)</p><p>-
+        Solo Gamma (Minerale schermato con alluminio 1mm)</p><p class="right">Contattare: <img alt="" decoding="async" height="16" loading="lazy" src="IMAGES/email.jpg" width="93"/></p><p class="center"><img alt="" decoding="async" height="249" loading="lazy" src="IMAGES/me_campione_u.jpg" width="336"/>
+      </p><p class="center"><img alt="" decoding="async" height="243" loading="lazy" src="IMAGES/campioni_pecbl_2.jpg" width="326"/>
+      </p><p class="center"><img alt="" decoding="async" height="243" loading="lazy" src="IMAGES/sonda_pancake.jpg" width="365"/>
+      </p><p>
+        Due esempi di campioni con
+        Minerale libero.
+      </p><p>
+        Tutti i campioni vengono
+        testati con sonde Pancake tipo Eberline HP-260 oppure Ludlum 44-9
+      </p>
+  
+
+
+
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"> © Roberto
+Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radioattività”</h2>
+      <ul class="card-grid">
+<li><a href="geiger_counter.htm"><span class="c-sec">Radioattività</span>Geiger Counter PC CDV</a></li>
+<li><a href="geiger_arduino.htm"><span class="c-sec">Radioattività</span>Geiger counter con Arduino</a></li>
+<li><a href="geiger_counter_pulsar.htm"><span class="c-sec">Radioattività</span>Calibratore per Geiger counter</a></li>
+<li><a href="ram63.htm"><span class="c-sec">Radioattività</span>RAM 63 — miglioramenti</a></li>
+<li><a href="SV500.htm"><span class="c-sec">Radioattività</span>FAG SV500 — upgrade</a></li>
+      </ul>
+    </section>
+  </main>
+
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

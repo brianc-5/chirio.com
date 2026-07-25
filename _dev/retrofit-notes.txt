@@ -1,0 +1,183 @@
+[meta] 433Mhz_sensor.htm: tidied 1 metadata item(s)
+[home-strip] 433Mhz_sensor.htm: removed 1 redundant “[ home ]” strip(s)
+[email] SV500.htm: replaced the e-mail raster with a mailto link
+[home-strip] SV500.htm: removed 1 redundant “[ home ]” strip(s)
+[meta] antenna_40m.htm: tidied 1 metadata item(s)
+[home-strip] antenna_40m.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] antenna_40m.htm: 6 paragraph run(s) became lists
+[meta] attenuator_20dbm.htm: tidied 1 metadata item(s)
+[home-strip] attenuator_20dbm.htm: removed 1 redundant “[ home ]” strip(s)
+[home-strip] atx_14_volt.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] atx_14_volt.htm: 9 paragraph run(s) became lists
+[home-strip] auto_elettrica.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] auto_elettrica.htm: 1 paragraph run(s) became lists
+[home-strip] battery_test.htm: removed 1 redundant “[ home ]” strip(s)
+[toc] battery_test.htm: shortened 2 table-of-contents label(s)
+[home-strip] bromografo_uv.htm: removed 1 redundant “[ home ]” strip(s)
+[align] chaberton/escursione_chaberton.htm: left-aligned 1 centred paragraph(s) of running text
+[dash-list] chaberton/fortificazioni.htm: 1 paragraph run(s) became lists
+[align] chaberton/fortificazioni.htm: left-aligned 1 centred paragraph(s) of running text
+[align] chaberton/foto_chaberton.HTM: left-aligned 1 centred paragraph(s) of running text
+[align] chaberton/mappa_chaberton.htm: left-aligned 1 centred paragraph(s) of running text
+[align] chaberton/panorami_chaberton.htm: left-aligned 1 centred paragraph(s) of running text
+[dash-list] chaberton/storia_chaberton.htm: 2 paragraph run(s) became lists
+[align] chaberton/storia_chaberton.htm: left-aligned 1 centred paragraph(s) of running text
+[align] chaberton/video_chaberton.HTM: left-aligned 1 centred paragraph(s) of running text
+[email] chirio_com_disclaimer.htm: replaced the e-mail raster with a mailto link
+[home-strip] chirio_com_disclaimer.htm: removed 1 redundant “[ home ]” strip(s)
+[email] chirio_com_privacy.htm: replaced the e-mail raster with a mailto link
+[home-strip] chirio_com_privacy.htm: removed 1 redundant “[ home ]” strip(s)
+[home-strip] cmos_cleaning.htm: removed 1 redundant “[ home ]” strip(s)
+[toc] cmos_cleaning.htm: shortened 2 table-of-contents label(s)
+[meta] drone_jammer.htm: tidied 1 metadata item(s)
+[home-strip] drone_jammer.htm: removed 1 redundant “[ home ]” strip(s)
+[toc] drone_jammer.htm: shortened 2 table-of-contents label(s)
+[email] ebike_extra_pack.htm: replaced the e-mail raster with a mailto link
+[home-strip] ebike_extra_pack.htm: removed 1 redundant “[ home ]” strip(s)
+[align] ebike_extra_pack.htm: left-aligned 1 centred paragraph(s) of running text
+[toc] ebike_extra_pack.htm: shortened 2 table-of-contents label(s)
+[email] ebike_test_batterie.htm: replaced the e-mail raster with a mailto link
+[home-strip] ebike_test_batterie.htm: removed 1 redundant “[ home ]” strip(s)
+[align] ebike_test_batterie.htm: left-aligned 1 centred paragraph(s) of running text
+[toc] ebike_test_batterie.htm: shortened 2 table-of-contents label(s)
+[home-strip] electric_bike_bms.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] electric_bike_bms.htm: 1 paragraph run(s) became lists
+[home-strip] electronic_load.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] electronic_load.htm: 8 paragraph run(s) became lists
+[toc] electronic_load.htm: shortened 2 table-of-contents label(s)
+[email] flash_macro.htm: replaced the e-mail raster with a mailto link
+[home-strip] flash_macro.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] flash_macro.htm: 1 paragraph run(s) became lists
+[toc] flash_macro.htm: shortened 2 table-of-contents label(s)
+[meta] fm_spy_bug.htm: tidied 1 metadata item(s)
+[home-strip] fm_spy_bug.htm: removed 1 redundant “[ home ]” strip(s)
+[toc] fm_spy_bug.htm: shortened 14 table-of-contents label(s)
+[email] geiger_arduino.htm: replaced the e-mail raster with a mailto link
+[home-strip] geiger_arduino.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] geiger_arduino.htm: 4 paragraph run(s) became lists
+[toc] geiger_arduino.htm: shortened 2 table-of-contents label(s)
+[email] geiger_counter.htm: replaced the e-mail raster with a mailto link
+[home-strip] geiger_counter.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] geiger_counter.htm: 12 paragraph run(s) became lists
+[align] geiger_counter.htm: left-aligned 1 centred paragraph(s) of running text
+[toc] geiger_counter.htm: shortened 4 table-of-contents label(s)
+[email] geiger_counter_pulsar.htm: replaced the e-mail raster with a mailto link
+[home-strip] geiger_counter_pulsar.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] geiger_counter_pulsar.htm: 4 paragraph run(s) became lists
+[email] geiger_counter_voltmeter.htm: replaced the e-mail raster with a mailto link
+[home-strip] geiger_counter_voltmeter.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] geiger_counter_voltmeter.htm: 4 paragraph run(s) became lists
+[align] geiger_counter_voltmeter.htm: left-aligned 2 centred paragraph(s) of running text
+[home-strip] home_save_energy.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] home_save_energy.htm: 9 paragraph run(s) became lists
+[align] home_save_energy.htm: left-aligned 1 centred paragraph(s) of running text
+[toc] home_save_energy.htm: shortened 2 table-of-contents label(s)
+[home-strip] jeep_perego.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] jeep_perego.htm: 10 paragraph run(s) became lists
+[home-strip] led_1_battery_AAA_.htm: removed 1 redundant “[ home ]” strip(s)
+[align] led_1_battery_AAA_.htm: left-aligned 1 centred paragraph(s) of running text
+[toc] led_1_battery_AAA_.htm: shortened 2 table-of-contents label(s)
+[home-strip] led_6_220V.htm: removed 1 redundant “[ home ]” strip(s)
+[email] led_acquario.htm: replaced the e-mail raster with a mailto link
+[home-strip] led_acquario.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] led_acquario.htm: 4 paragraph run(s) became lists
+[home-strip] led_bk3_s.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] led_bk3_s.htm: 2 paragraph run(s) became lists
+[align] led_bk3_s.htm: left-aligned 1 centred paragraph(s) of running text
+[home-strip] led_dimmer_rgb.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] led_dimmer_rgb.htm: 4 paragraph run(s) became lists
+[home-strip] led_h4.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] led_h4.htm: 3 paragraph run(s) became lists
+[home-strip] led_lamp_10w.htm: removed 1 redundant “[ home ]” strip(s)
+[home-strip] led_light_emitting_diodes.htm: removed 1 redundant “[ home ]” strip(s)
+[home-strip] led_s.htm: removed 1 redundant “[ home ]” strip(s)
+[toc] led_s.htm: shortened 2 table-of-contents label(s)
+[home-strip] led_seoul_zp4_mtb_3.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] led_seoul_zp4_mtb_3.htm: 1 paragraph run(s) became lists
+[home-strip] led_test.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] led_test.htm: 1 paragraph run(s) became lists
+[home-strip] led_torcia_sub_03.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] led_torcia_sub_03.htm: 5 paragraph run(s) became lists
+[home-strip] led_torcia_sub_p7.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] led_torcia_sub_p7.htm: 4 paragraph run(s) became lists
+[home-strip] led_video_3p7.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] led_video_3p7.htm: 4 paragraph run(s) became lists
+[toc] led_video_3p7.htm: shortened 2 table-of-contents label(s)
+[home-strip] legge_di_ohm.htm: removed 1 redundant “[ home ]” strip(s)
+[email] lipo_battery_charger.htm: replaced the e-mail raster with a mailto link
+[home-strip] lipo_battery_charger.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] lipo_battery_charger.htm: 3 paragraph run(s) became lists
+[toc] lipo_battery_charger.htm: shortened 2 table-of-contents label(s)
+[home-strip] luci_auto.htm: removed 1 redundant “[ home ]” strip(s)
+[home-strip] luci_auto_2.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] luci_auto_2.htm: 2 paragraph run(s) became lists
+[email] lux_meter.htm: replaced the e-mail raster with a mailto link
+[home-strip] lux_meter.htm: removed 1 redundant “[ home ]” strip(s)
+[align] lux_meter.htm: left-aligned 1 centred paragraph(s) of running text
+[meta] mini_loop.htm: tidied 1 metadata item(s)
+[home-strip] mini_loop.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] mini_loop.htm: 5 paragraph run(s) became lists
+[toc] mini_loop.htm: shortened 2 table-of-contents label(s)
+[meta] mini_whip_sdr.htm: tidied 1 metadata item(s)
+[home-strip] mini_whip_sdr.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] mini_whip_sdr.htm: 7 paragraph run(s) became lists
+[toc] mini_whip_sdr.htm: shortened 2 table-of-contents label(s)
+[meta] mini_whip_sdr_p.htm: tidied 1 metadata item(s)
+[home-strip] mini_whip_sdr_p.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] mini_whip_sdr_p.htm: 6 paragraph run(s) became lists
+[meta] mini_whip_tricks_and_tips.htm: tidied 1 metadata item(s)
+[home-strip] mini_whip_tricks_and_tips.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] mini_whip_tricks_and_tips.htm: 4 paragraph run(s) became lists
+[align] mini_whip_tricks_and_tips.htm: left-aligned 1 centred paragraph(s) of running text
+[toc] mini_whip_tricks_and_tips.htm: shortened 6 table-of-contents label(s)
+[home-strip] monopiede_1.htm: removed 1 redundant “[ home ]” strip(s)
+[home-strip] mtb_gomme_chiodate.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] mtb_gomme_chiodate.htm: 4 paragraph run(s) became lists
+[align] mtb_gomme_chiodate.htm: left-aligned 3 centred paragraph(s) of running text
+[email] nimh_battery_charger.htm: replaced the e-mail raster with a mailto link
+[home-strip] nimh_battery_charger.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] nimh_battery_charger.htm: 3 paragraph run(s) became lists
+[email] parkside_battery_pack.htm: replaced the e-mail raster with a mailto link
+[home-strip] parkside_battery_pack.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] parkside_battery_pack.htm: 2 paragraph run(s) became lists
+[home-strip] power_supply_12v_30A.htm: removed 1 redundant “[ home ]” strip(s)
+[home-strip] printer_3d.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] printer_3d.htm: 3 paragraph run(s) became lists
+[email] push_pull_20_16.htm: replaced the e-mail raster with a mailto link
+[home-strip] push_pull_20_16.htm: removed 1 redundant “[ home ]” strip(s)
+[align] push_pull_20_16.htm: left-aligned 2 centred paragraph(s) of running text
+[toc] push_pull_20_16.htm: shortened 2 table-of-contents label(s)
+[home-strip] ram63.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] ram63.htm: 1 paragraph run(s) became lists
+[toc] ram63.htm: shortened 2 table-of-contents label(s)
+[meta] rf_field_meter.htm: tidied 1 metadata item(s)
+[home-strip] rf_field_meter.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] rf_field_meter.htm: 2 paragraph run(s) became lists
+[meta] rf_gen_2014.htm: tidied 1 metadata item(s)
+[home-strip] rf_gen_2014.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] rf_gen_2014.htm: 1 paragraph run(s) became lists
+[align] rf_gen_2014.htm: left-aligned 1 centred paragraph(s) of running text
+[meta] rf_gen_2018.htm: tidied 1 metadata item(s)
+[home-strip] rf_gen_2018.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] rf_gen_2018.htm: 4 paragraph run(s) became lists
+[meta] rf_gen_VHF.htm: tidied 1 metadata item(s)
+[home-strip] rf_gen_VHF.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] rf_gen_VHF.htm: 3 paragraph run(s) became lists
+[home-strip] solare_termico_centralina.htm: removed 1 redundant “[ home ]” strip(s)
+[toc] solare_termico_centralina.htm: shortened 6 table-of-contents label(s)
+[home-strip] steady_cam_simple.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] steady_cam_simple.htm: 7 paragraph run(s) became lists
+[home-strip] step_up_10a.htm: removed 1 redundant “[ home ]” strip(s)
+[home-strip] switching_power_supply_atx.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] switching_power_supply_atx.htm: 4 paragraph run(s) became lists
+[toc] switching_power_supply_atx.htm: shortened 6 table-of-contents label(s)
+[home-strip] test_magicshine.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] test_magicshine.htm: 7 paragraph run(s) became lists
+[meta] tunnel_generator.htm: tidied 1 metadata item(s)
+[home-strip] tunnel_generator.htm: removed 1 redundant “[ home ]” strip(s)
+[meta] vfo_gen_2015.htm: tidied 1 metadata item(s)
+[home-strip] vfo_gen_2015.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] vfo_gen_2015.htm: 2 paragraph run(s) became lists
+[meta] yagi_pmr.htm: tidied 1 metadata item(s)
+[home-strip] yagi_pmr.htm: removed 1 redundant “[ home ]” strip(s)
+[dash-list] yagi_pmr.htm: 3 paragraph run(s) became lists

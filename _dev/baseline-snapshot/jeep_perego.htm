@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to pimp your Perego Jeep</title>
+  <meta name="description" content="How to pimp your Perego Jeep">
+  <meta name="keywords" content="jeep perego">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti" aria-current="true">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#progetti">Foto &amp; progetti</a></li><li aria-current="page">How to pimp your Perego Jeep</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Foto &amp; progetti</p>
+        <h1>How to pimp your Perego Jeep</h1>
+        <p class="subtitle">&quot;Fai da te&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#progetti">Foto &amp; progetti</a></span><span>Roberto Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#descrizione-modifiche">Descrizione modifiche</a></li>
+<li><a href="#gomme">Gomme</a></li>
+<li><a href="#illuminazione">Illuminazione</a></li>
+<li><a href="#batterie">Batterie</a></li>
+<li><a href="#motori">Motori</a></li>
+<li><a href="#controllo-motore-pwm">Controllo motore PWM</a></li>
+<li><a href="#schema-elettrico">Schema elettrico</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>] </p>
+<hr/>
+
+  <p class="center">  <img alt="" decoding="async" height="410" loading="lazy" src="IMAGES/jeep_perego_000.jpg" width="613"/></p><p class="center">  <strong><em>Jeep
+      Perego modificata</em></strong></p><p>marzo 2012</p><p> Dietro forte spinta
+      di mio figlio che ha 6 anni....ho modificato la macchinina originale per
+      ottenere delle migliori prestazioni.</p><p>- Sono state
+      aggiunte e sistemate dietro, sotto al sedile 2 batterie 12V 10Ah per fare
+      lavorare i motori a 24V mediante un controllo PWM.</p><p>- Le gomme
+      in plastica nera, sono state ricoperte mediante copertoni da MTB per
+      ridurre il rumore, migliorare il grip e ridurre la veloce usura della plastica
+      originale, specialmente per le ruote motrici posteriori.</p><p>- Montati
+      fanali a led per poter girare anche di notte.</p><p>- Aggiunto
+      contachilometri da bicicletta, collegato alla ruota anteriore mediante
+      sensore magnetico.</p><p>- Montato
+      Power Meter per visualizzare tensione, corrente e potenza assorbite dalla
+      batteria, inoltre con la funzione Wh, è possibile verificare l'autonomia
+      leggendo i Wh consumati.</p><p>- Sistema
+      elettronico per il controllo velocità motori, gestito da Arduino,
+      manopola regolazione velocità sul quadro comandi.</p><p>- Funzione
+      Turbo, per dare massima potenza ai motori per 8 secondi.</p><p>- Sono stati
+      mantenuti i motori originali, autoventilanti, per evitare di farli fondere
+      è stato aggiunto il controllo
+      di temperatura e corrente motore.</p><p>Non è stato
+      modificato il sistema di acceleratore a pedale, in quanto ha la funzione
+      di freno al rilascio, pertanto le modifiche diventavano più impegnative.
+      La regolazione di velocità si ottiene solo con la manopola sul quadro.</p><hr color="#336699"/><p>Prestazioni
+      ottenute:</p><p>- autonomia
+      di 12-15km in pianura. Consumo di circa 85-95Wh</p><p>- velocità
+      di 12kmh 1° marcia con i motori in serie, come pure in retromarcia.</p><p>- velocità
+      di 22kmh  2° marcia, con i motori in parallelo e PWM al 100% controllo di temperatura,
+      per tem.&gt; di 50° si passa a PWM50%</p><p>- potenza
+      assorbita sotto carico in salita oltre 250W, massima corrente assorbita
+      21A@24V</p><h2 id="descrizione-modifiche">Descrizione modifiche</h2><p class="center"><a class="zoom-link" href="IMAGES/jeep_perego_003.jpg" title="Apri l'immagine a piena risoluzione"><img alt="clicca per ingrandire" decoding="async" height="267" loading="lazy" src="IMAGES/jeep_perego_003_small.jpg" width="400"/></a></p><p>- Il gruppo volante
+      quadro di bordo.
+      </p><p>- Sulla sinistra il
+      contachilometri, collegato alla ruota anteriore, è un contaKm per
+      biciclette settato per una circonferenza di 1000mm che corrisponde
+      esattamente alla circonferenza della ruota Perego originale.</p><p>- Comando accensioni
+      luci, con i led segnalazione batteria e temperature motore.</p><p>- Comando velocità a
+      manopola, in quanto non è così facile realizzare un acceleratore
+      sull'impianto della Jeep, si è preferito lasciare il pedale interruttore
+      e mettere il controllo a manopola.</p><p>- Vediamo il power meter
+      che ci da il consumo istantaneo come pure i Wh consumati.</p><p>- Sulla destra per ultimo
+      il termometro temperature motore.
+      </p><h2 id="gomme">Gomme</h2><p>
+      - Le ruote originali sono in
+      plastica dura e si consumano facilmente oltre che avere un forte rumore di
+      rotolamento specialmente sullo sterrato.
+      </p><p>- Sono state ricoperte
+      con copertoni da MTB. Ideale quelli di grosse dimensioni tipo il 2.10 o
+      maggiori. Si mantiene la parte centrale del battistrada eliminando
+      ritagliando i
+      bordi.</p><p>- Il copertone viene
+      incollato sulla ruota in plastica mediante colla Bostick ed alcune viti
+      parker a testa svasata per tenerlo in posizione; una volta indurita la
+      colla, le viti si possono anche togliere.</p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/jeep_perego_001.jpg" width="400"/>
+      </p><p>
+      - Le ruote posteriori più
+      sottoposte ad usura vengono ricoperte con due giri di copertone.
+      </p><p>- Con 1 solo copertone da
+      bici MTB 26" è possibile fare tutto il battistrada, la misura è
+      giusta giusta.</p><p>- Per il posteriore si è
+      preferito usare la colla cianoacrilato, più resistente alle
+      sollecitazioni.</p><p>- Con l'adozione delle
+      coperture in gomma si riduce di molto anche il rumore di avanzamento.</p><p>- Molto migliorato il
+      grip, specialmente su erba e sterrato, meglio se i copertoni da bici sono
+      nuovi...
+      </p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/jeep_perego_002.jpg" width="400"/>
+      </p><h2 id="illuminazione">Illuminazione</h2><p>
+      - La Jeep non ha
+      illuminazione di serie,
+      sono stati pertanto aggiunti 4 led P4 dentro i fari trasparenti originali.
+      </p><p>- Due led hanno lenti da
+      10° in funzione dell'abbagliante e due led con lenti da 25° per dare
+      fascio largo.</p><p>- L'illuminazione prende
+      alimentazione dalla batteria originale 12V 8Ah della macchinina. Un
+      regolatore SW2800 stabilizza la corrente dei led.</p><p>- La luce emessa pari a
+      circa 1000Lumen è ottima per circolare di notte (ovviamente su piazzale
+      privato). Con batteria carica
+      l'autonomia è di circa 5 ore di luce.</p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/jeep_perego_004.jpg" width="400"/>
+      </p><p>
+      - Per i fanali posteriori
+      sono stati usati 4 led rossi 5mm 20mA collegati sempre alla batteria
+      ausiliaria da 12V
+      </p><p>- Luce forte e molto
+      visibile. E' possibile fare lampeggiare i led per aumentare la
+      visibilità.
+      </p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/jeep_perego_005.jpg" width="400"/>
+      </p><h2 id="batterie">Batterie</h2><p>
+      - Vano motori, dove sono
+      state alloggiate le 2 batterie Pb da 12v 10Ah. E' un vano, già predisposto
+      nella carrozzeria in plastica.
+      </p><p>- Sotto le batterie è
+      bene mettere un piano di appoggio rigido e poi fissare le batterie con un
+      robusto elastico ricavato da camera d'aria.</p><p>- In serie alle batterie
+      ci va un fusibile da 20A.</p><p>- Sulla destra la presa
+      per il caricabatteria.</p><p class="center"><a class="zoom-link" href="IMAGES/jeep_perego_006.jpg" title="Apri l'immagine a piena risoluzione"><img alt="clicca per zoom" decoding="async" height="267" loading="lazy" src="IMAGES/jeep_perego_006_small.jpg" width="400"/></a>
+      </p><p>
+      - Come interruttore generale
+      è stato usato un magnetotermico da 15A.
+      </p><p>- Cablaggi con cavi da
+      4mmq 
+      </p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/jeep_perego_007.jpg" width="400"/>
+      </p><h2 id="motori">Motori</h2><p>
+       - I motori originali
+      sono dei 540 autoventilati. Dopo alcune prove si sono dimostrati robusti
+      ed affidabili. importante non farli scaldare più dei 50° altrimenti si
+      fondono....
+      </p><p>- Si nota la sonda di
+      temperatura fissata con nastro in alluminio e tenuta in posizione con una
+      fascetta. va bene anche il fissaggio con silicone, importante non ostruire
+      la fessura di ventilazione. </p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/jeep_perego_008.jpg" width="400"/>
+      </p><h2 id="controllo-motore-pwm">Controllo motore PWM</h2><h2 id="schema-elettrico">Schema elettrico</h2><hr color="#336699"/>
+
+
+
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"> © Roberto
+Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Foto &amp; progetti”</h2>
+      <ul class="card-grid">
+<li><a href="flash_macro.htm"><span class="c-sec">Foto &amp; progetti</span>Flash macro made simple</a></li>
+<li><a href="monopiede_1.htm"><span class="c-sec">Foto &amp; progetti</span>MONOPIEDE photo economico</a></li>
+<li><a href="steady_cam_simple.htm"><span class="c-sec">Foto &amp; progetti</span>Steady cam made simple</a></li>
+<li><a href="printer_3d.htm"><span class="c-sec">Foto &amp; progetti</span>Printer 3D</a></li>
+<li><a href="mtb_gomme_chiodate.htm"><span class="c-sec">Foto &amp; progetti</span>Gomme chiodate per MTB</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#descrizione-modifiche">Descrizione modifiche</a></li>
+<li><a href="#gomme">Gomme</a></li>
+<li><a href="#illuminazione">Illuminazione</a></li>
+<li><a href="#batterie">Batterie</a></li>
+<li><a href="#motori">Motori</a></li>
+<li><a href="#controllo-motore-pwm">Controllo motore PWM</a></li>
+<li><a href="#schema-elettrico">Schema elettrico</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dimmer 3 canali 12V 10A per plafoniere led o RGB by Roberto Chirio</title>
+  <meta name="description" content="dimmer 3 canali 12V 10A per plafoniere led o RGB by Roberto Chirio">
+  <meta name="keywords" content="dimmer led strip, dimmer barra led, led dimmer acquario, led dimmerabili, dissolvenza luce led, lampada regolabile led acquari, illuminazione acquario alba tramonto, led tricromico, lampada led RGB 220V, illuminazione casa led RGB, acquario fai da te">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led" aria-current="true">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#led">LED &amp; illuminazione</a></li><li aria-current="page">Dimmer RGB 3 canali 12 V 10 A</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">LED &amp; illuminazione</p>
+        <h1>LED DIMMER RGB 3 canali</h1>
+        <p class="subtitle">Controllo luminosità per plafoniera led acquario Effetto alba tramonto automatico &quot;illuminazione LED&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#led">LED &amp; illuminazione</a></span><span>Roberto Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#schema-di-collegamento-led">Schema di collegamento Led</a></li>
+<li><a href="#schema-di-collegamento-led-strip">Schema di collegamento Led Strip</a></li>
+<li><a href="#diagramma-tempi-di-accensione">Diagramma tempi di accensione</a></li>
+<li><a href="#commenti">Commenti</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p>
+<hr color="#336699"/>
+
+
+
+  <p class="center"><img alt="" decoding="async" height="400" loading="lazy" src="IMAGES/led_dimmer_rgb_001.jpg" width="600"/>
+      
+      </p><p>2012
+      / 2013</p><p>Con
+      questo scheda è
+      possibile dare molto realismo all'illuminazione led
+      dell'acquario.   </p><p>La
+      scheda è semplificata al massimo, non ci sono pulsanti o display, non
+      c'è nessuna procedura complicata di programmazione, veramente una
+      installazione e funzionamento semplificato al massimo.</p><p>Basta
+      collegare led e ingresso timer, funziona subito!</p><p>Va
+      bene sia con led singoli collegati in serie, oppure si possono collegare
+      ledstrip o barre led del colore voluto, oppure singola barra del tipo RGB.</p><p>Il
+      software base permette di fare accensione e spegnimento graduale per alba
+      e tramonto, utilizzando 1, 2 o 3 canali driver PWM.</p><p>-
+      Utilizzando un timer esterno si da comando all'ingresso, per quando si
+      vuole accendere, così dopo 10 minuti il canale led bianco sarà a regime
+      con la massima luminosità.</p><p>-
+      Con due canali collegati quindi blu e bianco, partirà prima il blu e dopo
+      10 minuti arriva anche il bianco.</p><p>-
+      Con tre canali collegati e aggiungendo una fila di tre led rossi, è
+      possibile avere anche le sfumature rosa/rosse tipiche delle albe/tramonti
+      tropicali.</p><p>Il
+      tempo della transizione  led è facilmente modificabile
+      tramite commutatore presente sulla scheda.</p>
+
+
+
+
+  <h2 id="schema-di-collegamento-led">Schema di collegamento Led</h2><p class="center">                 <img alt="" decoding="async" height="399" loading="lazy" src="IMAGES/led_dimmer_rgb_003.jpg" width="700"/></p><p>
+      Schema pratico per il
+      collegamento dei vari componenti.
+      </p><p>- Il cavo rosso corrisponde al
+      +12V, il cavo nero al negativo. Il cavo blu al negativo (-) dei led.</p><p>- Rispettare la polarità
+      nella serie dei led, per semplificare i canali sono stati rappresentati da
+      una sola fila, ma nel caso dei 160W ci sono 13 file led White e 3 file led
+      Blue.</p><p>-
+      I collegamenti di potenza canali led devono essere fatti con cavi di
+      opportuna sezione, per 10A usare cavo da almeno 1,5mmq, se di lunghezza
+      superiore al metro meglio usare 2,5mmq.</p><p>- Per collegare i led
+      basta un cavo piccolo da 0,35mmq, meglio se con isolamento in silicone
+      adatto ad alte temperature.</p><p>- Prestare attenzione al
+      collegamento del Timer 220V ingresso, usare spine e cavi a norme.</p><p>- La funzione del relè
+      presente sulla scheda è quello di prendere il comando timer e mantenere isolata
+      la scheda dalla rete 220V.</p>
+
+
+
+  <h2 id="schema-di-collegamento-led-strip">Schema di collegamento Led Strip</h2><p class="center">                 <img alt="" decoding="async" height="399" loading="lazy" src="IMAGES/led_dimmer_rgb_004.jpg" width="700"/></p><p>
+      Schema pratico per il
+      collegamento dei vari componenti sulla scheda dimmer 2013/01
+      </p><p>- Il cavo rosso corrisponde al
+      +12V, il cavo nero al negativo. </p><p>- Rispettare la polarità
+      dei ledstrip, per semplificare i canali sono stati rappresentati da
+      una sola fila, si può aggiungere anche una fila di led strip rossi
+      collegati al morsetto RED.</p><p>- Le strisce LED non
+      devono essere più lunghe di 1 metro, se serve più luce, vanno tagliate e
+      collegate in parallelo. </p><p>- Tutte le strisce devono
+      essere sempre incollate su una piastra di alluminio della dimensione
+      coperchio acquario.</p>
+
+
+
+
+  
+  <div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+    <tbody><thead><tr>
+      <th colspan="5" scope="col">
+      
+       <strong>Programmazione
+      tempi e test</strong>
+      </th>
+    </tr></thead>
+    <tr>
+      <td colspan="5">
+      
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="9">
+      <p class="center"> <img alt="" decoding="async" height="138" loading="lazy" src="IMAGES/led_dimmer_rgb_005.jpg" width="170"/>
+      </p></td>
+      <td rowspan="9">
+       
+      </td>
+      <td>
+      <strong>123</strong>
+      </td>
+      <td class="center">
+      <strong>
+      tempo dissolvenza
+      </strong>
+      </td>
+      <td rowspan="9">
+       
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <strong>000</strong>
+      </td>
+      <td class="center">
+      <strong>test</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <strong>001</strong>
+      </td>
+      <td class="center">
+      <strong>10min</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <strong>010</strong>
+      </td>
+      <td class="center">
+      <strong>20min</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <strong>011</strong>
+      </td>
+      <td class="center">
+      <strong>30min</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <strong>100</strong>
+      </td>
+      <td class="center">
+      <strong>40min</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <strong>101</strong>
+      </td>
+      <td class="center">
+      <strong>50min</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <strong>110</strong>
+      </td>
+      <td class="center">
+      <strong>60min</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <strong>111</strong>
+      </td>
+      <td class="center">
+      <strong>70min</strong>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5">
+      <p>- A sistema spento
+      posizionare il dip switch
+      sul tempo desiderato, la posizione (1) corrisponde ad acceso quindi su ON.</p>
+      <p>- Con la posizione 000,
+      tutte le tre levette devono essere in basso, si attiva la funzione TEST.</p>
+      <p>- La funzione Test fà
+      progressivamente accendere e spegnere tutti i 3 canali in un tempo di 10
+      secondi, così da verificare il corretto funzionamento di tutti i canali
+      led, senza attendere i lunghi tempi di dissolvenza.</p>
+      <p>- Per cambiare
+      programmazione si deve prima spegnere alimentazione, cambiare posizione
+      sullo dip switch e
+      poi ridare alimentazione.</p>
+      
+      </td>
+    </tr>
+  </tbody></table></div>
+  
+
+
+
+
+  <h2 id="diagramma-tempi-di-accensione">Diagramma tempi di accensione</h2><p class="center">              <img alt="" decoding="async" height="376" loading="lazy" src="IMAGES/led_dimmer_rgb_002.jpg" width="499"/>                </p><p>-
+      S0 rappresenta il Timer collegato al relè. </p><p>-
+      Con l'accensione di
+      S0  la dissolvenza, aumenta il comando PWM dei led blu e 
+      rossi,
+      raggiungono il massimo dopo t0=10 (20, ... , 70)minuti. (vedi tabella
+      tempi)</p><p>-
+      Successivamente parte il canale led bianchi, scende e si spegne il rosso.</p><p>-
+      Finita la fase alba siamo a regime con led bianchi e blu accesi.</p><p>-
+      Spegnendo l'ingresso S0 si attiva la fase tramonto sempre di 10 (20, ... 70)minuti.</p><p>-
+      Si spengono i bianchi e si accendono i rossi sempre con i blu accesi.</p><p>-
+      Ultimo step spegnimento graduale blu e rossi.</p><p>-
+      Il sistema si porta in stand-by ed attende che venga riattivato S0</p>
+
+
+
+  <h2 id="commenti">Commenti</h2><p>Con
+      l'illuminazione Led si possono ottenere ottimi risultati sia luminosi che
+      di risparmio energetico. </p><p>Questo
+      dimmer è molto affidabile e facile da collegare, inoltre essendo già
+      programmato, non ha bisogno di pulsanti e display. </p><p>Adatto
+      quindi a tutti quelli che vogliono sistemi semplici e facili da usare,
+      senza complicati pulsanti e display.</p><p>Ottimizzando
+      la disposizione dei led e aggiungendo una fila di led rossi è possibile
+      ottenere ottima resa dell'alba tramonti.</p>
+
+
+
+<hr color="#336699" size="3"/>
+
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “LED &amp; illuminazione”</h2>
+      <ul class="card-grid">
+<li><a href="led_light_emitting_diodes.htm"><span class="c-sec">LED &amp; illuminazione</span>Cosa è un LED</a></li>
+<li><a href="led_s.htm"><span class="c-sec">LED &amp; illuminazione</span>Utilizzo diverso dei led</a></li>
+<li><a href="led_1_battery_AAA_.htm"><span class="c-sec">LED &amp; illuminazione</span>Un LED con una stilo da 1,5 V</a></li>
+<li><a href="led_6_220V.htm"><span class="c-sec">LED &amp; illuminazione</span>Lampade a LED con il 220 V</a></li>
+<li><a href="led_h4.htm"><span class="c-sec">LED &amp; illuminazione</span>Lampada LED sostituzione H4</a></li>
+<li><a href="led_acquario.htm"><span class="c-sec">LED &amp; illuminazione</span>Illuminare un acquario a LED</a></li>
+<li><a href="led_bk3_s.htm"><span class="c-sec">LED &amp; illuminazione</span>BK3/S — proiettore LED 10 W</a></li>
+<li><a href="led_lamp_10w.htm"><span class="c-sec">LED &amp; illuminazione</span>Illuminatore video 3× Seoul P7</a></li>
+<li><a href="led_video_3p7.htm"><span class="c-sec">LED &amp; illuminazione</span>Video lamp 3× LED P7</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#schema-di-collegamento-led">Schema di collegamento Led</a></li>
+<li><a href="#schema-di-collegamento-led-strip">Schema di collegamento Led Strip</a></li>
+<li><a href="#diagramma-tempi-di-accensione">Diagramma tempi di accensione</a></li>
+<li><a href="#commenti">Commenti</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attenuatore variabile -20dB 10Khz to 3000Mhz by Roberto Chirio</title>
+  <meta name="description" content="attenuatore variabile -20dB 10Khz to 3000Mhz by Roberto Chirio">
+  <meta name="keywords" content="attenuatore, attenuatore variabile, attenuator">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio" aria-current="true">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">Attenuatore variabile −20 dBm</li></ol></div></nav>
+<div class="wrap page">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radio &amp; antenne</p>
+        <h1>ATTENUATORE VARIABILE</h1>
+        <p class="subtitle">0-20dBm 100Khz - 3000 Mhz</p>
+        <p class="meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>“Radio Corner&quot; di R.Chirio” di R. Chirio</span></p>
+      </header>
+      
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>] </p>
+<hr color="#336699"/>
+
+  
+  <h2 id="premessa">Premessa</h2><p>Dicembre
+      2016 </p><p>A
+      cosa serve un attenuatore?  a ridurre valore di tensione RF a un
+      valore più basso, senza perdere il valore di impedenza di accoppiamento
+      della linea sempre a 50 OHM.</p><p>Può
+      capitare che il segnale ricevuto sia troppo alto così da saturare
+      l'ingresso del ricevitore, per cui se non è possibile attenuare
+      direttamente nel ricevitore bisogna ridurre il segnale di antenna tramite
+      partitori resistivi adatti alla RF.</p><p class="center"><img alt="" decoding="async" height="265" loading="lazy" src="IMAGES/attenuator_01.jpg" width="396"/></p><p>E
+      facile trovare attenuatori fissi e variabili usati su impianti di antenna TV e anche
+      per uso in strumentazione elettronica.</p><p>Attenuatori
+      per uso ricezione radio sono più difficili da trovare e sono costosi.</p><p>Utilizzando
+      un attenuatore variabile per uso TV-SAT come quello in foto si possono
+      avere buoni risultati anche in campo ricezione radio. Utile fare qualche
+      modifica per adattare il prodotto alla ricezione radio.</p>
+  
+
+
+
+  
+  <h2 id="descrizione">Descrizione</h2><p class="center"><img alt="" decoding="async" height="256" loading="lazy" src="IMAGES/attenuator_03.jpg" width="472"/>  </p><p>Questo
+      è lo schema di un attenuatore fisso con valore di attenuazione di 20dB
+      calcolato con il programma RFSIM99.</p><p>Impostando
+      i valori di impedenza ingresso e uscita e il valore di attenuazione
+      otteniamo il calcolo delle resistenze per la configurazione a Pi greco.</p><p>Inserendo
+      il partitore sull'ingresso del ricevitore o della strumentazione sempre a
+      50 Ohm otterremo una riduzione di 20dB pari a 100volte il valore in
+      ingresso, cioè 1V diventa 0,01V pari a  10mV.</p><p>Per
+      realizzare un attenuatore variabile dovremmo modificare il valore di tutte
+      e tre le resistenze, per mantenere costante il valore ingresso uscita.</p><p>Il
+      tutto è facilmente ottenibile con un trimmer multiplo come appunto quello
+      di colore blu contenuto nell'attenuatore per TV-Sat. E' una resistenza
+      variabile multigiri, con all'interno diverse spazzole che vanno sulla
+      piste di carbone, lo spostamento realizza la  variazione a impedenza
+      costante. </p><p class="center"><img alt="" decoding="async" height="367" loading="lazy" src="IMAGES/attenuator_02.jpg" width="548"/> 
+  
+      </p><p>Queste
+      sono le semplici modifiche da effettuare sull'attenuatore commerciale per
+      uso Tv-Sat, bisogna togliere l'induttore per il passaggio della DC saldato
+      tra i due connettori ed eventualmente saldare due connettori più usati in
+      campo radio come i BNC, o anche gli SMA da pannello.</p><p>L'attenuatore
+      è per i 75 ohm di linea, andando a 50 ohm si ottengono praticamente gli
+      stessi risultati di riduzione segnale, per ricezione direi che va bene
+      così,
+      mentre per chi lo vuole usare con
+      strumentazione è bene saldare una resistenza da 150 ohm a impasto
+      antiinduttiva su ognuno dei due connettori verso massa così da adattare
+      ingresso e uscita a
+      50 ohm.</p><p>Ruotando il
+      trimmer blu è possibile ottenere la variazione dell'attenuazione.
+      L'attenuatore viene dato per una gamma di frequenze da 0,1 - 2400Mhz.</p><p>Provato con
+      strumentazione arriva tranquillamente a 3000Mhz, e in basso si comporta
+      bene fino a 50-100khz ma può scendere anche di più, la frequenza minima è
+      limitata dai due condensatori ceramici presenti nello scatolotto metallico, sono da
+      220nF, esagerando si possono portare a 680nF così da essere sicuri di
+      arrivare fino a 10Khz senza grandi perdite. Per contro se si ha già un
+      isolamento galvanico del segnale in altri punti della discesa,  direi
+      che i condensatori si possono anche togliere collegando direttamente il
+      trimmer blu, all'ingresso e uscita. Si è verificato che il trimmer è
+      simmetrico quindi non sono vincolanti i connettori ingresso/uscita, si
+      può collegare dritto o invertito, il risultato in fatto di attenuazione
+      è sempre lo stesso.</p><p>La prova in
+      ricezione è stata fatto con l'antenna MiniWhip e ruotando il trimmer blu,
+      si è avuto una riduzione di segnale su tutta la gamma ricevibile, e
+      appunto le stazioni più forti sono state attenuate così da migliorare la
+      ricezione e disturbare meno a livello di intermodulazione le ricezioni
+      più basse.</p><p>L'attenuatore
+      va montato dietro o vicino al ricevitore così da effettuare facilmente la
+      regolazione, inoltre deve essere a valle di quelle antenne che richiedono
+      l'alimentazione coassiale.</p><p>In pratica
+      con la spesa di pochi Euro si ottiene un comodo attenuatore per uso
+      ricezione e laboratorio.
+      </p>
+
+
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.
+</p>
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+      <ul class="card-grid">
+<li><a href="mini_whip.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — antenna attiva HF/VLF</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR — antenna attiva</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2014.htm"><span class="c-sec">Radio &amp; antenne</span>RF Oscillator — generatore 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="c-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+      </ul>
+    </section>
+  </main>
+
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAM 63 geiger Counter miglioramenti by Roberto Chirio</title>
+  <meta name="description" content="RAM 63 geiger Counter upgrade by Roberto Chirio">
+  <meta name="keywords" content="scintillation counter, geiger, geiger counter, RAM 63, uranio counter, U238, contatore geiger, contatore a scintillazione">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita" aria-current="true">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radioattivita">Radioattività</a></li><li aria-current="page">RAM 63 — miglioramenti</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radioattività</p>
+        <h1>Geiger Counter RAM 63</h1>
+        <p class="subtitle">Come migliorare un buon strumento surplus &quot;Strumentazione&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#radioattivita">Radioattività</a></span><span>Roberto Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#schema-originali-ram-63">Schema originali RAM 63</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#schema-elettrico-alimentatore-stabilizzato-4-00v-200ma">Schema elettrico alimentatore stabilizzato 4,00V 200mA</a></li>
+<li><a href="#morsettiera-batteria">Morsettiera batteria</a></li>
+<li><a href="#porta-batteria">Porta batteria</a></li>
+<li><a href="#illuminazione-a-led">Illuminazione a led</a></li>
+<li><a href="#scala-illuminata">Scala illuminata</a></li>
+<li><a href="#alimentatore-4v">Alimentatore 4V</a></li>
+<li><a href="#inverter-hv">Inverter HV</a></li>
+<li><a href="#cavo-connessione-sonde">Cavo connessione sonde</a></li>
+<li><a href="#uscita-segnale-buzzer">Uscita segnale buzzer</a></li>
+<li><a href="#taratura">Taratura</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>] </p>
+<hr/>
+
+
+  <p class="center"><img alt="RAM63 con le Sonde Alfa  e Beta/Gamma" decoding="async" height="319" loading="lazy" src="IMAGES/RAM63_001.jpg" width="479"/></p><p>Luglio
+      2009</p><p>Questo
+      ottimo strumento
+      prodotto a Berlino, negli anni 70 è molto diffuso tra gli appassionati di
+      ricerca minerali, è ancora possibile acquistarlo sul mercato del
+      Surplus.</p><p>I
+      due tubi a scintillazione del tipo a fotomoltiplicatore permettono di raggiungere una alta
+      sensibilità nella lettura radiazioni, dei valori Alfa, Beta e Gamma.</p><p>Lo
+      schema originale prevedeva l'uso di 4 accumulatori torcia Ni-Cd da 4A + 1
+      ulteriore accumulatore per la illuminazione della scala indice.<a class="zoom-link" href="IMAGES/RAM63_002.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="162" loading="lazy" src="IMAGES/RAM63_002_small.jpg" width="300"/></a></p><p>Per
+      stabilizzare le variazioni di batteria era previsto un reostato da tarare
+      ad ogni accensione, questo per compensare le caduta di tensione durante la
+      scarica batteria. Era un sistema poco preciso, è possibile migliorare questa operazione usando uno
+      stabile alimentatore lineare a basso drop-out e con rumore nullo.</p><p>Le
+      modifiche apportate a questo esemplare di RAM63 comportano:</p><p>-
+      Utilizzo di solo 4 Batterie a torcia (tipo C) da 1,5V oppure 4 Ni-Mh
+      ricaricabili da 1,2V</p><p>-
+      Realizzazione di uno stadio alimentatore in grado di fornire 4,00V in
+      uscita, con un range alimentazione ingresso da 4,20 a 16V</p><p>-
+      Sostituzione della lampada a filamento con un led bianco.</p><p>-
+      Eliminazione dell'inaffidabile morsetto batteria.</p><p>-
+      Miglioramento del ripple generale aggiungendo condensatori.</p><p>-
+      Prelievo segnale per Buzzer e uscita segnale per sistema di acquisizione.
+      </p><h2 id="schema-originali-ram-63">Schema originali RAM 63</h2><p class="center"><a class="zoom-link" href="IMAGES/RAM63_schema_principale.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="70" loading="lazy" src="IMAGES/RAM63_schema_principale_small.jpg" width="100"/></a></p><p class="center">Schema
+      principale
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_schema_sonde.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="70" loading="lazy" src="IMAGES/RAM63_schema_sonde_small.jpg" width="100"/></a></p><p class="center">Schema
+      Sonde
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_schema_inverter.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="120" loading="lazy" src="IMAGES/RAM63_schema_inverter_small1.jpg" width="100"/></a></p><p class="center">Schema
+      Inverter HV</p><p class="center">(solo
+      su ultime versioni)
+      </p><p>
+      Manuale tradotto in
+      Italiano: 
+       <a href="http://dl.dropbox.com/u/5592203/Textos/Manual-Ram-63-Ital.pdf" rel="noopener">http://www.danieleproietti.it/_radioactivity/doc/RAM63_manual_ita.pdf</a>
+      </p>
+
+
+
+  
+  <h2 id="realizzazione">Realizzazione</h2><p class="MsoNormal"><strong><span class="hl">La
+        realizzazione delle modifiche comporta avere delle conoscenze di
+        elettronica, è necessaria un'attrezzatura ed esperienza nei
+        montaggi elettronici.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+        per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p>
+  
+
+
+
+
+  
+  <h2 id="schema-elettrico-alimentatore-stabilizzato-4-00v-200ma">Schema elettrico alimentatore stabilizzato 4,00V 200mA</h2><p class="center">  <a class="zoom-link" href="IMAGES/RAM63_schema_alimentazione.gif" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="344" loading="lazy" src="IMAGES/RAM63_schema_alimentazione_.gif" width="652"/></a>
+      </p><p>
+      Lo schema proposto permette
+      di avere in uscita una tensione di 4,00V tarabile precisa tramite il trimmer
+      R1 che deve essere del tipo Cermet 10 giri.  Tutte le resistenze
+      devono essere da 1/8W a strato metallico 1%.
+      </p><p>L'interruttore S1 è
+      quello rotativo generale del RAM che interrompe il positivo verso massa.</p><p>Il MosFet proposto non è
+      critico, vanno bene tutti i tipi di MosFet a comando logico L, tensione di lavoro 60V e una corrente da 3A. Il mosfet è saldato
+      direttamente sul CS, nel caso di tensioni ingresso, maggiori di 6V è bene
+      che venga montato su un piccolo dissipatore.</p><p>La tensione in uscita
+      deve essere tarata a 4,00V leggendo il valore sull'ingresso dell'inverter
+      HV come spiegato più avanti. La tensione secondaria uscente dall'inverter
+      HV deve avere il valore di 9,0V in caso contrario agire sul trimmer interno
+      dell'inverter HV per avere il valore corretto.</p><p>Fuori del circuito si
+      nota la nuova connessione per illuminare la scala dello strumento tramite
+      Led bianco, il potenziometro R9 da 100 ohm permette di variare la
+      luminosità del led. In questo caso la corrente nominale del led è di
+      60mA pari a tre led SMD in parallelo. L'interruttore S2 è quello
+      originale per accendere la lampadina come pure il potenziometro è quello
+      originale per tarare il valore di batteria.
+      </p>
+  
+
+
+
+
+  
+  
+    <h2 id="morsettiera-batteria">Morsettiera batteria</h2><p>
+         La morsettiera
+        batteria può avere ossidazioni e provocare cadute di tensione, deve
+        essere tolta completamente, al posto verranno saldati due fili
+        rosso/nero da 0,25mmq
+        protetti da una guaina. 
+        </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_morsettiera.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_morsettiera_small.jpg" width="300"/></a>
+      </p><h2 id="porta-batteria">Porta batteria</h2><p> Ecco
+        come si presenta il portabatteria solo con 4 elementi. Il cavetto con
+        guaina proviene direttamente dall'interruttore generale e dal comune
+        negativo.</p><p>E'
+        tutto più semplice ed affidabile.</p><p>Per
+        comodità è possibile usare un connettore maschio/femmina per
+        interrompere il collegamento pacco batteria.
+        </p><p>Chi
+        vuole ridurre drasticamente il peso dello strumento, può eliminare del
+        tutto il pesante gruppo batterie e portabatteria, ed adottare un porta pile in plastica
+        ed usare 4 stilo di buona qualità. Il porta pile si può fissare sul
+        fondo del Ram usando del velcro. 4 pile stilo danno una autonomia di
+        oltre 50 ore.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_batteria.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_batteria_small.jpg" width="300"/></a>
+      </p>
+  
+
+
+
+  
+  <h2 id="illuminazione-a-led">Illuminazione a led</h2><p>
+         Ecco il led SMD
+        montato al posto della lampadina da 1,5V.</p><p>In
+        questo caso il led contiene tre elementi che vanno saldati in parallelo.</p><p>Il
+        led va sistemato in centro dove c'era la lampadina.</p><p>Si
+        possono anche mettere uno due led tradizionali da 5mm.</p><p>Le
+        resistenze si possono anche montare esternamente sul percorso di alimentazione. 
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_lampada.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="132" loading="lazy" src="IMAGES/RAM63_lampada_small.jpg" width="300"/></a>
+      </p><h2 id="scala-illuminata">Scala illuminata</h2><p>Adesso
+        la scala viene illuminata da una forte luce bianca, ben visibile anche
+        di giorno.</p><p>E'
+        possibile montare due led distanziati per avere una migliore
+        distribuzione della luce, come pure si possono mettere led verdi o blu
+        per dare una sembianza più  professionale... 
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_scala_illuminata.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_scala_illuminata_smal.jpg" width="133"/></a>
+      </p>
+  
+
+
+
+  
+  <h2 id="alimentatore-4v">Alimentatore 4V</h2><p>L'alimentatore
+        finito, si presenta compatto e di piccole dimensioni.</p><p>Bisogna
+        incollare una staffa ad L isolata per fissarlo alle viti della piastra
+        intermedia. La posizione è possibile sotto la flangia dei trimmer di
+        taratura.</p><p>Oppure
+        si può anche sistemare nel vano della 5a batteria non utilizzata.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_006.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_006_small.jpg" width="300"/>
+        </a>
+      </p><p>
+      Qua vediamo il Mosfet
+      sistemato direttamente sulle piste ramate che fanno anche da dissipatore.
+      </p><p>Con 53mA di assorbimento
+      nominale dal 6V la dissipazione è molto bassa e non ci sono problemi di
+      riscaldamento.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_007.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_007_small.jpg" width="300"/>
+        </a>
+      </p><p>
+      Parziale vista dell'alimentatore
+      sistemato sotto i trimmer, sulla destra il gruppo schermato dell'inverter
+      HV
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_003.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_003_small.jpg" width="300"/></a>
+      </p><p>
+      Circuito stampato
+      principale, alzato, si
+      nota il condensatore da 3300uF montato tra massa e il negativo del 6V,
+      aiuta  a togliere i disturbi presenti sull'alimentazione, non è
+      comunque indispensabile.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_005.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_005_small.jpg" width="300"/>
+        </a>
+      </p>
+  
+
+
+
+  
+  <h2 id="inverter-hv">Inverter HV</h2><p>All'interno
+        del gruppo schermato troviamo il circuito moltiplicatore di tensione che
+        fornisce i 1250V per fare funzionare il tubo a scintillazione.</p><p>Non
+        è possibile misurare la tensione HV con gli strumenti tradizionali, è
+        necessario un voltmetro con altissima impedenza di ingresso. </p><p>Per
+        la misura dell' HV vedi il mio progetto di Voltmetro
+        altissima impedenza.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_008.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_008_small.jpg" width="300"/>
+        </a>
+      </p><p>Questo
+        è la sezione a bassa tensione dell'inverter.</p><p>Dal
+        filo azzurro entrano i -4,0V e dal giallo escono il -9 V, il nero è la
+        massa.</p><p>Sulla
+        sinistra si nota il trimmer per la taratura del 9V e anche del 1250V. Va
+        girato piano con molta attenzione.</p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_009.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_009_small.jpg" width="300"/>
+        </a>
+      </p>
+  
+
+
+
+  
+  <h2 id="cavo-connessione-sonde">Cavo connessione sonde</h2><p>Purtroppo
+        il cavo di connessione sonde rappresenta un problema.</p><p>E'
+        di grosso diametro e molto rigido, il fatto di muoverlo sovente, tende a fare saltare il
+        punto di saldatura dei vari cavi.</p><p>Si
+        può ripristinare la connessione con un pezzo di cavo flessibile saldato
+        per formare una piccola briglia. </p><p>Isolare
+        il tutto con guaina termorestringente.
+        </p><p>Curare
+        particolarmente il cavo centrale che rappresenta HV.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_010.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_010_small.jpg" width="300"/></a>
+      </p>
+  
+
+
+
+  
+  <h2 id="uscita-segnale-buzzer">Uscita segnale buzzer</h2><p class="center"><img alt="" decoding="async" height="364" loading="lazy" src="IMAGES/RAM63_010.gif" width="500"/>
+        </p><p> <strong><span class="hl-r">(S)</span>
+        </strong>
+        questo è il punto migliore per prelevare il segnale da amplificare, sia
+        per applicarlo al Buzzer piezoelettrico che per il contatore esterno.
+        </p><p>Va
+        utilizzato un circuito inseguitore ad alta impedenza per non condizionare
+        il segnale nel punto di prelevamento.
+      </p><p>
+      ....
+      </p><p>
+      ....
+      </p><p>
+      <strong> Software CDV:   </strong><strong><a href="http://www.anythingradioactive.com/CDVCounter/help.html" rel="noopener">http://www.anythingradioactive.com/CDVCounter/help.html</a></strong>
+      </p><p>Questo è un programma
+      molto utile, che converte gli impulsi in uscita dei geiger, (prelevati sul
+      cicalino, o sulla presa cuffia), in un grafico che riporta i valori medi
+      letti nel tempo. Si possono settare tempi anche molto lunghi, per
+      verificare deboli variazioni dei valori di radioattività. Il file di Help
+      è incluso del programma. </p>
+  
+
+
+
+
+  
+  
+  <h2 id="taratura">Taratura</h2><p>
+      E' utile montare due
+      condensatori al Tantalio da 47uF 16V direttamente sui cavi provenienti
+      dall'inverter HV. Con questa modifica il ripple presente sul 9V
+      passa da 150mV a circa 20mV, valore più che buono per non introdurre
+      disturbi.
+      </p><p>Dare alimentazione al RAM
+      63 collegando la sonda Beta/GAmma.  </p><p>Misurare sui terminali
+      cavo Nero (+) e Azzurro (-) il valore di 4,00V regolando il trimmer R1
+      presente sull'alimentatore 4V.</p><p>Verificare che tra il
+      cavo Nero (+) e il cavo Giallo (-) ci siano almeno 9,0V</p><p>Con il commutatore
+      principale sul primo scatto (ABGLEICH) verificare che l'indice sia in zona
+      segno rosso, in caso contrario regolare il trimmer R25 per centrare
+      l'indice sul segno rosso, il RAM 63 deve essere in posizione orizzontale,
+      appoggiato su un piano.</p><p>I trimmer R1 e R6 servono
+      a calibrare le sonde, è necessario avere una fonte di emissioni
+      calibrata, oppure mandare un preciso segnale ad onda quadra, in caso contrario, evitare di toccarli.</p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_tantalio.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_tantalio_small.jpg" width="300"/></a>
+      </p><p class="center"><a class="zoom-link" href="IMAGES/RAM63_004.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/RAM63_004_small.jpg" width="300"/></a>
+      </p>
+  
+
+
+
+
+  
+  
+  <h2 id="commenti-finali">Commenti finali</h2><p>Con queste
+      semplici modifiche il RAM dovrebbe essere molto più stabile e con 4
+      batteria a torcia la durata di funzionamento è molto lunga, non è più
+      necessario effettuare la taratura iniziale. Quando l'indice non arriverà più
+      alla tacca rossa vuol dire che le batterie sono scariche.</p><p>Le misure
+      migliori si effettuano con la sonda fissata sul suo supporto e i campioni
+      vanno messi sotto la sonda nel porta campioni.</p><p>Per via del
+      peso e della lancetta indice che è un po’ ballerina, non è uno
+      strumento  adatto per essere portato in miniera, è meglio usarlo come strumento di analisi
+      fisso appoggiato su un piano (tavolo).
+      </p><p>Per ridurre
+      peso consiglio di adottare per l'alimentazione, solo 4 batterie a stilo di
+      buona marca, eliminando tutto il gruppo in metallo del porta batterie
+      originale.
+      </p><hr color="#336699"/><p>
+      Sempre utili gli appunti del
+      Proff. Andrea Bosi su radioattività e Geiger:
+      </p><p><a href="http://spazioinwind.libero.it/andrea_bosi/index.htm" rel="noopener">http://spazioinwind.libero.it/andrea_bosi/index.htm</a></p>
+  
+
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radioattività”</h2>
+      <ul class="card-grid">
+<li><a href="geiger_counter.htm"><span class="c-sec">Radioattività</span>Geiger Counter PC CDV</a></li>
+<li><a href="geiger_arduino.htm"><span class="c-sec">Radioattività</span>Geiger counter con Arduino</a></li>
+<li><a href="geiger_counter_pulsar.htm"><span class="c-sec">Radioattività</span>Calibratore per Geiger counter</a></li>
+<li><a href="geiger_counter_voltmeter.htm"><span class="c-sec">Radioattività</span>HV Voltmeter 1000 MΩ</a></li>
+<li><a href="SV500.htm"><span class="c-sec">Radioattività</span>FAG SV500 — upgrade</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#schema-originali-ram-63">Schema originali RAM 63</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#schema-elettrico-alimentatore-stabilizzato-4-00v-200ma">Schema elettrico alimentatore stabilizzato 4,00V 200mA</a></li>
+<li><a href="#morsettiera-batteria">Morsettiera batteria</a></li>
+<li><a href="#porta-batteria">Porta batteria</a></li>
+<li><a href="#illuminazione-a-led">Illuminazione a led</a></li>
+<li><a href="#scala-illuminata">Scala illuminata</a></li>
+<li><a href="#alimentatore-4v">Alimentatore 4V</a></li>
+<li><a href="#inverter-hv">Inverter HV</a></li>
+<li><a href="#cavo-connessione-sonde">Cavo connessione sonde</a></li>
+<li><a href="#uscita-segnale-buzzer">Uscita segnale buzzer</a></li>
+<li><a href="#taratura">Taratura</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

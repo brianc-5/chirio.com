@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Battery Management System by Roberto Chirio</title>
+  <meta name="description" content="Bilanciatore per batterie Litio-Lipo-LiFePo4 - Battery balancer for power cell A123">
+  <meta name="keywords" content="BMS, A123 battery, Bilanciatore per batterie, battery balancer, Litio, Lipo, LiFePo4, electric bike, lifepo4 battery, battery charger">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie" aria-current="true">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#batterie">Batterie &amp; energia</a></li><li aria-current="page">BMS 48V 4A</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Batterie &amp; energia</p>
+        <h1>BMS - Battery Management System</h1>
+        <p class="subtitle">Bilanciatore per batterie Litio-Lipo-LiFePo4 &quot;Electronics design&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#batterie">Batterie &amp; energia</a></span><span>Roberto Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#bms-48v-4a">BMS 48V 4A</a></li>
+<li><a href="#schema-elettrico-versione-4a">Schema elettrico versione 4A</a></li>
+<li><a href="#schema-elettrico-versione-10a">Schema elettrico versione 10A</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>] </p>
+<hr color="#336699"/>
+
+
+  
+  <h2 id="bms-48v-4a">BMS 48V 4A</h2><p>
+       Marzo 2014 - Novembre
+      2021
+      </p><p>
+        Volendo caricare velocemente
+      le batterie ai polimeri di litio, è necessario un bilanciatore di fine
+      carica, in grado di assorbire tutta la corrente erogata dal
+      caricabatteria.
+      </p><p>
+      Vedi il significato di BMS : <a href="http://en.wikipedia.org/wiki/Battery_management_system" rel="noopener">http://en.wikipedia.org/wiki/Battery_management_system</a>
+      </p><p>
+      In questo caso
+      non è lo schema di un vero BMS completo di tutte le funzioni, ma solo un bilanciatore di
+      fine carica, da tenere assieme al caricabatteria in quanto ingombrante.
+      </p><p>Il pacco
+      batterie assemblato è composto di 16 elementi A123 da 20A, la tensione di
+      fine carica per ogni elemento deve essere di 3,60V con pochissima
+      tolleranza, se aumenta la tensione c'è rischio di danneggiare seriamente
+      la batteria. 
+      </p><p>Ogni sezione
+      del BMS è provvista di un trimmer di precisione multigiro, per settare
+      con precisione il valore di intervento. Per visualizzare l'intervento
+      della limitazione è presente un led per ogni batteria in totale 16 led,
+      che accendendosi segnalano il valore di tensione raggiunto.
+      </p><p>Valori di
+      soglia da non superare durante la carica:
+      </p><p>- celle A123 e
+      LIFEPO4 = 3,60V
+      </p><p>- batterie
+      Lipo/Litio  = 4,20V
+      </p><h2 id="schema-elettrico-versione-4a">Schema elettrico versione 4A</h2><p class="center"> <img alt="" decoding="async" height="297" loading="lazy" src="IMAGES/BMS_4A_2014_schema.gif" width="446"/></p><p>Schema della
+      cella singola, bisogna replicare 16 circuiti identici per avere un
+      regolatore per pacco batteria da 48V, se il pacco è da 36V bastano 12
+      circuiti in serie.</p><p>Il controllo
+      di soglia è affidato al preciso TL431, la taratura della tensione di
+      limitazione avviene attraverso il trimmer R4 da 10k , la tensione di
+      soglia deve essere tarata precisa, usando un voltmetro digitale ed un alimentatore
+      a corrente controllata. (Da farsi con i circuiti caldi a regime)</p><p>Il transistor
+      PNP 2N5193 ha il compito di assorbire la corrente quando la tensione
+      supera il valore di taratura, dai parametri del Data Sheet siamo al limite
+      del guadagno HFE pari a 40, meglio effettuare una selezione dei transistor
+      ed usare solo quelli con guadagno &gt; di 40</p><p>Il transistor
+      Q1 è un generico PNP a bassa corrente, ha il compito di pilotare il led
+      con una corrente di 10mA, non è critico, va bene qualsiasi PNP a bassa
+      potenza.</p><p>Il led D1 deve
+      essere un led rosso, in quanto altri colori richiedono una tensione di
+      soglia superiore e potrebbero non accendersi completamente. Non adatti
+      quindi i led Blu e Bianchi, mentre potrebbero ancora funzionare led gialli
+      e verdi.</p><p class="center"> <img alt="" decoding="async" height="295" loading="lazy" src="IMAGES/BMS_4A_2014_02.jpg" width="441"/></p><p>  Gruppo BMS,
+      vediamo gli elementi della singola cella, sul terminale a saldare
+      collegheremo il cavo che va alla batteria, molto importante rispettare la
+      sequenza di collegamento, non sono ammessi errori!</p><p class="center"><img alt="" decoding="async" height="331" loading="lazy" src="IMAGES/BMS_4A_2014_04.jpg" width="732"/></p><p>Gruppo BMS, i
+      16 transistor di potenza montati sul radiatore, ognuno deve essere isolato
+      dal radiatore. Curare bene il montaggio in quanto ogni transistor deve
+      dissipare 3,6V x 4A  = 14,4W  e 4,20V x 4A nelle condizioni
+      peggiori.
+      </p><p class="center"><img alt="" decoding="async" height="490" loading="lazy" src="IMAGES/BMS_4A_2014.jpg" width="732"/></p><p>    Gruppo
+      BMS assemblato, le dimensioni del circuito stampato sono 160 x 70 mentre i
+      radiatori sono lunghi 200mm, durante il funzionamento a fine carica
+      con caricabatteria da 3-4A il riscaldamento è notevole, oltre i 200W
+      serve quindi una ventola da 80x80 12V da alimentare a parte.</p><p>Per
+      evitare cadute di tensione, il collegamento alla batteria deve essere il
+      più corto possibile vanno usati cavi rame da minimo 1mmq meglio 1,5mmq
+      per evitare cadute di tensione.</p><h2 id="schema-elettrico-versione-10a">Schema elettrico versione 10A</h2><p class="center"><img alt="" decoding="async" height="268" loading="lazy" src="IMAGES/BMS_10A_2014_schema.gif" width="404"/></p><p>Questa
+      semplice variante permette di livellare fino a 10A, lo schema è stato
+      provato a carico e la soglia è precisa, i collegamenti devono essere ben
+      dimensionati.</p><p>Schema della
+      cella singola, bisogna replicare 16 circuiti identici per avere un
+      regolatore per pacco batteria da 48V, se il pacco è da 36V bastano 12
+      circuiti in serie.</p><p>Il controllo
+      di soglia è affidato al preciso TL431, la taratura della tensione di
+      limitazione avviene attraverso il trimmer R4 da 10k , la tensione di
+      soglia deve essere tarata precisa, usando un voltmetro digitale ed un alimentatore
+      a corrente controllata. (Da farsi con i circuiti caldi a regime)</p><p>Il transistor
+      PNP 2N5193 ha il compito di pilotare il transistor Q3, in configurazione
+      Darlington, il guadagno in corrente è sufficiente per pilotare il 2N3055
+      nelle condizioni peggiori con guadagno di 40 x 5 otteniamo un teorico di
+      20A non sopportati da Q3, ma 10A tengono bene, ci va una buona
+      dissipazione con dissipatore con generose dimensioni. Più facile da
+      montare la versione plastica con sigla TIP3055.</p><p>Il transistor
+      Q1 è un generico NPN a bassa corrente, ha il compito di pilotare il led
+      con una corrente di 10mA, non è critico, va bene qualsiasi NPN di piccola
+      potenza.</p><p>Il led D1 deve
+      essere un led rosso, in quanto altri colori richiedono una tensione di
+      soglia superiore e potrebbero non accendersi completamente. Non adatti
+      quindi i led Blu e Bianchi, mentre potrebbero ancora funzionare led gialli
+      e verdi.</p><p class="center"><img alt="" decoding="async" height="180" loading="lazy" src="IMAGES/BMS_4A_2014_03.jpg" width="733"/>
+      </p><p>
+      <span class="hl-g">Questo è il progetto
+      originale, è stato copiato e presentato come idea di altri progettisti
+      sul web, ovviamente cancellando le foto dove si legge sul PCB <a href="http://www.chirio.com" rel="noopener">www.chirio.com</a>,
+      è stato segnalato alle autorità garanti del web, segnalate eventuali
+      altri abusi.</span>
+      </p>
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Batterie &amp; energia”</h2>
+      <ul class="card-grid">
+<li><a href="battery_test.htm"><span class="c-sec">Batterie &amp; energia</span>Come testare l&#x27;autonomia delle batterie Ni-Mh</a></li>
+<li><a href="nimh_battery_charger.htm"><span class="c-sec">Batterie &amp; energia</span>Ni-Mh fast charger</a></li>
+<li><a href="lipo_battery_charger.htm"><span class="c-sec">Batterie &amp; energia</span>Litio (Li-Po) charger</a></li>
+<li><a href="parkside_battery_pack.htm"><span class="c-sec">Batterie &amp; energia</span>Parkside paccobatteria 20V 15Ah</a></li>
+<li><a href="ebike_test_batterie.htm"><span class="c-sec">Batterie &amp; energia</span>E-bike — test batterie 36/48 V</a></li>
+<li><a href="ebike_extra_pack.htm"><span class="c-sec">Batterie &amp; energia</span>E-bike — extra pack 36/48 V</a></li>
+<li><a href="auto_elettrica.htm"><span class="c-sec">Batterie &amp; energia</span>Auto elettrica: che fare?</a></li>
+<li><a href="home_save_energy.htm"><span class="c-sec">Batterie &amp; energia</span>Come risparmiare energia elettrica in casa</a></li>
+<li><a href="solare_termico_centralina.htm"><span class="c-sec">Batterie &amp; energia</span>Centralina solare termico</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#bms-48v-4a">BMS 48V 4A</a></li>
+<li><a href="#schema-elettrico-versione-4a">Schema elettrico versione 4A</a></li>
+<li><a href="#schema-elettrico-versione-10a">Schema elettrico versione 10A</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

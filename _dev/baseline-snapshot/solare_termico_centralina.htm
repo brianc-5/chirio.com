@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Centralina differenziale per controllo pannello solare termico Heat Pipe by Roberto Chirio</title>
+  <meta name="description" content="Centralina differenziale per controllo pannello solare termico Heat Pipe by Roberto Chirio">
+  <meta name="keywords" content="energia solare, solare termico, riscaldamento solare, heat pipe panel, pannello solare, controllo solare, risparmio energetico, energia dal sole">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie" aria-current="true">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#batterie">Batterie &amp; energia</a></li><li aria-current="page">Centralina solare termico</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Batterie &amp; energia</p>
+        <h1>Centralina per controllo differenziale</h1>
+        <p class="subtitle">temperature impianto solare termico. Circuito elettronico digitale (2011). Circuito elettronico analogico (2006). &quot;Fai da te&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#batterie">Batterie &amp; energia</a></span><span>Roberto Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#prefazione">Prefazione</a></li>
+<li><a href="#schema-idraulico-semplificato">Schema idraulico semplificato.</a></li>
+<li><a href="#schema-elettrico-sistema-digitale-arduino-2009-arduino-uno">Schema elettrico sistema digitale Arduino 2009 / Arduino Uno</a></li>
+<li><a href="#programma-per-scheda-arduino-2009-e-simili">programma per scheda Arduino 2009 e simili</a></li>
+<li><a href="#schema-elettrico-sistema-anlogico-2006-2007">Schema elettrico sistema anlogico 2006/2007</a></li>
+<li><a href="#timer-3minuti-on-12-minuti-off-da-usare-nel-periodo-estivo-p">Timer 3minuti ON - 12 minuti OFF ( Da usare nel periodo estivo più caldo)</a></li>
+<li><a href="#realizzazione-sonde-ntc-per-lettura-temperatura-tp-e-tb">Realizzazione sonde NTC per lettura temperatura Tp e Tb</a></li>
+<li><a href="#utilizzo-di-sonde-commerciali">Utilizzo di sonde commerciali.</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#considerazioni-finali">Considerazioni finali</a></li>
+<li><a href="#consigli">Consigli:</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p>
+<hr color="#336699"/>
+
+
+  <h2 id="prefazione">Prefazione</h2><p>Gennaio
+      2006-Giugno 2011</p><p>Un
+      impianto solare termico, adatto quindi per scaldare acqua e produrre acqua
+      calda sanitaria, è costoso, un certo risparmio si ottiene montando
+      pannelli termici a tubi sottovuoto tipo Heat Pipe di produzione cinese.</p><p class="center"><a class="zoom-link" href="IMAGES/solare_02.jpg" title="Apri l'immagine a piena risoluzione"><img alt="collettore solare composto da 24 tubi sotto vuoto del tipo Heat Pipe" decoding="async" height="233" loading="lazy" src="IMAGES/solare_02_small.jpg" width="350"/></a></p><p class="center">Collettore solare composto da 24 tubi sotto vuoto del tipo Heat Pipe.</p><p>Chi
+      è abile nei montaggi elettronici può ottenere un ulteriore significativo
+      risparmio, realizzando una semplice centralina di controllo temperatura
+      differenziale necessaria per gestire la
+      pompa di circolazione, unico elemento da gestire in un impianto per
+      riscaldamento acqua del tipo a schema semplice, non integrato con il
+      riscaldamento.</p><p>
+      In pratica la regola da
+      rispettare è molto semplice, si misurano la temperatura dell'acqua nel
+      Boiler di accumulo e la temperatura nella testa del pannello solare.</p><p>Quando
+      la temperatura nella testa del pannello (Tp) è superiore a quella
+      dell'acqua del Boiler (Tb) (di alcuni gradi) la centralina attiva la pompa di circolazione,
+      se la temperatura nel pannello è inferiore al Boiler la pompa si deve
+      fermare.</p><p>Per
+      sicurezza, se
+      la temperatura nel Boiler di accumulo (Tmax) arriva a un certo valore alto
+      (&gt;70°) la pompa si
+      deve fermare per non fare raggiungere all'acqua valori pericolosi.</p><h2 id="schema-idraulico-semplificato">Schema idraulico semplificato.</h2><p class="center">  <img alt="Schema funzionale di un pannello solare termico con circuito primario su scambiatore di calore Boiler." decoding="async" height="533" loading="lazy" src="IMAGES/solare_00.jpg" width="750"/> </p><p>Schema
+      pratico del sistema solare per il quale è stata fatta la centralina di
+      regolazione descritta in questa pagina.</p><p>Abbiamo
+      un collettore solare composto da 24 tubi sotto vuoto del tipo Heat Pipe,
+      posizionato sul tetto. </p><p>Nel
+      sottotetto (solaio) è sistemato il circuito idraulico collegato al Boiler
+      di accumulo da 150Lt.</p><p>Il
+      circuito primario realizzato in tubi rame da 12mm, con pompa di
+      circolazione 220W 40VA, vaso di espansione, valvola di sicurezza. E'
+      riempito con liquido antigelo glicole specifico per impianto solare con
+      caratteristiche anticongelanti e temperatura di esercizio fino a 120°.
+      L'impianto è precaricato a 2 BAR per evitare l'ebollizione.</p><p>
+      Il sistema elettronico deve
+      semplicemente confrontare due temperature (pannello e boiler), che in pratica vengono lette da
+      resistenze NTC (vedi note sotto) che trasformano in corrente la variazione di
+      temperatura.
+      </p><p>In pratica, di conoscere
+      il valore esatto delle temperature non ci interessa,  sappiamo che le temperature
+      del pannello possono raggiungere anche 120° (piena estate) ed arrivare a -10
+      di notte in pieno inverno. </p><p>Se
+      la temperatura dell'acqua dentro al pannello solare è superiore a quella
+      del boiler, viene attivata la pompa di circolazione, cosi da trasferire il
+      calore dentro il Boiler. Quando la temperatura
+      del boiler è superiore al pannello si ferma la pompa, o meglio la
+      temperatura del pannello scende a un valore inferiore a quello del Boiler.</p><p>Per
+      sicurezza arrivando a 70° nel boiler la pompa rimane spenta.</p><p>Per realizzare un
+      semplice controllo elettronico basterà avere due NTC uguali tra loro e
+      confrontare i valori di tensione applicati alle resistenze fisse.</p><p> Vengono
+      qui proposte due soluzioni,  una versione recente 2011 che utilizza una board
+      a uP tipo Arduino programmabile USB con linguaggio C++, questa ultima
+      versione si presta per ulteriori sofisticate implementazioni, e la prima versione
+      del 2006 realizzata usando un comparatore
+      operazionale tipo LM358 e componenti discreti.</p>
+
+
+
+  <h2 id="schema-elettrico-sistema-digitale-arduino-2009-arduino-uno">Schema elettrico sistema digitale Arduino 2009 / Arduino Uno</h2><p class="center"><a class="zoom-link" href="IMAGES/solare_schema_02.gif" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="418" loading="lazy" src="IMAGES/solare_schema_02_small.gif" width="750"/></a></p><p class="center">Schema elettrico controllo pannello solare termico.
+      (giugno 2011) </p><p>Configurazione
+      di ingresso a ponte differenziale virtuale.</p><p> Il
+      collegamento ingresso è lo stesso della versione precedente, così da sostituire
+      solo la centralina, senza intervenire sui cavi e istallazione.</p><p>I
+      condensatori C1 e C2 come pure i diodi D5 e D4 servono di protezione agli
+      ingressi, le resistenze R4 e R5 formano assieme ai 2 NTC il partitore di
+      tensione che darà i valori di tensione inversamente proporzionale alla temperatura.
+      Si è scelta la configurazione di avere un terminale a massa degli NTC per
+      ridurre i numero di cavi, bastano due cavi schermati di piccolo diametro
+      (tipo audio) per portare il
+      segnale dall'esterno alla centralina.</p><p>I
+      due segnali temperatura vengono portati sugli ingressi analogici
+      dell'Arduino, A0 e A1, dove A0 leggerà la temperatura dell'acqua boiler e
+      A1 la temperatura acqua pannello.</p><p>In
+      funzione del programma, avremo le uscite D11 e D13 abilitate per comandare
+      il led alta temperatura (&gt;70°) e il comando relè pompa.</p><p>La
+      scheda Arduino richiede 12V di alimentazione che prenderemo a valle del
+      regolatore 7812, un trasformatore da 5-10VA fornirà l'alimentazione a
+      tutta l'elettronica.</p><p>Il
+      relè 12V deve essere di buona qualità e con il contatto da 16A questo
+      per garantire un lungo tempo di esercizio, meglio usare un modello su
+      zoccolo così da facilitare la sostituzione.</p><p>Per
+      le note di montaggio e regolazione impianto vale quanto scritto più
+      avanti per l'impianto del 2006.</p><hr/>
+
+
+
+
+  
+  <h2 id="programma-per-scheda-arduino-2009-e-simili">programma per scheda Arduino 2009 e simili</h2><p>
+      /*<br/>
+      Controllo pannello solare<br/>
+      giugno  2011<br/>
+      Roberto Chirio
+      </p><p>rev. 1.2</p><p><br/>
+      */
+      <br/>
+      // variables :
+      <br/>
+      int boiler = A0;   //  NTC Boiler connected to A0<br/>
+      int pann = A1;  //  NTC Panel connected to A1<br/>
+      int tempB = 0;         // variable to store the boiler temperature in degree Celsius<br/>
+      int tempP = 0;         // variable to store the panel temperature in degree Celsius
+      <br/>
+      int BBB = 0;         // variable <br/>
+      int PPP = 0;         // variable 
+      
+      <br/>
+      void setup()<br/>
+      {<br/>
+   Serial.begin(9600); 
+      <br/>
+    pinMode(11, OUTPUT);   // sets the pin 11<br/>
+    pinMode(13, OUTPUT);   // sets the pin 13
+      <br/>
+  digitalWrite(11, LOW);   // set the 11 off
+      <br/>
+  digitalWrite(13, LOW);   // set the 13 off
+      <br/>
+  }
+      
+      
+      <br/>
+      void loop()<br/>
+      {<br/>
+  BBB = analogRead(boiler);   // read the boiler temperature<br/>
+  PPP = analogRead(pann);   // read the panel temperature<br/>
+  tempB=16666/BBB;<br/>
+  tempP=16666/PPP;
+      <br/>
+   Serial.println("Boiler");<br/>
+   Serial.println(tempB, DEC);       // monitor temperature BOILER<br/>
+   Serial.println("Pannello"); <br/>
+   Serial.println(tempP, DEC);       // monitor temperature PANEL
+      <br/>
+   delay(1000);              // wait for a second
+      
+      <br/>
+  // check if the Boiler temperature is to high &gt; 70°.<br/>
+  // if it is, the ledTemp is HIGH and pompa off<br/>
+  if (tempB &gt; 70) { <br/>
+    // turn LED HItemp on:<br/>
+    digitalWrite(11, HIGH); <br/>
+    // turn pompa OFF:<br/>
+    digitalWrite(13, LOW); <br/>
+      { goto fineloop;}<br/>
+      }
+      
+      
+      <br/>
+  // check if the panel temperature is &lt;= 20°.<br/>
+  // if it is, the pompa is LOW:<br/>
+  if (tempP &lt;= 20) { <br/>
+    // turn pompa off:<br/>
+    digitalWrite(13, LOW); <br/>
+   { goto fineloop;}<br/>
+   } 
+      
+      <br/>
+  // check if the temp panel is &gt; of temp boiler<br/>
+  // if it is, the pompa is on:<br/>
+  if (tempP &gt; tempB) { <br/>
+    // turn pompa on:<br/>
+    digitalWrite(13, HIGH); <br/>
+    // turn led OFF:<br/>
+    digitalWrite(11, LOW);<br/>
+    delay(15000);              // wait for 15 second <br/>
+  } 
+      <br/>
+      // check if the temp panel is &lt;= of temp boiler<br/>
+  // if it is, the pompa is off:<br/>
+  if (tempP &lt;= tempB) { <br/>
+    // turn pompa OFF:<br/>
+    digitalWrite(13, LOW); <br/>
+    // turn led OFF:<br/>
+    digitalWrite(11, LOW);
+      <br/>
+  } 
+      <br/>
+  fineloop:;
+      <br/>
+   }
+      <br/>
+      </p>
+  
+
+
+
+
+<hr/>
+
+
+
+
+  <h2 id="schema-elettrico-sistema-anlogico-2006-2007">Schema elettrico sistema anlogico 2006/2007</h2><p class="center"><a class="zoom-link" href="IMAGES/controllo_solare_2.gif" title="Apri l'immagine a piena risoluzione"><img alt="Schema elettrico controllo pannello solare termico. (Nuova versione sett. 2007)" decoding="async" height="323" loading="lazy" src="IMAGES/controllo_solare_2_small.gif" width="624"/></a></p><p class="center">Schema elettrico controllo pannello solare termico.
+      (Nuova versione sett. 2007) (<a href="IMAGES/solare_schema_00_x1.gif">Vecchio
+      schema</a>)</p><p>Configurazione
+      di ingresso a ponte differenziale, il primo comparatore cambia stato in uscita se la temperatura
+      Tp
+      aumenta in quanto la R del NTC si abbassa portando l'ingresso negativo
+      più basso e il positivo
+      più alto, di conseguenza viene comandato il Tr Q2 che eccita il relè pompa.</p><p>Al
+      contrario se la Tb è più alta viene portato basso l'ingresso + e
+      l'uscita va a zero e il transistor del comando pompa si apre facendo
+      fermare la pompa.</p><p>Il
+      secondo comparatore legge la tensione della NTC Boiler quando il valore raggiunge
+      il valore pretarato del P1 si comanda il Tr Q1 che interdice il Q2, il relè interrompe
+      l'alimentazione della pompa.</p><p>I
+      condensatore e i diodi sull'ingresso servono di protezione per le scariche
+      che potrebbero arrivare dai cavi sensori, eventualmente usare dei MOV o
+      TVP da 24-40V.</p><p>La
+      R10 in serie del NTC TP serve a dare circa +6° di temperatura
+      al pannello, così che quando parte la pompa l'acqua è sicuramente più
+      calda di quella del Boiler di accumulo. Il valore è determinato dal tipo
+      di NTC usato pertanto in caso di comportamenti incerti, o si elimina la
+      R10 o si
+      mette al posto un trimmer da 2K e si misura la temperatura di intervento.</p><p>A
+      valle del comparatore troviamo il deviatore per il comando pompa full time
+      oppure 3minuti ON/12 minuti OFF.</p><p>Il
+      temporizzatore astabile realizzato con il NE555 riceve alimentazione
+      direttamente dall'uscita del LM358 (alcuni mA di consumo). L'uscita del
+      555 va subito alta e inizia il ciclo ON di circa 3 minuti determinato
+      dalla R3 da 2.7M ohm  mentre il tempo di OFF è determinato dalla R4
+      da 10M ohm . Il condensatore C1 da 100uF deve essere di buona qualità
+      meglio se al Tantalio versione MIL. Se si vogliono dei tempi di
+      azionamento diversi, agire sul valore di questi componenti.</p><p>Nel
+      caso la temperatura pannello scendesse durante il ciclo di ON oppure OFF, il
+      temporizzatore viene immediatamente resettato in quanto l'alimentazione va
+      a 0V.</p><p>Da
+      realizzare a parte il circuito alimentazione 220V con trasformatore 220V/14v
+      5VA, ponte raddrizzante e condensatore di filtro.</p><p>Per
+      l'elenco componenti fare riferimento allo schema ingrandito. </p>
+
+
+
+  
+  <h2 id="timer-3minuti-on-12-minuti-off-da-usare-nel-periodo-estivo-p">Timer 3minuti ON - 12 minuti OFF ( Da usare nel periodo estivo più caldo)</h2><p>In
+      questa versione migliorata della centralina controllo solare, ho inserito
+      il timer comando pompa che durante la fase di pannello caldo, quindi trasferimento
+      calore, aziona per 3 minuti la pompa e per i successivi 12 rimane ferma.
+      Questa soluzione ci da alcuni vantaggi durante il periodo estivo, più indicata per i pannelli tipo
+      Heat-pipe in quanto rendono meglio se le temperature sono più alte. Se la
+      pompa circola in continuazione, la temperatura del pannello non potrà mai
+      avere il picco di calore, quindi la pausa di 12 minuti lascia salire la
+      temperatura, per poi trasferire l'accumulo di calore nei 3 minuti successivi.
+      Altro vantaggio è quello di fare lavorare meno la pompa e di conseguenza
+      un minore costo elettrico. La pompa lavora solo 1/4 del tempo rispetto al
+      Full.  Con una pompa da 60VA risparmiamo circa 10 euro/anno di
+      energia, inoltre la pompa durerà più a lungo.</p><p>Ricordo
+      che per avere dei vantaggi economici sull'installazione,  i costi di
+      questo impianto dovrebbero essere ammortati in 20 anni, pertanto un
+      circuito dal costo di 5 Euro ci farà risparmiare 200 euro nei prossimi
+      anni....</p><p class="center">
+      <img alt="Timer 555 usato per 3min ON - 12 min OFF" decoding="async" height="200" loading="lazy" src="IMAGES/solare_09.jpg" width="300"/>
+      </p>
+  
+
+
+
+  <h2 id="realizzazione-sonde-ntc-per-lettura-temperatura-tp-e-tb">Realizzazione sonde NTC per lettura temperatura Tp e Tb</h2><p>Se
+      non volete acquistare le sonde di temperatura è facile realizzarle.</p><p>Ho
+      recuperato da piastre motherboard i sensori di temperatura NTC, sono da 10Kohm a 25°, si presentano di colore verde o blu con
+      pallino bianco,
+      importante recuperare due elementi perfettamente uguali, provare il valore
+      con multimetro. Per una misura di confronto immergere i due NTC dentro del
+      grasso silicone e dopo 10 minuti misurare le resistenze di entrambi la
+      differenza non deve essere maggiore del 2%.</p><p>Per
+      questa realizzazione ho usato due NTC di colore Blu con pallino bianco.</p><p class="center">
+      <a class="zoom-link" href="IMAGES/solare_03.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="199" loading="lazy" src="IMAGES/solare_03_small.jpg" width="300"/></a>
+      </p><p>
+      Questi NTC sono di piccole
+      dimensioni, pertanto adatti per realizzare le sonde di temperatura, da
+      inserire nel pannello solare nell'apposito foro da 6mm vicino al passaggio
+      dell'acqua.
+      </p><p>Attenzione che il sensore
+      del pannello è sottoposto ad alte temperature, di oltre 120°, i cavi di collegamento
+      in questo caso devono essere adatti per alte temperature, quindi con
+      isolamento Teflon o Silicone. Possono anche andare bene due fili di rame
+      smaltato per avvolgimenti di piccolo diametro, questo per la parte calda
+      del pannello solare.</p><p>Il piccolo NTC non soffre
+      queste temperature in quanto può essere saldato a 220°.
+      </p><p class="center">
+      <a class="zoom-link" href="IMAGES/solare_04.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="199" loading="lazy" src="IMAGES/solare_04_small.jpg" width="300"/></a>
+      </p><p>
+      Per finire e proteggere la
+      sonda, bisogna ricoprire con guaina termorestringente.
+      </p><p>La migliore soluzione è
+      quella di mettere un po' di grasso al silicone (ricoprire l'NTC con il
+      grasso conduttivo per CPU) prima di riscaldare il tubetto
+      termorestringente. Tale grasso evita l'ingresso di umidità e migliora la
+      distribuzione termica all'interno.</p><p>Il diametro finale deve
+      essere minore di 5 mm, per facilitare l'inserimento nella apposita
+      fessura del pannello e del Boiler.</p><p>Il sensore per il Boiler
+      è sottoposto a temperature minori, non è comunque una ragione per non
+      realizzarlo con cura.
+      </p><p class="center">
+      <a class="zoom-link" href="IMAGES/solare_05.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="199" loading="lazy" src="IMAGES/solare_05_small.jpg" width="300"/></a>
+      </p><p>
+      La lunghezza dei cavi di
+      temperatura può anche superare i 10 metri, in pratica se non ci sono
+      forti campi elettrici, non dovrebbero esserci problemi. Per la connessione
+      del pannello solare ho usato del cavo schermato tipo RG58, così da avere basse
+      cadute di tensione.
+      </p>
+
+
+
+
+  <h2 id="utilizzo-di-sonde-commerciali">Utilizzo di sonde commerciali.</h2><p><strong>PT1000 
+      adatta per pannello solare fino a 180°</strong></p><p>Sonda
+      PTC da 1000 ohm a 25°C diam. 5.0mm</p><p>E'
+      una PTC, ma può funzionare con questo schema, bisogna ponticellare la
+      R10.</p><p>Le
+      due sonde uguali, vanno scambiate sulla morsettiera, essendo a variazione
+      positiva con l'aumento della temperatura, aumentano la resistenza, quindi
+      il collegamento deve essere invertito. La morsettiera boiler diventa
+      pannello e viceversa. Eliminare o invertire il comparatore per i
+      70°.</p><p class="center">
+      <img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/solare_s1.jpg" width="300"/>
+      </p><p><strong>PT1000 
+      adatta per pannello solare fino a 180°</strong></p><p>Sonda
+      PTC in teflon e silicone, da 1000 ohm a 25°C diam. 4.6mm</p><p>E'
+      una PTC, ma può funzionare con questo schema, bisogna ponticellare la
+      R10.</p><p>Le
+      due sonde uguali, vanno scambiate sulla morsettiera, essendo a variazione
+      positiva con l'aumento della temperatura, aumentano la resistenza, quindi
+      il collegamento deve essere invertito. La morsettiera boiler diventa
+      pannello e viceversa. Eliminare o invertire anche il comparatore per i
+      70°.</p><p class="center">
+      <img alt="PT 1000  PTC  1000 ohm" decoding="async" height="200" loading="lazy" src="IMAGES/solare_s3.jpg" width="300"/>
+      </p><p><strong>NTC
+      10K</strong><strong>  adatta per pannello solare fino a 120°</strong></p><p>Sonda
+      NTC da 10000 ohm a 25°C diam. 6.5mm  Lung. 32mm</p><p>Le
+      due sonde uguali, funzionano senza modifiche allo schema.</p><p class="center">
+      <img alt="NTC 10000  ohm" decoding="async" height="200" loading="lazy" src="IMAGES/solare_s2.jpg" width="300"/>
+      </p>
+
+
+
+  <h2 id="realizzazione">Realizzazione</h2><p class="MsoNormal"><strong><span class="hl">La
+        realizzazione della centralina di controllo temperatura differenziale solare comporta avere delle
+        buone conoscenze di
+        elettronica, è necessaria un'attrezzatura ed esperienza nei
+        montaggi elettronici.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+        per danni a cose, a persone e per un uso improprio della realizzazione.</span></strong></p><p class="center"><a class="zoom-link" href="IMAGES/solare_08.jpg" title="Apri l'immagine a piena risoluzione"><img alt="La centralina funzionante inserita dentro una scatola di protezione." decoding="async" height="200" loading="lazy" src="IMAGES/solare_08_small.jpg" width="300"/></a></p><p class="center">La
+      centralina funzionante inserita dentro una scatola di protezione.</p><p>Sulla
+      parte anteriore sono sistemati i LED di segnalazione: Power, Pannello
+      caldo, pompa ON e
+      Sovratemperatura 70°</p><p>Un
+      interruttore esterno per forzare manualmente la pompa, è utile in fase di
+      collaudo o per le successive verifiche.</p><p class="center"><img alt="" decoding="async" height="251" loading="lazy" src="IMAGES/solare_07.jpg" width="300"/></p><p>Importante
+      una buona connessione di terra, non dimentichiamo che il pannello solare
+      è sul tetto e d'estate ci sono i temporali con scariche elettriche.</p><p>Tutta
+      la struttura in metallo del pannello solare deve essere collegata a terra
+      con un conduttore di grossa sezione. </p><p>Per
+      conoscere la temperatura dell'acqua ho installato un termometro digitale che
+      legge la temperatura nello stesso punto dove è fissato il NTC del Boiler.</p>
+
+
+
+
+  <h2 id="considerazioni-finali">Considerazioni finali</h2><p>Il pannello o meglio i due pannelli da 12 tubi,
+      sono installati a Torino e funzionano egregiamente. </p><p> Da fine maggio la temperatura acqua
+      (Boiler accumulo) è sempre superiore ai 45° con punte a 65° a luglio. E' pertanto necessario intervenire con il mixer acqua fredda posizionato all'uscita del boiler di accumulo.<br/>
+      Durante l'inverno diciamo dicembre, gennaio e febbraio...non ci fai niente.
+      (Per ottenere qualche
+      risultato durante l'inverno è necessario un numero maggiore di tubi,
+      della migliore qualità e posizionare il tutto a Sud con almeno 45° di
+      elevazione.)</p><p> <br/>
+      La pompa di circolazione è una normalissima pompa di circolazione a 3 velocità, usata negli impianti di riscaldamento
+      a termosifoni,
+      va bene quella più piccola a 220V, in quanto deve muovere 10-20 litri di
+      glicole..non<a class="zoom-link" href="IMAGES/solare_06.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Come caricare l'impianto e mettere in pressione con una pompa collegata a un trapano 220V." decoding="async" height="300" loading="lazy" src="IMAGES/solare_06_small.jpg" width="212"/></a> di più.  Ideale sarebbe usare la pompa a 12V collegata a un pannello fotovoltaico, nel senso che se c'è sole, la pompa gira, manca il sole, come pure il termico, tutto è
+      fermo, purtroppo la pompa a 12V costa oltre 500 euro...<br/>
+      Tutti i tubi sono in rame, è bene mettere tubi più piccoli possibile 12mm anche 10mm è ancora meglio, nel senso poca massa, poca superficie
+      esposta, quindi poche perdite.  Tutta la tubazione in rame è ricoperta di tubi
+      isolanti neri in neoprene, all'esterno ulteriore copertura con nastro alluminio.
+      <br/>
+      Il glicole anticongelante in bidoni da 25-30 litri si trova presso i grossisti di idraulica che trattano il solare, quasi tutti.
+      In zone dove le temperature minime scendono poco sotto lo zero, è
+      pensabile di diluire il glicole con acqua, questo per fare meno lavorare
+      la pompa, che con il glicole più denso tende a scaldare di più.
+      <br/>
+      In pratica si usano solo 2Atm in quanto le temperature massime non sono così alte. Bisogna tarare il vaso di espansione a 2Atm e il carico impianto
+      si fa con una di quelle piccole pompe che si calettano sul trapano, il trapano
+      deve essere  a 220V e girare forte altrimenti non
+      arriva alla necessaria pressione.
+      <br/>
+      Per caricare l'impianto, bisogna avere un rubinetto con valvola, vicino al
+      gruppo e una valvola di sfogo nel punto più alto dell'impianto con un tubo che riporta giù nel bidone del glicole, quando l'impianto è carico, uscirà il liquido dal tubo, lasciarlo gorgogliare per qualche minuto finché sono sparite le bolle d'aria, poi si chiude lo sfogo e si continua a pompare fino a che la pressione sale e non si muove più dai 2Atm. Chiudere velocemente il rubinetto di
+      carico e l'impianto è pronto.  Dopo qualche ora che è stato messo in
+      pressione, controllare se ci sono perdite e gocciolamenti di
+      liquido. Se tutte le
+      giunzioni sono a posto, l'impianto deve restare in pressione per lungo
+      tempo. Controllare periodicamente, il mantenimento della pressione.</p><p>Con
+      la funzione timer 3/12 inserita, la temperatura dell'acqua sarà più bassa, ma sempre sufficiente per uso quotidiano di tre persone.
+      Eventualmente si può allungare il tempo di ON a 6 minuti (portare R3 =
+      5.6M ohm),  o anche a 12 min. ON e 12 min. OFF  (portare R3 =
+      10M ohm), ottenendo
+      sempre un risparmio del 50% sul consumo energia alla pompa.<br/>
+               </p><h2 id="consigli">Consigli:</h2><p>
+      Posizionare i pannelli per l'angolo
+      invernale (dove e quando possibile), questo per recuperare qualcosa durante l'inverno, meglio
+      usare i pannelli quelli con i tubi
+      sotto vuoto di
+      diametro da 57 o 70mm. che hanno un rendimento migliore dei 47mm.
+       
+      <br/>
+      Impianto con tubi di circolazione il più corto possibile, per avere basse perdite. Curare
+      molto bene l'isolamento termico dei tubi, pompa e valvole, nessun elemento
+      caldo in metallo deve essere esposto. Utile un termometro a infrarossi per
+      il controllare e cercare le perdite di calore.
+      </p><p>  Usare un timer giornaliero per attivare l'alimentazione generale,
+      diciamo dalle 10 alle 17 in estate e 11 - 15 durante l'inverno, così di notte non si consuma energia per la
+      centralina. Inoltre durante l'estate
+      riducendo i tempi di accensione, si può risparmiare
+      energia per la pompa tenendo l'impianto acceso per poche ore.
+      </p>
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Batterie &amp; energia”</h2>
+      <ul class="card-grid">
+<li><a href="battery_test.htm"><span class="c-sec">Batterie &amp; energia</span>Come testare l&#x27;autonomia delle batterie Ni-Mh</a></li>
+<li><a href="nimh_battery_charger.htm"><span class="c-sec">Batterie &amp; energia</span>Ni-Mh fast charger</a></li>
+<li><a href="lipo_battery_charger.htm"><span class="c-sec">Batterie &amp; energia</span>Litio (Li-Po) charger</a></li>
+<li><a href="parkside_battery_pack.htm"><span class="c-sec">Batterie &amp; energia</span>Parkside paccobatteria 20V 15Ah</a></li>
+<li><a href="ebike_test_batterie.htm"><span class="c-sec">Batterie &amp; energia</span>E-bike — test batterie 36/48 V</a></li>
+<li><a href="ebike_extra_pack.htm"><span class="c-sec">Batterie &amp; energia</span>E-bike — extra pack 36/48 V</a></li>
+<li><a href="electric_bike_bms.htm"><span class="c-sec">Batterie &amp; energia</span>BMS 48V 4A</a></li>
+<li><a href="auto_elettrica.htm"><span class="c-sec">Batterie &amp; energia</span>Auto elettrica: che fare?</a></li>
+<li><a href="home_save_energy.htm"><span class="c-sec">Batterie &amp; energia</span>Come risparmiare energia elettrica in casa</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#prefazione">Prefazione</a></li>
+<li><a href="#schema-idraulico-semplificato">Schema idraulico semplificato.</a></li>
+<li><a href="#schema-elettrico-sistema-digitale-arduino-2009-arduino-uno">Schema elettrico sistema digitale Arduino 2009 / Arduino Uno</a></li>
+<li><a href="#programma-per-scheda-arduino-2009-e-simili">programma per scheda Arduino 2009 e simili</a></li>
+<li><a href="#schema-elettrico-sistema-anlogico-2006-2007">Schema elettrico sistema anlogico 2006/2007</a></li>
+<li><a href="#timer-3minuti-on-12-minuti-off-da-usare-nel-periodo-estivo-p">Timer 3minuti ON - 12 minuti OFF ( Da usare nel periodo estivo più caldo)</a></li>
+<li><a href="#realizzazione-sonde-ntc-per-lettura-temperatura-tp-e-tb">Realizzazione sonde NTC per lettura temperatura Tp e Tb</a></li>
+<li><a href="#utilizzo-di-sonde-commerciali">Utilizzo di sonde commerciali.</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#considerazioni-finali">Considerazioni finali</a></li>
+<li><a href="#consigli">Consigli:</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

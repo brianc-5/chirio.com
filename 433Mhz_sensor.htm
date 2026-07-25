@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Sensori wireless 433 MHz come aumentare la distanza by Roberto Chirio</title>
+<meta content="Sensori wireless 433Mhz come aumentare la distanza by Roberto Chirio" name="description"/>
+<meta content="Oregon scientifics, sensori 433Mhz, temperatura wireless" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="assets/site.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Archivio tecnico</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Cerca nell’archivio</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>Categorie</span></button>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Categorie dell’archivio">
+<ul class="nav-list">
+<li><a aria-current="true" href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Antenne attive, generatori RF, misure di campo</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Alimentatori</span><span class="n-desc">Switching da laboratorio, ATX, step-up, carichi</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batterie</span><span class="n-desc">Capacità, caricabatterie, BMS, energia in casa</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">LED di potenza, torce, proiettori, dimmer, prove</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioattività</span><span class="n-desc">Contatori Geiger, alta tensione, calibrazione</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Misure</span><span class="n-desc">Strumenti autocostruiti e fondamenti</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Progetti</span><span class="n-desc">Fotografia, stampa 3D, meccanica</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Archivio storico della Batteria</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Percorso di navigazione" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">Sensori 433 Mhz sensor wireless</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radio &amp; antenne</p>
+<h1>Sensori a 433 MHz</h1>
+<p class="subtitle">Semplice modifica per aumentare la portata.</p>
+<p class="article-meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>rubrica “Radio Corner”</span></p>
+</header>
+<details class="toc-mobile"><summary>Indice della pagina</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-ensore-oregon-scientific">S ensore Oregon Scientific</a></li>
+<li><a href="#modifica-con-uscita-antenna-dalla-parte-sensore">Modifica con uscita antenna dalla parte sensore.</a></li>
+<li><a href="#descrizione">Descrizione</a></li>
+<li><a href="#soluzione-semplice">Soluzione semplice</a></li></ol></nav></details>
+<div class="prose">
+
+<hr color="#336699"/>
+<h2 id="premessa">Premessa</h2><p>Settembre
+2013/Gennaio 2020</p><p>Chi
+vuole usare un
+termometro digitale o una stazione meteo con la sonda wireless esterna
+sovente non riesce arrivare fuori casa per mancanza di segnale, mentre in
+spazio aperto arrivano anche a 30mt, il problema è la frequenza e la
+scarsa antenna montata sui sensori. Altro problema è dato dalla
+saturazione di segnali radio, in presenza di forti campi dovuti a WiFi o
+radio commerciali FM, i piccoli segnali a 433 MHz vengono penalizzati.</p><p>Altro
+problema che la maggior parte dei sensori usano quasi sempre lo stesso modulo
+433 e 3 Ch in
+un contesto di condominio, o abitazioni vicine, spesso non bastano più, può
+succedere di leggere la temperatura della sonda del vicino...
+</p><p>Soluzione,
+basta migliorare la piccola antenna per aumentare la portata.</p>
+<h2 id="s-ensore-oregon-scientific">S ensore Oregon Scientific</h2><p class="center">
+<img alt="" class="is-photo" decoding="async" height="395" loading="lazy" src="IMAGES/433mhz_001.jpg" width="593"/>
+</p><p>Togliendo
+il coperchio posteriore si vede la bobina a spirale che ha la funzione di
+antenna, purtroppo il segnale in uscita viene in parte assorbito dalle
+batterie metalliche e dal sensore NTC posizionato proprio sotto la bobina.
+(connessioni queste viste come messa a massa del segnale). Inoltre non è una buona soluzione avere la bobina antenna con il filo che corre
+assieme al sensore, quasi tutta la RF viene annullata.
+</p><p>Con
+433 MHz la lunghezza d'onda è di 70cm, teoricamente ogni ostacolo più
+vicino al trasmettitore può penalizzare l'efficienza di emissione.</p><p>Come
+pure
+il passaggio del cavo antenna di rame smaltato vicino al CS, penalizza
+il segnale, ci andrebbe un cavetto schermato coassiale.</p><p>Migliore
+soluzione sarebbe lasciare il NTC al suo posto ed uscire con l'antenna
+nella parte superiore della scatola, bisognerebbe sigillare bene per
+evitare ingresso acqua.
+</p>
+<h2 id="modifica-con-uscita-antenna-dalla-parte-sensore">Modifica con uscita antenna dalla parte sensore.</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="395" loading="lazy" src="IMAGES/433mhz_002.jpg" width="593"/>  </p><h2 id="descrizione">Descrizione</h2><p>
+Per semplificare e non avere
+problemi con la tenuta all'acqua, si è
+scelto di fare uscire il filo di antenna dalla parte inferiore.
+</p><p>La modifica è molto
+semplice, si stacca delicatamente la bobina e si svolge tutto il filo di
+rame smaltato, la lunghezza del filo è eccessiva per risuonare a 1/4 onda
+sui 433 MHz, dovremo accorciarlo a 17cm, in questo caso è stato usato un
+tubetto di teflon diam. 0.8 per protezione e antilacerazione.</p><p>Il cavo viene fatto
+uscire da uno dei fori per la misura della temperatura aria, il sensore
+NTC va posizionato in centro e fissato con un po’ di colla termica.</p><p>Il risultato è già
+molto buono, la portata fuori casa si è moltiplicata per 3 e anche la
+presenza di WiFi disturba poco. Si riescono facilmente superare i 3 piani
+dove prima si faceva a malapena un solo piano con l'antenna interna.</p><p>Attenzione che alcuni
+sensori usano la frequenza di 315 MHz quindi la lunghezza dell'antenna a
+1/4 deve essere di 23cm. la frequenza di lavoro è scritta dietro al
+dispositivo o meglio sopra al SAW Resonator.</p><p>Questa modifica va bene un
+po’ per tutti i tipi di sensori remoti, pure quelli per Power Meter usano la
+stessa frequenza e gruppo RF con il SAW Resonator 433 MHz.</p><p>
+<a class="zoom-link" href="IMAGES/433mhz_003.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="124" loading="lazy" src="IMAGES/433mhz_003_small.jpg" width="100"/></a>
+</p><p class="center"><img alt="" class="is-diagram" decoding="async" height="261" loading="lazy" src="IMAGES/433mhz_004.gif" width="645"/></p><p>Questo è lo
+schema generico della sezione RF dove la L2 rappresenta la bobina antenna
+interna che abbiamo eliminato mettendo il filo da 17cm.</p><p>Per chi
+vuole andare più lontano, la soluzione migliore sarebbe quella di
+adattare l'impedenza di uscita per i 52 Ohm e saldare un cavetto RG 174
+collegato a connettore SMA per poi andare su una antenna seria, posizionata nel
+punto migliore, è pensabile di arrivare a 80-100 metri.....</p><p>Aggiungere i
+17cm di antenna pure sul ricevitore può migliorare ancora la prestazione,
+bisognerebbe che il ricevitore fosse posizionato non appeso al muro, ma su
+un tavolo non metallico lontano dalle parti, così da avere più apertura in ricezione.</p><p>Meglio
+ancora aggiungere un piccolo amplificatore RF in classe "A" per
+portare il segnale dai 5-10mW a dei più sicuri 100-200mW......non ci
+sarebbe un grande consumo di batteria a 9V in quanto l'impulso
+trasmissione dati dura meno di 1 sec ogni 30 sec....
+</p><h2 id="soluzione-semplice">Soluzione semplice</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="498" loading="lazy" src="IMAGES/antenna_IMG_6190.jpg" width="743"/> </p><p><img alt="" class="is-photo" decoding="async" height="494" loading="lazy" src="IMAGES/antenna_IMG_6192.jpg" width="741"/>
+</p><p>
+Per chi non vuole aprire e
+saldare, propongo questa soluzione, meno efficace, ma che può dare
+qualche risultato, antenna a dipolo, accoppiata direttamente sul sensore,
+si tratta di avvolgere due spire di filo rigido e lasciare gli spezzoni
+come antenna, i baffi nel caso di 433  vanno lasciati lunghi 17cm,
+l'avvolgimento va posizionato dove sotto c'è l'antenna interna.
+Allontanando il trasmettitore si dovrebbe notare un mantenimeto del
+segnale. 
+</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+<ul>
+<li><a href="mini_whip.htm"><span class="r-sec">Radio &amp; antenne</span>Mini Whip — antenna attiva HF/VLF</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="r-sec">Radio &amp; antenne</span>Mini Whip SDR — antenna attiva</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="r-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="r-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="r-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="r-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="r-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2014.htm"><span class="r-sec">Radio &amp; antenne</span>RF Oscillator — generatore 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="r-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+</ul>
+</section>
+</main><aside aria-label="Indice della pagina" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-ensore-oregon-scientific">S ensore Oregon Scientific</a></li>
+<li><a href="#modifica-con-uscita-antenna-dalla-parte-sensore">Modifica con uscita antenna dalla parte sensore.</a></li>
+<li><a href="#descrizione">Descrizione</a></li>
+<li><a href="#soluzione-semplice">Soluzione semplice</a></li></ol></nav></aside></div>
+
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Archivio tecnico di Roberto Chirio: elettronica, radio e antenne,
+          alimentatori, batterie, illuminazione a LED, misure di laboratorio, e
+          l’archivio storico della Batteria dello Chaberton.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archivio</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure</a></li>
+<li><a href="index.html#progetti">Progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle
+        immagini, degli schemi e dei testi. Photos and videos are copyright
+        © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Torna all’inizio della pagina" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="assets/site.js"></script>
+</body>
+</html>

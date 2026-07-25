@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>1.5V 1.2V D C AA AAA battery size Come misurare la capacità degli accumulatori ricaricabili Ni-Mh by Roberto Chirio</title>
+<meta content="1.5V 1.2V D C AA AAA battery size Come misurare la capacità degli accumulatori ricaricabili Ni-Mh by Roberto Chirio" name="description"/>
+<meta content="test accumulatori, batterie ricaricabili, accumulatori ricaricabili, pile ricaricabili, batterie piombo, batterie Ni-Cd, batterie Ni-Mh, battery test, prova di scarica, corrente di scarica, verifica corrente, dummy load for battery cell" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="assets/site.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Archivio tecnico</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Cerca nell’archivio</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>Categorie</span></button>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Categorie dell’archivio">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Antenne attive, generatori RF, misure di campo</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Alimentatori</span><span class="n-desc">Switching da laboratorio, ATX, step-up, carichi</span></span><span class="count">6</span></a></li>
+<li><a aria-current="true" href="index.html#batterie"><span><span class="n-label">Batterie</span><span class="n-desc">Capacità, caricabatterie, BMS, energia in casa</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">LED di potenza, torce, proiettori, dimmer, prove</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioattività</span><span class="n-desc">Contatori Geiger, alta tensione, calibrazione</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Misure</span><span class="n-desc">Strumenti autocostruiti e fondamenti</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Progetti</span><span class="n-desc">Fotografia, stampa 3D, meccanica</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Archivio storico della Batteria</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Percorso di navigazione" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#batterie">Batterie &amp; energia</a></li><li aria-current="page">Come testare l'autonomia delle batterie Ni-Mh</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Batterie &amp; energia</p>
+<h1>Come testare l'autonomia degli</h1>
+<p class="subtitle">accumulatori ricaricabili Ni-Mh "Fai da te" di R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#batterie">Batterie &amp; energia</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Indice della pagina</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#test-su-batterie-commerciali">Test su Batterie commerciali</a></li>
+<li><a href="#schema-elettrico-sistema-test-batterie-corrente-costante" title="SCHEMA ELETTRICO sistema test batterie corrente costante.">SCHEMA ELETTRICO sistema test batterie corrente…</a></li>
+<li><a href="#conclusioni">Conclusioni</a></li></ol></nav></details>
+<div class="prose">
+
+<hr/>
+<h2 id="test-su-batterie-commerciali">Test su Batterie commerciali</h2><p>
+2006-2009 Negli
+ultimi  anni abbiamo visto una notevole crescita della capacità degli
+accumulatori, nel 1995 c'erano solamente gli accu Ni-CD e la loro
+capacità nel formato stilo (AA) era di solo 600mAh e già davano risparmio
+nell'uso di flash e dispositivi vari a batteria.
+</p><p> Attualmente gli Ni-Mh
+AA sono disponibili
+nella capacità massima di targa pari 2900mAh e fa pensare che la capacità
+aumenterà ancora. Il miglioramento di tali prestazioni è dovuto di
+riflesso al fatto che milioni di telefonini usano tali batterie pertanto
+le case costruttrici, in concorrenza tecnologica trovano e inventano
+continuamente nuove soluzioni e la quantità prodotta fa abbassare i
+prezzi e migliorare la qualità. </p><p> Personalmente con i
+Flash fotografici e lampade a LED  uso molte batterie ricaricabili
+e spesso ho bisogno di conoscere la loro capacità effettiva per
+pianificare la durata di funzionamento.</p><p> Come sono
+caratterizzati gli accumulatori?...
+pochi sanno che la capacità menzionata come Ampere x ora è
+caratterizzata a 0,2C Cosa vuol dire? Vuol dire semplicemente che tale
+batteria non è in grado di dare per esempio 2500mA per 1 ora, ma 2500mA
+x 0,2 x 5 ore in quanto la scarica batteria in tempi brevi richiede
+molta corrente che per effetto della resistenza interna e del
+riscaldamento per effetto joule degradano la capacità
+con l'aumento della corrente assorbita.</p><p>In pratica se il nostro
+assorbimento di corrente si avvicina al dato di targa degli accumulatori, dobbiamo
+fare affidamento su una capacità molto più bassa di quella per la
+quale abbiamo acquistato le ricaricabili.</p><p> Questo metodo di misura
+è
+anche valido per le batterie auto, sempre caratterizzate a 0,2C. In
+questo caso, è chiaro che occorre un <a href="electronic_load.htm"> carico elettronico</a> che permetta
+un controllo di scarica con corrente
+costante di 10-15A....ma questo è un altro dei miei progetti
+elettronici.</p>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+
+<strong>Batterie PANASONIC ENELOOP PRO 2500 mAh Ni-Mh AA 
+mod. </strong><strong>BK-3HCDE/4BE</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="7">
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_11_16_b.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="IMAGES/Battery_test_11_16.jpg" width="200"/></a></p>
+</td>
+<td rowspan="7">
+
+</td>
+<td class="center">
+
+</td>
+<td class="center">
+<strong>tempo scarica</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>valore mAh</strong>
+</td>
+<td rowspan="7">
+<p class="center"><strong>valore
+medio=2396mAh</strong>
+</p><p class="center"><strong>Valutazione:</strong></p><p class="center"><strong><span class="hl-g">OTTIME</span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 25m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2208</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 30m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2250</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>4h 50m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2415</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>4</strong>
+</td>
+<td class="center">
+<strong>4h 50m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2415</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>5</strong>
+</td>
+<td class="center">
+<strong>5h 01m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2508</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>6</strong>
+</td>
+<td class="center">
+<strong>5h 10m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2580</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+Novembre 2016<p>Batterie
+di nuova generazione appena uscite sul mercato, con una buona capacità 
+minima di 2500mAh
+garantito, presentato una capacità residua fino al 85% dopo 1 anno, quindi bassissima
+auto scarica sicuramente superiori a tutte le altre
+provate precedentemente.</p>
+<p>Per il test sono stati
+utilizzati due pacchi da 4 accumulatori, dopo diverse cariche/
+scariche di formazione sono stati presi gli ultimi 6 valori rilevati (*)</p>
+<p>Batteria molto
+consigliata, ideale per ogni impiego. Da tenere nel cassetto come se fosse
+una alcalina in quanto sempre carica.</p>
+<p>Ottima per Flash e ogni
+impiego che richieda corrente di spunto, come giocattoli a motore.</p>
+<p>(*) Le batterie 
+
+<strong> PANASONIC ENELOOP PRO BK-3HCDE </strong>hanno inciso
+sulle confezione e sul corpo batteria la data
+di produzione, consiglio di acquistare le batterie con data più recente.
+Nel nostro caso, le batterie arrivate avevano la data di produzione del
+5/2015 quindi 18 mesi vecchie. Provati due pacchi, appena aperta la
+confezione sono stati rilevati  2h 15m e 2h e 30m di carica residua,
+pertanto una carica (50%) ancora sufficiente per fare lavorare un flash o
+fare funzionare un giocattolo.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+
+<strong>Batterie SANYO 2700 mA/h Ni-Mh AA 
+mod. HR 3U</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="IMAGES/Battery_test_11_09_small.jpg" width="200"/></p>
+</td>
+<td rowspan="4">
+
+</td>
+<td class="center">
+
+</td>
+<td class="center">
+<strong>tempo scarica</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>valore mA/h</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>valore
+medio=2634mA/h</strong>
+</p><p class="center"><strong>Valutazione:</strong></p><p class="center"><strong><span class="hl-g">OTTIME</span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 45m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2565</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 50m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2610</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>5h 03m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2727</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+Novembre 2009<p>Batterie
+di nuova generazione con una buona capacità e valore minimo di 2500mAh
+garantito, con bassa autoscarica, sicuramente superiori a tutte le altre
+provate precedentemente.</p>
+<p>Batteria molto
+consigliata, presenta una buona capacità, corrispondente ai dati di targa. Ideale 
+per ogni applicazione di uso flash o per alimentare Power Led.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+
+<strong>Batterie SONIC ENERGY 2500 mAh Ni-Mh AA vendute
+solo nei supermercati LIDL</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_05_08.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="IMAGES/Battery_test_05_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+
+</td>
+<td class="center">
+
+</td>
+<td class="center">
+<strong>tempo scarica</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>valore mAh</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>valore
+medio=1561mAh</strong>
+</p><p class="center"><strong>Valutazione:</strong></p><p class="center"><strong>Insufficiente</strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>3h 00m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>21°</strong>
+</td>
+<td class="center">
+<strong>1500</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>3h 05m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1560</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>3h 15m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>21°</strong>
+</td>
+<td class="center">
+<strong>1625</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+Giugno 2008<p>Batterie
+con dato di targa ottimistico, sono state provate in oltre 4 carica/scarica senza
+mostrare miglioramenti nella prestazione.</p>
+<p>Vendute solo come
+promozione nei supermercati LIDL, la capacità risulta molto bassa
+rispetto ai 2500 dichiarati.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+
+<strong>Batterie GP 2700mAh Ni-Mh AA  </strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_04_08_b.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="IMAGES/Battery_test_04_08_b_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+
+</td>
+<td class="center">
+
+</td>
+<td class="center">
+<strong>tempo scarica</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>valore mAh</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>valore
+medio=2445mAh</strong>
+</p><p class="center"><strong>Valutazione:</strong></p><p class="center"><strong><span class="hl-g"><em>Buone</em></span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 20m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>2340</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 30m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>2430</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>4h 45m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>2565</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="7">
+Aprile 2008<p>Batterie
+con una discreta capacità effettiva, dopo 5 carica/scarica ancora in
+miglioramento.</p>
+<p>Si avvicinano al minimo
+garantito di 2600mAh.</p>
+<p>Molto valido ed
+efficiente il carica batteria POWER BANK V800C in grado di caricare 4
+stilo in meno di 60 minuti. Il controllo gestisce singolarmente ogni
+batteria e spegne la corrente di carica raggiunto il valore nominale.
+Durante la fase di carica, per ridurre il riscaldamento, una piccola
+ventola raffredda gli accumulatori. Caricatore molto indicato per chi ha
+fretta di ricaricare gli accumulatori, buone prestazioni con tutti gli
+accumulatori da 2000 a 2900mAh anche di altre marche. </p>
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_04_08_b1.jpg" title="Apri l'immagine a piena risoluzione"><img alt="GP Power Bank V800C" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/Battery_test_04_08_b1_small.jpg" width="200"/>
+</a>
+</p></td>
+</tr>
+</tbody></table></div>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+
+<strong>Batterie ANSMANN 2850mAh Ni-Mh AA </strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_04_08_c.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="IMAGES/Battery_test_04_08_c_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+
+</td>
+<td class="center">
+
+</td>
+<td class="center">
+<strong>tempo scarica</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>valore mAh</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>valore
+medio=2390mAh</strong>
+</p><p class="center"><strong>Valutazione:</strong></p><p class="center"><strong>Sufficiente</strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 00m</strong>
+</td>
+<td class="center">
+<strong>0,57</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>2280</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 30m</strong>
+</td>
+<td class="center">
+<strong>0,57</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2565</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>4h 05m</strong>
+</td>
+<td class="center">
+<strong>0,57</strong>
+</td>
+<td class="center">
+<strong>21°</strong>
+</td>
+<td class="center">
+<strong>2327</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+Aprile 2008<p>Batterie
+con dato di targa ottimistico, sono state provate in oltre 6 carica/scarica senza
+mostrare miglioramenti nella prestazione.</p>
+<p>Positivo il fatto che
+vengono vendute con 2 anni di garanzia, non usuale per batterie
+ricaricabili.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+
+<strong>Batterie SANYO  ENELOOP 2000mAh Ni-Mh AA  
+HR-3UTG</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_04_08.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="IMAGES/Battery_test_04_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+
+</td>
+<td class="center">
+
+</td>
+<td class="center">
+<strong>tempo scarica</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>valore mAh</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>valore
+medio=1788mAh</strong>
+</p><p class="center"><strong>Valutazione:</strong></p><p class="center"><strong>sufficiente</strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 15m</strong>
+</td>
+<td class="center">
+<strong>0,40</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1700</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 30m</strong>
+</td>
+<td class="center">
+<strong>0,40</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1800</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>4h 40m</strong>
+</td>
+<td class="center">
+<strong>0,40</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1864</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="7">
+Marzo 2008<p>Batterie
+ecologiche, (simili alle GP) sono vendute gia cariche, e una volta caricate si mantengono
+per diversi mesi, in quanto presentano una bassissima autoscarica,
+presentano una capacità di targa di 2000mAh.  <a href="http://www.it.eneloop.info/gamma_di_prodotti.html" rel="noopener">http://www.panasonic-eneloop.eu/it/prodotti</a></p>
+<p>Dalla Sanyo mi aspettavo
+delle prestazioni migliori, nelle tre prove non raggiunge il dato di
+targa, e nemmeno il minimo garantito di 1900mAh.</p>
+<p>Economico il
+caricabatteria fornito assieme alle ENELOOP, la carica consigliata è di 10-12 ore, un po’ lunga per chi
+fa un uso pesante delle ricaricabili.</p>
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_04a_08.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="150" loading="lazy" src="IMAGES/Battery_test_04a_08_s.jpg" width="118"/></a>
+</p></td>
+</tr>
+</tbody></table></div>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>Batterie GP 
+Recyko+ 2050mAh Ni-Mh AA</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_03_08.jpg" title="Apri l'immagine a piena risoluzione"><img alt=" Batterie GP  Recyko+ 2050mA/h Ni-Mh " class="is-photo" decoding="async" height="133" loading="lazy" src="IMAGES/Battery_test_03_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+
+</td>
+<td class="center">
+
+</td>
+<td class="center">
+<strong>tempo scarica</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>valore mAh</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>valore
+medio=1978mAh</strong>
+</p><p class="center"><strong>Valutazione:</strong></p><p class="center"><strong><span class="hl-g">ottime</span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>3h 15m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>19°</strong>
+</td>
+<td class="center">
+<strong>1885</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>3h 20m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1931</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>3h 40m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2120</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+Febbraio 2008<p>Batterie
+ecologiche, sono vendute gia cariche, e una volta caricate si mantengono
+per diversi mesi, in quanto presentano una bassissima autoscarica,
+presentano una capacità di targa di 2050mAh</p>
+<p><a href="http://www.gpbatteries.it/batterie-ricaricabili/" rel="noopener">http://www.gpbatteries.it/batterie-ricaricabili/</a></p>
+<p>Per comodità della
+prova, sono state
+scaricate con una corrente più alta del 0,20C, pertanto i già buoni
+risultati ottenuti, devono considerarsi ottimi, migliori dei dati di targa.</p>
+<p>Batteria molto
+consigliata, non presenta una capacità altissima, ma il dato è molto
+onesto. Ideale da tenere per lunghi tempi nella borsa della fotocamera per ogni
+evenienza di uso flash.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>Batterie EYEPOWER
+2950mAh Ni-Mh  AA</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_02_08.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Batterie EYEPOWER 2950mA/h Ni-Mh " class="is-photo" decoding="async" height="133" loading="lazy" src="IMAGES/Battery_test_02_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+
+</td>
+<td class="center">
+
+</td>
+<td class="center">
+<strong>tempo scarica</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<strong>tb</strong>
+</td>
+<td class="center">
+<strong>valore mAh</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>valore
+medio=1334mAh</strong>
+</p><p class="center"><strong>Valutazione:</strong></p><p class="center"><strong><span class="hl-r">insufficiente</span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>1h 55m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>1110</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>2h 20m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1351</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>2h 40m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1542</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+Gennaio 2008
+<p>sono stato attirato dal
+basso prezzo di acquisto di questi accumulatori cinesi, purtroppo la
+delusione è grande nel constatare la bassissima capacità dimostrata.
+Anche dopo diverse cariche scariche non sono mai andati oltre i 1550mAh</p>
+<p>Sconsiglio vivamente
+l'acquisto su Internet di tali prodotti.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>Batterie Alcava
+2900mAh Ni-Mh  AA</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="IMAGES/Battery_test_01_08.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Batterie Alcava 2900mA/h Ni-Mh " class="is-photo" decoding="async" height="133" loading="lazy" src="IMAGES/Battery_test_01_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+
+</td>
+<td class="center">
+
+</td>
+<td class="center">
+<strong>tempo scarica</strong>
+</td>
+<td class="center">
+<strong> Is </strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>valore mAh</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>valore
+medio=2181mAh</strong>
+</p><p class="center"><strong>Valutazione:</strong></p><p class="center"><strong>appena
+sufficiente</strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>3h 33m</strong>
+</td>
+<td class="center">
+<strong>0,58 </strong>
+</td>
+<td class="center">
+<strong>25°</strong>
+</td>
+<td class="center">
+<strong>2059</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>3h 45m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>24°</strong>
+</td>
+<td class="center">
+<strong>2175</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>3h 59m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>25°</strong>
+</td>
+<td class="center">
+<strong>2310</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+<p>
+Maggio 2007
+</p>
+<p>
+Dati
+di verifica su accumulatori Alcava  Ni-Mh 2900 nuovi. (Prima di
+questa misura sono state effettuate tre
+carica/scarica di formazione).
+</p>
+<p>
+Si vede che il dato di targa
+degli accumulatori è un po' ottimistico, vedremo più avanti se tali
+accumulatori aumenteranno la capacità e di quanto dopo un certo numero di
+cariche scariche. 
+</p>
+<p>Gennaio
+2008</p>
+<p>Le
+batterie (accumulatori)  sono stati riprovate dopo 9 mesi di lavoro,
+durante questo periodo sono state caricate circa 20 volte, la capacità
+media misurata è adesso di 2070mAh.</p>
+</td>
+</tr>
+</tbody></table></div>
+<hr color="#336699" size="4"/>
+<p> Settembre
+2007
+</p>
+<h2 id="schema-elettrico-sistema-test-batterie-corrente-costante">SCHEMA ELETTRICO sistema test batterie corrente costante.</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="230" loading="lazy" src="led/images/battery_test_01.gif" width="620"/></p><p class="center">Schema
+elettrico per testare le batterie ricaricabili Ni-Mh.</p><p> Usando
+l'integrato LM317 in configurazione corrente costante possiamo fare un
+circuito che garantisce il controllo della corrente batteria per tutta la durata
+della scarica. </p><p><span class="hl-g"><strong> Nota
+bene</strong></span>, questa configurazione serve per un minimo di 4
+batterie, con meno batterie non funziona in quanto la tensione di lavoro
+risulta troppo bassa per compensare le cadute sull' LM317 + 1,25V del
+carico.</p><p>Individuati
+gli accumulatori da testare, dobbiamo tarare la corrente di uscita in
+funzione della corrente accumulatore.</p><p>Esempio:</p><p class="center">accu
+Ni-Mh  da 2900mAh  la R diventa 1.25/
+(2900/5) =  2,155 ohm  1W  per una
+I=0,580A</p><p> Questa
+R da 2,155 ohm deve essere il più precisa possibile, in alternativa è
+possibile mettere al posto di R1 un reostato da 10W 5-10ohm e regolare il
+valore della corrente leggendo sull'amperometro in serie il valore
+numerico preciso.</p><p>Il
+regolatore LM317 va montato su un radiatore, in quanto
+deve dissipare l'energia della batteria in scarica. Ricordo che LM317
+sopporta una dissipazione fino a 20W.</p><p>Serve
+anche un voltmetro digitale per leggere la tensione batteria.</p><p class="center"><img alt="Prova capacità accumulatori al Ni-Mh" class="is-photo" decoding="async" height="343" loading="lazy" src="led/images/battery_test_02.jpg" width="500"/></p><p class="center">Disposizione
+dei componenti durante la prova.</p><p>Sulla
+sinistra il multimetro in configurazione Amperometro, in questo caso la corrente
+costante letta è pari a 0,580 A. Alla destra il Voltmetro che legge la tensione delle 4
+batterie, <em><strong> la prova finisce quando la tensione raggiunge i 4,00Volt.</strong></em></p><p>Il
+cronometro è indispensabile per misurare la durata della scarica. Inoltre
+si può misurare la temperatura batterie per un confronto su misure
+future.</p><p>Al
+centro il regolatore LM317 con la resistenza serie da 2,155 ohm ottenuta
+con una serie parallelo.</p><p>Per
+chi deve realizzare molte misure, lo schema è facilmente automatizzabile
+con l'utilizzo di componenti logici o meglio con un sistema con Arduino.</p><p>Esecuzione
+della prova.</p><p>Caricare
+le batterie a fondo, quando cariche aspettare che siano a temperatura
+ambiente. E' sempre bene caricare  lentamente gli accumulatori, per
+non farli surriscaldare, 6-8 ore di carica sono il tempo giusto per una lunga vita
+degli accumulatori.</p><p>Collegare
+il pacco batteria al sistema di scarica e fare partire il cronometro.</p><p>La
+misura finisce quando la tensione batteria corrisponde a 4,00 Volt totali
+(prova di 4 batterie in serie), leggere il tempo e scrivere il valore nella
+tabella.</p><p>Per
+un dato affidabile è consigliabile ripetere tre volte la misura  e
+fare il valore medio delle tre misure.</p><hr color="#336699"/><h2 id="conclusioni">Conclusioni</h2><p>Da
+come si vede dalle prove, è' meglio acquistare batterie con solo
+2000-2200mAh di targa, ma più
+oneste e corrispondenti nei valori dichiarati.</p><p>E'
+sempre consigliabile ricaricare subito le batterie scaricate, non lasciarle
+per lungo tempo scariche. Importante, non fare scaldare gli accumulatori
+oltre i 40° altrimenti si degraderanno molto in fretta.
+</p><p>La
+durata delle batterie può anche superare i tre anni, in genere sono da
+tenere sotto controllo eventuali ossidazioni e perdite di elettrolita, in
+tal caso tutte e quattro vanno smaltite, non lasciare batterie a lungo
+dentro le apparecchiature, se non si usa il giocattolo o il flash, meglio
+tenere le batterie in luogo asciutto dentro a un porta batteria in
+plastica.
+</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Altre pagine in “Batterie &amp; energia”</h2>
+<ul>
+<li><a href="nimh_battery_charger.htm"><span class="r-sec">Batterie &amp; energia</span>Ni-Mh fast charger</a></li>
+<li><a href="lipo_battery_charger.htm"><span class="r-sec">Batterie &amp; energia</span>Litio (Li-Po) charger</a></li>
+<li><a href="parkside_battery_pack.htm"><span class="r-sec">Batterie &amp; energia</span>Parkside paccobatteria 20V 15Ah</a></li>
+<li><a href="ebike_test_batterie.htm"><span class="r-sec">Batterie &amp; energia</span>E-bike — test batterie 36/48 V</a></li>
+<li><a href="ebike_extra_pack.htm"><span class="r-sec">Batterie &amp; energia</span>E-bike — extra pack 36/48 V</a></li>
+<li><a href="electric_bike_bms.htm"><span class="r-sec">Batterie &amp; energia</span>BMS 48V 4A</a></li>
+<li><a href="auto_elettrica.htm"><span class="r-sec">Batterie &amp; energia</span>Auto elettrica: che fare?</a></li>
+<li><a href="home_save_energy.htm"><span class="r-sec">Batterie &amp; energia</span>Come risparmiare energia elettrica in casa</a></li>
+<li><a href="solare_termico_centralina.htm"><span class="r-sec">Batterie &amp; energia</span>Centralina solare termico</a></li>
+</ul>
+</section>
+</main><aside aria-label="Indice della pagina" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#test-su-batterie-commerciali">Test su Batterie commerciali</a></li>
+<li><a href="#schema-elettrico-sistema-test-batterie-corrente-costante" title="SCHEMA ELETTRICO sistema test batterie corrente costante.">SCHEMA ELETTRICO sistema test batterie corrente…</a></li>
+<li><a href="#conclusioni">Conclusioni</a></li></ol></nav></aside></div>
+
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Archivio tecnico di Roberto Chirio: elettronica, radio e antenne,
+          alimentatori, batterie, illuminazione a LED, misure di laboratorio, e
+          l’archivio storico della Batteria dello Chaberton.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archivio</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure</a></li>
+<li><a href="index.html#progetti">Progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle
+        immagini, degli schemi e dei testi. Photos and videos are copyright
+        © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Torna all’inizio della pagina" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="assets/site.js"></script>
+</body>
+</html>

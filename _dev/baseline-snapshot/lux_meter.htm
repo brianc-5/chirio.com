@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luxmeter Luxmetro analogico per misure di illuminamento by Roberto Chirio</title>
+  <meta name="description" content="Luxmeter Luxmetro analogico per misure di illuminamento by Roberto Chirio">
+  <meta name="keywords" content="lux, luxmeter, luxmetro, misurare la luce, light meter, luce diretta, luce incidente, luce riflessa, misure di laboratorio, illuminotecnica">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure" aria-current="true">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#misure">Misure &amp; laboratorio</a></li><li aria-current="page">LUX-METER ANALOG</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Misure &amp; laboratorio</p>
+        <h1>LUX - METER LUXMETRO LIGHT-METER</h1>
+        <p class="subtitle">Semplice strumento con uscita analogica adatto per misure di illuminamento relativo. &quot;Fai da te&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#misure">Misure &amp; laboratorio</a></span><span>Roberto Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#schema-elettrico">SCHEMA ELETTRICO</a></li>
+<li><a href="#descrizione-circuito">Descrizione circuito</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#collegamento-a-un-oscilloscopio-digitale">Collegamento a un Oscilloscopio digitale.</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>] </p>
+<hr/>
+
+
+  <p class="center"><img alt="" decoding="async" height="374" loading="lazy" src="IMAGES/lux_meter_00.jpg" width="500"/></p><p>Agosto
+      2007</p><p>Questo
+      progetto nasce dalla necessità di acquisire un flusso luminoso con
+      oscilloscopio digitale, il tutto per avere in tempo reale le curve di intensità luce, relative
+      ai vari progetti di illuminatori a Led funzionanti a batterie.</p><p>Strumenti
+      simili in commercio non sono disponibili se non a prezzi molto alti. Sono
+      in genere dei Data Logger per acquisizioni con tempi molto lungi.</p><p>Tarando
+      opportunamente il valore della tensione in uscita tramite un partitore
+      resistivo, è possibile avere una correlazione
+      precisa tra i mV e i Lux. (E' necessario un luxmetro di riferimento.)</p><p>Per
+      la semplicità di schema e per la mancanza di filtri ottici sul sensore,
+      non è possibile avere delle misure precise e calibrate con varie tipologie di luce,
+      tipo fluorescenza, scarica e a led. La misura è sempre relativa anche se
+      ripetibile.</p><p class="center"><a href="IMAGES/BPW_20.pdf"><img alt="BPW20 photo diode foto diodo" decoding="async" height="200" loading="lazy" src="IMAGES/lux_meter_bpw20.jpg" width="300"/>
+      </a>
+      </p><p>
+      Foto diodo al silicio,
+      adatto per realizzare strumenti di misura della luce, quali esposimetri,
+      luxmetri e misuratori temperatura colore, è caratterizzato da una ampia
+      gamma di valori di ingresso con una buona linearità della corrente in
+      uscita:
+      </p><p class="center"><a class="download" href="IMAGES/BPW_20.pdf"><strong>BPW20</strong></a>
+      (pdf 79K)</p><p class="right">                                 Per
+      info contattare: <img alt="" decoding="async" height="16" loading="lazy" src="IMAGES/email.jpg" width="93"/></p>
+
+
+
+
+  
+  <h2 id="schema-elettrico">SCHEMA ELETTRICO</h2><p class="center"><img alt="Schema elettrico Luxmetro Luxmeter" decoding="async" height="340" loading="lazy" src="IMAGES/lux_meter_01.gif" width="735"/>
+      </p>
+  
+
+
+
+  
+  <div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+    <tbody><thead><tr>
+      <th colspan="2" scope="col">
+      <p>
+      <strong> Materiale</strong>
+      </p>
+      </th>
+      <th scope="col">
+      <p>
+      <strong> Dove</strong>
+      </p>
+      </th>
+    </tr></thead>
+    <tr>
+      <td class="center">
+      <p><strong>U</strong><strong>1</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 integrato LM358
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>R1</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 resistenza
+      1M/100K/10K ohm
+      1/4W 
+      1%
+      strato metallico
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>R2</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 resistenza 10K ohm
+      1/4W 1%
+      strato metallico
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>R3</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 trimmer 10K ohm
+      cermet multigiri 
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>R4</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 resistenza 470 ohm
+      1/4W 
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>C1</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 condensatore
+      elettrolitico 1-22uF 16V (vedi
+      note)
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>C2</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 condensatore
+      elettrolitico 47uF 16V 
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>D1</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 photo diode BPW20 (vedi
+      note)
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>D2</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 led 5mm rosso
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>D3</strong></p>
+      </td>
+      <td>
+      <p>
+      ●
+      1 diodo Zener 6,2 
+      400mW
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>S1</strong></p>
+      </td>
+      <td>
+      <p>
+      
+      ●
+      1 interruttore a slitta
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      <p><strong>V1</strong></p>
+      </td>
+      <td>
+      <p>
+      ● 
+      1 Batteria 9V 
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      
+      </td>
+      <td>
+      <p>
+      ● 
+      commutatore 1 via 3
+      posizione  (rotativo o lineare) 
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      
+      </td>
+      <td>
+      <p>
+      ● 
+      connettore BNC 
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      
+      </td>
+      <td>
+      <p>
+      ● 
+      connettore batteria 9V
+      </p>
+      </td>
+      <td>
+      <p>
+      negozio elettronica
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="center">
+      
+      </td>
+      <td>
+      <p>
+      ● 
+      circuito stampato 
+      </p>
+      </td>
+      <td>
+      <p>
+      da farsi
+      </p>
+      </td>
+    </tr>
+  </tbody></table></div>
+  
+
+
+
+
+  
+  <h2 id="descrizione-circuito">Descrizione circuito</h2><p>
+      Alimentazione con batteria da
+      9V, il funzionamento è buono fino a 6V.
+        </p><p>
+       Il diodo led rosso segnala
+      l'accensione, la corrente del led è mantenuta bassa per non consumare la
+      batteria, il diodo zener in serie fa spegnere il led quando la tensione
+      scende sotto i 7V, questo per segnalare batteria scarica.
+        </p><p>
+      L'integrato LM358 ha la
+      funzione di amplificare il segnale del Photo Diode. La configurazione di
+      amplificatore a guadagno costante ci permette di avere una buona
+      linearità su tutta la scala. Per avere un completo campo di utilizzo per
+      tutta la scala di illuminazione da 0 a 20000 lux è necessario usare un
+      commutatore a tre posizione per sostituire la resistenza del guadagno
+      amplificatore. Le tre resistenze devono essere del tipo a strato metallico da 1%
+      di precisione.
+        </p><p>Il filtro passa basso in
+      uscita dall'amplificatore composto da R2 e C1, serve a ridurre gli impulsi
+      e i disturbi e linearizzare la lettura. Questo luxmetro nasce da una esigenza di acquisire fenomeni
+      luminosi lenti come la diminuzione di flusso luminoso delle varie lampade a
+      LED presenti in questo sito. Pertanto mantenendo
+      una R2 da 10K il C1 può assumere un valore da 1 a 22uF. Nel caso si
+      volessero vedere forme d'onda veloci relative alla luce pulsata, tipica di
+      lampade neon a 50Hz o neon con ballast elettronici, o altre lampade non a
+        filamento, consiglio un C1 da
+      10nF, è possibile una lettura con oscilloscopio anche senza filtro ma il
+      disturbo introdotto potrebbe essere alto e va valutato caso per caso. Un
+      condensatore da 1uF ci da una frequenza di taglio da 10Hz, valore buono
+      per uso con voltmetro digitale, da 2-3 letture/s.</p><p>Il
+        secondo stadio del LM358 è solamente un inseguitore con guadagno 1 utile per disaccoppiare l'uscita.</p><p>Sull'uscita
+        troviamo il trimmer cermet multigiro, che dovremmo tarare per avere il
+        giusto valore millivolt/Lux. Per avere un campo di funzionamento lineare
+        e non saturare l'amplificatore è bene avere valori massimi non
+        superiori ai 1,5-2,0V.
+        </p><p>L'uscita per
+        oscilloscopio non è condizionata dalla regolazione del trimmer, questo
+        per usufruire della massima escursione di segnale, utile per fare
+        diagrammi a pieno schermo.
+      </p>
+
+
+
+
+  
+    
+    <h2 id="realizzazione">Realizzazione</h2><p class="MsoNormal"><span class="hl"><strong>La
+        realizzazione del LUX-METER comporta avere delle conoscenze di
+        elettronica, è necessaria un'attrezzatura ed esperienza nei
+        montaggi elettronici.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+        per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p><p>La
+        costruzione è facile, anche senza la realizzazione del circuito
+        stampato. Basta usare una basetta millefori di piccola dimensione adatta
+        a essere fissata all'interno di una scatola per montaggi elettronici.</p><p>Il sensore
+        può essere fissato all'esterno su un lato della scatola e bloccato con un po’ di
+        colla. I terminali piegati verso l'interno e saldati ai cavetti.</p><p>Prestare un po’
+        di cura nella sistemazione dei cavi e commutatori e connettori, anche l'occhio vuole
+        la sua parte.</p><p>E'
+        necessario realizzare un'etichetta per la posizione del commutatore del
+        guadagno, sopra segneremo in corrispondenza della posizione: 1X 
+        10X  100X</p><p class="center">
+      <img alt="Luxmetro come tarare la tensione di uscita con la R3" decoding="async" height="428" loading="lazy" src="IMAGES/lux_meter_04.jpg" width="640"/>
+      </p><p>
+          Per
+        calibrare lo strumento è necessario avere un luxmetro di
+        riferimento. I due sensori vanno posizionati nella stessa direzione
+        della fonte di luce. (per comodità di foto sono entrambi appoggiati sul
+        tavolo, ma la scatola con il circuito deve essere posizionata in verticale
+        con il sensore verso l'alto.)
+        </p><p>I due sensori devono essere
+        orientati verso la fonte di luce, utilizzare una  luce con
+        filamento a Tungsteno,
+        la fonte di luce deve essere lontana il più possibile così da avere
+        raggi paralleli e verticali su entrambi i sensori e di uguale
+        intensità.</p><p>Tarare il trimmer R3 in
+        funzione da avere in uscita 1mV/Lux. Verificare la
+        lettura dei valori anche sulle scale 10X e 100X confrontandoli con il
+        luxmetro campione.
+        </p><p>Una volta tarato
+        usufruendo delle tre scale potremmo leggere valori da 1 a 20000 lux.
+        Anche oltre se lo strumento di lettura è un multimetro. 1,00Volt sulla
+        scala 100X corrispondono a 100000 lux.   (100000 lux sono
+        maggiori della luce del sole estivo.)
+      </p><p class="center"><img alt="" decoding="async" height="426" loading="lazy" src="IMAGES/lux_meter_05.jpg" width="640"/></p><p> Con
+      lo strumento tarato è anche possibile usare un voltmetro digitale da
+      200mV  fondo scala.  Il tutto può essere assemblato nella
+      stessa scatola per avere un unico strumento di misura. E' bene mantenere
+      le alimentazioni separate, o se si vuole utilizzare 1 sola pila da 9V
+      essere sicuri di avere il negativo in comune. </p><p>Il
+      consumo del Luxmetro è di qualche mA, come pure il voltmetro digitale LCD. 
+      L'autonomia con 1 comune batteria da 9V supera le 100 ore.</p><p>
+        Il sensore BPW20 viene
+        fissato con
+        un po’ di colla, come pure la rondella  di ferro. La rondella in
+        ferro serve per proteggere dai colpi il photodiode e per fissare la
+        cupola diffusore.
+      </p><p class="center"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/lux_meter_03.jpg" width="300"/>
+      </p><p>
+        La cupola diffusore è stata
+        ricuperata da una lampada a batteria con luce diffusa.
+        </p><p>Due piccole calamite
+        incollate a filo, dentro la cupola, permettono il fissaggio non permanente all'anello
+        in ferro.</p><p>Togliendo la cupolina
+        possiamo così avere la massima sensibilità per il sensore, quando è
+        necessario acquisire deboli segnali luminosi.
+      </p><p class="center"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/lux_meter_02.jpg" width="300"/>
+      </p>
+
+
+
+  
+  <h2 id="collegamento-a-un-oscilloscopio-digitale">Collegamento a un Oscilloscopio digitale.</h2><p>
+      Per fare acquisizioni di lunga
+      durata del flusso luminoso collegheremo l'uscita Scope del Luxmetro ad un
+      oscilloscopio digitale.
+      </p><p>Ottima accoppiata è usare
+      il Hantek DSO2150 USB, che presenta una base tempi minima di 1h/div potendo quindi
+      acquisire a schermo, fenomeni da 10 ore di durata. </p><p>Quasi nessun Oscilloscopio
+      Digitale di marca presenta una base tempi con valori così bassi, in
+      genere ci si ferma 5s/div.</p><p>In alternativa è possibile
+      usare un multimetro USB ed acquisire i valori di tensione letti dal
+      Luxmetro, dopo sarà possibile creare un diagramma usando Excel.</p><p>La misura va fatta portando
+      al 90% il cursore con piena luce, semplicemente allontanando o avvicinando
+      la fonte di luce dal Luxmetro, agire poi anche su 10X o 100X per attenuare un forte
+      segnale che potrebbe saturare il segnale di ingresso.</p><p>Il segnale è saturo, quando avvicinando ulteriormente la fonte di luce, non abbiamo
+      aumenti di segnale, in questo caso allontanare la fonte di luce per fare
+      scendere di almeno un 20% il segnale massimo.</p><p>La misura della luce in
+      scarica batteria, va fatta coprendo
+      con una scatola il luxmetro e la fonte di luce, questo per non
+      condizionare la misura con la luce ambiente.</p><p class="center"><a class="zoom-link" href="IMAGES/lux_meter_06.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Piccola torcia a led, sotto esame. Manca la scatola scura che scherma la luce ambiente." decoding="async" height="225" loading="lazy" src="IMAGES/lux_meter_06_small.jpg" width="300"/></a>
+      </p><p class="center">Piccola
+      torcia a led, sotto esame. Manca la scatola scura che scherma la luce
+      ambiente.
+      </p><p><strong>Esempio di
+      acquisizione flusso lampada a led, correlato a tensione batteria.</strong></p><p class="center"><img alt="" decoding="async" height="387" loading="lazy" src="led/images/curva_luxeon_2w_3x2.jpg" width="559"/></p><p class="center">Curva di
+      flusso in funzione della scarica batterie relativa al Luxeon 3W alimentato
+      a 2.16W   4x2700mA
+      </p><p class="center">Si
+      nota che con tensione di 4.0V il flusso luminoso sia ancora del 50%.
+      </p><p class="center">Le
+      batterie ancora calde erano appena state ricaricate,  questo spiega la tensione
+      iniziale di 5.8V e il picco di luce iniziale.
+  </p><hr color="#336699"/><p>Roberto
+      Chirio è a disposizione per consulenze nel campo illuminotecnico.</p><p class="right">                                 Contattare: <img alt="" decoding="async" height="16" loading="lazy" src="IMAGES/email.jpg" width="93"/></p>
+
+
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"> © Roberto
+Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Misure &amp; laboratorio”</h2>
+      <ul class="card-grid">
+<li><a href="legge_di_ohm.htm"><span class="c-sec">Misure &amp; laboratorio</span>La legge di Ohm</a></li>
+<li><a href="bromografo_uv.htm"><span class="c-sec">Misure &amp; laboratorio</span>Bromografo UV realizzato con uno scanner</a></li>
+<li><a href="cmos_cleaning.htm"><span class="c-sec">Misure &amp; laboratorio</span>Pulizia sensore reflex C-mos — CCD cleaning</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#schema-elettrico">SCHEMA ELETTRICO</a></li>
+<li><a href="#descrizione-circuito">Descrizione circuito</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#collegamento-a-un-oscilloscopio-digitale">Collegamento a un Oscilloscopio digitale.</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

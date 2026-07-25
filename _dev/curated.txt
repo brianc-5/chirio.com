@@ -1,0 +1,5 @@
+# Pages revised by hand. retrofit.py never touches these.
+# One path per line, relative to the site root.
+chaberton/chab.htm
+index.html
+mini_whip.htm

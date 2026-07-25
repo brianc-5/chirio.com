@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spy Bug FM Transmitter Spie a transistor by Roberto Chirio</title>
+  <meta name="description" content="Spy Bug FM Transmitter Spie a transistor by Roberto Chirio">
+  <meta name="keywords" content="FM BUG Circuit, varicap, high frequency diode, rf inductor, Transmitter, FM broadcast band">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio" aria-current="true">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">Spy Bug FM Transmitter</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radio &amp; antenne</p>
+        <h1>Spy Bug FM Transmitter (Spie a transistor)</h1>
+        
+        <p class="meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>“Radio Corner&quot; di R.Chirio” di R. Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#spy-bug-fm-transmitter">Spy Bug FM Transmitter</a></li>
+<li><a href="#schema-elettrico">Schema elettrico</a></li>
+<li><a href="#descrizione">Descrizione</a></li>
+<li><a href="#prove">Prove</a></li>
+<li><a href="#nuova-elettronica-spia-fm-lx-359-come-aumentare-la-potenza-i">Nuova Elettronica Spia FM LX 359 come aumentare la potenza in uscita</a></li>
+<li><a href="#descrizione-2">Descrizione</a></li>
+<li><a href="#schema-amplificatore-lineare-classe-a-10db-87-110mhz">Schema amplificatore lineare Classe A +10dB 87-110Mhz</a></li>
+<li><a href="#amplificatore-fm-lineare-10db-con-modulo-dsp-pll-87-108mhz">Amplificatore FM lineare +10dB con modulo DSP PLL 87-108MHz</a></li>
+<li><a href="#descrizione-3">Descrizione</a></li>
+<li><a href="#schema-amplificatore-lineare-classe-a-classe-c-15db-87-110mh">Schema amplificatore lineare Classe A - Classe C +15dB 87-110Mhz</a></li>
+<li><a href="#microspia-fm-a-403mhz-utilizzando-un-modulo-rf-per-radiosond">Microspia FM a 403Mhz utilizzando un modulo rf per radiosonda GRAW-SPRENGER E085</a></li>
+<li><a href="#descrizione-4">Descrizione</a></li>
+<li><a href="#power-meter-per-la-misura-delle-microspie-fm-da-1mhz-a-800mh">POWER METER per la misura delle microspie FM da 1Mhz a 800Mhz 10-100mW fs</a></li>
+<li><a href="#descrizione-5">Descrizione</a></li>
+<li><a href="#amplificatore-fm-lineare-30db-con-power-out-2w-1-930mhz-alie">Amplificatore FM lineare +30dB con Power out 2W 1-930Mhz Aliexpress</a></li>
+<li><a href="#descrizione-6">Descrizione</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>] </p>
+<hr color="#336699"/>
+
+  
+  <h2 id="premessa">Premessa</h2><p>
+      2013-2026</p><p>Chi
+      è appassionato di radio, uno dei primi circuiti che va realizzare è il
+      piccolo trasmettitore FM, ideale per mandare segnali su una
+      comune radio FM (88-108Mhz). Negli ultimi 30 anni, lo schema è stato pubblicato in
+      tutte le salse, su tutte le riviste del settore radio e elettronica. </p><p>Vedi
+      l'archivio vecchie riviste <a href="http://www.introni.it/" rel="noopener">http://www.introni.it/</a></p><p>Lo
+      schema proposto in questa pagina è stato semplificato al massimo per
+      riuscire a ridurre al minimo le dimensioni finali. La prestazione è
+      ancora buona e la portata significativa...
+      </p>
+  
+
+
+
+  
+  <h2 id="spy-bug-fm-transmitter">Spy Bug FM Transmitter</h2><p class="center">
+      <img alt="" decoding="async" height="336" loading="lazy" src="IMAGES/fm_micro_bug_003.jpg" width="506"/>
+      </p><p>La
+      dimensione del circuito montato è di 10x17mm e da come si vede in foto i componenti più grossi (fuori circuito) sono appunto il microfono e la
+      batteria, è comunque possibile
+      montare un microfono con ridotte dimensioni, lo si può prelevare dai
+      cellulari di qualche anno fa, sono di piccole dimensioni ed ottima
+      sensibilità..
+      </p>
+
+
+
+  <h2 id="schema-elettrico">Schema elettrico</h2><p class="center"><img alt="" decoding="async" height="275" loading="lazy" src="IMAGES/fm_micro_bug_000.jpg" width="513"/>  </p><h2 id="descrizione">Descrizione</h2><p>
+      Per una efficace
+      alimentazione la batteria da 9V (Duracell) è ottima e permette parecchie
+      ore di autonomia, ma se si vuole avere dimensioni ridotte al massimo è
+      meglio usare 2 o 3 celle litio tipo le 2032 usate nei PC.
+      </p><p>Il circuito funziona bene
+      da 3 a 12V, la massima portata si ottiene con 12V e un pezzo di cavo da
+      40-60cm come antenna. </p><p>Per andare a 3,7-4V
+      modificare R4 a 10K e R1 a 150ohm.</p><p>La lunghezza antenna varia in funzione della frequenza di
+      uscita, 300/f  poi si divide per 4 così da avere la lunghezza
+      antenna a 1/4 lunghezza onda.  100Mhz = 75cm - 10% per compensare le
+      perdite fanno 68cm.</p><p>Per semplificazione viene
+      usato il 2N2222A anche come amplificatore BF, il funzionamento è buono
+      senza distorsioni, molto in funzione della qualità del microfono.</p><p>Il Q2 è configurato come
+      oscillatore Colpitts. La frequenza di lavoro può essere tarata da 70 a
+      400Mhz solamente cambiando il circuito accordato formato da L1 e C4</p><p>Si utilizza sempre il
+      solito transistor RF  tipo 2N2222A  in versione SMD
+      diventa  MMBT2222A</p><div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+          <tbody><thead><tr>
+            <th colspan="4" scope="col">
+              <p class="center">Frequenza
+              in funzione dei valori LC + lung. antenna</p></th>
+          </tr></thead>
+          <tr>
+            <td>
+              <p class="center">70Mhz</p></td>
+            <td class="center">
+              C4 33pF</td>
+            <td>
+              <p class="center">L1
+              10 spire</p></td>
+            <td>
+              <p class="center">ant
+              90cm</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p class="center">100Mhz</p></td>
+            <td class="center">
+              C4 22pF</td>
+            <td>
+              <p class="center">L1
+              7spire</p></td>
+            <td>
+              <p class="center">ant
+              68cm</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p class="center">150Mhz</p></td>
+            <td class="center">
+              C4 15pF</td>
+            <td>
+              <p class="center">L1
+              6 spire</p></td>
+            <td>
+              <p class="center">ant
+              45cm</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p class="center">430Mhz</p></td>
+            <td class="center">
+              C4 4.7pF</td>
+            <td>
+              <p class="center">L1
+              3 spire</p></td>
+            <td>
+              <p class="center">ant
+              15cm</p></td>
+          </tr>
+        </tbody></table></div><p>Dalla tabella si possono
+      rilevare i valori indicativi per la frequenza di lavoro, questo vale per
+      il montaggio SMD su pcb da 0,8mm con dimensioni ridotte, con montaggi
+      tradizionali le frequenze possono variare di molto e anche non oscillare.</p><p class="center"><img alt="" decoding="async" height="358" loading="lazy" src="IMAGES/fm_micro_bug_001.jpg" width="539"/></p><p>Non utilizzando i Diodi
+      Varicap per modulare la frequenza, avremo un uscita adatta per
+      ricevitori Wide FM, con la ricezione in FM narrow potrebbero esserci
+      delle distorsioni, è anche possibile sentire qualcosa in AM ma la
+      distorsione è maggiore, la migliore qualità ascoltabile in cuffia è
+      quindi con un ricevitore scanner in modalità WFM.</p><p>La frequenza di uscita
+      non è molto stabile e può variare di qualche Mhz in funzione della
+      temperatura e della variazione di tensione batteria dovuta alla scarica,
+      è quindi necessario effettuare in continuazione una precisa sintonia a
+      passi di 5khz.
+      </p>
+
+
+
+  
+  
+      <h2 id="prove">Prove</h2><p>
+      Questo è ancora l'ottimo
+      segnale rilevato a 434Mhz, già fuori delle caratteristiche del  MMBT2222A
+      dato per Ft minima di 300Mhz.</p><p>Con
+      questo segnale, senza antenna si raggiungono i 50/80metri di portata
+      all'esterno in campo aperto.</p><p>Usando
+      antenna Tx a filo, antenna Yagi in ricezione e cuffia è pensabile di
+      arrivare a 300-500 metri, sempre in campo aperto e lontano dai centri abitati.</p><p>La
+      presenza di Wifi satura parecchio l'etere e riduce la prestazione dei
+      piccoli trasmettitori. (Vedi chiavi auto...!!)
+      </p><p class="center"><a class="zoom-link" href="IMAGES/fm_micro_bug_004.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="73" loading="lazy" src="IMAGES/fm_micro_bug_004_small.jpg" width="100"/></a>
+      </p><hr color="#336699"/><p>Con batteria
+      alcalina nuova da 9V la tensione è di 9,56V il consumo è di 12,4mA potenza
+      assorbita 0,11W potenza resa in antenna circa 5-10mW.</p><p>Saldando direttamente il circuito
+      su una presa 9V si ottiene un piccolo gruppo
+      trasmittente con una autonomia di 20-30 ore.</p><p>Semplice
+      schema, facilmente realizzabile con componenti tradizionali, adatto a fare
+      in casa le sperimentazioni di trasmissione radio con pochi mW.</p><p>In genere se
+      i componenti sono giusti e la configurazione rispettata questo schema
+      funziona sempre, non è critico e può essere la buona base per sperimentazioni
+      più complesse e configurazioni a più stadi.</p><hr color="#336699"/><p class="center"><img alt="" decoding="async" height="245" loading="lazy" src="IMAGES/fm_micro_bug_005.jpg" width="144"/>
+      </p><p class="center"><img alt="" decoding="async" height="358" loading="lazy" src="IMAGES/fm_micro_bug_002.jpg" width="539"/>
+      </p>
+
+
+      <hr color="#336699"/>
+
+
+  <h2 id="nuova-elettronica-spia-fm-lx-359-come-aumentare-la-potenza-i">Nuova Elettronica Spia FM LX 359 come aumentare la potenza in uscita</h2><p class="center"><a class="zoom-link" href="IMAGES/fm_bug_001_large.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="284" loading="lazy" src="IMAGES/fm_bug_001.jpg" width="754"/></a></p><h2 id="descrizione-2">Descrizione</h2><p>
+      Pur essendo uno schema del
+      1979 pubblicato su Nuova Elettronica è un progetto ancora valido con
+      ottima qualità di modulazione, aggiungendo uno stadio di potenza Classe A
+      è
+      possibile aumentare la potenza in uscita di oltre 10dB facendolo diventare
+      un microtrasmettitore potente.
+      </p><p>E' stata utilizzata la
+      Classe A perché permette di avere una larghezza di banda di potenza tale
+      da coprire tutta la gamma della Microspia FM, senza grandi perdite di
+      potenza, per contro una configurazione Classe C avrebbe rendimenti
+      migliori, ma richiederebbe più stadi e ad ogni variazione di frequenza
+      richiederebbe la taratura della risonanza.</p><p>Il circuito così come è
+      stato pensato, fornisce in uscita 10mW sul terminale B del PCB, per
+      misurare questo valore bisogna adattare l'impedenza dell'uscita per i 50 ohm, lo si può
+      facilmente ottenere con un partitore composto da due compensatori dal
+      valore di  2-20pF.
+      </p><p>Questo amplificatore oltre che per la microspia di Nuova Elettronica è
+      facilmente adattabile ad altri schemi di piccoli trasmettitori FM.
+      </p><h2 id="schema-amplificatore-lineare-classe-a-10db-87-110mhz">Schema amplificatore lineare Classe A +10dB 87-110Mhz</h2><p class="center"><img alt="" decoding="async" height="287" loading="lazy" src="IMAGES/fm_bug_002.jpg" width="617"/>
+      </p><p>
+      Per amplificare il segnale,
+      viene usato un transistor 2N3866A in grado di fornire fino a 1W con
+      guadagno &gt; 10dB (24Volt) nel nostro caso la potenza in uscita è circa 100mW in funzione
+      della potenza applicata all'ingresso pari a 10mW ed alimentazione batteria
+      9V.
+      </p><p>Il transistor Q1 deve
+      essere montato con un dissipatore, il dissipatore deve avere delle
+      dimensioni contenute, (cilindrico) per non aumentare la capacità
+      parassita. Il trimmer R2 serve a regolare il bias del transistor, partire
+      con il trimmer tutto aperto e chiudere misurando la corrente assorbita dal
+      9V, nel mio caso si ottengono 100mW in uscita con una corrente di 50mA non
+      aumentare tale valore in quanto si aumenta solo l'assorbimento facendo
+      scaldare il transistor senza avere aumenti di potenza in uscita, perché
+      la potenza di ingresso è troppo bassa. Chiaramente la batteria da 9V
+      sarà in grado di fornire 50mA solo per poche ore, se necessario avere maggiore
+      autonomia va usata una batteria di maggiore dimensione, ma non è più una
+      microspia ma semplicemente un trasmettitore FM...</p><p>Per ottenere il migliore accoppiamento
+      è necessario adattare le impedenze, regolare prima C1 e C2 per avere il
+      massimo segnale in uscita su carico 50 Ohm successivamente si regolano
+      pure C3 e C4 per avere il migliore accoppiamento in uscita.</p><p>La potenza in uscita va
+      letta con un Power Meter ingresso 50 ohm, anche solo una resistenza
+      antiinduttiva seguita da circuito diodo condensatore e tester può essere
+      sufficiente per valutare gli incrementi di potenza. Anche con un
+      oscilloscopio da 250Mhz è possibile leggere il segnale in uscita, chiaramente
+      lo strumento ideale è lo Spectrum Analyser da almeno 1000Mhz di banda.</p><p>Il filtro composto da L2,
+      L3 e C6 ha il compito di ridurre le armoniche in uscita, come passa basso lascerà
+      passare solo la fondamentale fino a 110Mhz, le frequenze più alte vengono
+      attenuate di molto.</p><p>Per aumentare di circa
+      altri 10dB la potenza in uscita, pari a quasi 1W(teorico), si può accoppiare un
+      altro stadio uguale, a cascata di questo magari alimentandolo a 12V, ci va
+      in questo caso un dissipatore maggiore ed aumentare la regolazione del
+      bias. Il filtro passa basso elimina
+      armoniche va messo solo in uscita prima dell'antenna.</p><p>
+      <img alt="" decoding="async" height="254" loading="lazy" src="IMAGES/fm_bug_007.jpg" width="380"/>
+      </p><p class="center">
+      <img alt="" decoding="async" height="253" loading="lazy" src="IMAGES/fm_bug_006.jpg" width="380"/>
+      </p><p>Questa
+      la misura della potenza di uscita della LX359, si è visto che prelevando
+      il segnale direttamente dal collettore del 2N2222 si ottiene una potenza
+      di uscita maggiore, si vedono i due compensatori per l'adattamento di
+      impedenza, il valore ottenuto con batteria 9V nuova è pari a 11,22dBm che
+      corrisponde a 13.2mW. L'uscita dal punto B anche con il
+      migliore adattamento non ci fornisce meglio di 7.8dBm. Ricordo che la
+      misura della potenza comprende la fondamentale come pure l'energia di
+      tutte le armoniche successive. Un buon filtro passa basso eliminerà gran
+      parte delle armoniche, permettendo una misura più corretta della
+      fondamentale.</p><p>
+      Questo è il segnale del
+      LX359 applicato all'analizzatore di spettro, la maggiore potenza di uscita
+      si ottiene dalla parte bassa delle frequenze di uscita, cioè a 80-87Mhz
+      otteniamo +3dB rispetto a una taratura a 108Mhz. Si possono vedere le successive
+      armoniche che andrebbero attenuate con l'utilizzo del filtro passa basso
+      in uscita.
+      </p><p class="center">
+      <a class="zoom-link" href="IMAGES/fm_bug_009.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="66" loading="lazy" src="IMAGES/fm_bug_009_small.jpg" width="100"/></a>
+      </p><p class="center">
+      <img alt="" decoding="async" height="339" loading="lazy" src="IMAGES/fm_bug_008.jpg" width="640"/>
+      </p><p>La
+      mini Spia FM accoppiata con lo stadio finale, il tutto è in via
+      sperimentale, e lo stadio finale ha gli spazi comodi per
+      lavorare.</p><p class="center">
+      <img alt="" decoding="async" height="253" loading="lazy" src="IMAGES/fm_bug_003.jpg" width="380"/>
+      </p><p class="center">
+      <img alt="" decoding="async" height="253" loading="lazy" src="IMAGES/fm_bug_004.jpg" width="380"/>
+      </p><p>L' uscita
+      del LX359 con il connettori SMA, si preleva l'uscita direttamente dal case
+      del 2N2222A metallico.
+      </p><p>Si
+      nota il transistor 2N3866 montato con il dissipatore in ottone, bisogna
+      mantenerlo alcuni mm distante dal fondo in metallo per ridurre la
+      capacità verso massa. Il Filtro passa basso è realizzato con 2 bobine uguali
+      avvolte con 4 spire di filo 1mm su diametro 6mm.</p><p class="center"><a class="zoom-link" href="IMAGES/fm_bug_010.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="66" loading="lazy" src="IMAGES/fm_bug_010_small.jpg" width="100"/></a></p><p>La potenza
+      in uscita dopo avere ottimizzato gli accoppiamenti, arriva a 100mW, il
+      trimmer del Bias va regolato per avere il minimo di corrente e la massima
+      potenza in uscita regolando più volte accoppiamenti e Bias. Nel mio caso
+      la corrente assorbita con 9V è compresa tra i 35 e 50mA consiglio di non
+      aumentare la corrente in quanto potrebbe creare instabilità nel
+      transistor.
+      </p><p class="center">
+      <img alt="" decoding="async" height="253" loading="lazy" src="IMAGES/fm_bug_005.jpg" width="380"/>
+      </p><p>
+      Le prove con antenna a 1/4
+      onda hanno dato ottimi risultati e buona qualità della voce ascoltata
+      bene all'interno di una stanza anche a 4 metri distante dal microfono.
+      </p><p>Integrando lo stadio
+      finale vicino al LX359 si possono mantenere le dimensioni ridotte
+      utilizzando componenti di piccola dimensione, inoltre una volta ottimizzato
+      gli accoppiamenti i trimmer compensatori possono essere sostituiti da
+      condensatori fissi SMD.</p><p>Per una buona
+      realizzazione, la microspia, lo stadio lineare e il filtro passa basso,
+      andrebbero inseriti in una scatola metallica e separati tra loro con uno
+      schermo tra ogni stadio.</p><p>Con batteria da 9V
+      l'autonomia è ridotta a 4-6 ore, se si vogliono avere maggiori autonomie,
+      è da usare un buon alimentatore 9V da rete, oppure si passa a un
+      accumulatore da 12V ma va rivisto il circuito e adattato per una tensione
+      più alta.
+      </p><p class="center"><img alt="" decoding="async" height="981" loading="lazy" src="IMAGES/fm_bug_013.jpg" width="640"/></p><p>Versione
+      definitiva, montata dentro la scatola in plastica, accoppiamento da
+      collettore con partitore fisso 22+22pF, regolazione accoppiamento solo per
+      l'uscita, filtro passa basso con bobine filo 0.3mm su diam 3mm.</p><p>In questa
+      configurazione al migliore accoppiamento con 87Mhz otteniamo 280mW in
+      uscita, sono troppi, pertanto si scende di Bias (trimmer blu) per avere
+      solo 100mW e assorbimento di 42mA</p><p>Con un po' di
+      pazienza si può sistemare tutto senza PCB, così ci sono poche capacità
+      disperse e il funzionamento è stabile. Con una antenna GP
+      sul balcone si arriva comodamente a 3KM, chiaramente su una frequenza da
+      non disturbare le radio commerciali, tipo 86.0Mhz.
+      </p>
+
+
+<hr color="#336699"/>
+
+
+  <h2 id="amplificatore-fm-lineare-10db-con-modulo-dsp-pll-87-108mhz">Amplificatore FM lineare +10dB con modulo DSP PLL 87-108MHz</h2><p class="center"><img alt="" decoding="async" height="314" loading="lazy" src="IMAGES/fm_bug_012.jpg" width="640"/></p><h2 id="descrizione-3">Descrizione</h2><p>
+      L'amplificatore con 2N3866A
+      classe A è adatto per ogni aumento di segnale in gamma FM, collegandolo con il
+      Modulo PLL si ottengono ottimi risultati, ovviamente è possibile
+      acquistare il gruppo trasmettitore da 5-10W finito su Ebay per 70 euro, ma
+      è più soddisfacente realizzare il tutto da soli.
+      </p><p>Per comodità di prova ho
+      saldato un terminale SMA sul modulo pll, l'uscita interna è già a 50 ohm
+      quindi non sono necessari particolari adattamenti di impedenza.</p><p>Il Modulo esce con 8mW
+      quindi possiamo ottenere un'uscita di 80mW dal lineare.  Il modulo
+      deve essere alimentato a 5.0V, nella foto viene alimentato separatamente
+      con pacco batterie da 4,8V, mentre il finale è alimentato con 9V da alimentatore
+      stabilizzato. Per una sistemazione finale è da prevedere un regolatore da
+      5V per la sezione PLL.</p><p>Per le prove si è
+      collegato in uscita BNC uno stilo da 60cm senza particolari adattamenti,
+      l'ascolto è buono a fondo scala, dentro e fuori casa.</p><p>La potenza in uscita si
+      è rivelata superiore ai 80mW ma ho preferito ridurre con il trimmer il
+      bias per stare a 80mW, il consumo è inferiore ai 50mA con 9.0V</p><p>Per una buona
+      trasmissione è consigliabile un'antenna esterna quale dipolo verticale
+      calcolato per la banda FM.</p><p>
+      <strong>DSP PLL 87-108MHz Digital Wireless Microphone Stereo FM Transmitter Module</strong>
+      </p><p>E' venduto su Ebay a
+      circa 9 Euro spedizione compresa.</p><p class="center"><a href="https://www.ebay.co.uk/itm/DC3-5V-PLL-DSP-Audio-FM-RadioTransmitter-Wireless-Microphone-Module-87MHz-108MHz/272639757942?_trkparms=aid%3D1110012%26algo%3DSPLICE.SOIPOST%26ao%3D1%26asc%3D229896%26meid%3D7187b3a26b694dee89406096739ff55c%26pid%3D100008%26rk%3D9%26rkt%3D12%26sd%3D272162057084%26itm%3D272639757942%26pmt%3D1%26noa%3D0%26pg%3D2047675%26algv%3DPromotedSellersOtherItemsV2%26brand%3DUnbranded&amp;_trksid=p2047675.c100008.m2219" rel="noopener" target="_blank">vedi
+      questo</a>  </p><p>oppure
+      fare una ricerca usando il testo sopra evidenziato.</p><p>Alimentazione 5V cavi o
+      miniusb, ingresso per cavo 3,5mm oppure microfono già montato sulla
+      board, possibilità di controllare il volume e la frequenza in uscita a
+      step di 0.1Mhz</p><p>Dalle
+      prove si è rivelato stabile e la frequenza è precisa, la sensibilità
+      del microfono incorporato è un po' bassa, ma la modulazione si
+      è rivelata di buona qualità e fruscio a bassi livelli.</p><p>Ottima
+      la trasmissione tramite cavo stereo da una fonte CD o MP3 di
+      qualità. Si riceve un buon segnale sia con le radio in casa che dalla
+      autoradio fuori nel parcheggio....
+      </p><p>
+      <img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/fm_bug_011.jpg" width="400"/>
+      </p><h2 id="schema-amplificatore-lineare-classe-a-classe-c-15db-87-110mh">Schema amplificatore lineare Classe A - Classe C +15dB 87-110Mhz</h2><p><img alt="" decoding="async" height="314" loading="lazy" src="IMAGES/fm_linear200.jpg" width="757"/>
+      </p><p>Marzo
+      2020.
+      </p><p>Con
+      questo schema si ottengono 200mW in uscita, sempre con il modulo FM
+      descritto sopra.
+      </p><p>Lo
+      stadio finale diventa un classe C, mentre il pre è un classe A di potenza
+      intermedia realizzato con 2N2222A. 
+      </p><p>Collegare
+      l'uscita da 8mW all'ingresso e regolare i compensatori per la massima
+      potenza in uscita, lo stesso regolare i compensatori in uscita per avere
+      la massima potenza sempre leggendo l'uscita con un Wattmetro. La
+      polarizzazione del Q1 va regolata al minimo per non fare scaldare il
+      transistor, il finale Q2 deve essere montato su dissipatore come indicato
+      sopra. </p><p> Il filtro in uscita è lo stesso dello schema lineare classe A. </p><p>La
+      potenza massima si ottiene con 13,8V di alimentazione, ma controllare la
+      temperatura del finale 2N3688.</p><p>La
+      potenza in uscita arriva a 24dBm con un ingresso un segnale da 8-10mW pari
+      a 9-10dBm il guadagno totale è di circa 15dBm.</p>
+
+
+<hr color="#336699"/>
+
+
+  <h2 id="microspia-fm-a-403mhz-utilizzando-un-modulo-rf-per-radiosond">Microspia FM a 403Mhz utilizzando un modulo rf per radiosonda GRAW-SPRENGER E085</h2><p>  Le
+      radiosonde vengono prodotte in grande quantità, quelle inutilizzate
+      vengono rivendute sul mercato Surplus. Alcune notizie sulla E085  <a href="http://www.radiosonde.eu/RS00-I/RS03J06-i.html" rel="noopener">http://www.radiosonde.eu/RS00-I/RS03J06-i.html</a></p><p>Questa funziona perfettamente, ha solo la trasmissione temperatura, la
+      potenza in uscita rilevata è di 20mW (13 dBm) con batteria 9V alla frequenza di
+      403.730 Mhz precisa come dati di targa.</p><p class="center"><a class="zoom-link" href="IMAGES/fm_bug_sm_04.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="320" loading="lazy" src="IMAGES/fm_bug_sm_04_small.jpg" width="640"/></a></p><p>Nella nostra
+      conversione viene utilizzato solo il modulo RF, va quindi dissaldato il
+      PCB esterno nella sua completezza, rimarranno 5 piedini che corrispondo 2
+      alla massa, uno ingresso segnale audio, uno per il +5V e l'ultimo per il
+      +9V.</p><p class="center"><a class="zoom-link" href="IMAGES/fm_bug_sm_02.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="325" loading="lazy" src="IMAGES/fm_bug_sm_02_small.jpg" width="626"/></a></p><p>Questo è il
+      modulo RF senza il coperchio, il montaggio componenti è fatto molto bene,
+      si nota in alto a sinistra il quarzo e tutti i componenti SMD, gli
+      induttori sono quelli gialli e si nota sulla destra il gruppo con la
+      funzione di filtro passa basso elimina armoniche. L'antenna è realizzata
+      con lamierino in acciaio rivettato sul PCB e collegato alla bobina di
+      carico realizzata sul PCB. Per la prova della potenza in uscita ho
+      sezionato la pista alla fine del filtro passa basso prima della bobina a
+      spirale, adattando il segnale per i 50 ohm.</p><p>Se il modulo
+      funziona fornendo RF in uscita, consiglio di non smanettare sui trimmer e
+      compensatori, altrimenti senza una procedura di taratura è difficile
+      riportare il gruppo alla iniziale efficienza.</p><h2 id="descrizione-4">Descrizione</h2><p>Il modulo RF
+      testato, funziona correttamente ed emette il segnale FM alla frequenza di
+      targa pari a 403.730Mhz, togliendo il gruppo analogico esterno non ha più
+      il segnale di audio modulato, bisogna realizzare il preamplificatore per microfono e
+      fornire oltre a 9V anche il 5V per il modulo RF.
+      </p><p>Lo schema da
+      realizzare è il seguente:</p><p class="center"><img alt="" decoding="async" height="281" loading="lazy" src="IMAGES/fm_bug_sm_01.jpg" width="616"/></p><p>Amplificatore a guadagno
+      regolabile, realizzato con l'operazionale LM358, il segnale amplificato
+      deve essere applicato all'ingresso audio del modulo. Eventuali modifiche e
+      aggiunte di filtri possono migliorare la qualità dell'audio, vedi lo
+      schema del LX359.</p><p> Un regolatore 7805 o
+      anche solo il piccolo 78L05 riduce la tensione del 9V ai 5V.</p><p>Una volta collegato il
+      circuito e le alimentazioni, il tutto dovrebbe funzionare subito, è
+      meglio comunque avere provato prima il buon funzionamento e portata del
+      modulo FM E085 tramite ricevitore scanner su FM narrow, anche in  FMW si
+      può ricevere un buon segnale in genere con migliore qualità rispetto al
+      FM narrow.</p><p>Con batteria 9V il
+      consumo è di circa 30mA, abbastanza basso così da garantire una autonomia di
+      6-10 ore.</p><p class="center"><a class="zoom-link" href="IMAGES/fm_bug_sm_03.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="320" loading="lazy" src="IMAGES/fm_bug_sm_03_small.jpg" width="640"/></a></p><p>Questa
+      è la modifica applicata per utilizzare un microfono a condensatore. Le
+      dimensioni non sono così ridotte, la potenza di 20mW a 403Mhz
+      permette di andare oltre i 3 KM in campo aperto e l'oscillatore a quarzo
+      fornisce una notevole stabilità alla frequenza di emissione.</p><p>Senza
+      intervenire sul Modulo RF per aumentare la potenza, si ottengono già ottimi risultati a costi
+      bassissimi, per ascoltare sempre comunque necessario un buon ricevitore
+      per le UHF, o anche solo un RTX per le UHF tipo l'economico Baofeng uv-5r.
+      </p>
+
+
+
+<hr color="#336699"/>
+
+
+  <h2 id="power-meter-per-la-misura-delle-microspie-fm-da-1mhz-a-800mh">POWER METER per la misura delle microspie FM da 1Mhz a 800Mhz 10-100mW fs</h2><p>Per chi è
+      all'inizio e non ha strumentazione, questo lo schema giusto per
+      visualizzare la resa in uscita della RF generata ed effettuare la migliore
+      taratura, del resto lo scopo finale è quello di portare in antenna la
+      massima potenza possibile, il tutto si ottiene tarando al meglio e
+      disponendo i componenti in maniera da ridurre le perdite. Con questo
+      semplice Power Meter è possibile misurare la potenza in uscita dalle
+      microspie FM, sempre riferito a un carico 50 ohm.</p><p class="center"><img alt="" decoding="async" height="271" loading="lazy" src="IMAGES/fm_bug_power_meter_01.jpg" width="685"/></p><p>Lo schema è
+      molto semplice, bisogna realizzare il carico da 50 ohm il più preciso
+      possibile, qua sono state utilizzate 2 resistenze SMD 1206 da 100ohm in
+      parallelo, in quanto la potenza massima letta sarà di solo 100mW, ma è
+      pensabile di adottare 2 resistenze da 1W antiinduttive per raggiungere il
+      fondo scala di 1W come pure montare una resistenza chip da 50ohm che su
+      dissipatore sopporta oltre 100W, <img alt="" decoding="async" height="162" loading="lazy" src="IMAGES/fm_bug_power_meter_05.jpg" width="240"/></p><p> vedi la foto a destra.</p><p> Per
+      leggere 1W fondo scala lo schema è sempre lo stesso, al
+      posto di R5 e R6 ho messo 11 resistori SMD 1206 da 560 ohm in parallelo
+      per un valore di 50.2 ohm,  in uscita modificare il valore della R3 a 22-33k regolare la R1 con un
+      segnale di riferimento 1W per avere la lettura di fondo scala sul  uAmperometro a lancetta da
+      100uA fs.</p><p>Il tutto va
+      assemblato più compatto possibile e con RF stile così da riuscire a
+      salire di frequenza, per chi ha necessità di fare misure oltre i 500Mhz.</p><p>Il Diodo
+      1N34 si è dimostrato valido fino oltre a 500Mhz importante tagliare molto
+      corti i reofori. (Con assemblaggio compatto si legge un segnale
+      ragionevole fino oltre 1200Mhz.)</p><p>I
+      condensatori C4, C3 e C1 compongono il filtraggio passa basso che elimina
+      i residui di RF, le perline di ferrite compongono gli induttori del
+      filtro, ho utilizzato le perline in quanto permettono di avere dimensioni
+      molto ridotte di tutto il gruppo rivelatore, è possibile utilizzare al
+      posto piccoli induttori SMD da 50-100pHenry o gli VK200 per chi non ha
+      problemi di spazio.</p><h2 id="descrizione-5">Descrizione</h2><p>Lo strumento più adatto
+      per effettuare tarature è lo strumento a indice, in quanto, la taratura
+      è per avere più uscita segnale e vedere la lancetta salire verso il
+      fondo scala è molto meglio che leggere valori numerici, magari più utili
+      se servono misure precise. </p><p>Ho utilizzato lo
+      strumento da 100uA fs perchè era quello che avevo nel cassetto, è
+      possibile usare anche strumenti da 50uA oppure collegare vecchi tester
+      tipo ICE680R da 20uA, basterà variare il valore di resistenza in serie
+      per avere il corretto valore di fondo scala.</p><p>Nel nostro caso saranno
+      10mW e 100mW.</p><p class="center"><img alt="" decoding="async" height="315" loading="lazy" src="IMAGES/fm_bug_power_meter_02.jpg" width="474"/></p><p>
+      Vediamo molto bene il carico
+      da 50 ohm rappresentato dalle due resistenze SMD 1206 da 100 ohm, saldate
+      direttamente sui terminali del BNC, seguite
+      dal diodo IN34 e dal circuito filtrante con capacitor e perline di
+      ferrite, si comporta bene fino a 600Mhz, poi il diodo va in crisi, per chi
+      vuole salire di frequenza è bene adottare un diodo per 6Ghz ed assemblare il tutto su
+      PCB con strip per microonde.
+      </p><p>In questo caso lavorando
+      sotto ai 500Mhz il funzionamento è buono, del resto nel mio caso è solo
+      un ausilio per la taratura veloce delle microspie FM.
+      </p><p class="center"><img alt="" decoding="async" height="317" loading="lazy" src="IMAGES/fm_bug_power_meter_04.jpg" width="474"/></p><p>Questo è tutto il gruppo
+      del Power Meter di prova, composto dallo strumento, BNC, circuito e
+      trimmer per la regolazione e deviatore 10/100mW fondo scala.</p><p>Per fare prove va bene
+      anche in aria ma i risultati più stabili al variare della frequenza si
+      ottengono montando il tutto dentro una scatola metallica facendo buone
+      connessioni della massa. </p><p class="center"><img alt="" decoding="async" height="316" loading="lazy" src="IMAGES/fm_bug_power_meter_03.jpg" width="474"/>
+      </p><p>
+      Per la taratura dei trimmer
+      sarebbe utile un Power Meter di riferimento dove allineare i valori, in
+      mancanza di Power Meter è possibile tarare i trimmer anche solo
+      applicando una tensione continua all'ingresso del BNC, nel caso di questa realizzazione,
+      con quel particolare strumento per avere 100uA fondo scala applichiamo <strong>
+      0,898V</strong> per ottenere 10mW fs, mentre per 100mW la tensione da applicare
+      sarà di <strong>3,05V</strong>, il tutto fa riferimento ai valori di RF a 100Mhz
+      e letta su Power Meter Anritsu. Chiaramente bisogna prima applicare
+      tensione all'ingresso e poi regolare uno dei due trimmer per
+      raggiungere il fondo scala valore 100. 
+</p><div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+          <tbody><thead><tr>
+            <th class="center" scope="col">
+              <p class="center"><strong>0</strong></p></th>
+            <th class="center" scope="col"><strong>20</strong></th>
+            <th class="center" scope="col"><strong>40</strong></th>
+            <th class="center" scope="col"><strong>60</strong></th>
+            <th class="center" scope="col"><strong>80</strong></th>
+            <th class="center" scope="col"><strong>100</strong></th>
+            <th class="center" scope="col"><strong>uA</strong></th>
+          </tr></thead>
+          <tr>
+            <td class="center" colspan="7">
+                  </td>
+          </tr>
+          <tr>
+            <td class="center"><strong>0</strong></td>
+            <td class="center"><strong>1.61</strong></td>
+            <td class="center"><strong>3.12</strong></td>
+            <td class="center"><strong>5.04</strong></td>
+            <td class="center"><strong>7.37</strong></td>
+            <td class="center"><strong>10.0</strong></td>
+            <td class="center"><strong>mW</strong></td>
+          </tr>
+          <tr>
+            <td class="center"><strong>0</strong></td>
+            <td class="center"><strong>2.08</strong></td>
+            <td class="center"><strong>4.94</strong></td>
+            <td class="center"><strong>7.02</strong></td>
+            <td class="center"><strong>8.67</strong></td>
+            <td class="center"><strong>10.0</strong></td>
+            <td class="center"><strong>dBm</strong></td>
+          </tr>
+          <tr>
+            <td class="center" colspan="7"></td>
+          </tr>
+          <tr>
+            <td class="center"><strong>0</strong></td>
+            <td class="center"><strong>6.97</strong></td>
+            <td class="center"><strong>22.54</strong></td>
+            <td class="center"><strong>40.8</strong></td>
+            <td class="center"><strong>66.9</strong></td>
+            <td class="center"><strong>100</strong></td>
+            <td class="center"><strong>mW</strong></td>
+          </tr>
+          <tr>
+            <td class="center"><strong>0</strong></td>
+            <td class="center"><strong>8.43</strong></td>
+            <td class="center"><strong>13.53</strong></td>
+            <td class="center"><strong>16.11</strong></td>
+            <td class="center"><strong>18.25</strong></td>
+            <td class="center"><strong>20.0</strong></td>
+            <td class="center"><strong>dBm</strong></td>
+          </tr>
+        </tbody></table></div><p>La
+      tabella riporta i valori di riferimento che ho rilevato con lo strumento
+      da 100uA, in rapporto al segnale ingresso, c'è da dire che utilizzando
+      uno strumento diverso  e componenti non dello stesso tipo, i valori
+      possono variare di parecchio, pertanto i dati di tabella vanno visti solo
+      come esempio.</p><p>Lo
+      strumento Power  Meter pur essendo uno strumento semplice senza la
+      presunzione di competere con la precisione, si è comunque rivelato molto
+      utile per la messa a punto di circuiti RF anche a più stadi, dove per
+      ogni stadio si cerca la migliore taratura con i valori più alti e non la lettura
+      precisa dei valori.
+      </p>
+
+
+
+
+  <h2 id="amplificatore-fm-lineare-30db-con-power-out-2w-1-930mhz-alie">Amplificatore FM lineare +30dB con Power out 2W 1-930Mhz Aliexpress</h2><p class="center">
+		<img alt="" decoding="async" height="304" loading="lazy" src="IMAGES/spy_ampli_2w.jpg" width="406"/></p><h2 id="descrizione-6">Descrizione</h2><p>
+      <strong>Marzo 2026</strong>  </p><p>
+		 L'Amplificatore
+      FM lineare +30dB    con Po da 2W campo da 1-930Mhz Aliexpress è una 
+		soluzione economica per aumentare la potenza applicata all'antenna, per ogni aumento di segnale in gamma FM, collegandolo con il
+      Modulo PLL si ottengono ottimi risultati.</p><div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+				<tbody><tr>
+					<td>
+					<p class="center">
+					Mhz</p></td>
+					<td class="center">
+					Input (dBm)</td>
+					<td class="center">
+					Output (W)</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					100</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					3.12</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					200</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					2.83</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					300</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					2.65</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					400</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					2.50</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					500</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					2.16</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					600</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					1.78</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					700</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					1.53</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					800</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					1.34</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					900</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					1.03</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					1000</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					0.73</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					1100</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					0.46</td>
+					<td class="center"> </td>
+				</tr>
+				<tr>
+					<td class="center">
+					1200</td>
+					<td class="center">
+					13.5</td>
+					<td class="center">
+					0.31</td>
+					<td class="center"> </td>
+				</tr>
+			</tbody></table></div><p>Per una buona
+      trasmissione è consigliabile un'antenna esterna quale dipolo verticale 50 
+		ohm
+      calcolato per la frequenza di lavoro.</p><p>
+		Serve sempre in uscita 
+		filtro passa basso per eliminare le armoniche.</p>
+
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+      <ul class="card-grid">
+<li><a href="mini_whip.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — antenna attiva HF/VLF</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR — antenna attiva</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2014.htm"><span class="c-sec">Radio &amp; antenne</span>RF Oscillator — generatore 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="c-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#spy-bug-fm-transmitter">Spy Bug FM Transmitter</a></li>
+<li><a href="#schema-elettrico">Schema elettrico</a></li>
+<li><a href="#descrizione">Descrizione</a></li>
+<li><a href="#prove">Prove</a></li>
+<li><a href="#nuova-elettronica-spia-fm-lx-359-come-aumentare-la-potenza-i">Nuova Elettronica Spia FM LX 359 come aumentare la potenza in uscita</a></li>
+<li><a href="#descrizione-2">Descrizione</a></li>
+<li><a href="#schema-amplificatore-lineare-classe-a-10db-87-110mhz">Schema amplificatore lineare Classe A +10dB 87-110Mhz</a></li>
+<li><a href="#amplificatore-fm-lineare-10db-con-modulo-dsp-pll-87-108mhz">Amplificatore FM lineare +10dB con modulo DSP PLL 87-108MHz</a></li>
+<li><a href="#descrizione-3">Descrizione</a></li>
+<li><a href="#schema-amplificatore-lineare-classe-a-classe-c-15db-87-110mh">Schema amplificatore lineare Classe A - Classe C +15dB 87-110Mhz</a></li>
+<li><a href="#microspia-fm-a-403mhz-utilizzando-un-modulo-rf-per-radiosond">Microspia FM a 403Mhz utilizzando un modulo rf per radiosonda GRAW-SPRENGER E085</a></li>
+<li><a href="#descrizione-4">Descrizione</a></li>
+<li><a href="#power-meter-per-la-misura-delle-microspie-fm-da-1mhz-a-800mh">POWER METER per la misura delle microspie FM da 1Mhz a 800Mhz 10-100mW fs</a></li>
+<li><a href="#descrizione-5">Descrizione</a></li>
+<li><a href="#amplificatore-fm-lineare-30db-con-power-out-2w-1-930mhz-alie">Amplificatore FM lineare +30dB con Power out 2W 1-930Mhz Aliexpress</a></li>
+<li><a href="#descrizione-6">Descrizione</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

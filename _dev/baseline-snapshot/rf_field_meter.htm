@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rilevatore di campo radiofrequenza a LED by Roberto Chirio</title>
+  <meta name="description" content="Rilevatore di campo radiofrequenza a LED by Roberto Chirio">
+  <meta name="keywords" content="diode tunnel, tunnel">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio" aria-current="true">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">RF field meter a LED</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radio &amp; antenne</p>
+        <h1>Rilevatore di campo radiofrequenza a LED</h1>
+        <p class="subtitle">RF Field Strength LED Meter</p>
+        <p class="meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>“Radio Corner&quot; di R.Chirio” di R. Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-chema-elettrico">S chema elettrico</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#verifica-segnale-ingresso">Verifica segnale ingresso.</a></li>
+<li><a href="#applicazioni">Applicazioni</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p>
+<hr color="#336699"/>
+
+  
+  <h2 id="premessa">Premessa</h2><p>Maggio
+      2014 </p><p>Questo
+      circuito rappresenta un rilevatore di segnale Radio Frequenza (RF), ci
+      indica la presenza di emissione radio su un vasto spettro di frequenze da
+      poche migliaia di Hz fino oltre 2000Mhz segnalando con l'accensione dei
+      LED il segnale di aggancio
+      cellulari 3G.</p><p>Vista
+      la buona sensibilità di ingresso può segnalare la presenza di emissioni
+      radio insospettate, come rilevare radio spie (radio Bug), è anche utile
+      per verificare alimentatori switching che emettono forti disturbi
+      fastidiosi per chi vuole fare ascolto di Onde Corte.</p><p>Può
+      anche essere utilizzato per verificare il livello di segnale antenna TV
+      amplificata.</p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/rf_led_meter_001.jpg" width="400"/></p><p>Lo
+      schema proposto non effettua una misura del segnale, ma solo il
+      rilevamento a breve distanza.</p><p>Sull'ingresso
+      BNC è possibile collegare svariate antenne più adatte a ricevere la
+      frequenza da analizzare.</p><p>Il
+      funzionamento è garantito da una batteria da 9V, il consumo in Stand-by
+      è minore di 1 mA.</p>
+  
+
+
+
+  
+  <h2 id="s-chema-elettrico">S chema elettrico</h2><p class="center"><img alt="" decoding="async" height="274" loading="lazy" src="IMAGES/rf_led_meter_000.jpg" width="641"/>  </p><p>-
+      Sull'ingresso bisogna collegare una antenna, anche pochi cm bastano per
+      rilevare il segnale, per una maggiore sensibilità alla frequenza più
+      basse si consiglia uno stilo da almeno 40-50cm.</p><p>-
+      Il condensatore C1  taglia le frequenze domestiche inferiori ai
+      10khz, regolando la R1 possiamo cambiare la sensibilità dell'ingresso,
+      lontano da fonti RF, andremo regolare R1 per fare spegnere i led sulla
+      soglia di intervento.</p><p>-
+      Non ci sono induttori, quindi l'ingresso accetta un vasto spettro di
+      frequenze. Al
+      posto della R2 è possibile mettere un circuito risonante composto da un
+      condensatore variabile e induttore, così da avere un circuito selettivo
+      solo per la frequenza che ci interessa.</p><p>-
+      Il segnale radio viene rivelato dal diodo D1 che per migliore sensibilità
+      deve essere al germanio, il circuito funziona anche con un diodo al Si
+      comune come il 1N4148  o simili, si può anche usare la giunzione
+      base-Emettiore di un transistor RF.</p><p>-
+      Il segnale rilevato e convertito in un valore di pochi mV viene applicato
+      sul condensatore C3 che lo livella a una costante di tempo tale d evitare
+      il rapido lampeggiare dei led, il LM 358 in configurazione comparatore a
+      0V, porta l'uscita a valori positivi appena il segnale supera la soglia di
+      off-set che per il LM358 è di 3-4mV. Questo è il valore minimo di
+      segnale che leggeremo in ingresso. Per migliorare la sensibilità
+      consiglio l'uso di operazionali più costosi con soglia off-set minore del
+      mV.</p><p>-
+      Lo stadio successivo in configurazione inseguitore serve da amplificatore
+      guadagno 1 per pilotare direttamente i led con una corrente max di 
+      15mA, più che buona per dare una forte luminosità ai 3 led rossi da 5mm
+      posti in serie.</p><p>-
+      Sono stati usati 3 led RED per avere una forte segnalazione luminosa con
+      basse perdite sulla resistenza.</p><p>-
+      Il segnalatore RF è ben visibile a parecchi metri, anche di giorno....</p>
+
+
+
+  <h2 id="realizzazione">Realizzazione</h2><p class="center"><img alt="" decoding="async" height="331" loading="lazy" src="IMAGES/rf_led_meter_003.jpg" width="495"/></p><p>Ecco
+      il circuito assemblato dentro
+      a una scatola metallica di piccole dimensioni. La semplicità dello schema
+      permette di fare una veloce realizzazione anche solo usando una basetta
+      millefori.</p><p>Il
+      connettore BNC ci permette di applicare i più svariati tipi di antenna e
+      anche cavi collegati ad antenne specifiche.</p><p>La
+      batteria in questo caso è collegata direttamente senza interruttore in
+      quanto il basso consumo ci da molte decine di ore di funzionamento.</p><p class="center"><img alt="" decoding="async" height="330" loading="lazy" src="IMAGES/rf_led_meter_004.jpg" width="495"/></p><p class="center">I
+      tre led vengono fissati all'interno con un po’ di colla cyanoacrilica </p><p class="center"><img alt="" decoding="async" height="328" loading="lazy" src="IMAGES/rf_led_meter_002.jpg" width="493"/></p><p> Particolare
+      sul gruppo ingresso, per rilevare anche le frequenze oltre i 1000Mhz è
+      bene usare un trimmer di piccole dimensioni, come pure curare la
+      disposizione dei componenti.</p><h2 id="verifica-segnale-ingresso">Verifica segnale ingresso.</h2><p>
+      Collegando l'ingresso del RF
+      LED Meter al generatore RF con uscita 50 OHM, e regolando il trimmer per il segnale più
+      sensibile,
+      si rileva quanto segue:
+      </p><div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+        <tbody><thead><tr>
+          <th class="center" scope="col">
+            <p>frequenza
+            Mhz</p>
+          </th>
+          <th class="center" scope="col">
+            <p>
+      segnale mV </p>
+          </th>
+          <th class="center" scope="col">
+            <p>dBm</p>
+          </th>
+        </tr></thead>
+        <tr>
+          <td class="center">
+            <p>1k</p>
+          </td>
+          <td class="center">
+            <p>33.1
+          </p></td>
+          <td class="center">
+            <p class="center">
+            -16.6</p></td>
+        </tr>
+        <tr>
+          <td class="center">
+            10k
+          </td>
+          <td class="center">
+            8.03
+          </td>
+          <td class="center">
+            -28.9
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            100k
+          </td>
+          <td class="center">
+            3.42
+          </td>
+          <td class="center">
+            -36.3</td>
+        </tr>
+        <tr>
+          <td class="center">
+            <p>10</p>
+          </td>
+          <td class="center">
+            <p>3.5</p>
+          </td>
+          <td class="center">
+            <p>-36.1</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            <p>50</p>
+          </td>
+          <td class="center">
+            <p>3.89</p>
+          </td>
+          <td class="center">
+            <p>-35.0</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            <p>125</p>
+          </td>
+          <td class="center">
+            <p>4.0</p>
+          </td>
+          <td class="center">
+            <p>-34.0</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            <p>250</p>
+          </td>
+          <td class="center">
+            <p>5.62</p>
+          </td>
+          <td class="center">
+            <p>-32.0</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            <p>500</p>
+          </td>
+          <td class="center">
+            <p>7.40</p>
+          </td>
+          <td class="center">
+            <p>-29.6</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            <p>1000</p>
+          </td>
+          <td class="center">
+            <p>9.32</p>
+          </td>
+          <td class="center">
+            <p>-27.6</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            1500
+          </td>
+          <td class="center">
+          16
+          </td>
+          <td class="center">
+            -22.8
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            1800
+          </td>
+          <td class="center">
+          24
+          </td>
+          <td class="center">
+            -19.5
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            2000
+          </td>
+          <td class="center">
+          50
+          </td>
+          <td class="center">
+            -13.0
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            3000
+          </td>
+          <td class="center">
+          56
+          </td>
+          <td class="center">
+            -12.0
+          </td>
+        </tr>
+      </tbody></table></div><p>Questi sono
+      i valori minimi di segnale ingresso che faranno accendere i led, il meter
+      legge ancora bene il segnale dei cellulari fino a 2100Mhz come pure con
+      attenuazione il segnale dei WiFi a 2400Mhz, utilizzando un diodo per RF,
+      ed un pezzo di antenna di solo 3.5cm meglio si rivelano questi segnali
+      oltre i 2000Mhz.</p><p>Portando
+      il condensatore C1 a 0.1uF è possibile avere accensione led anche con
+      campo elettromagnetico a 50Hz.</p><p>Per
+      lavorare con segnali ingresso molto bassi, si può aggiungere un
+      amplificatore a FET in grado di leggere valori di uV, va comunque rivisto il
+      circuito per ridurre l'ingresso disturbi.</p><h2 id="applicazioni">Applicazioni</h2><p>
+      Il LED RF Meter, è utile
+      per visualizzare la presenza di Radiofrequenza anche a valori bassi,
+      sempre nociva alla salute, come pure si possono individuare microfoni spia
+      trasmittenti nascosti, o utile in laboratorio elettronico per verificare il
+      funzionamento di circuiti RF.
+      </p><p>Utile per regolare
+      il segnale di impianti TV, si regola prima il trimmer per fare accendere i led
+      con una presa dove il segnale è corretto, poi si utilizza il RF LED METER
+      sulla presa da misurare e si regola l'amplificatore antenna TV per dare lo stesso
+      segnale.</p>
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+      <ul class="card-grid">
+<li><a href="mini_whip.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — antenna attiva HF/VLF</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR — antenna attiva</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2014.htm"><span class="c-sec">Radio &amp; antenne</span>RF Oscillator — generatore 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="c-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-chema-elettrico">S chema elettrico</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#verifica-segnale-ingresso">Verifica segnale ingresso.</a></li>
+<li><a href="#applicazioni">Applicazioni</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

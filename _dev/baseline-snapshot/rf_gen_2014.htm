@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generatore RF 20Mhz - 4Ghz harmonic comb generator by Roberto Chirio</title>
+  <meta name="description" content="Generatore RF 20Mhz - 4Ghz harmonic comb generator by Roberto Chirio">
+  <meta name="keywords" content="RF, generator, quarzo, harmonic comb generator, xtal">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio" aria-current="true">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">RF Oscillator — generatore 20 MHz – 4 GHz</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radio &amp; antenne</p>
+        <h1>Generatore RF 25Mhz - 4000Mhz</h1>
+        <p class="subtitle">Simple sweep RF generator, harmonic comb generator. Arduino RF beacon.</p>
+        <p class="meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>“Radio Corner&quot; di R.Chirio” di R. Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-chema-elettrico">S chema elettrico</a></li>
+<li><a href="#segnale-uscita">Segnale Uscita</a></li>
+<li><a href="#arduino-rf-generator">Arduino RF generator</a></li>
+<li><a href="#applicazioni">Applicazioni</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p>
+<hr color="#336699"/>
+
+  
+  <h2 id="premessa">Premessa</h2><p>Giugno
+      2014 </p><p>Questo
+      circuito è
+      un generatore di armoniche RF, partendo da un segnale fisso e stabile
+      generato da un oscillatore quarzo a 5V 4 piedini half-size, compatto e stabile del tipo
+      che si usa per clock microprocessori.</p><p class="center"><img alt="Oscillator " decoding="async" height="266" loading="lazy" src="IMAGES/rf_gen_2014_oscillator.jpg" width="313"/>  
+      <img alt="Scheda video con oscillatore a quarzo XCL, da 27.000Mhz" decoding="async" height="266" loading="lazy" src="IMAGES/rf_gen_2014_oscillator_2.jpg" width="399"/></p><p>E'
+      possibile smontare gli oscillatori a quarzo da quasi tutte le motherboard
+      o circuiti recenti a microprocessore. Da catalogo è possibile ordinare
+      oscillatori per frequenze che vanno da 1Mhz a oltre i 100Mhz.</p><p>Le
+      armoniche si ripetono partendo dalla frequenza fondamentale del quarzo
+      fino a superare i 4000Mhz, in pratica è come avere un generatore Sweep,
+      utile per testare molti dispositivi.</p><p>Sull'uscita
+      adatta per un carico 50 Ohm è presente un segnale massimo di 16dB, è di
+      notevole intensità, adatto sia per realizzare piccoli trasmettitori che
+      per testare filtri.</p><p>E'
+      possibile restringere la banda passante realizzando a valle uno o più
+      stadi accordati, tutto sempre ottenendo una grande stabilità in
+      frequenza, grazie al quarzo.</p><p>Se
+      si vuole una più stretta ripetizione si può usare un quarzo anche da
+      solo 1 Mhz, così da avere un impulso stretto ogni Mhz fino ad arrivare
+      oltre i 2000Mhz ancora con un segnale discreto. Ideale per testare i
+      ricevitori USB SDR come il FUN-CUBE o altri simili....</p><p class="center"><img alt="" decoding="async" height="330" loading="lazy" src="IMAGES/rf_gen_2014_006.jpg" width="497"/></p><p>Questo
+      è il prototipo su basetta del generatore RF, i componenti e lo schema
+      sono ottimizzati per avere la massima potenza in uscita con un solo
+      transistor RF tipo BFR91, alcune resistenze e condensatori non sono collegati,
+      sono serviti per le prove. E' possibile usare la maggior parte di
+      oscillatore a quarzo tipo KTS ed altre marche con frequenze da 1 a 120Mhz.
+      Il segnale in uscita è superiore al Volt e quindi adatto per pilotare
+      direttamente il transistor.</p>
+  
+
+
+
+  
+  <h2 id="s-chema-elettrico">S chema elettrico</h2><p class="center"><img alt="" decoding="async" height="286" loading="lazy" src="IMAGES/rf_gen_2014_000.jpg" width="699"/>  </p><p>-
+      Il quarzo oscillatore U2 deve essere alimentato a 5V tramite il regolatore
+      U3 78L05.</p><p>-
+      Il condensatore C3 applica il segnale a 25,00Mhz alla base del transistor
+      amplificatore RF d 6Ghz, anche usato come diodo Tunnell  vedi <a href="tunnel_generator.htm">EFFETTO
+      TUNNEL</a></p><p>-
+      La resistenza R2 limita la corrente del Q1 a un max di 40mA con
+      alimentazione 12V, durante le prove consiglio di non superare i 9V altrimenti
+      si rischia di bruciare il transistor. </p><p>-
+      I condensatori C4 e C6 sono indispensabili per ottenere quasi 50mW in
+      uscita (9V),
+      senza condensatori la potenza in uscita sempre su 50 Ohm scende a 1-2mW</p><p>-
+      Per induttore di arresto L1 si può usare una VK200, ma anche 20 spire
+      avvolte su una ferrite da 5-6mm vanno  bene. Sulla versione finale è
+      stato adottato un induttore da 1mH per avere più ampiezza in gamma HF.</p><p>-
+      Al posto della L1 si può inserire una LC accordata, in questo caso avremo
+      un picco maggiore di segnale sulla frequenza di risonanza.</p><p>-
+      Il tutto va inserito in un contenitore metallico per evitare irradiazioni
+      dirette, che possono disturbare le trasmissioni radio.</p><p>-
+      Il segnale in uscita se applicato a una antenna tipo Discone è
+      sufficiente per farsi sentire a qualche km anche senza ulteriore
+      amplificazione.</p><p>-
+      Utilizzando un transistor tipo il 2N2222A si ottengono risultati simili,
+      ma la banda passante si limita a 500Mhz</p><p class="center"><img alt="" decoding="async" height="440" loading="lazy" src="IMAGES/rf_gen_2014_007.jpg" width="656"/></p><p>Questa
+      è la versione prova dentro al contenitore metallico, sempre con
+      oscillatore da 25Mhz, l'induttore L1 è diventato da 1mH.</p><p class="center"><img alt="" decoding="async" height="437" loading="lazy" src="IMAGES/rf_gen_2014_008.jpg" width="656"/></p><p>Dove
+      possibile, tutti i componenti sono SMD, C4 e C6 sono diventati un unico
+      condensatore in ceramica da 20uF, come pure il C1. Completano il gruppo, l'interruttore a
+      levetta e il led per segnalare l'accensione.</p><p>Per
+      ottenere la minore dispersione RF, il coperchio va chiuso e fissato bene con le
+      viti...</p>
+
+
+
+  <h2 id="segnale-uscita">Segnale Uscita</h2><p class="center"><img alt="" decoding="async" height="483" loading="lazy" src="IMAGES/rf_gen_2014_001.jpg" width="656"/></p><p>Questo
+      è il segnale a largo spettro presente in uscita,  otteniamo ancora
+      un -60dB a 3500Mhz pari a 0,224mVrms. I primi impulsi assieme alla
+      fondamentale superano la linea dello 0dB.</p><p class="center"><img alt="" decoding="async" height="483" loading="lazy" src="IMAGES/rf_gen_2014_002.jpg" width="656"/></p><p>Questo
+      è il segnale fondamentale a 25,000Mhz con +16dB pari a 2,69V su 50 Ohm.
+      Su ogni banda il segnale è molto stabile e pulito. </p><p class="center"><img alt="" decoding="async" height="483" loading="lazy" src="IMAGES/rf_gen_2014_003.jpg" width="656"/></p><p> Qua
+      si vede molto bene, la ripetizione delle armoniche una ogni 25Mhz,
+      l'ampiezza non è sempre costante e lineare è matematica delle armoniche
+      pari e dispari, è sempre un circuito
+      semplice da realizzare, non si può pretendere una resa da strumento di
+      misura...</p><p class="center"><a class="zoom-link" href="IMAGES/rf_gen_2014_009_b.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Clicca per vedere tutta l'immagine." decoding="async" height="480" loading="lazy" src="IMAGES/rf_gen_2014_005.jpg" width="640"/></a></p><p>Lettura
+      su Power Meter della potenza in uscita, 16.94dB, riferito al picco più
+      alto, non male per un solo transistor collegato a un oscillatore a quarzo.
+      Il generatore RF è collegato direttamente all'ingresso dell'analizzatore
+      per non avere perdite sui cavi.(clicca per ingrandire).</p><h2 id="arduino-rf-generator">Arduino RF generator</h2><p>  Al
+      posto del quarzo o dell'oscillatore quarzato, è possible usare una
+      board Arduino per generare la frequenza, in questa prova è stato usato un
+      Arduino Pro Nano 5V con clock a 16Mhz. L'alimentazione di 9V viene presa dalla
+      board millefori, ma
+      si può anche usare alimentazione USB separata a 5V solo per Arduino. Uscita Rf sul piedino
+      out (8). L'uscita viene applicata al circuito descritto sopra, ed Arduino
+      rappresenta l'oscillatore a quarzo.</p><p class="center"><img alt="" decoding="async" height="317" loading="lazy" src="IMAGES/rf_gen_2014_010.jpg" width="475"/></p><p>- Per avere
+      una fondamentale a 1,332 Mhz (pin out 8) viene utilizzato come partenza il
+      programma indicato in questa pagina: <a href="http://forum.arduino.cc/index.php/topic,8456.0.html" rel="noopener">http://forum.arduino.cc/index.php/topic,8456.0.html</a></p><p>Il programma
+      oltre a fare girare il loop per avere la massima frequenza in uscita usa
+      degli interrupt per modulare l'uscita con un messaggio Morse, si può
+      facilmente cambiare il messaggio con una scritta più opportuna. Il
+      segnale armonico in uscita è presente fino oltre i 2000Mhz con una
+      ripetizione appunto di 1,332Mhz.</p><p class="center"><img alt="" decoding="async" height="476" loading="lazy" src="IMAGES/rf_gen_2014_arduino_2a.jpg" width="656"/></p><p class="center">Questo è
+      il segnale in uscita su 50 Ohm, a 1000Mhz siamo a -60dB ancora udibile su
+      uno scanner a qualche metro di distanza. Vista la tipologia della
+      modulazione è ascoltabile sia in FM che in AM, meglio ancora nella banda
+      HF con filtraggio CW.</p><p class="center"><img alt="" decoding="async" height="476" loading="lazy" src="IMAGES/rf_gen_2014_arduino_2b.jpg" width="656"/></p><p>Questa è
+      la fondamentale a 1,332Mhz molto disturbato attorno, dovuto alla
+      modulazione Morse e agli altri disturbi generati internamente dalla board
+      Arduino.</p><hr color="#336699"/><p>- La massima
+      frequenza di uscita con una fondamentale a 4,0065 Mhz (pinout 8) viene utilizzato questo programma
+      più semplificato e veloce che porta su tutte le uscite lo stesso segnale che
+      corrisponde a 1/4 della frequenza di clock a 16Mhz.</p><p class="center"><a href="http://forum.arduino.cc/index.php/topic,36729.0.html" rel="noopener">http://forum.arduino.cc/index.php/topic,36729.0.html</a></p><p>Programma
+      molto più semplice del precendente, serve per arrivare al massimo della frequenza disponibile
+      sulle porte in uscita.</p><p class="center"><img alt="" decoding="async" height="476" loading="lazy" src="IMAGES/rf_gen_2014_arduino_1a.jpg" width="656"/></p><p class="center">Questo è
+      il segnale in uscita su 50 Ohm, a 1000Mhz siamo a -50dB segnale migliore
+      più pulito del precedente programma.</p><p class="center"><img alt="" decoding="async" height="476" loading="lazy" src="IMAGES/rf_gen_2014_arduino_1b.jpg" width="656"/></p><p>Questo è il
+      segnale fondamentale, misurato a 4,0065Mhz molto pulito, e senza disturbi
+      di modulazione come sul precedete programma, i picchi si susseguono
+      regolari ogni 4Mhz fino oltre i 2000Mhz.</p><p>Utilizzando
+      Arduino 2 che va con clock maggiore è pensabile di ottenere un maggiore numero
+      di fondamentali in programmazione.....</p><p>...................</p><h2 id="applicazioni">Applicazioni</h2><p>
+      Il RF generator è utile in
+      molti casi, si può testare l'ingresso di un ricevitore per verificare il
+      funzionamento, inoltre con l'oscillatore a quarzo può verificare l'esattezza della
+      lettura sulla scala radio per la maggior parte delle bande fino a superare
+      i 3000Mhz.
+      </p><p>Usando un oscillatore a
+      quarzo da 1Mhz diventa ideale per testare i ricevitori SDR .</p><p>Per linearizzare il
+      segnale si può usare un filtro passa alto tarato sui 700-1000Mhz seguito
+      da un attenuatore, così da ridurre le frequenze più basse, ed avere un segnale da circa
+      -30dB.</p><p>Attenuando di molto il segnale
+      e collegando direttamente il segnale con cavo si può verificare
+      la sensibilità in ingresso per ricevitori radio.
+      </p>
+
+
+
+
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+      <ul class="card-grid">
+<li><a href="mini_whip.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — antenna attiva HF/VLF</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR — antenna attiva</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="c-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="c-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2018.htm"><span class="c-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+<li><a href="rf_gen_VHF.htm"><span class="c-sec">Radio &amp; antenne</span>VHF generator 70–500 MHz</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#premessa">Premessa</a></li>
+<li><a href="#s-chema-elettrico">S chema elettrico</a></li>
+<li><a href="#segnale-uscita">Segnale Uscita</a></li>
+<li><a href="#arduino-rf-generator">Arduino RF generator</a></li>
+<li><a href="#applicazioni">Applicazioni</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

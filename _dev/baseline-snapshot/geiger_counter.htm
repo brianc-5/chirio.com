@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema per la misura ambientale radiazioni by Roberto Chirio</title>
+  <meta name="description" content="Sistema per la misura ambientale radiazioni by Roberto Chirio">
+  <meta name="keywords" content="geiger, geiger counter, misura radiazioni, theremino geiger">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita" aria-current="true">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radioattivita">Radioattività</a></li><li aria-current="page">Geiger Counter PC CDV</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Radioattività</p>
+        <h1>GEIGER COUNTER collegato a computer.</h1>
+        <p class="subtitle">Semplice sistema per misurare la radioattività ambientale. Utilizzo del software Theremino geiger &quot;Electronics design&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#radioattivita">Radioattività</a></span><span>Roberto Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#schema-elettrico">SCHEMA ELETTRICO</a></li>
+<li><a href="#descrizione">Descrizione</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#induttore-l1">Induttore L1</a></li>
+<li><a href="#tubo-geiger">Tubo geiger</a></li>
+<li><a href="#taratura">Taratura</a></li>
+<li><a href="#campioni-per-taratura-geiger">Campioni per taratura geiger</a></li>
+<li><a href="#misura-dei-valori-di-fondo-tramite-theremino-geiger-counter">Misura dei valori di Fondo tramite THEREMINO Geiger Counter</a></li>
+<li><a href="#misura-dei-valori-su-cenere-di-pellet">Misura dei valori su cenere di pellet</a></li>
+<li><a href="#misura-dei-valori-di-fondo-tramite-cdv-counter-di-david-honi">Misura dei valori di Fondo tramite CDV Counter di David Honig</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]</p><hr/>
+
+
+  <p>
+      <img alt="La pioggia radioattiva si ferma sopra la scatola stagna e permette la misurazione dei valori." decoding="async" height="267" loading="lazy" src="IMAGES/geiger_pc_000.jpg" width="400"/>
+      </p><p>Marzo
+      2011/giugno 2015</p><p>In
+      seguito al guasto della centrale giapponese di Fukushima nel Marzo 2011, sale l'allarme
+      radioattività in
+      tutto il mondo. </p><p>Questo
+      sistema relativamente semplice, serve per monitorare la radioattività
+      ambientale, a parte il reperimento del tubo geiger, la realizzazione non
+      comporta particolari difficoltà.</p><p>La
+      lettura dei dati su PC è basata su programma  Theremino Geiger
+      software (2013) oppure il più vecchio CDV di David Honig (2004), entrambi
+      di libera distribuzione.</p><p>Per
+      chi è appassionato di elettronica ed ha in casa un tubo geiger, può in poco
+      tempo attivare un sistema di monitoraggio delle radiazioni e con sonda montata all'esterno casa, monitorare il livello di fondo.</p><p class="center">Video
+      pioggia radioattiva:  <a href="https://youtu.be/qHlzF3xIY3E" rel="noopener">https://youtu.be/qHlzF3xIY3E</a></p>
+
+
+
+
+  
+  <h2 id="schema-elettrico">SCHEMA ELETTRICO</h2><p class="center"><img alt="" decoding="async" height="384" loading="lazy" src="IMAGES/geiger_pc_schema.gif" width="760"/>
+      </p>
+  
+
+
+
+
+  
+  <h2 id="descrizione">Descrizione</h2><p>-
+      L'HV viene generata con la tecnica della carica induttore ed successiva apertura
+      veloce, (Step-up) non avendo  praticamente assorbimento in uscita è
+      possibile sfruttare tutta la tensione di apertura generata dall'induttore
+      ed arrivare cosi a oltre 400V. (600V a vuoto senza zener)</p><p>-
+      Il circuito funziona con tensione alimentazione 5V, è facilmente prelevabile da una
+      porta USB, utilizzando un cavo USB, dei 4 conduttori quelli esterni sono
+      il 5V, da verificare con tester il positivo (cavo rosso) e il negativo
+      (cavo nero).</p><p>-
+      Lo schema presentato assorbe meno di 10mA quindi non carica l'uscita
+      neanche di un notebook funzionante a batteria. Adatto quindi anche per
+      rilevamenti sul campo.</p><p>-
+      Il driver usato è il noto 555 versione C-Mos, in questo caso usato come oscillatore
+      astabile bloccato, il funzionamento viene inibito dalla chiusura del
+      transistor Tr1 2N2222 o qualsiasi generico NPN.</p><p>-
+      La frequenza di lavoro è di circa 2Khz, il punto di lavoro ottimale viene
+      trovato per il minore assorbimento dal 5V appunto variando la R7</p><p>-
+      Il MosFet deve poter lavorare a 600 V pertanto si consiglia il tipo FQP2N60
+      o il BSP300. Si ottengo buoni risultati anche con transistor 2N13005 e
+      simili facilmente reperibili dallo stesso circuito dell'induttore neon.</p><p>-
+      Il partitore con 4 Zener da 100V 400mW sull'uscita serve per stabilizzare il valore di
+      tensione, se la tensione aumenta oltre 400V il transistor va in
+      conduzione, bloccando  il 555 e di conseguenza il funzionamento dello
+      step-up, in questa maniera avviene la stabilizzazione della tensione HV
+      che è molto buona, migliore del 5%. lo spegnimento del driver è il
+      sistema migliore per abbassare i consumi.</p><p>-
+      Con 400V è possibile alimentare la maggior parte dei Tubi di fabbricazione
+      Russa tipo il SBM-20 ed molte  pancake.</p><p>-
+      Utilizzando
+      Zener da 50V o altri è possibile regolare la tensione a 450 o 500V a
+      piacimento come richiesto dalle sonde in uso.</p><p>-
+      Il collegamento del tubo all'esterno deve essere fatto con cavo RG58 o
+      RG59 e connettori
+      tipo BNC o meglio PL259. Non è importante l'impedenza del cavo a 50 o 75
+      Ohm, ma bensì l'isolamento che deve essere maggiore di 700/1000V. Importante
+      anche curare l'isolamento dei connettori.</p><p>-
+      Il condensatore da 1000pF 3kV serve per bloccare l'HV, (va bene un tipo
+      ceramico, ma gli MKP sono migliori, anche per il circuito duplicatore) e per rilevare gli impulsi
+      audio tramite il partitore R12/R11, i due diodi hanno il
+      compito di proteggere l'ingresso PC dagli eventuali scariche atmosferiche elettrostatiche.
+      Si può montare un eventuale condensatore da 100/330pF ai capi della R11
+      per ridurre disturbi o doppie commutazioni. Eventualmente per regolare
+      meglio il segnale audio, al posto di R11 montare un trimmer in
+      configurazione volume.</p><p>-
+      Per uscita audio PC, si utilizza un cavetto audio schermato di buona
+      qualità, da collegare
+      all'ingresso PC meglio se su AUX, l'ingresso Microfono è sconsigliato in
+      quanto troppo sensibile e può prendere disturbi.</p>
+
+
+
+
+  
+    
+    <h2 id="realizzazione">Realizzazione</h2><p class="MsoNormal"><strong><span class="hl">La
+        realizzazione del Contatore Geiger per misure ambientali comporta avere delle conoscenze di
+        elettronica, è necessaria un'attrezzatura ed esperienza nei
+        montaggi elettronici.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+        per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">Attenzione
+        che in uscita è presente una tensione di 400V anche se di bassissima
+        energia, può essere pericolosa per chi non esperto.</span></strong></p><p class="center">
+      <img alt="" decoding="async" height="264" loading="lazy" src="IMAGES/geiger_pc_004.jpg" width="400"/>
+        </p><p>
+          Ecco come si presenta il prototipo montato
+        
+        su una piastra millefori.
+        </p><p>
+        Per la sezione a bassa tensione,
+        non ci sono particolari  problemi per sistemare i componenti,
+        mentre nella sezione HV prestare attenzione alle distanze e alla
+        disposizione dei componenti e alle saldature sulle piazzole che devono
+        avere maggiore distanza tra di loro, lasciare almeno 1 foro libero tra due punti
+        HV.
+        </p><h2 id="induttore-l1">Induttore L1</h2><p> L'induttanza
+        da 3,3mH serve per
+        generare gli impulsi ad alta tensione fino ad un valore di 400V di
+        picco, è facile da trovare in quanto presente all'interno del driver di
+        tutti i tubi neon basso consumo, risparmio energia.
+        </p><p class="center"> <img alt="" decoding="async" height="264" loading="lazy" src="IMAGES/step_up_HV_2000_4.jpg" width="400"/></p><p>L'induttanza
+        presente nelle lampade a basso consumo, può avere un valore da 1 a 4mH,
+        in genere valori da 2 a 4 mH vanno benissimo per questa
+        applicazione. Importante che sia una bobina impregnata con vernice e
+        resina, questo per garantire un buon isolamento. </p><h2 id="tubo-geiger">Tubo geiger</h2><p>
+      - SBM-20 Sonda tipo HOT DOG  sensibile a Beta e Gamma
+      <br/>
+      - Tensione nominale :  400-450V<br/>
+      - Sensibilità Cs137 :  800 CPM/mR/h<br/>
+      - Anno di fabbricazione 1991
+      <br/>
+      - Altre caratteristiche le trovate in rete.
+      </p><p>- E' facilmente
+      acquistabile su Ebay.</p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/geiger_pc_007.jpg" width="400"/>
+      </p><p>
+      - Il tutto è fissato al
+      balcone tramite una staffa in alluminio della lunghezza di 80cm.
+      </p><p>- Si consiglia di stare
+      il più lontano possibile dalla abitazione, in quanto molti materiali
+      edili sono leggermente radioattivi e possono falsare la misura.</p><p>- Non ci sono problemi di
+      lunghezza del cavo RG58 o RG59, importante che sia nuovo e di buona qualità per
+      evitare dispersioni di HV.
+      </p><p>- Per comodità si può
+      anche usare cavo TV o satellite, importante curare gli isolamenti che
+      devono tenere oltre 400V in presenza di acqua.
+      </p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/geiger_pc_002.jpg" width="400"/>
+      </p><p>
+      - Versione con 2 x SBM20
+      </p><p>- Le sonde sono tenute
+      alte vicino al coperchio, per meglio leggere la pioggia che si ferma sul
+      coperchio.</p><p>- Con 2 SBM20 il valore
+      di fondo è di 70-90 CPM.
+      </p><p>- Le sonde sono collegate
+      in parallelo con 1 sola resistenza in serie da 4M7.
+      </p><p class="center"><img alt="" decoding="async" height="266" loading="lazy" src="IMAGES/geiger_pc_006.jpg" width="400"/>
+      </p><p>
+      - Versione con 3 x SBM20
+      </p><p>- Le sonde sono tenute
+      alte, per meglio leggere la pioggia che si ferma sul
+      coperchio.</p><p>- Le sonde sono collegate
+      in parallelo con 1  resistenza in serie da 4M7 per ogni tubo.</p><p>- In questo caso tutto il
+      circuito è montato  dentro la scatola stagna.
+      </p><p>- Con cavo schermato si
+      porta alimentazione e uscita segnale.
+      </p><p class="center"><img alt="" decoding="async" height="267" loading="lazy" src="IMAGES/geiger_pc_008.jpg" width="400"/>
+      </p>
+  
+
+
+
+  
+  <h2 id="taratura">Taratura</h2><p>-
+      Collegare
+      un voltmetro ad alta impedenza (300-1000Mohm) sull'uscita e dare alimentazione a
+      5V. Vedi <a href="geiger_counter_voltmeter.htm">Voltmeter HV 1000Mohm</a></p><p>-
+      Il circuito non richiede particolari tarature, deve funzionare subito,  la tensione deve salire fino a
+      400V e stabilizzarsi.</p><p>-
+      La resistenza R7 va regolata per ottenere il minimo assorbimento dal 5V,
+      sempre leggendo 400V con voltmetro alta impedenza.</p><p>-
+      Collegare il cavetto audio all'ingresso AUX del PC.</p><p class="center"><img alt="" decoding="async" height="270" loading="lazy" src="IMAGES/geiger_pc_005.jpg" width="339"/></p>
+
+
+
+  
+  
+      <p>In mancanza
+      di un Voltmetro ad alta impedenza si può realizzare un ottimo strumento
+      utilizzando un multimetro con 10M ohm impedenza di ingresso, aggiungendo
+      il partitore per alta tensione dello schema che segue.</p><p class="center"><img alt="" decoding="async" height="311" loading="lazy" src="IMAGES/voltmeter_1000_simple.gif" width="505"/></p><p>Versione
+      semplificata del voltmetro HV, da collegare direttamente a un Multimetro (DMM).
+      Sulla portata 2.000V, leggeremo  x1000 quindi 2KVolt fs.  Il
+      trimmer cermet multigiri, serve per tarare con precisione il rapporto 1000:1.
+      </p><p>Importante:
+      il DDM deve avere 10Mohm di impedenza d'ingresso, alcuni di basso costo
+      hanno solo 1Mohm, in genere la lettura è ancora possibile, eliminare la
+      R1 e lasciare solo il trimmer, in questo caso usare la portata 200mV e
+      tarare per un rapporto 10000:1.
+  </p><p>La
+      resistenza da 300Mohm si può acquistare ma è difficile da trovare, si
+      può realizzare facilmente mettendo 30 resistenze da 10Mohm in serie,
+      meglio se SMD. 
+      </p><p class="center"><a class="zoom-link" href="IMAGES/voltmeter_1000_02.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Resistenza da 300Mohm realizzata con SMD e ricoperta di resina isolante." decoding="async" height="50" loading="lazy" src="IMAGES/voltmeter_1000_02_small.jpg" width="100"/></a>
+      </p>
+  
+
+
+
+  
+  <h2 id="campioni-per-taratura-geiger">Campioni per taratura geiger</h2><p>Disponibili
+        campioni Pechblenda sotto piombo per la taratura Geiger Counter.</p><p>Contenitori
+        diam. 29mm, valori a richiesta da 0,100 mRh a 2 mRh,
+        emissione tipo: </p><p>-
+        Alpha, Beta + gamma (Minerale libero)</p><p>-
+        Beta + Gamma  (Minerale inglobato in resina)</p><p>-
+        Solo Gamma (Minerale schermato con alluminio 1mm)</p><p class="right">Contattare: <img alt="" decoding="async" height="16" loading="lazy" src="IMAGES/email.jpg" width="93"/></p><p class="center"><img alt="" decoding="async" height="249" loading="lazy" src="IMAGES/me_campione_u.jpg" width="336"/>
+      </p><p class="center"><img alt="" decoding="async" height="243" loading="lazy" src="IMAGES/campioni_pecbl_2.jpg" width="326"/>
+      </p><p class="center"><img alt="" decoding="async" height="243" loading="lazy" src="IMAGES/sonda_pancake.jpg" width="365"/>
+      </p><p>
+        Due esempi di campioni con
+        Minerale libero.
+      </p><p>
+        Tutti i campioni vengono
+        testati con sonde Pancake tipo Eberline HP-260 oppure Ludlum 44-9
+      </p>
+  
+
+
+
+
+
+  
+  <h2 id="misura-dei-valori-di-fondo-tramite-theremino-geiger-counter">Misura dei valori di Fondo tramite THEREMINO Geiger Counter</h2>
+  
+
+
+  
+  <p>
+      - Download del programma
+      da :  <a href="http://www.theremino.com/downloads/radioactivity" rel="noopener">http://www.theremino.com/downloads/radioactivity</a>
+      </p><p>- Ottimo programma, più
+      recente (2013) rispetto CVD (2004). Visualizzazione grafica con interfaccia strumento analogico e traccia curva continua programmabile
+      anche per molte ore.</p><p>- Gia in memoria i
+      parametri delle sonde più usate dagli appassionati.</p><p class="center"><img alt="" decoding="async" height="574" loading="lazy" src="IMAGES/theremino_geiger_00.jpg" width="752"/></p><p>- Funziona perfettamente
+      con il circuito proposto in questa pagina. Seguire attentamente le
+      istruzioni riportate nell'Help del programma.</p><h2 id="misura-dei-valori-su-cenere-di-pellet">Misura dei valori su cenere di pellet</h2><p>
+      - La misura va fatta su
+      cenere di pellet appena tolta dalla stufa, meglio usare quella della
+      pulizia fornetto in quanto più pesante.
+      </p><p>- La cenere va compressa
+      dentro una scatolina, qua si è usato un fondo per candele in alluminio.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/TH_geiger_pellet_004.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="75" loading="lazy" src="IMAGES/TH_geiger_pellet_004_small.jpg" width="100"/></a>
+      </p><p>
+      - Leggere il valore del
+      fondo per 15-20 minuti.
+      </p><p>- In questo caso è stata
+      usata una sonda pancake Russa 58mm, con buona sensibilità paragonabile
+      alle LND 7312</p><p>- La schermatura con
+      piombo ha ridotto del 70% il  valore del fondo, ancora migliorabile
+      se si realizza un forno completamente chiuso con il piombo da 2-3 cm.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/TH_geiger_pellet_002.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="75" loading="lazy" src="IMAGES/TH_geiger_pellet_002_small.jpg" width="100"/></a>
+      </p><p>
+      - Si nota molto bene la
+      differenza tra il fondo (schermato) e la lettura sul contenitore di pellet.
+      </p><p>- Non sono valori
+      pericolosi, ma comunque leggermente radioattivi, quando il legno di pellet
+      non
+      dovrebbe dare nessuna lettura....
+      </p><p class="center"><a class="zoom-link" href="IMAGES/TH_geiger_pellet_003.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="62" loading="lazy" src="IMAGES/TH_geiger_pellet_003_small.jpg" width="100"/></a>
+      </p>
+  
+
+
+
+
+
+  
+  <h2 id="misura-dei-valori-di-fondo-tramite-cdv-counter-di-david-honi">Misura dei valori di Fondo tramite CDV Counter di David Honig</h2>
+  
+
+
+  
+  <p>
+      - Download del programma
+      da diversi siti:
+      </p><p><a href="http://sourceforge.net/projects/cdvcounter/files/cdvcounter/SRC/CDVCounter_EXE.zip/download" rel="noopener">Download cdvcounter from
+      sourceforge.net</a></p><p>oppure </p><p><a href="http://www.anythingradioactive.com/downloads/DSRB88%20instructions.bak" rel="noopener">http://www.anythingradioactive.com/downloads/DSRB88%20instructions.bak</a></p><p>- A questo si apre il
+      programma CDV Counter, che non necessita di installazione, basta fare
+      partire il file cdvcounter.exe da 212K, può girare anche da chiavetta.</p><p><img alt="" decoding="async" height="350" loading="lazy" src="IMAGES/geiger1.jpg" width="481"/></p><p>Impostare Sample time a
+      60s, Repeat a 999999 (Forever) e Detection threshold a un valore basso che
+      permetta di riconoscere tutti i click, nel mio caso 10 funziona bene, ma
+      è molto in funzione del segnale audio disponibile e se si sta utilizzando
+      l'ingresso mic.</p><p>Sensitivity va settato
+      sul valore della sonda in uso, per esempio, la SBM20 ha una sensibilità
+      di 700-800 cpm/mR/h  usando 2 x SBM20 mettiamo  1400 cpm/mR/h</p><p><img alt="" decoding="async" height="334" loading="lazy" src="IMAGES/geiger2.jpg" width="482"/></p><p>Entrare su Options e
+      settare Scroll Width su 1200 o valori simili, da provare, in funzione
+      dello schermo usato, in tal caso la scala avrà una visione temporale di
+      circa 24h</p><p><img alt="" decoding="async" height="350" loading="lazy" src="IMAGES/geiger3.jpg" width="481"/></p><p>partire premendo Start e
+      poi Graph per visualizzare il diagramma </p>
+  
+
+
+
+
+  
+  <div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+  <tbody><tr>
+      <td>
+      15 aprile 2011  valori
+      di fondo alti, pioggia con tracce radioattive
+      </td>
+      <td>
+      <p class="center"><a class="zoom-link" href="IMAGES/geiger_fondo_15_aprile_2011.gif" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="24" loading="lazy" src="IMAGES/geiger_fondo_15_aprile_2011_small.gif" width="100"/></a>
+      </p></td>
+  </tr>
+  <tr>
+      <td>
+      2 aprile 2011  valori
+      di fondo bassi, sereno, sole caldo
+      </td>
+      <td>
+      <p class="center"><a class="zoom-link" href="IMAGES/geiger_fondo_2_aprile_2011.gif" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="24" loading="lazy" src="IMAGES/geiger_fondo_2_aprile_2011_small.gif" width="100"/></a>
+      </p></td>
+  </tr>
+  <tr>
+      <td>
+      1 aprile 2011  valori
+      di fondo bassi, sereno, sole caldo
+      </td>
+      <td>
+      <p class="center"><a class="zoom-link" href="IMAGES/geiger_fondo_1_aprile_2011.gif" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="24" loading="lazy" src="IMAGES/geiger_fondo_1_aprile_2011_small.gif" width="100"/></a>
+      </p></td>
+  </tr>
+  <tr>
+      <td>
+      29 marzo 2011  valori
+      di fondo alti, pioggia con tracce radioattive
+      </td>
+      <td>
+      <p class="center"><a class="zoom-link" href="IMAGES/geiger_29_30_valori%20fondo.gif" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="20" loading="lazy" src="IMAGES/geiger_29_30_valori_fondo_small.gif" width="100"/></a>
+      </p></td>
+  </tr>
+  </tbody></table></div>
+  
+
+
+
+  
+  <h2 id="commenti-finali">Commenti finali</h2>
+  
+
+
+  
+  <p>
+      - La configurazione pur
+      essendo semplice, permette notevoli risultati, sempre sperando che serva solo a
+      scopo didattico e non debba rilevare valori pericolosi. In caso di dubbi appoggiarsi ad un esperto di settore.
+      </p><p>- Migliori risultati con
+      il più recente programma Theremino geiger.</p><p>-
+      Realizzando questo Geiger Counter PC, con l'ausilio di un fornetto con
+      schermatura in piombo è possibile fare l'analisi degli alimenti tipo frutta e
+      verdura. Posizionare a contatto della sonda, dopo alcune decine di minuti, se ci sono
+      valori più alti vuol dire che gli alimenti hanno assorbito un po’ di
+      radioattività, eventualmente contattare la USL o ARPA, per una analisi
+      più approfondita.</p><p>
+      Sempre utili gli appunti del
+      Proff. Andrea Bosi su radioattività e Geiger:
+      </p><p><a href="http://spazioinwind.libero.it/andrea_bosi/index.htm" rel="noopener">http://spazioinwind.libero.it/andrea_bosi/index.htm</a></p>
+  
+
+
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Radioattività”</h2>
+      <ul class="card-grid">
+<li><a href="geiger_arduino.htm"><span class="c-sec">Radioattività</span>Geiger counter con Arduino</a></li>
+<li><a href="geiger_counter_pulsar.htm"><span class="c-sec">Radioattività</span>Calibratore per Geiger counter</a></li>
+<li><a href="geiger_counter_voltmeter.htm"><span class="c-sec">Radioattività</span>HV Voltmeter 1000 MΩ</a></li>
+<li><a href="ram63.htm"><span class="c-sec">Radioattività</span>RAM 63 — miglioramenti</a></li>
+<li><a href="SV500.htm"><span class="c-sec">Radioattività</span>FAG SV500 — upgrade</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#schema-elettrico">SCHEMA ELETTRICO</a></li>
+<li><a href="#descrizione">Descrizione</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#induttore-l1">Induttore L1</a></li>
+<li><a href="#tubo-geiger">Tubo geiger</a></li>
+<li><a href="#taratura">Taratura</a></li>
+<li><a href="#campioni-per-taratura-geiger">Campioni per taratura geiger</a></li>
+<li><a href="#misura-dei-valori-di-fondo-tramite-theremino-geiger-counter">Misura dei valori di Fondo tramite THEREMINO Geiger Counter</a></li>
+<li><a href="#misura-dei-valori-su-cenere-di-pellet">Misura dei valori su cenere di pellet</a></li>
+<li><a href="#misura-dei-valori-di-fondo-tramite-cdv-counter-di-david-honi">Misura dei valori di Fondo tramite CDV Counter di David Honig</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

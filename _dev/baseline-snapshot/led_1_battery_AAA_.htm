@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1.5V AA and AAA battery size power supply for led 5mm 20mA and 10mm 80mA by Roberto Chirio</title>
+  <meta name="description" content="1.5V AA and AAA battery size power supply for led 5mm 20mA and 10mm 80mA by Roberto Chirio">
+  <meta name="keywords" content="cree power leds, led k2, luxeon k2, illuminazione led, video led lamp, led lamp, led torch, headlamp led, head lamp, torcia led, lampada led, led professionale, luxeon led, luxeon 1W, luxeon 3w, luxeon 5w, lumileds">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led" aria-current="true">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#led">LED &amp; illuminazione</a></li><li aria-current="page">Un LED con una stilo da 1,5 V</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">LED &amp; illuminazione</p>
+        <h1>Alimentare un led 5mm 20mA con 1 stilo 1,5V</h1>
+        <p class="subtitle">&quot;Fai da te&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#led">LED &amp; illuminazione</a></span><span>Roberto Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#alimentare-un-led-20ma-con-1-5volt-aa-cell">Alimentare un LED 20mA con 1,5Volt AA Cell</a></li>
+<li><a href="#dati-di-prova-rilevati">Dati di prova rilevati:</a></li>
+<li><a href="#alimentare-un-led-20ma-con-1-5volt-aa-cell-versione-migliora">Alimentare un LED 20mA con 1,5Volt AA Cell versione migliorata con la corrente stabilizzata a 20mA/led</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>] </p>
+<hr color="#336699"/>
+
+
+  <h2 id="alimentare-un-led-20ma-con-1-5volt-aa-cell">Alimentare un LED 20mA con 1,5Volt AA Cell</h2><p class="center"><img alt="Schema elettrico per alimentare un LED 20mA con 1,5Volt AA Cell " decoding="async" height="249" loading="lazy" src="led/images/led_1_cell_01.jpg" width="600"/></p><p>Questo
+      è lo schema più semplice per alimentare correttamente un LED White da
+      20mA tramite una batteria da 1.5Volt tipo Stilo (AA cell) oppure solo con
+      Ministilo (AAA cell).</p><p>Si
+      tratta di un oscillatore a un transistor in configurazione auto oscillante
+      con uno stadio in uscita a recupero Step-up.</p><p>Il
+      transistor Q1 và in autoscillazione in quanto il T1 riporta il segnale del collettore sulla
+      base con fase a 180°.</p><p>La
+      frequenza di lavoro e di conseguenza la corrente nel LED viene determinata
+      dal valore di R1, dai valori induttivi del T1 e dalle caratteristiche del
+      Q1. Anche il carico rappresentato dal D1, C2 e D2 LED contribuiscono alla
+      frequenza di oscillazione.</p><p>In
+      questo caso ho usato un transistor generico, adatto alla commutazione:</p><p class="center"> tipo
+      UTC2SA684   PNP  VCE:60V Ic:1A  f:200Mhz  hfe:85</p><p>Vanno
+      bene in genere un po' tutti i transistor in questa fascia di valori,
+      meglio se NPN (più comuni), in questo caso, ricordarsi di invertire polarità della
+      batteria, condensatori e diodi.</p><p>Trasformatore
+      T1 circa 20 spire di filo rame smaltato diam. 0,15-0,2mm avvolte in bifilare su un toroide da 10mm, va bene anche
+      su un piccolo cilindro di ferrite (6x8), oppure per avere un buon rendimento, un piccolo
+      trasformatore a E in ferrite sarebbe ideale.</p><p class="center"><img alt="1 led supply by 1 AA cell" decoding="async" height="119" loading="lazy" src="led/images/led_auto_oscill_1tr_f.jpg" width="300"/></p><h2 id="dati-di-prova-rilevati">Dati di prova rilevati:</h2><p class="center">
+      <strong>Vb=1.496V   Ib=0.102A   
+      Pb=0.152W</strong>
+      </p><p class="center"><strong>Vled=3.41V  
+      Iled=0.0217A    Pled=0.074W</strong></p><p class="center"><strong>fo=22.7Khz </strong>
+      </p><p class="center"><strong>rendimento:</strong>
+      </p><p class="center"><strong>
+      0.487</strong>
+      </p><p class="center"><a class="zoom-link" href="led/images/led_auto_oscill_1tr.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="75" loading="lazy" src="led/images/led_auto_oscill_1tr_small.jpg" width="100"/></a></p><p class="center">Forma
+      onda capi CE di Q1</p><p class="center">Per
+      comodità visiva ho invertito alto/basso la figura, la tensione ha
+      un  andamento negativo verso l'alto, in
+      quanto usiamo un transistor PNP.
+      </p><p class="center">Con
+      un NPN vedremo in normale la stessa forma d'onda.
+      </p><p>Commenti
+      e miglioramenti:  </p><p>In
+      questo caso usando come nucleo un toroide a traferro distribuito, non è
+      possibile avere dei buonissimi rendimenti, consiglierei di provare con un
+      nucleo trasformatore a doppia E in ferrite N27.</p><p>Ulteriori
+      miglioramenti usando un diodo  Schottky
+      al posto del D1.</p><p>Questa
+      configurazione non si presta a fornire maggiori potenze in quanto correnti
+      più alte e tempi di conduzione  tendono a sprecare molta energia sul
+      nucleo e sul transistor, portando il sistema a rendimenti molto bassi.</p><p>Si
+      può tentare di spremere le prestazioni per arrivare ad alimentare fino a
+      4 LED in parallelo oppure un solo LED da  80mA 10mm di diametro.(vedi
+      in seguito)</p><p>La
+      ricerca  e selezione di transistor con migliori caratteristiche può
+      dare significativi miglioramenti.</p><p>Il
+      circuito funziona anche con una batteria ricaricabile da 1,2V è
+      necessario modificare il valore della R1 per avere 20mA sul LED.</p><p>Se
+      si impiega per alimentazione una torcia (D cell) da 1.5 di buona qualità
+      possiamo avere una autonomia di oltre 100 ore, che considerando la buona
+      resa del led a 40000mcd (migliorabile con i nuovi a 50000mcd) otteniamo
+      una fonte luminosa compatta ed affidabile. </p><p>Febbraio
+      2007</p><p class="center"><img alt="" decoding="async" height="272" loading="lazy" src="led/images/led_auto_oscill_1tr_2b.jpg" width="700"/></p><p>Versione
+      migliorata, usando un trasformatore in ferrite cilindrica 6x8 si migliora
+      la resa del transistor e quindi è possibile avere in uscita una corrente
+      maggiore, in questo caso ho messo 18+18 spire diam 0,15.</p><p>La
+      R1 diventa 270 ohm e in uscita è possibile pilotare un led 10mm da 80mA
+      120000mcd, il rendimento di questa configurazione 4 volte più potente
+      rimane circa il 0.48, per usare batterie da 1,2V ricaricabili adattare il
+      valore di R1 per avere 80mA di corrente nel LED.</p><p class="center"><img alt="" decoding="async" height="233" loading="lazy" src="led/images/led_auto_oscill_1tr_2a.jpg" width="350"/>
+      </p>
+
+
+
+  <h2 id="alimentare-un-led-20ma-con-1-5volt-aa-cell-versione-migliora">Alimentare un LED 20mA con 1,5Volt AA Cell versione migliorata con la corrente stabilizzata a 20mA/led</h2><p class="center"><img alt="" decoding="async" height="306" loading="lazy" src="IMAGES/led_1AA_2010.gif" width="590"/></p><p>
+      Ulteriore versione
+      migliorata, usando un secondo transistor per bloccare l'oscillatore,
+      quando la corrente nel led supera i 20mA. E' sufficiente controllare la
+      corrente di un solo ramo per avere anche stabile la corrente su gli altri
+      diodi, importante che siano tutti diodi led dello stesso tipo.
+      </p><p>Il valore della R1 deve
+      essere aggiustato per avere il funzionamento fino a circa 1,0V. Il valore
+      esatto è in funzione dei componenti usati e del tipo di trasformatore.</p><p>Utilizzando led ultimo
+      tipo ad altissima resa, e una batteria a torcia (tipo D) possiamo
+      realizzare una affidabile lampada di sicurezza con una lunga autonomia.
+      </p>
+
+<hr color="#336699" size="3"/>
+
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"><br/>
+ © Roberto Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “LED &amp; illuminazione”</h2>
+      <ul class="card-grid">
+<li><a href="led_light_emitting_diodes.htm"><span class="c-sec">LED &amp; illuminazione</span>Cosa è un LED</a></li>
+<li><a href="led_s.htm"><span class="c-sec">LED &amp; illuminazione</span>Utilizzo diverso dei led</a></li>
+<li><a href="led_6_220V.htm"><span class="c-sec">LED &amp; illuminazione</span>Lampade a LED con il 220 V</a></li>
+<li><a href="led_h4.htm"><span class="c-sec">LED &amp; illuminazione</span>Lampada LED sostituzione H4</a></li>
+<li><a href="led_acquario.htm"><span class="c-sec">LED &amp; illuminazione</span>Illuminare un acquario a LED</a></li>
+<li><a href="led_bk3_s.htm"><span class="c-sec">LED &amp; illuminazione</span>BK3/S — proiettore LED 10 W</a></li>
+<li><a href="led_dimmer_rgb.htm"><span class="c-sec">LED &amp; illuminazione</span>Dimmer RGB 3 canali 12 V 10 A</a></li>
+<li><a href="led_lamp_10w.htm"><span class="c-sec">LED &amp; illuminazione</span>Illuminatore video 3× Seoul P7</a></li>
+<li><a href="led_video_3p7.htm"><span class="c-sec">LED &amp; illuminazione</span>Video lamp 3× LED P7</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#alimentare-un-led-20ma-con-1-5volt-aa-cell">Alimentare un LED 20mA con 1,5Volt AA Cell</a></li>
+<li><a href="#dati-di-prova-rilevati">Dati di prova rilevati:</a></li>
+<li><a href="#alimentare-un-led-20ma-con-1-5volt-aa-cell-versione-migliora">Alimentare un LED 20mA con 1,5Volt AA Cell versione migliorata con la corrente stabilizzata a 20mA/led</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

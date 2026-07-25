@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWITCHING POWER SUPPLY ATX 13,8V. Semplici modifiche per aumentare la tensione in uscita. How to Modify a Computer ATX Power Supply to a 13.80 Volt Supply by Roberto Chirio</title>
+  <meta name="description" content="SWITCHING POWER SUPPLY ATX 13,8V. Semplici modifiche per aumentare la tensione in uscita. How to Modify a Computer ATX Power Supply to a 13.80 Volt Supply by Roberto Chirio">
+  <meta name="keywords" content="electronics design, switching power supply, step-down, step-up, buck converter, current mode supply, led driver, power led driver, led driver design, led driver pump, led driver flash">
+  <meta name="author" content="Roberto Chirio">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Chirio<b>.com</b><small>Elettronica · radio · progetti</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="bars" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Navigazione principale">
+      <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori" aria-current="true">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Percorso di navigazione"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#alimentatori">Alimentatori</a></li><li aria-current="page">ATX 13.8V power supply</li></ol></div></nav>
+<div class="wrap page has-aside">
+  <main id="main">
+    <article class="article">
+      <header class="article-head">
+        <p class="kicker">Alimentatori</p>
+        <h1>SWITCHING POWER SUPPLY 13.8V</h1>
+        <p class="subtitle">Come modificare un ATX. How to Modify a Computer ATX Power Supply to a 13.8V Power Supply &quot;Electronics design&quot; di R.Chirio</p>
+        <p class="meta"><span><a href="index.html#alimentatori">Alimentatori</a></span><span>Roberto Chirio</span></p>
+      </header>
+      <details class="toc-mobile"><summary>Indice della pagina</summary><nav class="toc" aria-labelledby="toc-title-m"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#schema-elettrico-atx-modifiche-per-13-8v-a-carico">SCHEMA ELETTRICO ATX modifiche per 13,8V a carico.</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#prova-a-carico">Prova a Carico</a></li>
+<li><a href="#parallelo-alimentatori">Parallelo Alimentatori</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></details>
+      <div class="prose">
+
+
+
+  
+
+
+  
+
+<p class="center">[<a href="index.html">home</a>]
+
+
+</p>
+<hr/>
+
+
+  <p>2008-2013</p><p>E'
+      facile ottenere 13,8V da un alimentatore ATX, indipendentemente dal tipo
+      di driver usato.</p><p>Seguendo
+      le facili istruzioni, è possibile ottenere un alimentatore adatto per
+      carichi che richiedono una tensione fissa da 13,8V con correnti anche fino
+      a 20A (Dipende dalle caratteristiche originali dell' ATX ).</p><p>Questa
+      modifica è stata provata con ATX che contengono regolatori PWM tipo
+      TL494, KA7500, 2003, UC3843.</p><p><span class="hl-g">Attenzione:con
+      regolatore PWM a 20 pin tipo SG6105 e anche con il 16 pin marchiato 2005 in alcuni casi la modifica
+      è più complessa e difficile da fare funzionare.</span></p><p class="MsoNormal center"><span class="hl"><strong> La
+        modifica dello Switching Power Supply ATX comporta avere delle buone conoscenze di
+        elettronica, </strong></span></p><p class="MsoNormal center"><span class="hl"><strong> è necessaria un'attrezzatura ed esperienza nei
+        montaggi elettronici. </strong></span></p><p class="MsoNormal center"><span class="hl"><strong> E
+        chiare competenze nell'uso dei dispositivi a 220V.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+        per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p><p>Prima di iniziare la
+      modifica è bene provare in funzionamento l'ATX, ed essere sicuri che
+      funzioni a carico. In questo caso bisogna ponticellare a massa il cavo
+      verde (PS-ON), presente sul piedino 14 del connettore principale, e poi dare
+      tensione di rete (220V AC).  </p><p>Se OK si sentirà la ventola girare. </p><p>Attenzione: il fatto che la
+      ventola gira, è buon segno ma non vuol dire che la parte di potenza funzioni,
+      bisogna misurare le tensioni in uscita collegando un carico.</p><p> Misurare la
+      tensione sui connettori bianchi e verificare il 5V (+/- 0.5V)  tra il
+      cavo rosso e quello nero, e poi il 12V tra il cavo giallo e quello nero.
+      Per la prova del funzionamento a carico bisogna collegare una resistenza di potenza da 20W 
+      10 ohm sui terminali del
+      12V e verificare che la tensione non
+      scenda sotto il 12V. Va bene anche una lampadina da 20W 12V non di potenza
+      maggiore altrimenti la corrente di spunto manda in blocco l'ATX.</p><p> Lasciare
+      il carico collegato, per un po’ di tempo e verificare che non ci siano problemi di
+      cadute di tensione o il blocco della ventola o surriscaldamenti.</p><p>Un eventuale ventola
+      rumorosa, è bene che venga sostituita con una nuova, se si bloccasse
+      durante il funzionamento sotto carico, potrebbero esserci danni anche ai
+      dispositivi alimentati dall'ATX modificato.</p><p class="center"><img alt="" decoding="async" height="210" loading="lazy" src="IMAGES/atx_013.jpg" width="370"/>
+      </p><p class="center"><img alt="Ponticello PS-ON a massa per fare funzionare un ATX. Collegare pin14 con 16" decoding="async" height="200" loading="lazy" src="IMAGES/atx_012_ps_on_small.jpg" width="300"/>
+      </p><p>
+      Per conoscere  la
+      corrente massima che potremo assorbire, è sufficiente leggere il valore
+      riportato sulla targhetta del ATX.
+      </p><p>In questo caso con il 12V
+      il massimo assorbimento è di 16A.</p><p>Possiamo trovare
+      alimentatori da 480-500W che forniscono 18-22A dal 12V.
+      </p><p>Attenzione che ci sono
+      alimentatori economici che pur presentando buoni valori di corrente sulla
+      targhetta non sono in grado di arrivare a tali valori..... le buone
+      prestazioni si ottengono con alimentatori pesanti..
+      </p><p class="center"><a class="zoom-link" href="IMAGES/atx_14_000.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/atx_14_000_small.jpg" width="300"/></a>
+      </p><p>
+      Possiamo trovare molti schemi
+      ATX in questo sito : <a href="http://danyk.cz/s_atx_en.html" rel="noopener">http://danyk.cz/s_atx_en.html</a>
+      </p>
+
+
+
+
+  
+  
+    
+    <h2 id="schema-elettrico-atx-modifiche-per-13-8v-a-carico">SCHEMA ELETTRICO ATX modifiche per 13,8V a carico.</h2><p class="center"><img alt="" decoding="async" height="507" loading="lazy" src="IMAGES/atx_14_schema.gif" width="428"/>
+      </p><p>Da
+      come si può vedere dallo Schema le modifiche sono minime, si tratta di
+      aggiungere diodi 1N4448 in serie ai sensing del 12V e del 5V, questo per
+      ingannare il controllo facendogli credere che la tensione del 5 e del 12
+      sono a posto mentre in pratica avremo sul 12 un 12+0,6+0,6+0,6+0,6 pari a
+      14,5 Volt in uscita a vuoto.
+      </p><p>Al
+      posto dei diodi è anche possibile inserire un trimmer cermet da 10K e poi
+      regolare la tensione in uscita con +2-4V maggiore del 12V.
+      </p><p>*
+      attenzione che in alcuni ATX è necessario mettere anche 1 diodo 1N4448 in
+      serie al sensing del 3,3V
+      </p>
+  
+
+
+
+  
+    <h2 id="realizzazione">Realizzazione</h2><p class="MsoNormal"><span class="hl"><strong>La
+        realizzazione dello Switching Power Supply comporta avere delle
+        conoscenze di elettronica, è necessaria un'attrezzatura ed esperienza
+        nei montaggi elettronici.</strong></span></p><p class="MsoNormal center"><span class="hl"><strong> E
+        chiare competenze nell'uso dei dispositivi a 220V.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+        per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p><p class="center">Versione 2008.1
+      </p><p>
+      - Iniziare con il togliere il
+      CS dal contenitore metallico, svitare le 4
+      viti di fissaggio e dissaldare i cavi della rete.
+      </p><p>- Con un robusto saldatore
+      staccare tutti i cavi saldati sul CS, lasciare solamente il cavo verde
+      PS-ON e il cavo Viola del 5VSB.</p><p>- Si nota che in questa
+      piastra (economica!) manca del tutto il filtro rete, per economia del produttore.
+      Per usare l'ATX modificato con apparati radio, è meglio che ci sia.</p><p class="center"><a class="zoom-link" href="IMAGES/atx_14_001.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/atx_14_001_small.jpg" width="300"/></a></p><p>- Scheda
+      pronta per le modifiche. </p><p>-
+      Il cavo verde deve essere saldato a Massa per attivare il funzionamento
+      dell'ATX</p><p>- Il cavo Viola 5VSB può
+      servire ad alimentare servizi che richiedano 5V max 1A  come per
+      esempio un Voltmetro a Led o anche solo il led per la spia di accensione.</p><p>- Il cavo nero è una massa
+      e va lasciato senza eliminarlo.</p><p class="center"><a class="zoom-link" href="IMAGES/atx_14_002.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/atx_14_002_small.jpg" width="300"/></a></p><p class="center">
+      - Si
+      tratta di interrompere due piste del CS ed aggiungere i diodi.
+      </p><p>
+      - Si suggerisce di mettere
+      anche 1 diodo in serie al sensing del 3,3V
+      </p><p class="center">
+      <a class="zoom-link" href="IMAGES/atx_14_003.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="194" loading="lazy" src="IMAGES/atx_14_003_small.jpg" width="300"/></a>
+      </p><p>
+      - I Diodi 1N4448 montati al
+      posto delle interruzioni di pista.</p><p>-
+      Mettere sotto del nastro isolante per evitare contatti con le altre piste.
+      </p><p>- E'
+      necessario mettere del nastro isolante anche sulla faccia metallica del
+      contenitore, per evitare che i diodi vadano massa, una volta rimesso in
+      sede il CS.
+      </p><p>- Se montiamo
+      il trimmer al posto dei diodi, quello del 5V sarà regolato a un valore
+      ohmico più basso di quello del 12V, i valori variano da tipo di ATX
+      pertanto è meglio fare alcune prove sotto carico, per trovare la
+      regolazione migliore.</p><p>Si
+      è preferito consigliare l'uso dei diodi in quanto più versatile sui vari
+      ATX.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/atx_14_004.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="134" loading="lazy" src="IMAGES/atx_14_004_small.jpg" width="300"/></a>
+      </p><p>- Utilizzare
+      almeno 4 cavi originali per le uscite di potenza, rosso per il positivo,
+      da inserire sulla piazzola del 12V e Nero per la connessione verso il morsetto
+      negativo. In questo caso solo tre cavi si sono rivelati un po’ scarsi
+      con la corrente massima di 14A, 4-5 cavi da 1mmq rappresentato una robusta
+      connessione.</p><p>- Si
+      nota la bobina di filtro RF realizzata avvolgendo direttamente i cavi di
+      potenza su due Toroidi in ferrite. Ha il compito di bloccare la
+      radiofrequenza di ritorno, che potrebbe disturbare il controllo dell'ATX. 
+      Non è
+      comunque indispensabile, consigliato solo per applicazioni RF.</p><p>-
+      Se si usa con apparecchi radio collegare condensatori ceramici  un 100nF, un 10nF e 1nF,
+      tutti in parallelo alla boccola di uscita. Aggiungere inoltre 2
+      condensatori 0,1uF verso massa da entrambe le boccole.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/atx_14_005.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/atx_14_005_small.jpg" width="300"/></a>
+      </p><p>
+      - Si nota il filtro rete
+      montato,
+      il condensatore di blocco e i due condensatori verso massa, aggiunti su questa piastra.</p><p>-
+      Il filtro rete serve a bloccare i disturbi entranti e anche a fermare la
+      propagazione dei disturbi generati dall'ATX stesso.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/atx_14_006.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/atx_14_006_small.jpg" width="300"/></a>
+      </p><p>giugno 2008 - <strong>AUMENTO
+      CORRENTE USCITA 16-20A  </strong></p><p>
+      - Utilizzando due diodi Fast
+      SF1004 da 10A 400V è possibile migliorare l'erogazione di corrente della
+      sezione 12V modificata.</p><p>-
+      Togliere il doppio diodo singolo del 12V dalla sua sede, (in genere è un
+      10A) e ricavare più in alto due fori da 3mm sul radiatore. </p><p>-
+      Fissare i nuovi diodi sul radiatore usando la boccola isolata e l'isolante
+      conduttore-termico.</p><p>-
+      Collegare in parallelo gli ingressi del diodo e mettere in comune il
+      positivo sul terminale centrale.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/atx_14_009.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/atx_14_009_small.jpg" width="300"/></a>
+      </p>
+
+
+  
+  
+  <h2 id="prova-a-carico">Prova a Carico</h2><p>-
+      Collegando un <a href="electronic_load.htm">Carico Elettronico</a>
+      all'uscita del ATX modificato è possibile eseguire una prova a carico e determinare
+      la Curva della tensione in uscita in funzione della corrente.</p><p>-
+      L'ATX è rimasto per 4 ore consecutive a 10A 13V (circa 130W) costanti senza
+      mostrare cedimenti, riscaldamento o derive degne di nota.
+      </p><p class="center"><a class="zoom-link" href="IMAGES/atx_14_007.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" decoding="async" height="200" loading="lazy" src="IMAGES/atx_14_007_small.jpg" width="300"/></a>
+      </p><p class="center"><img alt="" decoding="async" height="412" loading="lazy" src="IMAGES/atx_14_diagram_1.gif" width="604"/>
+      </p><p>
+      - Interessante il confronto <strong>prima</strong>
+       e <strong>dopo</strong>
+      le modifiche alla tensione di Vout. Si nota come l'alimentatore originale
+      anche solo con 10A arrivasse con difficoltà a 10V.
+      </p><p>
+      - Dopo le modifiche buono il comportamento a
+      carico, con ancora 12V a 14A di assorbimento, migliorabile, usando cavi di
+      sezione maggiore, almeno 5mmq. e montando due diodi come suggerito sopra.
+      </p><p>- La flessione tra 6 e 7A
+      è dovuta alla configurazione interna del regolatore e può variare tra le
+      tipologie ATX sotto test.</p>
+  
+
+
+
+
+  
+  
+  <h2 id="parallelo-alimentatori">Parallelo Alimentatori</h2><p>2013.</p><p>E' possibile
+      collegare più alimentatori in parallelo per aumentare la corrente totale,
+      si può arrivare a 100A mettendo 5-8 alimentatori in parallelo..</p><p>Importante che
+      siano tutti uguali e con le stesse modifiche, andrebbero testati uno ad
+      uno, per
+      verificare che sotto carico presentino la stessa erogazione.</p><p class="center"><img alt="" decoding="async" height="310" loading="lazy" src="IMAGES/atx_020.jpg" width="590"/></p><p>Usando
+      diodi SCHOTTKY da 45A 50V si ottiene una ridotta caduta di tensione sotto
+      carico, vanno
+      montati su dissipatore e ventilati.</p><p>E'
+      possibile usare diodi fast, ma la caduta di tensione sarà maggiore.(&gt;1Volt)</p><p>Il
+      condensatore C1 è formato da 10 condensatori da 0,1uF messi in parallelo
+      sulla morsettiera di uscita.
+      </p><p>Per i cavi di
+      collegamento rimanere sui 3A/mmq per avere poca caduta a carico.
+      </p>
+  
+
+
+
+
+
+  
+  
+    <h2 id="commenti-finali">Commenti finali</h2><p>Queste
+      semplici modifiche sono attuabili un po’ su tutti  gli ATX, se il
+      driver lo consente.
+      </p><p>Il costo della
+      realizzazione può ritenersi molto basso, molto vicino a 0 euro.....</p><p>E'
+      un buon alimentatore, senza però la limitazione di corrente, se si va in
+      cortocircuito in uscita l'erogazione viene bloccata. E' necessario
+      spegnere, attendere 15-30 secondi e poi riaccendere.</p><p>E'
+      stato provato in collegamento ad apparati ponti radio FM a 13,8V 10A e
+      il rumore di fondo è trascurabile. Non è consigliabile con apparati
+      HF.</p><p> Buono il comportamento con
+      assorbimenti impulsivi presentando basse cadute di tensione. Non è comunque
+      adatto per alimentare lampade alogene 12V e frigoriferi di una
+      certa potenza.</p><p>Realizzando
+      la modifica con due diodi fast, su certi esemplari è pensabile di raggiungere
+      i 20A di servizio quasi continuo.</p><p>La
+      realizzazione è indicata per chi già è un esperto di elettronica e
+      anche per chi non non se la sente di realizzare l'altro progetto più
+      complicato di SPS
+      con uscita variabile.</p><p class="center">.............................................................
+      </p><hr color="#336699"/>
+  
+
+
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+    </p>
+
+<p class="center"> © Roberto
+Chirio: all rights reserved.</p>
+
+
+
+
+      </div>
+    </article>
+    <section class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Altre pagine in “Alimentatori”</h2>
+      <ul class="card-grid">
+<li><a href="switching_power_supply_atx.htm"><span class="c-sec">Alimentatori</span>ATX lab power supply</a></li>
+<li><a href="power_supply_12v_30A.htm"><span class="c-sec">Alimentatori</span>Alimentatore ATX 12 V 30 A</a></li>
+<li><a href="step_up_10a.htm"><span class="c-sec">Alimentatori</span>Step-up 10A 16V</a></li>
+<li><a href="push_pull_20_16.htm"><span class="c-sec">Alimentatori</span>Push-pull DC-DC 12V 20A 16V 250W</a></li>
+<li><a href="electronic_load.htm"><span class="c-sec">Alimentatori</span>Electronic Load 20A 40V</a></li>
+      </ul>
+    </section>
+  </main>
+<aside class="aside-col" aria-label="Indice della pagina"><nav class="toc" aria-labelledby="toc-title"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#schema-elettrico-atx-modifiche-per-13-8v-a-carico">SCHEMA ELETTRICO ATX modifiche per 13,8V a carico.</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#prova-a-carico">Prova a Carico</a></li>
+<li><a href="#parallelo-alimentatori">Parallelo Alimentatori</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></aside>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sezioni</h2>
+        <ul>
+<li><a href="index.html#radio">Radio &amp; antenne</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie &amp; energia</a></li>
+<li><a href="index.html#led">LED &amp; illuminazione</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure &amp; laboratorio</a></li>
+<li><a href="index.html#progetti">Foto &amp; progetti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Chaberton</h2>
+        <ul>
+          <li><a href="chaberton/chab.htm">La Batteria dello Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+<li><a href="chaberton/pan_360.HTM">Panoramiche 360°</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Il sito</h2>
+        <ul>
+          <li><a href="index.html">Indice generale</a></li>
+          <li><a href="chirio_com_privacy.htm">Informativa sulla privacy</a></li>
+          <li><a href="chirio_com_disclaimer.htm">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>Chirio.com</strong> — Roberto Chirio. Archivio tecnico di progetti di
+        elettronica, radio, illuminazione a LED e documentazione storica.</p>
+      <p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle immagini,
+        degli schemi e dei testi. Photos and videos are copyright © Roberto Chirio:
+        all rights reserved.</p>
+    </div>
+  </div>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">↑</button>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Mini-Whip active antenna 10 kHz - 30 MHz by Roberto Chirio</title>
+<meta content="Mini-Whip active antenna 10khz - 30Mhz by Roberto Chirio" name="description"/>
+<meta content="Best Scanner Radio Antenna, HF receiver, ICOM radio, Yaesu, radioamatori, antenna, antenna attiva, mini antenna, banda HF, radio am, Mini-Whip, VLF, propagazione, macchie solari, HF band" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="assets/site.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Archivio tecnico</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Cerca nell’archivio</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>Categorie</span></button>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Categorie dell’archivio">
+<ul class="nav-list">
+<li><a aria-current="true" href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Antenne attive, generatori RF, misure di campo</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Alimentatori</span><span class="n-desc">Switching da laboratorio, ATX, step-up, carichi</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batterie</span><span class="n-desc">Capacità, caricabatterie, BMS, energia in casa</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">LED di potenza, torce, proiettori, dimmer, prove</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioattività</span><span class="n-desc">Contatori Geiger, alta tensione, calibrazione</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Misure</span><span class="n-desc">Strumenti autocostruiti e fondamenti</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Progetti</span><span class="n-desc">Fotografia, stampa 3D, meccanica</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Archivio storico della Batteria</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Percorso di navigazione" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antenne</a></li><li aria-current="page">Mini Whip SDR — antenna attiva</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radio &amp; antenne</p>
+<h1>Chirio Mini Whip SDR</h1>
+<p class="subtitle">Antenna attiva per frequenze 10 kHz - 30 MHz</p>
+<p class="article-meta"><span><a href="index.html#radio">Radio &amp; antenne</a></span><span>Roberto Chirio</span><span>rubrica “Radio Corner”</span></p>
+</header>
+<details class="toc-mobile"><summary>Indice della pagina</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#caratteristiche">Caratteristiche</a></li>
+<li><a href="#collegamento-rtl-sdr-con-tablet-samsung-10-1">Collegamento RTL.SDR con Tablet Samsung 10.1</a></li>
+<li><a href="#consigli-per-montare-le-miniwhip">Consigli per montare le MiniWhip:</a></li>
+<li><a href="#consigli-per-ascolto-stazioni-bande-frequenze-orari-e-stagio" title="Consigli per ascolto: stazioni, bande, frequenze, orari e stagioni.">Consigli per ascolto: stazioni, bande, frequenze</a></li></ol></nav></details>
+<div class="prose">
+
+<hr/>
+<p>maggio
+2017</p><p>Questa
+MiniWhip è realizzata per andare incontro a tutti gli utilizzatori di
+ricevitori SDR collegati a PC.</p><p>Le
+caratteristiche sono quelle della MiniWhip SR per scanner portatili, ma
+in questa configurazione l'antenna può essere montata all'esterno
+usando un tubo PVC da 16mm come supporto.</p><p>Il
+tubo può essere facilmente posizionato su balconi, terrazzi e anche
+solo fuori di una finestra. Molto adatta questa configurazione per
+montaggio su camper e perché no anche fuori di una tenda.</p><p>L'alimentazione
+sempre con batteria da 9V avviene per via coassiale, utilizzando lo
+stesso cavo segnale, quindi tutto molto comodo e compatto.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="478" loading="lazy" src="IMAGES/mini_whip_sdr.jpg" width="477"/>
+</p>
+<h2 id="caratteristiche">Caratteristiche</h2><ul class="dash-list"><li>Con batteria 9V l'assorbimento è di 15mA circa. </li><li>Banda passante da 10 kHz a 30 MHz  (-10dB), a -50dB si riceve ancora
+fino a 150 MHz</li><li>Impedenza uscita è di 200 ohm adatta un po’ per tutti gli ingressi
+ricevitore.</li><li>Versione base con 6m di cavo RG174</li><li>Power Feeder con ingresso e uscita connettore SMA-F + connettore
+batteria 9V incorporato.</li><li>Senza Power Feeder è possibile alimentare a 5V direttamente da SDR
+predisposto.</li></ul><p>
+
+Segnale presente sulla <strong>
+Chirio Mini-Whip</strong>, si vedono tutte le frequenze da 0 a 20 MHz. Il segnale è
+più forte ed escono molte emittenti non ascoltabili con una antenna
+convenzionale filare. Molto presenti tutti i segnali fino a poche decine di
+kHz.
+L'antenna è stata
+montata esterno casa su un palo in PVC da 3mt.
+
+</p><p class="center"><a class="zoom-link" href="IMAGES/mini_whip_008.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="74" loading="lazy" src="IMAGES/mini_whip_008_small.jpg" width="100"/></a>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="343" loading="lazy" src="IMAGES/mini_whip_050.jpg" width="518"/></p><ul class="dash-list"><li>Power Feeder con
+ingressi/uscita connettore SMA, la dimensione è molto ridotta e il
+tutto può essere posizionato vicino al Ricevitore.</li><li>In questa
+configurazione, non serve la connessione a terra per togliere i disturbi
+in quanto non abbiamo il cavo di alimentazione separato.</li></ul><p class="center"><img alt="" class="is-photo" decoding="async" height="346" loading="lazy" src="IMAGES/mini_whip_051.jpg" width="518"/></p><ul class="dash-list"><li>Il gruppo MiniWhip
+SDR si può facilmente incastrare su un tubo PVC da 16mm, eventualmente
+un po' di colla silicone permette di fermare e sigillare il tutto.</li><li>L'antenna deve essere
+sempre posizionata all'esterno, lontano da ostacoli metallici, il
+tubo/palo PVC può anche essere posizionato in orizzontale quando non
+è possibile la verticale, importante almeno 2 metri lontano dalla parte
+metallica del balcone terrazzo.
+</li></ul><p class="center"><img alt="" class="is-photo" decoding="async" height="346" loading="lazy" src="IMAGES/mini_whip_054.jpg" width="518"/></p><p>-
+La semplice connessione tra il Power Feeder e l'ingresso SDR, in questo
+caso si collega sull'ingresso HF, con la MiniWhip  è possibile
+ascoltare segnali forti fino a 150 MHz collegandosi all'ingresso UV.</p><p class="center"><a class="zoom-link" href="IMAGES/mini_whip_053.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="407" loading="lazy" src="IMAGES/mini_whip_053.jpg" width="651"/></a></p><p>-
+Ottimi segnali in 40mt, a sinistra la parte bassa di banda dove si
+vedono chiaramente le comunicazioni CW, mentre nella parte a destra
+oltre i 7,060 MHz diverse comunicazioni LSB in fonia 
+</p>
+<h2 id="collegamento-rtl-sdr-con-tablet-samsung-10-1">Collegamento RTL.SDR con Tablet Samsung 10.1</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="426" loading="lazy" src="IMAGES/mini_whip_052.jpg" width="567"/></p><p>-
+la RTL.SDR funziona in collegamento con Tablet, ma non ci sono ancora i
+driver per campionamento diretto, per cui funziona solo l'ingresso UV
+cioè da 30 a 1700 MHz, non è possibile sintonizzare le HF.</p><p>E'
+comodo portare fuori casa il Tablet e vedere tutte le comunicazioni in
+VHF/UHF tramite il Waterfall.</p><p class="center"><a class="zoom-link" href="IMAGES/Screenshot_2015-09-27-20-58-22.png" title="Apri l'immagine a piena risoluzione"><img alt="" class="float-right is-diagram" decoding="async" height="62" loading="lazy" src="IMAGES/Screenshot_2015-09-27-20-58-22_small.png" width="100"/></a>
+</p>
+<h2 id="consigli-per-montare-le-miniwhip">Consigli per montare le MiniWhip:</h2><ul class="dash-list"><li>Posizionare l'antenna in
+alto, minimo 4 metri lontano da cavi e fonti elettriche, per discesa va bene il cavo
+RG58/U, anche per lunghezze di 15-30metri. Anche con cavi TV 75 ohm o cavi
+schermati per audio si ottengono buoni risultati.
+</li><li>Più si sale, più
+l'antenna recupera guadagno sul segnale. Indicativamente una altezza di
+10-12 metri dà un incremento di +10dB rispetto a 2 metri.</li><li>Non ci sono grandi differenze
+ad usare un palo in ferro o in materiale plastico, in quanto il cavo
+coassiale in discesa da le stesse caratteristiche di un palo metallico...
+importante
+che sia di piccolo diametro con cavi tiranti controvento di nylon.</li><li>Importante avere un
+buon collegamento di terra, ideale dedicato solo per questa antenna e non
+facente punto comune con l'impianto di casa. Un palo di ferro lungo 1
+metro piantato nella terra umida va benissimo, la connessione verso
+l'antenna deve essere il più corta possibile, evitare loop e lunghi giri
+di cavo. </li><li>Migliore Terra andrebbe
+realizzata con 4 paletti acciaio/rame piantati nella terra umida dove
+scolano le canaline dell'acqua piovana o del rubinetto del giardino. Unire
+i 4 pali con cavo rame 16mm e portare con un unico cavo a una morsettiera
+comune, collegare tutto a terra comprese le strutture metalliche del tetto,
+grondaie in rame e pali in ferro.</li><li>Evitare il più
+possibile fonti di disturbo nelle vicinanze dell'antenna, come lampade
+neon/led, cavi elettrici, motori a spazzole.</li></ul><p>
+<img alt="Ottima installazione di MiniWhip fatta da un radioamatore" class="is-photo" decoding="async" height="451" loading="lazy" src="IMAGES/mini_whip_041.jpg" width="305"/>
+</p><ul class="dash-list"><li>Come da foto per tenere
+in posizione la MiniWhip XP II sul tubo PVC 32 mm, utilizzare silicone
+trasparente, altre colle più tenaci potrebbero bloccare troppo la boccola
+per eventuali rimozioni.
+</li><li>Il silicone evita
+inoltre l'ingresso di acqua e pioggia all'interno del tubo PVC proteggendo
+i connettori BNC e alimentazione.</li><li>E' sempre consigliabile
+posizionare la MiniWhip in posizione verticale anche se il funzionamento
+è buono anche in posizione orizzontale.</li></ul><p class="center"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/mini_whip_047.jpg" width="300"/>
+</p><hr color="#336699"/><p class="center"><img alt="" class="is-photo" decoding="async" height="379" loading="lazy" src="IMAGES/mini_whip_040.jpg" width="731"/></p><ul class="dash-list"><li>Il disegno
+illustra come meglio posizionare la Mini Whip XP II con doppia discesa.</li><li>Il palo in PVC deve essere posizionato lontano da ostacoli come muri,
+recinzioni ed alberi ad alto fusto.</li><li>Usare cavi tiranti in Nylon tipo filo da pesca o treccia.</li><li>Fare correre i cavi sul terreno per evitare ingressi di RF</li><li>Collegando a Terra il cavo schermato di alimentazione, in genere si
+riducono i disturbi.</li><li>Per non bruciare il FET sull'ingresso, tutte le MiniWhip vanno tenute ad
+almeno 10 metri da una antenna trasmittente.</li></ul>
+<h2 id="consigli-per-ascolto-stazioni-bande-frequenze-orari-e-stagio">Consigli per ascolto: stazioni, bande, frequenze, orari e stagioni.</h2><ul class="dash-list"><li>Associazione Italiana Radioascolto <a href="http://www.air-radio.it/" rel="noopener">http://www.air-radio.it/</a></li><li>International Shortwave Broadcast Bands  <a href="http://www.hamuniverse.com/shortwavebandfreqs.html" rel="noopener">http://www.hamuniverse.com/shortwavebandfreqs.html</a></li><li>RADIO NEW ZEALAND INTERNATIONAL  <a href="http://www.rnzi.com/pages/listen.php" rel="noopener">http://www.rnzi.com/pages/listen.php</a></li><li>Manuali e schemi per radioamatori, CB e BCL 
+<a href="http://www.radiomanual.eu/" rel="noopener" target="_blank">http://www.radiomanual.eu/</a></li></ul>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto
+Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Altre pagine in “Radio &amp; antenne”</h2>
+<ul>
+<li><a href="mini_whip.htm"><span class="r-sec">Radio &amp; antenne</span>Mini Whip — antenna attiva HF/VLF</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="r-sec">Radio &amp; antenne</span>Mini Whip SDR+ — antenna attiva</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="r-sec">Radio &amp; antenne</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="r-sec">Radio &amp; antenne</span>Mini Loop — antenna attiva</a></li>
+<li><a href="antenna_40m.htm"><span class="r-sec">Radio &amp; antenne</span>Antenna filare 40 mt band</a></li>
+<li><a href="yagi_pmr.htm"><span class="r-sec">Radio &amp; antenne</span>Antenna Yagi PMR</a></li>
+<li><a href="rf_gen_2014.htm"><span class="r-sec">Radio &amp; antenne</span>RF Oscillator — generatore 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="r-sec">Radio &amp; antenne</span>Generatore RF 2700 MHz</a></li>
+<li><a href="rf_gen_VHF.htm"><span class="r-sec">Radio &amp; antenne</span>VHF generator 70–500 MHz</a></li>
+</ul>
+</section>
+</main><aside aria-label="Indice della pagina" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#caratteristiche">Caratteristiche</a></li>
+<li><a href="#collegamento-rtl-sdr-con-tablet-samsung-10-1">Collegamento RTL.SDR con Tablet Samsung 10.1</a></li>
+<li><a href="#consigli-per-montare-le-miniwhip">Consigli per montare le MiniWhip:</a></li>
+<li><a href="#consigli-per-ascolto-stazioni-bande-frequenze-orari-e-stagio" title="Consigli per ascolto: stazioni, bande, frequenze, orari e stagioni.">Consigli per ascolto: stazioni, bande, frequenze</a></li></ol></nav></aside></div>
+
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Archivio tecnico di Roberto Chirio: elettronica, radio e antenne,
+          alimentatori, batterie, illuminazione a LED, misure di laboratorio, e
+          l’archivio storico della Batteria dello Chaberton.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archivio</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure</a></li>
+<li><a href="index.html#progetti">Progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle
+        immagini, degli schemi e dei testi. Photos and videos are copyright
+        © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Torna all’inizio della pagina" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="assets/site.js"></script>
+</body>
+</html>

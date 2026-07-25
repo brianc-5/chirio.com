@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>FAG SV500 Geiger Counter upgrade by Roberto Chirio</title>
+<meta content="FAG SV500 Geiger Counter upgrade by Roberto Chirio" name="description"/>
+<meta content="FAG SV500, geiger, geiger counter, uranio counter, U238, U235, contatore geiger, SBM20" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="assets/site.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Archivio tecnico</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Cerca nell’archivio</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>Categorie</span></button>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Categorie dell’archivio">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Antenne attive, generatori RF, misure di campo</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Alimentatori</span><span class="n-desc">Switching da laboratorio, ATX, step-up, carichi</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batterie</span><span class="n-desc">Capacità, caricabatterie, BMS, energia in casa</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">LED di potenza, torce, proiettori, dimmer, prove</span></span><span class="count">15</span></a></li>
+<li><a aria-current="true" href="index.html#radioattivita"><span><span class="n-label">Radioattività</span><span class="n-desc">Contatori Geiger, alta tensione, calibrazione</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Misure</span><span class="n-desc">Strumenti autocostruiti e fondamenti</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Progetti</span><span class="n-desc">Fotografia, stampa 3D, meccanica</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Archivio storico della Batteria</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Percorso di navigazione" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radioattivita">Radioattività</a></li><li aria-current="page">FAG SV500 — upgrade</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radioattività</p>
+<h1>Geiger Counter FAG SV500</h1>
+<p class="subtitle">Collegamento con 2X sonda SBM20 "Strumentazione" di R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#radioattivita">Radioattività</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Indice della pagina</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#schema-elettrico-sonda-gm-con-amplificatore-esterno">Schema elettrico sonda GM con amplificatore esterno.</a></li>
+<li><a href="#montaggio-circuito">Montaggio circuito</a></li>
+<li><a href="#sonde-sbm20">Sonde SBM20</a></li>
+<li><a href="#sonda-pancake-48mm">Sonda Pancake 48mm</a></li>
+<li><a href="#campioni-per-taratura-geiger">Campioni per taratura geiger</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></details>
+<div class="prose">
+
+<hr/>
+<p class="center"><img alt="" class="is-photo" decoding="async" height="312" id="i_vv4-0" loading="lazy" src="IMAGES/SV500_0.jpg" width="500"/></p><p>Ottobre
+2010</p><p>Questo 
+strumento
+prodotto in Germania negli anni 80, si presenta con una costruzione molto
+curata, sono stati utilizzati componenti di ottima qualità, sia per
+l'elettronica che per i particolari meccanici.</p><p>Adatto
+per applicazioni in ambienti esterni anche molto freddi ed umidi,
+guarnizioni a tenuta d'acqua e cavi al teflon permettono di mantenere le
+prestazioni anche alle rigide temperature del Nord.</p><p>Il
+cavo prolunga batterie da la possibilità di estrarre il gruppo batterie e
+metterle sotto la giacca per sfruttare il calore corporeo.</p><p class="center"><a class="download" href="SV-500-SchematicsAndBlockDiagram.pdf">SV500
+manuale e schemi PDF</a> (grazie al proff. A. Scroccaro)</p><p>La
+sonda Gamma fornita nella configurazione base, è una sonda molto dura, in
+pratica non serve a niente, non rileva gli impulsi di fondo e neppure le
+deboli pietre di Urannite.<img alt="Sonda Gamma collegata al suo cavo." class="is-photo" decoding="async" height="230" loading="lazy" src="IMAGES/sv500_gamma_extsensor.jpg" width="230"/></p><p>Le
+modifiche apportate a questo esemplare di SV500, non interessano il gruppo
+strumento, ma solo il cavo sonda esterno.</p><p>La
+sonda Gamma originale, può così rimanere nel suo alloggiamento all'interno
+dello strumento vicino alle batterie.</p><p>Chi
+invece volesse sfruttare l'inutile sonda gamma, può aprirla e utilizzare il connettore
+applicandolo su un contenitore più lungo, dove mettere l'elettronica e la sonda
+SBM20.</p><p>Per
+aumentare la sensibilità di lettura sono state usate 2 SBM20 in
+parallelo, è comunque possibile mettere altri tubi in parallelo,
+raggiungendo una ottima sensibilità di ricerca. Va comunque ricalibrata
+la scala di lettura.</p>
+<h2 id="realizzazione">Realizzazione</h2><p class="MsoNormal"><strong><span class="hl">La
+realizzazione delle modifiche comporta avere delle conoscenze di
+elettronica, è necessaria un'attrezzatura ed esperienza nei
+montaggi elettronici.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p>
+<h2 id="schema-elettrico-sonda-gm-con-amplificatore-esterno">Schema elettrico sonda GM con amplificatore esterno.</h2><p class="center">  <img alt="" class="is-diagram" decoding="async" height="328" loading="lazy" src="IMAGES/sv500_schema.gif" width="721"/>
+</p><p>
+Lo schema proposto permette
+di collegare la Sonda Gm riferita a massa, molto comodo per evitare di
+introdurre disturbi, inoltre mettendo un connettore BNC è possibile
+collegare tubi esterni.
+</p><p>Per transistor va bene un
+qualsiasi NPN da segnale come il BC107B  oppure il 2N2222A</p><p>Il condensatore C1
+ceramico deve essere 900-1600V</p><p>Con questa configurazione
+è possibile collegare il SV500 ad ogni tipo di sonda GM con tensione di lavoro
+da 4-500V.
+</p><p>*) Per utilizzare sonde
+critiche, è necessario limitare la tensione a 400V, vanno usati, quindi 4
+diodi Zener da 100V 400mW. oppure arrivare anche a 440V con 4 Zener da
+110V. Con le SBM20 il funzionamento è corretto a 400V.</p><p>Per il
+collegamento bisogna tagliare il cavo di collegamento sonda, e collegare i
+cavi come indicato dai colori sullo schema, la calza metallica va collegata
+a massa del contenitore sonda. Oppure si realizza un contenitore e si
+utilizza il connettore della sonda gamma.
+</p>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="2" scope="col">
+<strong> Forme d'onda A</strong>
+</th>
+</tr></thead>
+<tr>
+<td>
+<p>
+La forma d'onda
+rilevata sull'ingresso base del transistor, si nota il clipping negativo
+attuato dal diodo D1, senza il diodo avremmo un picco di -20V dannoso
+per il  transistor.
+</p></td>
+<td>
+<p class="center"><a class="zoom-link" href="IMAGES/sv500_001.gif" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-diagram" decoding="async" height="67" loading="lazy" src="IMAGES/sv500_001_small.gif" width="100"/></a>
+</p></td>
+</tr>
+<tr>
+<td colspan="2">
+<p> <strong>Forme
+d'onda B</strong>
+</p></td>
+</tr>
+<tr>
+<td>
+<p> Ecco
+come si presenta il segnale in uscita dall'emettitore del transistor, la
+configurazione ad inseguitore permette di avere il segnale in fase con
+una ottima riduzione di impedenza.
+</p></td>
+<td>
+<p class="center"><a class="zoom-link" href="IMAGES/sv500_002.gif" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-diagram" decoding="async" height="67" loading="lazy" src="IMAGES/sv500_002_small.gif" width="100"/></a>
+</p></td>
+</tr>
+</tbody></table></div>
+<h2 id="montaggio-circuito">Montaggio circuito</h2><p>I
+componenti sono stati montati su una piccola basetta millefori, il cavo
+giallo del 500V è stato isolato con guaina in silicone.</p><p>In
+questo caso non ci sono gli zener.</p><p>Il
+tutto assemblato all'interno del manico della sonda. </p><p>Il
+manico è realizzato con un profilato in alluminio a U da 20x20mm.</p><p>Si
+nota il cavo originale, privato del connettore e i cavi con i rispettivi
+colori collegati come da schema.
+</p><p>la
+calza schermata è collegata direttamente al manico in alluminio che ha anche
+la funzione di schermo ed isolante.</p><p>Il
+circuito va isolato dalle pareti metalliche tramite un foglio di nastro
+isolante oppure Mylar.
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="181" loading="lazy" src="IMAGES/Sv500_03.jpg" width="400"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="181" loading="lazy" src="IMAGES/Sv500_04.jpg" width="400"/>
+</p><h2 id="sonde-sbm20">Sonde SBM20</h2><p> Ecco
+le due sonde SBM20 montate in parallelo per aumentare la
+sensibilità. 
+</p><p>Si
+nota il foglio di piombo da 1mm fissato sulle pareti interne della
+scatola, il piombo scherma e riduce le radiazioni di fondo, non utili
+per la misura. </p><p>Lo
+schermo di piombo è collegato a massa attraverso le viti posteriori.
+</p><p>Le
+due sonde SBM20 sono collegate in parallelo e si usa una sola resistenza
+di load da 3.3M ohm.</p><p>Le
+sonde sono a filo della scatola, con l'accortezza di tenerle 1mm più
+interne rispetto i bordi, questo per evitare di battere e raschiare il
+corpo della sonda. Eventualmente è meglio montare una griglia di
+protezione.
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="201" loading="lazy" src="IMAGES/Sv500_02.jpg" width="400"/>
+</p>
+<h2 id="sonda-pancake-48mm">Sonda Pancake 48mm</h2><p>Recuperando
+una sonda GM pancake, è possibile realizzare un ottima sonda per dare
+sensibilità al SV500.
+</p><p> Ecco
+il circuitino montato dentro il guscio in alluminio, che ospita la sonda
+pancake. 
+</p><p>I
+cavi sono sempre con gli stessi colori, il circuitino ha i componenti
+montati dalla stessa parte delle piste per restare più bassi possibile,
+questo per facilitare la chiusura del coperchio. </p><p>I
+cavi passano direttamente all'interno del tubo di alluminio da 20mm.</p><p>Il
+manico è fissato inclinato per facilitare la ricerca a terra.
+</p><p>La
+sonda è protetta da una griglia in plastica dura.</p><p>Prestazione
+buona, con lettura anche degli Alpha.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="264" loading="lazy" src="IMAGES/Sv500_08_pancake.jpg" width="400"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="264" loading="lazy" src="IMAGES/Sv500_07_pancake.jpg" width="400"/>
+</p>
+<h2 id="campioni-per-taratura-geiger">Campioni per taratura geiger</h2><p>Disponibili
+campioni Pechblenda sotto piombo per la taratura Geiger Counter.</p><p>Contenitori
+diam. 29mm oppure 20mm, valori a richiesta da 0,100 mRem a 2 mRem,
+emissione Alpha, Beta + gamma.</p><p class="right">Contattare: <a href="mailto:info@chirio.com">info@chirio.com</a></p><p class="center"><img alt="" class="is-photo" decoding="async" height="249" loading="lazy" src="IMAGES/me_campione_u.jpg" width="336"/>
+</p>
+<div aria-label="Tabella dati" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="2" scope="col">
+<strong> Verifiche risultati</strong>
+</th>
+</tr></thead>
+<tr>
+<td>
+<p>Campione da
+0.300mR/h letti con sonda Ludlum 44.9, applicato sulle due sonde SBM20, il
+valore letto sulla scala del SV500  è di 1,5 mrad/h pari a 700CPM</p>
+<p>- valore
+reale=valore letto /5</p>
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="IMAGES/Sv500_05.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="66" loading="lazy" src="IMAGES/Sv500_05_small.jpg" width="100"/></a>
+</p></td>
+</tr>
+<tr>
+<td>
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+<p>Campione da 15mR/h letti
+con sonda Ludlum 44.9, applicato sulle due sonde SBM20, il valore letto
+sulla scala del SV500  è di 50 mrad/h.</p>
+<p>- valore reale=valore
+letto /3.3</p>
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="IMAGES/Sv500_06.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="66" loading="lazy" src="IMAGES/Sv500_06_small.jpg" width="100"/></a>
+</p></td>
+</tr>
+<tr>
+<td colspan="2">
+<p>Pertanto
+se sulla scala più sensibile, leggeremo un valore di 5mrad/h fondo scala
+il valore reale del campione sarà di solo 1 mR/h, il tutto sempre usando
+2 x sonde SBM20, con altre sonde bisognerà fare altre prove di confronto.</p>
+<p>Da
+tenere presente che le tolleranze in gioco sono ampie, per cui il valore
+1mR/h può effettivamente essere all'interno di tolleranze del 25-30% di
+errore.</p>
+</td>
+</tr>
+</tbody></table></div>
+<h2 id="commenti-finali">Commenti finali</h2><p>Con queste
+semplici modifiche il SV500 diventa uno strumento per uso domestico, con
+la possibilità di impiegarlo per rilevare la radiazione di fondo e fare
+misure entro valori di 10-30mREM</p><p>E'
+necessario avere una fonte calibrata, per potere fare delle misure
+ricalibrando la lettura della scala con un fattore correttivo.</p><p>Il tutto
+utilizzando le tre portate più basse, quelle più sensibili, le 3 portate
+superiori, non sono collegate, in quanto corrispondo al cavo di colore
+verde non utilizzato.</p><hr color="#336699"/><p>
+Sempre utili gli appunti del
+Proff. Andrea Bosi su radioattività e Geiger:
+</p><p><a href="http://spazioinwind.libero.it/andrea_bosi/index.htm" rel="noopener">http://spazioinwind.libero.it/andrea_bosi/index.htm</a></p>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Altre pagine in “Radioattività”</h2>
+<ul>
+<li><a href="geiger_counter.htm"><span class="r-sec">Radioattività</span>Geiger Counter PC CDV</a></li>
+<li><a href="geiger_arduino.htm"><span class="r-sec">Radioattività</span>Geiger counter con Arduino</a></li>
+<li><a href="geiger_counter_pulsar.htm"><span class="r-sec">Radioattività</span>Calibratore per Geiger counter</a></li>
+<li><a href="geiger_counter_voltmeter.htm"><span class="r-sec">Radioattività</span>HV Voltmeter 1000 MΩ</a></li>
+<li><a href="ram63.htm"><span class="r-sec">Radioattività</span>RAM 63 — miglioramenti</a></li>
+</ul>
+</section>
+</main><aside aria-label="Indice della pagina" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#schema-elettrico-sonda-gm-con-amplificatore-esterno">Schema elettrico sonda GM con amplificatore esterno.</a></li>
+<li><a href="#montaggio-circuito">Montaggio circuito</a></li>
+<li><a href="#sonde-sbm20">Sonde SBM20</a></li>
+<li><a href="#sonda-pancake-48mm">Sonda Pancake 48mm</a></li>
+<li><a href="#campioni-per-taratura-geiger">Campioni per taratura geiger</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></aside></div>
+
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Archivio tecnico di Roberto Chirio: elettronica, radio e antenne,
+          alimentatori, batterie, illuminazione a LED, misure di laboratorio, e
+          l’archivio storico della Batteria dello Chaberton.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archivio</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure</a></li>
+<li><a href="index.html#progetti">Progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle
+        immagini, degli schemi e dei testi. Photos and videos are copyright
+        © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Torna all’inizio della pagina" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="assets/site.js"></script>
+</body>
+</html>

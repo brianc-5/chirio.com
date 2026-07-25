@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Carico elettronico Electronic Load 20V 20A max400W by Roberto Chirio</title>
+<meta content="Carico elettronico Electronic Load 20V 20A max 400W by Roberto Chirio" name="description"/>
+<meta content="corrente costante, tensione costante, potenza costante, costant current, carico elettonico, electronic load" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="assets/site.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Archivio tecnico</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Cerca nell’archivio</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>Categorie</span></button>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Categorie dell’archivio">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Antenne attive, generatori RF, misure di campo</span></span><span class="count">17</span></a></li>
+<li><a aria-current="true" href="index.html#alimentatori"><span><span class="n-label">Alimentatori</span><span class="n-desc">Switching da laboratorio, ATX, step-up, carichi</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batterie</span><span class="n-desc">Capacità, caricabatterie, BMS, energia in casa</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">LED di potenza, torce, proiettori, dimmer, prove</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioattività</span><span class="n-desc">Contatori Geiger, alta tensione, calibrazione</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Misure</span><span class="n-desc">Strumenti autocostruiti e fondamenti</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Progetti</span><span class="n-desc">Fotografia, stampa 3D, meccanica</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Archivio storico della Batteria</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Percorso di navigazione" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#alimentatori">Alimentatori</a></li><li aria-current="page">Electronic Load 20A 40V</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Alimentatori</p>
+<h1>Electronic Load - Carico elettronico - Attivo.</h1>
+<p class="subtitle">Tensione o corrente costante. "Fai da te" di R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#alimentatori">Alimentatori</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Indice della pagina</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#prefazione">Prefazione</a></li>
+<li><a href="#carico-elettronico-da-0-40-40v-0-30-20a-corrente-e-tensione-" title="Carico Elettronico da 0,40-40V 0,30-20A Corrente e Tensione costante.">Carico Elettronico da 0,40-40V 0,30-20A Corrente e…</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#lettura-corrente">Lettura corrente</a></li>
+<li><a href="#versione-bjts-40a-40v">Versione BJTs 40A 40V</a></li>
+<li><a href="#prove-con-electronic-load">Prove con Electronic Load</a></li></ol></nav></details>
+<div class="prose">
+
+<hr color="#336699"/>
+<p class="center"><a class="zoom-link" href="IMAGES/electronic_load_04.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Electronic load 20 Volt 20 Amper" class="is-photo" decoding="async" height="300" loading="lazy" src="IMAGES/electronic_load_04_small.jpg" width="300"/></a></p>
+<h2 id="prefazione">Prefazione</h2><p>
+Per chi costruisce 
+alimentatori, la principale esigenza è collaudarli per le caratteristiche 
+di progetto.</p><p>
+Molto spesso non c'è a 
+disposizione il carico con i giusti valori richiesti dall'uscita, bisogna
+pertanto usare resistenze e/o lampadine fino a raggiungere il valore
+necessario,
+purtroppo non  sempre si ha
+a disposizione il 
+valore o la potenza necessaria, inoltre la loro stabilità termica non è
+garantita.</p><p>
+E' molto comodo un carico elettronico che si possa regolare/programmare per infiniti 
+valori di carico.</p><p>
+Andiamo ad analizzare quali 
+sono le esigenze richieste dalla pratica:</p><p>
+<span class="hl-g">
+<em><strong>
+Alimentatori con uscita a 
+tensione fissa:</strong></em>
+</span> 
+vanno testati con un carico a corrente costante.</p><p>
+<em><strong>
+<span class="hl-g">Alimentatori a corrente costante:</span></strong></em> 
+hanno bisogno di un carico che 
+presenti una tensione costante.</p><p><em><strong><span class="hl-g">Carica
+batteria:</span></strong></em> 
+hanno bisogno di un carico che 
+presenti una tensione costante per simulare la batteria.</p><p>
+<strong><em>
+<span class="hl-g">Test di scarica su batterie ed
+accumulatori:</span></em></strong> 
+vanno testati con un carico a corrente costante.</p><p>
+<span class="hl-g"><strong><em>Pannelli Solari
+Fotovoltaico:</em></strong></span> 
+hanno bisogno di un carico che 
+presenti una tensione costante.</p><p><span class="hl-g"><strong><em>Generatori
+Eolici ed Idroelettrici a CC:</em></strong></span> 
+hanno bisogno di un carico che 
+presenti una tensione costante.</p><p>
+In pratica per testare 
+un Power Supply ATX per PC, serve un carico che simuli il massimo assorbimento
+in uscita per le varie tensioni, da 3,3 a 5,0 a 12,0 Volt, è necessario un carico  a corrente
+costante, con il valore massimo settato come richiesto della misura.</p><p>
+La prova degli alimentatori 
+per led, deve essere fatta con un carico che presenta 
+la stessa tensione del led sotto corrente, pertanto un carico elettronico 
+con Tensione stabilizzata è molto utile. (Tipicamente 3,6V per simulare
+il carico di un led da 3W)</p>
+<h2 id="carico-elettronico-da-0-40-40v-0-30-20a-corrente-e-tensione-">Carico Elettronico da 0,40-40V 0,30-20A Corrente e Tensione costante.</h2><p class="center"><a class="zoom-link" href="IMAGES/electronic_load_1_2008.gif" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-diagram" decoding="async" height="263" loading="lazy" src="IMAGES/electronic_load_1_2008_smal.gif" width="700"/></a></p><p>
+Gennaio 2008.</p><p>
+Questa è una configurazione
+semplice, robusta e
+stabile.  </p><p>
+Per i componenti fare
+riferimento allo schema elettrico ingrandito.</p><p>Elementi
+di carico sono 2 MosFet <a href="http://www.datasheetarchive.com/pdf/1786396.pdf" rel="noopener" target="_blank"> IRFP250</a> da 30A 200V
+(180WPd) collegati in parallelo, devono
+essere montati su un robusto radiatore di alluminio e raffreddati da una
+ventola a 12V. In funzione del tipo di radiatore si può arrivare a oltre 200W
+dissipati. Si possono usare la gran parte dei power Mos-fet, per aumentare
+la potenza dissipabile, basta fare parallelo di Mosfet fino a raggiungere
+la potenza desiderata.</p><p>Modificando
+la R2 è possibile utilizzare valori di
+ingresso anche più alti come 60V, è bene in questo caso non superare i
+200W di potenza.</p><p>E'
+possibile arrivare fino a potenze di 400W, ma è necessario mettere almeno
+4 Mosfet per distribuire
+meglio la corrente e la dissipazione, il radiatore deve essere del tipo
+profilato pesante da almeno 30cm con robusta ventola da 160x160.</p><p>Il
+riferimento di tensione (voltage reference) è rappresentato da un TL431
+collegato per dare 2,50V, con a seguire un partitore da 0,40V, dove
+prenderanno riferimento il comparatore
+di tensione e il comparatore di corrente. (Tale valore è settabile con precisione
+attraverso la R11, trimmer cermet multigiro)</p><p>Entrambi
+i comparatori possono pilotare il carico di Mosfet, in funzione della
+regolazione dei rispettivi potenziometri. Con il deviatore S1 potremmo quindi
+selezionare un funzionamento in corrente costante oppure a tensione
+costante.</p><p>L'accensione
+dei led rosso (corrente) e verde (tensione) ci informa quale tipo di
+intervento si sta attuando.</p><p>Molto
+importante avere in uscita un voltmetro da 40V e un amperometro da
+20A  per controllare i valori sotto carico. Per una precisa
+regolazione consiglio potenziometri di precisione da 10 giri.</p><p>Per
+evitare danni da cortocircuito è bene mettere un Fuse da 25/30A in serie
+all'ingresso.</p><p>Il
+tutto può essere facilmente inserito all'interno di un case ATX recuperato,
+sfruttando la ventola da 12V e inserendo all'interno un trasformatore da 5VA 
+220/12V per alimentare il pilotaggio + un altro trasformatore da 2VA per
+alimentare gli strumenti LCD che richiedono un'alimentazione isolata e separata da 12V 10mA.</p><p>Prima
+di accendere posizionare sempre al minimo (0) il potenziometro corrente e
+posizionare a fondo scala (massimo 40V o +) il potenziometro regolazione
+tensione.</p><p> Tenere sotto controllo le
+temperature raggiunte dai Power MosFet.</p><p>Utile
+montare un Klixon da 75°C sul radiatore, collegato a un cicalino, per
+segnalare una temperatura pericolosa, o meglio ancora fare staccare il
+pilotaggio in caso di temperature sopra i 75°.</p><p>Mettendo
+in serie all'ingresso un ponte raddrizzante da 25A 100V sarà possibile testare
+direttamente trasformatori a 50 Hz con potenze fino a 200/400VA</p><p class="center"><br/>
+....................................................
+
+</p>
+<h2 id="realizzazione">Realizzazione</h2><p class="MsoNormal"><strong><span class="hl">La
+realizzazione dello Carico Elettronico comporta avere delle buone conoscenze di elettronica, è necessaria un'attrezzatura ed esperienza
+nei montaggi elettronici.</span></strong></p><p class="MsoNormal center"><strong> <span class="hl"> E
+chiare competenze nell'uso dei dispositivi a 220V.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p><p class="center">Versione
+2008.3
+</p><ul class="dash-list"><li>E' necessario realizzare un
+CS, per comodità sono state usate le stesse misure e interassi di
+foratura, per inserire il tutto dentro
+un case ATX. 
+</li><li>Per i collegamenti
+esterni prevedere delle torrette dove saldare i terminali, o meglio un
+connettore.</li><li>Il collegamento di
+Potenza (20A) deve essere fatto con una adeguata morsettiera, o anche solo
+con più cavi in parallelo come avviene per gli alimentatori ATX.</li><li>Per il dissipatore è
+stato usato un gruppo per CPU recuperato da un PC, in pratica si è rivelata
+una ottima soluzione, in grado di dissipare tranquillamente in poco spazio
+oltre 200W.</li></ul><p class="center"><a class="zoom-link" href="IMAGES/electronic_load_01.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_01_small.jpg" width="300"/></a></p><p class="center">Circuito
+stampato completo di trasformatore e radiatore.</p><p class="center"><a class="zoom-link" href="IMAGES/electronic_load_08.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_08_small.jpg" width="300"/></a></p><p class="center">Vista
+dell'interno a montaggio ultimato.</p><p class="center">Sul
+coperchio si notano i potenziometri e gli strumenti LCD.</p><p class="center"><a class="zoom-link" href="IMAGES/electronic_load_06.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_06_small.jpg" width="300"/></a></p><p class="center">Particolare
+sul fissaggio dei MosFet IRFZ45.(1° versione)</p><p class="center">Usando
+gli IRFP250 bastano solo 2 MosFet.(2008.3)</p><ul class="dash-list"><li>Il
+dissipatore si trova sotto tensione, in quanto per avere un buon
+rendimento termico, non è conveniente montare gli isolatori. Va pertanto
+fissato al CS con tiranti basetta isolati. Usare materiali adatti alle
+alte temperature (100°).</li><li>Sul piccolo nucleo in rame non è stato possibile montare più di tre
+MosFet, risultano comunque sufficienti per il carico da 20A, nella seconda
+versione sono stati usati solo due IRFP250, con il vantaggio di poter
+salire in tensione (40V).
+</li></ul><p class="center"><a class="zoom-link" href="IMAGES/electronic_load_05.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_05_small.jpg" width="300"/></a>
+</p><p class="center">
+Particolare sui
+deviatori, entrambi con off centrale.
+</p><p class="center"><a class="zoom-link" href="IMAGES/electronic_load_09.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_09_small.jpg" width="300"/></a>
+</p><p class="center">
+Particolare sulle
+connessioni di potenza.
+</p><ul class="dash-list"><li>Utilizzando un case
+ATX con doppio ventilatore (meglio) non c'è molto posto per il pannello
+comandi, bisogna quindi posizionare i deviatori vicino alla morsettiera di
+uscita, come pure il led rosso e il led verde.
+</li><li>I deviatori devono essere
+del tipo on-off-on così che nella posizione centrale rimangono aperti.</li><li>La morsettiera di uscita
+deve essere del tipo da 20A così da poter fissare cavi da 4mmq muniti di
+capocorda.</li><li>All'interno vicino alla
+resistenza R8 di Current Sensing si notano le ferriti, necessarie a
+bloccare i disturbi.</li></ul><p class="center"><a class="zoom-link" href="IMAGES/electronic_load_07.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_07_small.jpg" width="300"/></a></p><p class="center">Particolare
+sulla resistenza di sensing R8 e l'induttanza di filtro.
+</p><ul class="dash-list"><li>La resistenza di
+Current Sensing R8 è realizzata con un parallelo di fili di costantana e poi
+saldati a un capicorda, il suo valore è di 0,020 Ohm. Al posto si possono
+mettere 5 resistenze commerciali da 0,1 Ohm 3W in parallelo. E' posizionata
+direttamente sul flusso di aria, questo per portare via il calore
+dissipato 8W @ 20A.</li><li>La bobina da 1uH usata per bloccare i disturbi HF è recuperata da una
+piastra Motherboard. Il valore di induttanza non è critico, importante è
+la sezione dell'avvolgimento, deve essere in grado di sopportare 20A.</li></ul><h2 id="lettura-corrente">Lettura corrente</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="166" loading="lazy" src="IMAGES/electronic_load_a6.gif" width="290"/>
+</p><p>
+- Per evitare di mettere un
+ulteriore shunt per la misura della corrente, è facile collegare un
+voltmetro digitale da 200mV FS, direttamente sulla resistenza di sensing.
+Per la taratura della lettura di corrente dobbiamo mettere in serie al
+carico un buon Multimetro da 20A e semplicemente tarare il trimmer cermet
+da 10K per visualizzare sul millivoltmetro la stessa cifra letta sul
+multimetro. Il condensatore serve a ridurre eventuali disturbi presenti.
+</p><h2 id="versione-bjts-40a-40v">Versione BJTs 40A 40V</h2><p class="center"><img alt="Electronic Load 40V 40A" class="is-diagram" decoding="async" height="285" loading="lazy" src="IMAGES/electronic_load_1_2008_40A.gif" width="533"/></p><p>
+Utilizzando transistor in
+configurazione Darlington è possibile salire di potenza ottenendo un
+certo risparmio economico nei confronti dei MOSFET. Il gruppo realizzato
+si può sostituire ai MOSFET nello schema generale. La R6 diventa 1k5 ohm.
+</p><p>Il 2N3772 è un transistor
+da 20A 150W robusto e affidabile, mentre il MJ3001 è un ottimo Darlington da
+10A 4000 hFE. Collegando come da schema il guadagno totale è di 25000
+quindi con 1,6mA possiamo pilotare 40A. Addirittura è possibile collegare
+4 x 2N3772 in parallelo, per ottenere una corrente massima di 80A, e quasi
+500W dissipabili, sempre
+con un solo MJ3001 come pilotaggio.
+</p><p class="center"><a class="zoom-link" href="IMAGES/electronic_load_011.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Gruppo ventilato da 40A 40V in grado di dissipare 280/300W" class="is-photo" decoding="async" height="229" loading="lazy" src="IMAGES/electronic_load_011_small.jpg" width="300"/></a>
+</p><h2 id="prove-con-electronic-load">Prove con Electronic Load</h2><p class="center">
+<a class="zoom-link" href="IMAGES/electronic_load_02.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_02_small.jpg" width="300"/></a>
+</p><p class="center"><span class="hl-g"> <em><strong>Prova di scarica con
+accumulatore 12V 7,2A/h</strong></em></span>
+</p><ul class="dash-list"><li>Per verificare la
+capacita dell'accumulatore bisogna scaricare a 0,2 C pertanto in questo
+caso 7,2/5 = 1,44A.</li><li>La prova si considera
+finita quando la tensione batteria raggiunge 10,80V</li><li>La scarica è durata 3h
+30m  pari a una capacità reale di 5,04A/h
+</li></ul><p class="center">
+<a class="zoom-link" href="IMAGES/electronic_load_03.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_03_small.jpg" width="300"/></a>
+</p><p class="center"><strong><em><span class="hl-g">Prova di scarica con
+accumulatore 12V 60A/h</span></em></strong>
+</p><ul class="dash-list"><li>Per verificare la
+capacita dell'accumulatore bisogna scaricare a 0,2 C pertanto in questo
+caso 60/5 = 12A.</li><li>La prova si considera
+finita quando la tensione batteria raggiunge 10,80V  in questo caso
+letti direttamente sui poli della batteria, per evitare le cadute di
+tensione sui cavi da 2.5mmq.</li><li>La scarica è durata 3h
+55m  pari a una capacità reale di 47A/h</li></ul><p class="center">
+<a class="zoom-link" href="IMAGES/electronic_load_03_b.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_03_b_small.jpg" width="300"/></a>
+</p><ul class="dash-list"><li>Con la batteria da
+60A/h test di potenza dissipata con il Carico Elettronico.
+</li><li>Leggiamo 11,61V e
+19,39A  pari a una potenza di 225W</li><li>Con la ventola in
+posizione Turbo 16V, dopo 15 min. non si superano i 60° sul radiatore
+interno.</li><li>Chiaramente i cavi da 2,5
+mmq se pur in silicone non sono adatti per questa corrente, bisogna usare
+6mmq.</li><li>Ottima prestazione.</li></ul><p class="center">
+<a class="zoom-link" href="IMAGES/electronic_load_010.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/electronic_load_010_small.jpg" width="300"/></a>
+</p><p class="center"><strong><em><span class="hl-g"> Simulazione di Batteria con
+Caricabatteria.</span></em></strong>
+</p><ul class="dash-list"><li>Il Carico Elettronico
+funzionante a tensione costante, led verde acceso.</li><li>Vengono simulate le varie
+tensioni di batteria durante la carica e si verifica quale corrente può
+erogare il carica batteria.</li><li>Con questo carica
+batteria sotto esame,  possiamo caricare 15A fino a 12,5V  e 7,5A con tensione
+batteria 13,80V.</li><li>Simulando le varie
+tensioni, da 10 a 15V con step di 0,5V si può tracciare un grafico
+relativo alle varie correnti massime che può fornire in uscita il Battery Charger.</li></ul>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Altre pagine in “Alimentatori”</h2>
+<ul>
+<li><a href="switching_power_supply_atx.htm"><span class="r-sec">Alimentatori</span>ATX lab power supply</a></li>
+<li><a href="power_supply_12v_30A.htm"><span class="r-sec">Alimentatori</span>Alimentatore ATX 12 V 30 A</a></li>
+<li><a href="atx_14_volt.htm"><span class="r-sec">Alimentatori</span>ATX 13.8V power supply</a></li>
+<li><a href="step_up_10a.htm"><span class="r-sec">Alimentatori</span>Step-up 10A 16V</a></li>
+<li><a href="push_pull_20_16.htm"><span class="r-sec">Alimentatori</span>Push-pull DC-DC 12V 20A 16V 250W</a></li>
+</ul>
+</section>
+</main><aside aria-label="Indice della pagina" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#prefazione">Prefazione</a></li>
+<li><a href="#carico-elettronico-da-0-40-40v-0-30-20a-corrente-e-tensione-" title="Carico Elettronico da 0,40-40V 0,30-20A Corrente e Tensione costante.">Carico Elettronico da 0,40-40V 0,30-20A Corrente e…</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#lettura-corrente">Lettura corrente</a></li>
+<li><a href="#versione-bjts-40a-40v">Versione BJTs 40A 40V</a></li>
+<li><a href="#prove-con-electronic-load">Prove con Electronic Load</a></li></ol></nav></aside></div>
+
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Archivio tecnico di Roberto Chirio: elettronica, radio e antenne,
+          alimentatori, batterie, illuminazione a LED, misure di laboratorio, e
+          l’archivio storico della Batteria dello Chaberton.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archivio</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure</a></li>
+<li><a href="index.html#progetti">Progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle
+        immagini, degli schemi e dei testi. Photos and videos are copyright
+        © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Torna all’inizio della pagina" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="assets/site.js"></script>
+</body>
+</html>

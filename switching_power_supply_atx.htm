@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html data-root="" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SWITCHING POWER SUPPLY ATX Come realizzare un SPS da laboratorio. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply Da 1,0V a 15V e da 0,15A a 15A (20A) by Roberto Chirio</title>
+<meta content="SWITCHING POWER SUPPLY ATX Come ottenere un SPS da laboratorio. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply Da 1,0V a 15V e da 0,15A a 15A (20A) by Roberto Chirio" name="description"/>
+<meta content="electronics design, switching power supply, step-down, step-up, buck converter, current mode supply, led driver, power led driver, led driver design, led driver pump, led driver flash" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="assets/site.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Archivio tecnico</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Cerca nell’archivio</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>Categorie</span></button>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Categorie dell’archivio">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Antenne attive, generatori RF, misure di campo</span></span><span class="count">17</span></a></li>
+<li><a aria-current="true" href="index.html#alimentatori"><span><span class="n-label">Alimentatori</span><span class="n-desc">Switching da laboratorio, ATX, step-up, carichi</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batterie</span><span class="n-desc">Capacità, caricabatterie, BMS, energia in casa</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">LED di potenza, torce, proiettori, dimmer, prove</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioattività</span><span class="n-desc">Contatori Geiger, alta tensione, calibrazione</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Misure</span><span class="n-desc">Strumenti autocostruiti e fondamenti</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Progetti</span><span class="n-desc">Fotografia, stampa 3D, meccanica</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Archivio storico della Batteria</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Percorso di navigazione" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#alimentatori">Alimentatori</a></li><li aria-current="page">ATX lab power supply</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Alimentatori</p>
+<h1>SWITCHING POWER SUPPLY ATX (2009)</h1>
+<p class="subtitle">Come realizzare un SPS da laboratorio. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply Da 0.1V a 16V (30V) e da 0.15A a 16A (30A) "Electronics design" di R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#alimentatori">Alimentatori</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Indice della pagina</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">In questa pagina</p><ol><li><a href="#schema-elettrico-atx-200w">SCHEMA ELETTRICO ATX 200W</a></li>
+<li><a href="#schema-elettrico-atx-per-modifiche-controllo-tensione-e-corr" title="SCHEMA ELETTRICO ATX per modifiche controllo tensione e corrente.">SCHEMA ELETTRICO ATX per modifiche controllo…</a></li>
+<li><a href="#atx-300-500w-modifiche-per-uscita-da-0-6v-a-20v-e-corrente-d" title="ATX 300/500W modifiche per uscita da 0.6V a 20V e corrente da 0,15 a 20A">ATX 300/500W modifiche per uscita da 0.6V a 20V e…</a></li>
+<li><a href="#atx-300-500w-modifiche-per-uscita-da-0-6v-a-30v-e-corrente-d" title="ATX 300/500W modifiche per uscita da 0.6V a 30V e corrente da 0,1 a 12A">ATX 300/500W modifiche per uscita da 0.6V a 30V e…</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#ventilazione-a-temperatura-controllata">Ventilazione a temperatura controllata.</a></li>
+<li><a href="#miglioramenti">Miglioramenti</a></li>
+<li><a href="#cause-guasti-atx">Cause guasti ATX</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></details>
+<div class="prose">
+
+<hr/>
+<p> 2008-2013</p><p>Dopo
+l'alimentatore switching di un TV, l'alimentatore ATX è sicuramente il
+prodotto elettronico switching power supply, più diffuso al mondo, negli ultimi 10
+anni ne sono stati prodotti milioni di pezzi.</p><p>La
+durata media di un PC non supera i 3-5 anni, quindi sono molti i PC che
+vengono rottamati o aggiornati, e un componente che spesso viene
+sostituito anche se funziona ancora è proprio l'alimentatore ATX, sostituito
+da un modello più potente.</p><p>Come
+è noto il power supply ATX serve per convertire l'energia 220V alternata
+in corrente continua, separata dalla rete e di basso valore come 3,3V 5V e
+12V, tensioni necessarie al funzionamento delle schede a microprocessore.</p><p>Per
+uso da laboratorio di elettronica il più delle volte è necessario avere
+dei valori di tensione regolabili in continuità, per effettuare tutte le
+prove del caso. Un alimentatore con tali caratteristiche è costoso,
+specialmente se in grado di erogare anche 20A.</p><p>Con
+relativa semplicità è possibile modificare un ATX per fargli variare la
+tensione in uscita e anche limitare e regolare la corrente.</p><p>Diciamo
+subito che la parte di ingresso a 220V non deve essere toccata e
+modificata. Le modifiche vanno fatte solamente sul circuito secondario
+come da indicazioni. Aprendo il coperchio dell' ATX non bisogna mai avere
+la rete 220V collegata, e prima di ricollegarla sempre rimettere e avvitare
+il coperchio metallico.</p><p class="MsoNormal center"><span class="hl"><strong> La
+modifica dello Switching Power Supply ATX comporta avere delle buone conoscenze di
+elettronica, </strong></span></p><p class="MsoNormal center"><span class="hl"><strong> è necessaria un'attrezzatura ed esperienza nei
+montaggi elettronici. </strong></span></p><p class="MsoNormal center"><span class="hl"><strong> E
+chiare competenze nell'uso dei dispositivi a 220V.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p><p class="center"><img alt="" class="is-photo" decoding="async" height="375" loading="lazy" src="IMAGES/atx_001.jpg" width="500"/>
+</p><p>
+ATX da 350W modificato per
+renderlo alimentatore da laboratorio, a destra il potenziometro (manopola
+blu) per la regolazione della tensione in uscita da 1 a 15V
+(20V in questo caso) e il potenziometro giallo per la regolazione della corrente da 0,15 a 15A.
+La tensione viene letta con un voltmetro digitale a led, alimentato dalla
+sezione interna denominata +5V StandBy che non è stata modificata. 
+</p><p>Con modelli da oltre 450W,
+e in funzione del tipo di ATX
+recuperato, è possibile raggiungere in uscita i 20V 20A  o anche i
+30V 12A, a
+titolo cautelativo verrà descritto come realizzare il modello meno
+potente.</p><p>Prima
+di iniziare a modificare l'ATX è necessario individuare il modello più
+adatto alla realizzazione, lo schema modificato proposto funziona con la
+maggior parte
+degli ATX che contengono il regolatore TL494 o l'equivalente KA7500.</p><p class="center"><em><strong><span class="hl-g">Gli
+integrati Driver tipo 2003, 2005,  SG6105, non sono adatti per
+realizzare un Power Supply variabile.</span></strong></em></p><p class="center"><em><strong><span class="hl-g">Con
+l' </span></strong></em><em><strong><span class="hl-g">UC3843
+si può fare ma non è adatto lo schema proposto in questa pagina.</span></strong></em></p><p class="center"><strong>Driver
+PWM:</strong></p><p class="center">(scarica
+PDF Data Sheet )</p><p class="center"><strong><a class="download" href="IMAGES/DRIVER%20PWM%20KA7500C.pdf">KA7500</a>  oppure 
+<a class="download" href="IMAGES/DRIVER%20PWM_TL494.pdf">TL494</a></strong></p><p class="center"><a class="zoom-link" href="IMAGES/atx_011.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Come individuare il driver PWM TL494" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/atx_011_small.jpg" width="300"/></a>
+</p><p>L'integrato TL494 è
+presente su ATX costruiti in Cina dal 1997 fino alla data attuale, anche
+se le potenze aumentano, il driver è sempre il medesimo, del resto
+presenta delle buone caratteristiche così da impiegarlo su ATX da 200W
+fino a 600W. Quello che cambia all'interno dell'alimentatore è la potenza
+dei componenti, quali trasformatore di ferrite, transistor, Mosfet e diodi di
+potenza come pure il valore dei condensatori di filtro. </p><p>Da modello a modello
+cambiano le configurazioni del circuito Power Good e di quello del
+OverVoltage, questo non è un problema, in quanto tali circuiti, non ci interessano perché
+devono essere isolati e disinseriti, vedi le interruzioni dello schema generale.</p><p>Prima di iniziare la
+realizzazione è bene provare in funzionamento l'ATX, ed essere sicuri che
+funzioni a carico. In questo caso bisogna ponticellare a massa il cavo
+verde (PS-ON), presente sul piedino 14 del connettore principale, e poi dare
+tensione di rete.  </p><p>Se OK si sentirà la ventola girare. </p><p>Attenzione il fatto che la
+ventola gira, è buon segno ma non vuol dire che la parte di potenza funzioni,
+bisogna misurare le tensioni in uscita collegando un carico.</p><p> Misurare la
+tensione sui connettori bianchi e verificare il 5V (+/- 0.5V)  tra il
+cavo rosso e quello nero, e poi il 12V tra il cavo giallo e quello nero.
+Per la prova del funzionamento a carico bisogna collegare una resistenza di potenza da 20W 10 ohm sui terminali del
+12V e verificare che la tensione non
+scenda sotto il 11,80V. Va bene anche una lampadina da 20W 12V non di potenza
+maggiore altrimenti la corrente di spunto manda in blocco l'ATX.</p><p> Lasciare
+il carico collegato, per un po’ di tempo e verificare che non ci siano problemi di
+cadute di tensione o il blocco della ventola o surriscaldamenti.</p><p>Un eventuale ventola
+rumorosa, è bene che venga sostituita con una nuova, se si bloccasse
+durante il funzionamento sotto carico, in molti ATX senza protezione termica potrebbero
+facilmente crearsi danni da sovratemperatura. </p><p class="center"><img alt="" class="is-photo" decoding="async" height="210" loading="lazy" src="IMAGES/atx_013.jpg" width="370"/>
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_012_ps_on.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Ponticello PS-ON a massa per fare funzionare un ATX." class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/atx_012_ps_on_small.jpg" width="300"/></a>
+</p><p>
+Per conoscere la corrente massima 
+che può erogare, è sufficiente leggere il valore
+riportato sulla targhetta del ATX.
+</p><p>In questo caso con il 12V
+il massimo assorbimento è di 14A.</p><p>Non avendo carichi sulle
+altre uscite, è ragionevole pensare che dal 12V si possa assorbire una
+corrente maggiore. Da 15 a 20A per periodi non superiori ai 15 minuti.</p><p>Possiamo trovare
+alimentatori da 480-500W che forniscono 18-22A dal 12V.
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="186" loading="lazy" src="IMAGES/atx_010.jpg" width="336"/>
+</p><p>
+
+Possiamo trovare molti schemi
+ATX in questo sito: <a href="http://danyk.cz/s_atx_en.html" rel="noopener">http://danyk.cz/s_atx_en.html</a>
+</p>
+<h2 id="schema-elettrico-atx-200w">SCHEMA ELETTRICO ATX 200W</h2><p>  Schema
+di un ATX da 200W recuperato in rete. (Attenzione che lo schema originale presenta
+alcuni errori. )</p><p>Sono
+evidenziati in rosso i punti dove isolare le connessioni e in verde
+i componenti da togliere.</p><p>Lo
+schema di base è sempre simile, cambiano i circuiti di PowerGood e
+Overvoltage (che non useremo e andremo ad isolare) inoltre con differenti potenze, cambieranno i
+componenti di potenza.
+</p><p> Individuare i componenti
+da sostituire attorno al TL494 partendo
+dai piedini del regolatore PWM stesso.
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_psp_lab_schema_00.gif" title="Apri l'immagine a piena risoluzione"><img alt="Schema elettrico ATX 200W" class="is-diagram" decoding="async" height="61" loading="lazy" src="IMAGES/atx_psp_lab_schema_00_small.gif" width="100"/></a>
+</p>
+<h2 id="schema-elettrico-atx-per-modifiche-controllo-tensione-e-corr">SCHEMA ELETTRICO ATX per modifiche controllo tensione e corrente.</h2><p class="center"><a class="zoom-link" href="IMAGES/atx_psp_lab_schema_01_2011.gif" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-diagram" decoding="async" height="476" loading="lazy" src="IMAGES/atx_psp_lab_schema_01_2011_.jpg" width="750"/></a></p><p> (Versione
+2011/03)</p><p>Schema
+delle modifiche, da apportare ai componenti attorno al regolatore TL494
+per ottenere fino a 30A in uscita. </p><p>Con
+questo schema c'è una migliore stabilità e precisione nella regolazione.</p><p>La
+minima tensione regolabile e il massimo dropout sono a meno di 0,10V</p><p>Per
+lo schema generale fare riferimento alle due versioni pubblicate più
+avanti.</p><p>R3
+è il potenziometro che regola la corrente, R17 è il potenziometro che
+regola la tensione, per maggiore precisione devono essere a filo 10 giri.</p><p>
+Questo è lo schema più
+stabile, adatto per le varie correnti disponibili in funzione dell'ATX
+scelto. Utilizzare il valore della R11 in funzione della massima corrente
+ottenibile in uscita.
+</p><p>
+I piedini fanno
+riferimento all'integrato TL494 saldato sul circuito stampato. Per comodità
+i piedini 15 e 16 vanno isolati dallo schema originale,
+l'integrato si può dissaldare e prima di inserirlo di nuovo, si piegano
+verso l'alto il 15 e il 16, così facendo si evita di interrompere le
+piste del CS.
+</p><p>
+Le resistenze R1, R4, R9 
+e R15 devono
+essere  del tipo al 2% strato metallico, mentre la R11 deve
+essere una resistenza di potenza a filo  con una potenza totale di 
+10W. Il valore và scelto in funzione della massima corrente ottenibile in
+uscita. La stabilità termica del valore di corrente è in funzione della
+qualità della resistenza usata. Posizionare la R11 più possibile sul
+flusso della ventola.
+</p><p>La resistenza R11, il
+condensatore C5 e i due potenziometri R3 e R17 sono da sistemare fuori del circuito
+stampato.</p><p>La R10 serve per tarare il massimo valore
+fondo scala per la tensione (per esempio 16,0V compensando le tolleranze del potenziometro). </p><p>La R16 serve per tarare il massimo valore
+fondo scala per la corrente (per esempio 16,0A compensando le tolleranze del potenziometro). </p><p>Le induttanze L1 e L2 sono
+le originali presenti sul CS, verificare che possano tenere fino a 30A.</p><p>I
+condensatori C3 e C4 sostituiscono gli  originali da 1000uF 16V, non
+sufficienti per reggere sovratensioni e maggiore corrente.</p><p>Il gruppo RC C6 R12 serve
+per dare stabilità alla regolazione, eliminando i disturbi di ritorno sui
+morsetti uscita per tensioni maggiori di 9-10V.
+</p><p>Vanno isolate le piste del
+CS che portano a massa il negativo, al posto collegare un condensatore da
+0,1uF 400V, questo per evitare ritorni di massa sulla regolazione
+corrente.
+</p><h2 id="atx-300-500w-modifiche-per-uscita-da-0-6v-a-20v-e-corrente-d">ATX 300/500W modifiche per uscita da 0.6V a 20V e corrente da 0,15 a 20A</h2><p>Schema
+completo delle modifiche, eliminando le parti non più usate. </p><p>In
+rosso i nuovi collegamenti e componenti.
+</p><p>Per
+collegare la ventola  usare lo schema consigliato più avanti,
+usando un trasformatore separato.
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_schema_03.jpg" title="Apri l'immagine a piena risoluzione"><img alt="atx schema per 20V 20A" class="is-diagram" decoding="async" height="64" loading="lazy" src="IMAGES/atx_schema_03_small.jpg" width="100"/></a></p><h2 id="atx-300-500w-modifiche-per-uscita-da-0-6v-a-30v-e-corrente-d">ATX 300/500W modifiche per uscita da 0.6V a 30V e corrente da 0,1 a 12A</h2><p>Schema
+completo delle modifiche, eliminando le parti non più usate.</p><p>E'
+necessario introdurre un nuovo ponte raddrizzante in uscita, posizionato
+su un nuovo radiatore isolato. 
+</p><p> Eliminare la connessione di massa
+sull'uscita del trasformatore.
+</p><p>Per
+collegare la ventola usare lo schema consigliato più avanti,
+usando un trasformatore separato.
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_schema_30v_2008_01.jpg" title="Apri l'immagine a piena risoluzione"><img alt="atx schema per 30V 10A" class="is-diagram" decoding="async" height="64" loading="lazy" src="IMAGES/atx_schema_30v_2008_01_small.jpg" width="100"/></a>
+</p>
+<h2 id="realizzazione">Realizzazione</h2><p class="MsoNormal"><span class="hl"><strong>La
+realizzazione dello Switching Power Supply comporta avere delle
+conoscenze di elettronica, è necessaria un'attrezzatura ed esperienza
+nei montaggi elettronici.</strong></span></p><p class="MsoNormal center"><span class="hl"><strong> E
+chiare competenze nell'uso dei dispositivi a 220V.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">Non si risponde
+per danni a cose e persone e per un uso improprio della realizzazione.</span></strong></p><p class="center">Foto Versione
+2007
+</p><ul class="dash-list"><li>Iniziare con il togliere il
+CS dal contenitore metallico, dissaldare i cavi della rete e svitare le 4
+viti di fissaggio.
+</li><li>Con un robusto saldatore
+staccare tutti i cavi saldati sul CS, lasciare solamente il cavo verde
+PS-ON e il cavo Viola del 5VSB.</li><li>Staccare i componenti non
+necessari delle varie sezioni del + 5v e del + 3.3V e anche le varie
+resistenze che andranno sostituite con i nuovi valori.</li></ul><p class="center"><a class="zoom-link" href="IMAGES/atx_014.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Piastra ATX 300W senza cavi." class="is-photo" decoding="async" height="225" loading="lazy" src="IMAGES/atx_014_small.jpg" width="300"/></a></p><p class="center">Scheda
+da 350W pronta per le modifiche.</p><p class="center"><a class="zoom-link" href="IMAGES/atx_002.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="IMAGES/atx_002_small.jpg" width="300"/></a></p><p class="center">Vista
+dell'interno a montaggio ultimato.</p><p class="center"><a class="zoom-link" href="IMAGES/atx_003.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="IMAGES/atx_003_small.jpg" width="300"/></a></p><p class="center">Vista
+dell'interno a montaggio ultimato.</p><ul class="dash-list"><li>Utilizzare
+almeno 4 cavi originali per le uscite di potenza, rosso per il positivo
+direttamente verso il morsetto di uscita. Nero per la connessione verso la
+resistenza R11 di Current Sensing e dalla resistenza verso il morsetto
+negativo.
+</li><li>Si notano i
+condensatori da 35V di grosse dimensioni sostituiti agli originali da solo
+16V non adatti per sopportare tensioni maggiori. Nel caso si realizzasse
+il carica batteria 12V possiamo mantenere i condensatori da 16V originali,
+in quanto gli stessi andrebbero a lavorare solo a 14,50V.
+</li></ul><p class="center"><a class="zoom-link" href="IMAGES/atx_004.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="IMAGES/atx_004_small.jpg" width="300"/></a>
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_005.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="IMAGES/atx_005_small.jpg" width="300"/></a>
+</p><ul class="dash-list"><li>La piattina bianca serve per
+alimentare il voltmetro digitale da sistemare all'esterno del contenitore.
+(Dentro non c'è posto.)
+</li><li>La morsettiera di uscita
+deve essere del tipo da 30A così da poter fissare cavi da 4/6mmq muniti di
+capocorda.</li></ul><p>- Il ventilatore da 12V non
+può più essere collegato come in origine sull'uscita uscita, in questo caso prenderemo alimentazione
+positiva dal piedino 12 (+18V) del TL494 e il negativo dal negativo
+comune. Con un regolatore 7812
+stabilizziamo l'alimentazione della ventola. Il regolatore non ha bisogno del
+dissipatore, in questo caso è fissato con una vite direttamente al
+ventilatore. (Verificare
+la tensione a monte del regolatore che a regime, cioè con ventola
+funzionante non scenda sotto i 17V, in caso contrario utilizzare la
+soluzione con trasformatore separato spiegata più avanti.)</p><p>
+- Particolare sulla resistenza
+R11 di current sensing, realizzata in filo di costantana e fissata alla
+morsettiera da 30A. La resistenza viene  raffreddata direttamente dal flusso di
+aria aspirato dalla ventola, questo mantiene bassa la temperatura avremo
+quindi una ridotta deriva dei valori con l'aumentare della corrente. 
+</p><p>
+La
+R11 è anche facilmente realizzabile con il parallelo di n resistenze da 3/5W in parallelo.</p><p>
+Si
+notano i due potenziometri di precisione a 10 giri, mantenere i cavi di collegamento
+corti il più possibile, vicini al metallo del contenitore e distanti dai trasformatori, questo per
+evitare interferenze.
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_008.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="IMAGES/atx_008_small.jpg" width="300"/></a>
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_007.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="IMAGES/atx_007_small.jpg" width="300"/></a>
+</p><p>
+- Si notano le resistenze
+saldate direttamente sui piedini 13,14 e 16 e le due resistenze sul CS al
+posto di R25 e R31 che rappresentano il nuovo reference da 1,0V per il
+controllo di tensione. (Versione 2007)
+</p>
+<h2 id="ventilazione-a-temperatura-controllata">Ventilazione a temperatura controllata.</h2><p>Collegare
+la ventola al circuito flyback primario, come descritto sopra nello schema
+principale, in molti casi riduce l'efficienza del pilotaggio nelle
+condizioni di massima corrente out.  Per raffreddare l'ATX modificato, è bene
+utilizzare un circuito con trasformatore separato.
+</p><p class="center"><img alt="" class="is-diagram" decoding="async" height="279" loading="lazy" src="IMAGES/sh_regolatore_ventola_sm.gif" width="610"/>
+</p><p>Viene
+utilizzato un piccolo trasformatore 220V-12/14V da 5VA. Seguito da un
+circuito raddrizzante e filtrante.
+</p><ul class="dash-list"><li>Il regolatore LM317 ci permette di regolare con precisione la tensione in
+uscita.
+</li><li>R2 determina la tensione massima di funzionamento sulla ventola  normalmente
+12V. Anche 16V dove è richiesta forte ventilazione.
+</li><li>R5 determina la tensione minima sulla ventola tip. 5,5V.</li><li>R4 determina la temperatura minima di intervento tip.40°</li></ul><p>Eliminando
+la R5 la ventola interviene solamente al superamento della temperatura di
+intervento.</p><p>Il
+termistore NTC R3 deve essere fissato, con collante silicone, sul
+radiatore dei diodi raddrizzanti di potenza.</p><p>I
+valori possono variare in funzione della ventola impiegata, si consiglia
+di usare una ventola di qualità migliore di quella solitamente montata
+dentro all'ATX.</p><p>Utilizzando
+un trasformatore con uscita 12V out è possibile omettere il regolatore LM317
+e collegare il circuito ventola direttamente ai capi del condensatore C5,
+verificare che la tensione a vuoto non sia superiore a 16V.</p><p>Ovviamente
+durante il funzionamento a carico del nostro ATX, sentiremo la ventola
+funzionare a diverse velocità, in funzione delle temperature raggiunte.
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_018.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="204" loading="lazy" src="IMAGES/atx_018_small.jpg" width="300"/></a>
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_019.jpg" title="Apri l'immagine a piena risoluzione"><img alt="" class="is-photo" decoding="async" height="203" loading="lazy" src="IMAGES/atx_019_small.jpg" width="300"/></a>
+</p>
+<h2 id="miglioramenti">Miglioramenti</h2><p>Con ATX da
+400-500W è possibile arrivare in uscita a 20-22V e  20-25A
+sostituendo il doppio diodo raddrizzante del 12V con quello del 5V adatto
+per 30A, inoltre è da usare la sezione sempre del 5V dell'induttore
+toroidale di filtro, più adatta a sopportare alte correnti, come pure il
+secondo induttore con filo di diametro maggiore.
+</p><p>Attenzione
+che il diodo Schottky
+da 30 A, lavorando a 20V è al limite della tensione di soglia, verificare
+la tensione ai capi, nel caso appesantire lo snubber RC, per ridurre gli
+spikes, oppure usare un SBL3060PT, da 60V.</p><p><em>Meglio
+ancora usare due diodi fast da 200V 16A uno per ogni ramo.</em></p><p>Con
+queste semplici sostituzioni e una ventilazione adeguata ed efficiente
+dovremmo poter avere a disposizione un 20A e più in servizio continuo, sono sempre
+da verificare le temperature a regime, in particolare del trasformatore di
+potenza.
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_017.jpg" title="Apri l'immagine a piena risoluzione"><img alt="ATX versione 20A. Diodo STPS3045CW da 30A 45V usato per avere oltre 20A in uscita." class="float-left is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/atx_017_small.jpg" width="300"/></a></p><p>Per i più
+esperti consiglio di aumentare la frequenza di lavoro del TL494, aumento
+non più del 20% ma sufficiente a spremere qualcosa di più dal
+trasformatore. Se quindi la frequenza nominale è di 50kz la si porta a
+60 kHz agendo sulla R e C presenti sui piedini  6 e 5 del driver TL494.
+E bene usare un oscilloscopio e/o frequenzimetro per leggere i valori. Dopo
+questa modifica è pensabile di ottenere un incremento della potenza
+massima in uscita, è necessario montare in uscita diodi fast da 16A  200V. 
+</p><p> Sono
+da curare tutti i collegamenti di potenza, mai inferiori ai 4mmq.
+</p><p>Verificare
+l'efficienza della ventola, eventualmente adottare un modello con maggiore
+portata.
+</p><p>L'aggiunta di un
+Voltmetro digitale e un Amperometro digitale da 20A, permette di finalizzare un
+ottimo strumento da laboratorio. Consigliato l'inserimento in un mobile
+metallico di
+maggiori dimensioni, adatto a contenere tutto il gruppo elettronico con
+gli strumenti.
+</p><p>
+<a class="zoom-link" href="IMAGES/atx_015.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Vista completa ATX modificato versione 20V 20A" class="is-photo" decoding="async" height="200" loading="lazy" src="IMAGES/atx_015_small.jpg" width="300"/>
+</a>
+</p><p>
+Con
+la stesso schema è possibile realizzare un ottimo carica batterie per
+il 12V o anche per il 24V semplicemente montando all'interno due trimmer al posto dei potenziometri e
+tarando la tensione di uscita per 14,5Volt (29V) tensione che corrisponde a una batteria a fine
+carica.
+</p><p>In questo caso ho inserito
+la regolazione di corrente esterna, da 1 a 18A, mentre la tensione è
+fissa a 14,50V.
+</p><p class="center"><a class="zoom-link" href="IMAGES/atx_016.jpg" title="Apri l'immagine a piena risoluzione"><img alt="Caricabatteria da 1 a 18A realizzato con un alimentatore ATX" class="is-photo" decoding="async" height="202" loading="lazy" src="IMAGES/atx_016.jpg" width="300"/></a>
+</p>
+<h2 id="cause-guasti-atx">Cause guasti ATX</h2><p>
+- Al 90% gli ATX vengono sostituiti dopo 3-4 anni in quanto non hanno sufficiente potenza di spunto in seguito upgrade schede video e schede madri, in genere si buttano ATX
+funzionanti.
+<br/>
+- Seconda causa è il surriscaldamento in seguito al bloccaggio della ventola, entra polvere e frena o blocca la ventola, cosi i componenti si surriscaldano, a volte si staccano da CS, in genere saltano
+per primi gli elettrolitici.<br/>
+Basterebbe aprire ogni 6 mesi il case e soffiare e pulire la polvere. Buona norma tenere i Tower e miniTower sollevati dal pavimento.  Anche chi fuma molto contribuisce a fare bloccare la ventola prima del tempo...
+<br/>
+- Difficilmente salta il driver, semmai il primo stadio del 5V standby che fornisce alimentazione al driver.  Il primo stadio è un autooscillante che è sempre sotto tensione e fornisce qualche Watt al sistema per avviarsi....
+<br/>
+- Spesso è anche la bassa qualità di costruzione che porta al limite i componenti interni più sollecitati...<br/>
+</p>
+<h2 id="commenti-finali">Commenti finali</h2><p>Sicuramente un
+ottimo e potente alimentatore. Il progetto originale, forte dei milioni di
+pezzi prodotti, si presenta ottimizzato, efficiente ed affidabile. In condizioni di prova si arriva facilmente
+a 20V e 20A pari a 400W, non adatti per servizio continuo, ma comodi per
+carichi di breve durata. 
+</p><p>Il costo della
+realizzazione può ritenersi molto basso, specialmente se non si usano i
+potenziometri multigiro e il voltmetro digitale.</p><p>L'ATX
+modificato a 13,8V 20A è stato provato in collegamento ad apparati radio trasmittenti
+VHF e
+il rumore di fondo è trascurabile. Non adatto per HF in quanto presenta
+parecchio rumore. Buono il comportamento con
+assorbimenti impulsivi presentando la tipologia di switching una bassa
+impedenza in uscita.</p><p>La
+realizzazione è indicata per chi già è un esperto di elettronica e
+pratico di sistemi funzionanti con il 220V.</p><p>Ricordo
+che non tutti gli ATX con TL494 driver accettano la modifica, pertanto
+potrebbero funzionare male o anche fare saltare il fusibile, da provare
+con altri modelli...</p><p class="center">............................................</p><p class="center"><img alt="Alimentatori ATX da 300 a 480W, adatti per essere modificati e diventare SPS LAB." class="is-photo" decoding="async" height="333" loading="lazy" src="IMAGES/atx_009.jpg" width="500"/>
+</p><hr color="#336699"/>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto
+Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Altre pagine in “Alimentatori”</h2>
+<ul>
+<li><a href="power_supply_12v_30A.htm"><span class="r-sec">Alimentatori</span>Alimentatore ATX 12 V 30 A</a></li>
+<li><a href="atx_14_volt.htm"><span class="r-sec">Alimentatori</span>ATX 13.8V power supply</a></li>
+<li><a href="step_up_10a.htm"><span class="r-sec">Alimentatori</span>Step-up 10A 16V</a></li>
+<li><a href="push_pull_20_16.htm"><span class="r-sec">Alimentatori</span>Push-pull DC-DC 12V 20A 16V 250W</a></li>
+<li><a href="electronic_load.htm"><span class="r-sec">Alimentatori</span>Electronic Load 20A 40V</a></li>
+</ul>
+</section>
+</main><aside aria-label="Indice della pagina" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">In questa pagina</p><ol><li><a href="#schema-elettrico-atx-200w">SCHEMA ELETTRICO ATX 200W</a></li>
+<li><a href="#schema-elettrico-atx-per-modifiche-controllo-tensione-e-corr" title="SCHEMA ELETTRICO ATX per modifiche controllo tensione e corrente.">SCHEMA ELETTRICO ATX per modifiche controllo…</a></li>
+<li><a href="#atx-300-500w-modifiche-per-uscita-da-0-6v-a-20v-e-corrente-d" title="ATX 300/500W modifiche per uscita da 0.6V a 20V e corrente da 0,15 a 20A">ATX 300/500W modifiche per uscita da 0.6V a 20V e…</a></li>
+<li><a href="#atx-300-500w-modifiche-per-uscita-da-0-6v-a-30v-e-corrente-d" title="ATX 300/500W modifiche per uscita da 0.6V a 30V e corrente da 0,1 a 12A">ATX 300/500W modifiche per uscita da 0.6V a 30V e…</a></li>
+<li><a href="#realizzazione">Realizzazione</a></li>
+<li><a href="#ventilazione-a-temperatura-controllata">Ventilazione a temperatura controllata.</a></li>
+<li><a href="#miglioramenti">Miglioramenti</a></li>
+<li><a href="#cause-guasti-atx">Cause guasti ATX</a></li>
+<li><a href="#commenti-finali">Commenti finali</a></li></ol></nav></aside></div>
+
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Archivio tecnico di Roberto Chirio: elettronica, radio e antenne,
+          alimentatori, batterie, illuminazione a LED, misure di laboratorio, e
+          l’archivio storico della Batteria dello Chaberton.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archivio</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Alimentatori</a></li>
+<li><a href="index.html#batterie">Batterie</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioattività</a></li>
+<li><a href="index.html#misure">Misure</a></li>
+<li><a href="index.html#progetti">Progetti</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">Storia</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortificazioni</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Teleferica</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panorami</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>È vietato ogni utilizzo non autorizzato delle foto, dei video, delle
+        immagini, degli schemi e dei testi. Photos and videos are copyright
+        © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Torna all’inizio della pagina" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="assets/site.js"></script>
+</body>
+</html>
