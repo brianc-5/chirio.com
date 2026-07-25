@@ -108,14 +108,20 @@ dark page needs a light plate (`--plate`) or the line art disappears.
 `aspect-ratio` + `object-fit: cover` are used only on editorial thumbnails,
 never on a diagram.
 
-**The archive index opens itself.** Each category is a `<details>`, but the id
-lives on the `<ul>` *inside* it, not on the `<details>`. Linking to an element
-inside a closed `<details>` makes the browser expand it — so a category tile or
-a header link opens the right list **with no JavaScript at all**. The script
-does the same for older browsers, keeps the disclosure marker honest, and
-handles same-page clicks where the hash does not change. Verified in a real
-browser: on load, tile click, second tile click, arriving from an article, and
-with JavaScript disabled.
+**The archive index opens itself, one category at a time.** Each category is a
+`<details>`, but the id lives on the `<ul>` *inside* it, not on the `<details>`.
+Linking to an element inside a closed `<details>` makes the browser expand it —
+so a category tile or a header link opens the right list **with no JavaScript at
+all**. The shared `name="archivio"` makes it an exclusive accordion: opening one
+category closes the others, natively, also without JavaScript. The script only
+supplies the fallbacks — sibling closing for browsers without `name` support,
+expansion for browsers without fragment auto-expand, and same-page clicks where
+the hash does not change.
+
+Verified in a real browser across nine cases: on load, three successive tile
+clicks, opening and re-closing a summary, arriving from an article via the
+header nav, and both fragment arrival and summary clicking with JavaScript
+disabled.
 
 **Archive previews.** Every row in the archive list carries a 64×48 preview.
 65 of the 68 pages have one: 59 are the exact thumbnails the original homepage

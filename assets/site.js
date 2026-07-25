@@ -162,6 +162,24 @@
         block: 'start'
       });
     };
+    /* Only one category open at a time. Browsers that support the exclusive
+       accordion do this from the shared name= attribute; this closes the
+       siblings for the ones that do not. Closing a sibling fires its own
+       toggle event, but that event is a close, so nothing cascades. */
+    var exclusiveNative = (function () {
+      var d = doc.createElement('details');
+      return 'name' in d;
+    })();
+    if (!exclusiveNative) {
+      archive.addEventListener('toggle', function (e) {
+        var det = e.target;
+        if (!det || det.tagName !== 'DETAILS' || !det.open) return;
+        [].forEach.call(archive.querySelectorAll('details[name]'), function (other) {
+          if (other !== det) other.open = false;
+        });
+      }, true);
+    }
+
     openFromHash(window.location.hash, false);
     window.addEventListener('hashchange', function () {
       openFromHash(window.location.hash, true);

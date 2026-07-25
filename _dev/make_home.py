@@ -121,6 +121,9 @@ def main():
     # The list carries the id, not the <details>. Linking to an element *inside*
     # a closed <details> makes the browser expand it on its own, so a category
     # tile or a header link opens the right list with no JavaScript at all.
+    #
+    # The shared name= makes it an exclusive accordion: opening one category
+    # closes the others, natively, still without JavaScript.
     thumbs = getattr(meta, "INDEX_THUMB", {})
 
     def row(p):
@@ -136,14 +139,14 @@ def main():
     for slug, label, heading, desc in meta.SECTIONS:
         pages = sorted((p for p, s in meta.PAGE_SECTION.items() if s == slug),
                        key=order.index)
-        blocks.append(f'''      <details class="cat" id="cat-{slug}">
+        blocks.append(f'''      <details class="cat" name="archivio" id="cat-{slug}">
         <summary><span>{esc(heading)}</span><span class="count">{counts[slug]}</span></summary>
         <ul id="{slug}">
 {chr(10).join(row(p) for p in pages)}
         </ul>
       </details>''')
 
-    blocks.append(f'''      <details class="cat" id="cat-documenti">
+    blocks.append(f'''      <details class="cat" name="archivio" id="cat-documenti">
         <summary><span>Documenti e note legali</span><span class="count">{len(meta.LEGAL_PAGES)}</span></summary>
         <ul id="documenti">
 {chr(10).join(row(p) for p in meta.LEGAL_PAGES)}
