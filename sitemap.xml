@@ -1213,12 +1213,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chirio.com/electronic_load.htm"/>
   </url>
   <url>
-    <loc>https://chirio.com/en/404.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://chirio.com/404.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://chirio.com/en/404.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://chirio.com/404.html"/>
-  </url>
-  <url>
     <loc>https://chirio.com/en/433Mhz_sensor.htm</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://chirio.com/433Mhz_sensor.htm"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://chirio.com/en/433Mhz_sensor.htm"/>

@@ -13,14 +13,14 @@ have actually opened and revised it.
   been applied. These pages are correct and consistent; they are not
   individually curated.
 
-**512 pages total — 3 curated, 509 on the system.**
+**511 pages total — 3 curated, 508 on the system.**
 
 ## By page family
 
 | Family | Pages | Curated | Notes |
 | --- | ---: | ---: | --- |
 | home | 1 | 1 | hand-built; the only page with a bespoke layout |
-| technical article | 148 | 1 | the archive proper — where the remaining work is |
+| technical article | 147 | 1 | the archive proper — where the remaining work is |
 | legal page | 4 | 0 | short, stable, low risk |
 | chaberton landing | 1 | 1 | hand-built section entry point |
 | chaberton article | 12 | 0 | prose pages of the historical archive |
@@ -34,7 +34,7 @@ have actually opened and revised it.
 
 - **P1 — revise next** — 60 pages
 - **P2 — review** — 75 pages
-- **P3 — spot-check** — 374 pages
+- **P3 — spot-check** — 373 pages
 - **done — hand-curated** — 3 pages
 
 Priority is computed from observable signals: page length, number of
@@ -186,7 +186,7 @@ headerless tables, external images, missing subtitle.
 | `chaberton/panorami_chaberton.htm` | chaberton article | 66 | 4 | centred blocks | system |
 | `en/chaberton/panorami_chaberton.htm` | technical article | 63 | 4 | centred blocks | system |
 
-### P3 — spot-check (374)
+### P3 — spot-check (373)
 
 | Page | Family | Words | Img | Needs a look at | Status |
 | --- | --- | ---: | ---: | --- | --- |
@@ -219,8 +219,6 @@ headerless tables, external images, missing subtitle.
 | `en/chaberton/mappa_chaberton.htm` | technical article | 40 | 2 | — | system |
 | `en/chaberton/mappa_sito.htm` | technical article | 36 | 1 | — | system |
 | `chaberton/mappa_sito.htm` | chaberton article | 34 | 1 | — | system |
-| `en/404.html` | technical article | 32 | 0 | — | system |
-| `404.html` | error page | 30 | 0 | — | system |
 | `chaberton/2007_04_05/index.htm` | gallery index | 14 | 0 | — | system |
 | `chaberton/batteria_2003/batteria_2003.htm` | gallery index | 12 | 0 | — | system |
 | `chaberton/batteria_2003/index.htm` | gallery index | 12 | 0 | — | system |
@@ -239,6 +237,7 @@ headerless tables, external images, missing subtitle.
 | `en/chaberton/pt_vallon/index.htm` | gallery index | 3 | 0 | — | system |
 | `chaberton/testa.htm` | chaberton article | 1 | 1 | — | system |
 | `en/chaberton/testa.htm` | technical article | 1 | 1 | — | system |
+| `404.html` | error page | 0 | 0 | — | system |
 | `chaberton/2007_04_05/pages/IMG_1414.htm` | photo page | 0 | 1 | — | system |
 | `chaberton/2007_04_05/pages/IMG_1416.htm` | photo page | 0 | 1 | — | system |
 | `chaberton/2007_04_05/pages/IMG_1418.htm` | photo page | 0 | 1 | — | system |

@@ -144,6 +144,24 @@ feature, article header, TOC rail + mobile disclosure, callouts
 (`--specs`, `--warning`, `--update`), spec list, figures, tables, gallery,
 photo navigation, panorama, footer.
 
+**The error page is a special case.** GitHub Pages returns `/404.html` for a
+missing path at *any* depth, but the browser keeps the requested URL as its
+base. A relative `assets/site.css` on that page therefore resolves against
+`/chaberton/…` and 404s in turn, leaving the error page completely unstyled —
+which is exactly how it used to fail. So `404.html` is the one page whose URLs
+are all **site-absolute within the GitHub Pages project**, using the
+`/chirio.com/` project prefix; its `data-root` uses that same prefix, and it
+carries no language switch or `hreflang` (there is no counterpart page to point
+at). `retrofit.py` applies this automatically for any file named `404.html`, so
+the error page keeps receiving chrome updates without ever regaining a relative
+URL. If the site later moves to the `chirio.com` apex domain, change that prefix
+back to `/` in the template and retrofit special case.
+
+It is also the one **bilingual** page: Pages serves the root 404 for `/en/`
+addresses too, so it cannot assume a language. Italian and English sit
+side by side, each with its own route into the archive. There is deliberately
+no `/en/404.html` — a second copy could only drift.
+
 **Mobile navigation.** Below 62 rem the categories are a disclosure panel with
 item counts and one-line descriptions; at or above 62 rem they are a single
 compact row and the button is hidden. The breakpoint is read with `matchMedia`
@@ -245,6 +263,9 @@ next build overwrites it. Fix the map, or fix the Italian page and re-run.
   programmatically; register and idiom were not. Treat `/en/` as a good
   working translation, not a publication-grade one. Corrections go in
   `i18n/map.en.json`.
+- **The 404 search box queries the Italian index.** Results open Italian pages;
+  each one carries the IT/EN switch. A bilingual page cannot pick an index, and
+  Italian is the site default.
 - **Italian is the default language.** `x-default` in the `hreflang` set points
   at the Italian page, and no automatic redirection by browser language is
   performed — the reader chooses with the switch.

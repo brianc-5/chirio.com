@@ -123,7 +123,7 @@ def note(kind, msg):
 # --------------------------------------------------------------------------- #
 
 def build_header(root, meta, section=None, chaberton=False, chab_prefix="",
-                 rel="index.html", lang="it"):
+                 rel="index.html", lang="it", switch=True):
     if chaberton:
         brand = (f'<a class="brand" href="{chab_prefix}chab.htm">{BRAND_MARK}'
                  f'<span class="brand-text"><span class="brand-name">Chaberton</span>'
@@ -156,7 +156,7 @@ def build_header(root, meta, section=None, chaberton=False, chab_prefix="",
     {brand}
     <a class="icon-btn icon-btn--search" href="{root}index.html#cerca">{ICON_SEARCH}<span class="visually-hidden">Cerca nell’archivio</span></a>
     <button class="icon-btn icon-btn--menu" type="button" aria-expanded="false" aria-controls="site-nav">{ICON_MENU}<span class="btn-label">Categorie</span></button>
-    {lang_switch(rel, lang)}
+    {lang_switch(rel, lang) if switch else ""}
   </div>
   <div class="nav-panel" id="site-nav">
     <div class="wrap">
@@ -527,7 +527,11 @@ def retrofit_page(site, rel, meta, section_of):
         return False
 
     chaberton = body.get("data-site") == "chaberton"
-    root = rel_root(rel)
+    is_404 = os.path.basename(rel) == "404.html"
+    # This repository is a GitHub Pages project site, served below
+    # /chirio.com/. The 404 keeps the originally requested URL as its base,
+    # so its chrome must use the stable project-root prefix at every depth.
+    root = "/chirio.com/" if is_404 else rel_root(rel)
     section = section_of.get(rel)
 
     # ---- head -------------------------------------------------------------
@@ -538,7 +542,7 @@ def retrofit_page(site, rel, meta, section_of):
         for l in head.find_all("link", rel="alternate"):
             l.decompose()
         depth = rel.count("/")
-        for code, href in (("it", os.path.basename(rel)),
+        for code, href in () if is_404 else (("it", os.path.basename(rel)),
                            ("en", "../" * depth + "en/" + rel),
                            ("x-default", os.path.basename(rel))):
             tag = soup.new_tag("link", rel="alternate", href=href)
@@ -550,7 +554,7 @@ def retrofit_page(site, rel, meta, section_of):
     if old_header is not None:
         new = BeautifulSoup(build_header(root, meta, section, chaberton,
                                          chab_prefix(rel) if chaberton else "",
-                                         rel=rel, lang="it"),
+                                         rel=rel, lang="it", switch=not is_404),
                             "html.parser")
         old_header.replace_with(new)
         STATS["header"] += 1
@@ -580,7 +584,9 @@ def retrofit_page(site, rel, meta, section_of):
             pass
 
     for art in body.find_all("article", class_="article"):
-        art["class"] = ["article"]
+        # normalise to a leading "article" but keep modifier classes such as
+        # "error-page" — blindly resetting the list silently unstyles them
+        art["class"] = ["article"] + [c for c in art.get("class", []) if c != "article"]
     for m in body.select(".article-head .meta"):
         m["class"] = ["article-meta"]
     for ul in body.select(".related ul.card-grid"):
@@ -613,6 +619,18 @@ def retrofit_page(site, rel, meta, section_of):
     # legacy note boxes adopt the callout component
     for bn in body.select(".band-note"):
         bn["class"] = ["callout"]
+
+    if is_404:
+        for el in soup.find_all(True):
+            for attr in ("href", "src"):
+                v = el.get(attr)
+                if isinstance(v, str) and v and not v.startswith(("#", "/", "http",
+                                                                 "mailto:", "tel:")):
+                    el[attr] = "/" + v
+        h = soup.find("html")
+        if h is not None:
+            h["data-root"] = root
+            h["data-lang-root"] = root
 
     out = str(soup)
     if not out.startswith("<!DOCTYPE"):

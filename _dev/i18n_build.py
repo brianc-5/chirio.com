@@ -189,8 +189,10 @@ def main():
         dirnames[:] = [d for d in dirnames if d not in ("_dev", "en")]
         for fn in sorted(filenames):
             if os.path.splitext(fn)[1].lower() in HTML_EXT:
-                pages.append(os.path.relpath(os.path.join(dirpath, fn), site)
-                             .replace(os.sep, "/"))
+                rel = os.path.relpath(os.path.join(dirpath, fn), site).replace(os.sep, "/")
+                if rel == "404.html":
+                    continue    # one bilingual error page at the site root only
+                pages.append(rel)
     pages.sort()
     pages_lower = {p.lower() for p in pages}
 
