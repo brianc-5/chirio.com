@@ -33,7 +33,8 @@ why it is kept: it documents exactly how the FrontPage material was converted.
 
 | I want to… | Do this |
 | --- | --- |
-| fix wording, a heading, an image on one page | edit that `.htm` file directly |
+| fix wording, a heading, an image on one page | edit that `.htm` file directly, then re-run the i18n pipeline so `/en/` follows |
+| fix an English translation | edit `_dev/i18n/map.en.json`, then re-run `i18n_build.py` |
 | change colour, type, spacing, a component | edit `assets/site.css` |
 | change behaviour (menu, search, panorama) | edit `assets/site.js` |
 | make the same mechanical change on many pages | write it into `retrofit.py`, run it, read the notes, review the diff |
@@ -64,6 +65,12 @@ decision, or the next repetitive pass may flatten your work.
 | `shoot.py` | Screenshots every breakpoint in light and dark, and fails on horizontal overflow. |
 | `REVISION-CHECKLIST.md` | Page-by-page status and priority queue. |
 | `retrofit-notes.txt` | What the last retrofit pass changed, page by page. |
+| `i18n_extract.py` | Pulls every translatable string out of the Italian pages and deduplicates. |
+| `i18n_chunk.py` | Splits the catalogue into model-sized chunks. |
+| `i18n_build.py` | Rebuilds `/en/` from the Italian pages plus the translation map. |
+| `i18n_assets.py` | English search index and the bilingual sitemap. |
+| `i18n/map.en.json` | The Italian → English string map. **This is the file to edit to fix a translation.** |
+| `i18n/BRIEF.md` | The translator brief and domain glossary. |
 
 ## Running the checks
 
@@ -144,6 +151,63 @@ so JavaScript and CSS can never disagree.
 
 ---
 
+## The English mirror
+
+The site is bilingual. Italian stays at the original URLs; English lives at
+`/en/` with exactly the same shape, so `mini_whip.htm` ↔ `en/mini_whip.htm`.
+A compact IT/EN switch sits in the top-right corner of every page and links to
+the counterpart of the page you are on, at any depth.
+
+**Nothing is translated as HTML.** A model asked to translate raw markup will
+eventually drop an attribute, break a table or mangle a link. Instead:
+
+1. `i18n_extract.py` walks the DOM and pulls out text nodes, `title`, `alt`,
+   `aria-label`, `placeholder` and the prose `<meta>` tags — **text only, never
+   markup**. Strings are deduplicated across the whole site, which turned
+   21,189 occurrences into **4,425 unique strings**: the shared header, footer
+   and navigation are translated once, not 256 times.
+2. `i18n_chunk.py` splits those into 22 chunks of ~22,000 characters.
+3. Each chunk was translated by **Claude Haiku 4.5**, working from
+   `i18n/BRIEF.md` — a register brief plus a 40-term domain glossary that fixes
+   *tensione* → voltage, *autonomia* → runtime, *schema elettrico* → circuit
+   diagram, and so on.
+4. `i18n_build.py` clones each Italian page and substitutes the text. Same
+   tags, same ids, same anchors, same images. The two trees cannot drift.
+
+Because the English page is a clone, three things are re-anchored: `lang`
+becomes `en`; asset URLs are resolved against the site root and re-pointed out
+of `/en/` (doing this by "just add one `../`" is correct at the top level and
+silently wrong one directory down); and `data-root` / `data-lang-root` /
+`data-search-index` are set per page so the search box loads
+`assets/search-index.en.json` and links to English results.
+
+### Verification
+
+* every one of the 4,425 strings came back translated — **zero gaps**
+* **11,732 local references** in the English tree resolve to a real file
+* numeric drift was audited string by string. 258 differences are all Italian
+  decimal commas becoming English decimal points (`3,6V` → `3.6V`) or grouped
+  lists being split (`torri 5,6,7` → `towers 5, 6, 7`). Exactly **5 strings**
+  showed a genuinely different numeral count, and all five are correct English
+  idiom: *guadagno 1* → "unity gain", *anni 70* → "the 1970s", *antenna a 1/4
+  onda* → "quarter-wave antenna", *2 batterie* → "Two batteries"
+* IT→EN→IT round trips verified in a real browser at six different depths,
+  including a gallery photo page four levels down and a panorama page
+
+### Editing a translation
+
+Edit the value in `_dev/i18n/map.en.json` and re-run:
+
+```sh
+python3 _dev/i18n_build.py  --site . --map _dev/i18n/map.en.json
+python3 _dev/i18n_assets.py --site . --map _dev/i18n/map.en.json
+```
+
+The English tree is fully generated. Never hand-edit a file under `/en/`: the
+next build overwrites it. Fix the map, or fix the Italian page and re-run.
+
+---
+
 ## Known issues and deliberate decisions
 
 - **The old metallic banners are gone from the interface.**
@@ -176,3 +240,11 @@ so JavaScript and CSS can never disagree.
   touching a value is not worth the polish.
 - **`/INDEX.HTM` in uppercase is still not served.** `/`, `/index.html` and
   `/index.htm` all work.
+- **The English text is machine translation, reviewed mechanically but not by a
+  native technical editor.** Numbers, units and part numbers were verified
+  programmatically; register and idiom were not. Treat `/en/` as a good
+  working translation, not a publication-grade one. Corrections go in
+  `i18n/map.en.json`.
+- **Italian is the default language.** `x-default` in the `hreflang` set points
+  at the Italian page, and no automatic redirection by browser language is
+  performed — the reader chooses with the switch.

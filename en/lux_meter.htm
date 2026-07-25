@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Luxmeter Analog lux meter for illuminance measurements by Roberto Chirio</title>
+<meta content="Luxmeter Analog lux meter for illuminance measurements by Roberto Chirio" name="description"/>
+<meta content="lux, luxmeter, luxmetro, measure the light, light meter, direct light, incident light, reflected light, laboratory measurements, illuminotechnics" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="lux_meter.htm" hreflang="en" rel="alternate"/><link href="../lux_meter.htm" hreflang="it" rel="alternate"/><link href="../lux_meter.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../lux_meter.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a aria-current="true" href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#misure">Measurements &amp; laboratory</a></li><li aria-current="page">LUX-METER ANALOG</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Measurements &amp; laboratory</p>
+<h1>LUX - METER LIGHT-METER</h1>
+<p class="subtitle">Simple instrument with analog output suitable for relative illuminance measurements. "Do it yourself" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#misure">Measurements &amp; laboratory</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</a></li>
+<li><a href="#descrizione-circuito">Circuit description</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#collegamento-a-un-oscilloscopio-digitale">Connection to a digital oscilloscope.</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<p class="center"><img alt="" class="is-photo" decoding="async" height="374" loading="lazy" src="../IMAGES/lux_meter_00.jpg" width="500"/></p><p>August 2007</p><p>This project arose from the need to acquire a light flux with a digital oscilloscope, all to have in real-time the light intensity curves, relative to the various LED illuminator projects operating on batteries.</p><p>Similar instruments are not available on the market except at very high prices. They are generally Data Loggers for acquisitions with very long times.</p><p>By properly calibrating the output voltage value through a resistive divider, it's possible to have a precise correlation between mV and Lux. (A reference lux meter is required.)</p><p>Due to the simplicity of the circuit and the lack of optical filters on the sensor, it is not possible to have precise and calibrated measurements with various types of light, such as fluorescence, discharge and LED. The measurement is always relative even if repeatable.</p><p class="center"><a href="../IMAGES/BPW_20.pdf"><img alt="BPW20 photo diode photo diode" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/lux_meter_bpw20.jpg" width="300"/>
+</a>
+</p><p>
+Photodiode on silicon, suitable for making light measurement instruments, such as exposure meters, light meters and color temperature meters, is characterized by a wide range of input values with good current output linearity:
+</p><p class="center"><a class="download" href="../IMAGES/BPW_20.pdf"><strong>BPW20</strong></a>
+(pdf 79K)</p><p class="right"> For info contact: <a href="mailto:info@chirio.com">info@chirio.com</a></p>
+<h2 id="schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</h2><p class="center"><img alt="Circuit diagram Lux meter Light meter" class="is-diagram" decoding="async" height="340" loading="lazy" src="../IMAGES/lux_meter_01.gif" width="735"/>
+</p>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="2" scope="col">
+<p>
+<strong> Material</strong>
+</p>
+</th>
+<th scope="col">
+<p>
+<strong> Where</strong>
+</p>
+</th>
+</tr></thead>
+<tr>
+<td class="center">
+<p><strong>U</strong><strong>1</strong></p>
+</td>
+<td>
+<p>
+● 1 integrated LM358
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R1</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 1M/100K/10K ohm 1/4W 1% metal film
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R2</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 10K ohm 1/4W 1% metal film
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R3</strong></p>
+</td>
+<td>
+<p>
+● 1 trimmer 10K ohm cermet multiturn 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R4</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 470 ohm 1/4W 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C1</strong></p>
+</td>
+<td>
+<p>
+● 1 electrolytic capacitor 1-22uF 16V (see notes)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C2</strong></p>
+</td>
+<td>
+<p>
+● 1 electrolytic capacitor 47uF 16V 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>D1</strong></p>
+</td>
+<td>
+<p>
+● 1 photo diode BPW20 (see notes)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>D2</strong></p>
+</td>
+<td>
+<p>
+● 1 LED 5mm red
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>D3</strong></p>
+</td>
+<td>
+<p>
+● 1 Zener diode 6.2 400mW
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>S1</strong></p>
+</td>
+<td>
+<p>
+
+● 1 slide switch
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>V1</strong></p>
+</td>
+<td>
+<p>
+● 1 Battery 9V 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● 1 switch 1 way 3 position (rotary or linear) 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● BNC connector 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● 9V battery connector
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● printed circuit board 
+</p>
+</td>
+<td>
+<p>
+to be done
+</p>
+</td>
+</tr>
+</tbody></table></div>
+<h2 id="descrizione-circuito">Circuit description</h2><p>
+Power supply with 9V battery, operation is good down to 6V.
+</p><p>
+The red LED diode signals power-on, the LED current is kept low to avoid draining the battery, the series Zener diode turns off the LED when the voltage drops below 7V, this to signal low battery.
+</p><p>
+The LM358 integrated circuit has the function of amplifying the Photo Diode signal. The constant-gain amplifier configuration allows us to have good linearity across the entire scale. To have a complete range of use across the entire illumination scale from 0 to 20000 lux it is necessary to use a three-position switch to replace the amplifier gain resistor. The three resistors must be of the 1% precision metallic film type.
+</p><p>The low pass filter at the output from the amplifier made of R2 and C1 serves to reduce impulses and noise and linearize the reading. This luxmeter was born from a need to capture slow luminous phenomena such as the decrease in luminous flux of the various LED lamps present on this site. Therefore keeping an R2 of 10K the C1 can take a value from 1 to 22uF. In the case of wanting to see fast waveforms related to pulsed light, typical of neon lamps at 50 Hz or neon with electronic ballast, or other non-filament lamps, I recommend a C1 of 10nF, a reading with oscilloscope is possible even without filter but the noise introduced could be high and should be evaluated case by case. A 1uF capacitor gives us a cutoff frequency of 10 Hz, a good value for use with a digital voltmeter, 2-3 readings/s.</p><p>The second stage of the LM358 is only a follower with gain 1 useful for decoupling the output.</p><p>On the output we find the multiturn cermet trimmer, which we should calibrate to have the right millivolt/Lux value. To have a linear operating range and not saturate the amplifier it is good to have maximum values not exceeding 1.5-2.0V.
+</p><p>The oscilloscope output is not affected by trimmer adjustment, this to take advantage of the full signal swing, useful for full-screen diagrams.
+</p>
+<h2 id="realizzazione">Realization</h2><p class="MsoNormal"><span class="hl"><strong>Building the LUX-METER requires knowledge of electronics, equipment and experience in electronic assembly is necessary.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p><p>Construction is easy, even without making the printed circuit board. Just use a small perforated board suitable to be mounted inside a box for electronic assemblies.</p><p>The sensor can be fixed externally on one side of the box and locked with some glue. The terminals bent inward and soldered to the cables.</p><p>Take some care in arranging the cables and switches and connectors, the eye wants its share too.</p><p>It is necessary to make a label for the position of the gain switch, on top we will write at the corresponding position: 1X 10X 100X</p><p class="center">
+<img alt="Luxmeter how to calibrate the output voltage with R3" class="is-photo" decoding="async" height="428" loading="lazy" src="../IMAGES/lux_meter_04.jpg" width="640"/>
+</p><p>
+To calibrate the instrument you need a reference illuminance meter. The two sensors must be positioned in the same direction of the light source. (For convenience of the photo both are resting on the table, but the box with the circuit must be positioned vertically with the sensor facing up.)
+</p><p>The two sensors must be oriented toward the light source, use a light with tungsten filament, the light source must be as far away as possible so as to have parallel and vertical rays on both sensors and of equal intensity.</p><p>Adjust the R3 trimmer to have 1mV/Lux at the output. Verify the reading of values also on the 10X and 100X scales comparing them with the reference luxmeter.
+</p><p>Once calibrated using the three scales we can read values from 1 to 20000 lux. Even beyond if the reading instrument is a multimeter. 1.00Volt on the 100X scale corresponds to 100000 lux. (100000 lux are greater than summer sunlight.)
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="426" loading="lazy" src="../IMAGES/lux_meter_05.jpg" width="640"/></p><p> With the calibrated instrument it is also possible to use a 200mV full scale digital voltmeter. Everything can be assembled in the same box to have a single measurement instrument. It is good to keep the power supplies separate, or if you want to use just 1 9V battery be sure to have the negative in common. </p><p>The Luxmeter current draw is a few mA, as is the LCD digital voltmeter. Runtime with 1 common 9V battery exceeds 100 hours.</p><p>
+The BPW20 sensor is attached with a bit of adhesive, as is the iron washer. The iron washer is used to protect the photodiode from impact and to secure the diffuser dome.
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/lux_meter_03.jpg" width="300"/>
+</p><p>
+The diffuser dome was recovered from a battery lamp with diffused light.
+</p><p>Two small magnets glued with wire, inside the dome, allow non-permanent fastening to the iron ring.</p><p>By removing the dome we can thus have maximum sensitivity for the sensor, when it is necessary to acquire weak light signals.
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/lux_meter_02.jpg" width="300"/>
+</p>
+<h2 id="collegamento-a-un-oscilloscopio-digitale">Connection to a digital oscilloscope.</h2><p>
+To make long-term acquisitions of light flux we will connect the Scope output of the Luxmeter to a digital oscilloscope.
+</p><p>Excellent combination is to use the Hantek DSO2150 USB, which has a minimum time base of 1h/div thus being able to acquire on screen, phenomena lasting 10 hours. </p><p>Almost no branded Digital Oscilloscope has a time base with such low values, generally it stops at 5s/div.</p><p>Alternatively it is possible to use a USB multimeter and acquire the voltage values read from the Luxmeter, after that it will be possible to create a diagram using Excel.</p><p>The measurement should be done by bringing the cursor to 90% with full light, simply by moving the light source away or toward the light meter, then also act on 10X or 100X to attenuate a strong signal that could saturate the input signal.</p><p>The signal is saturated, when bringing the light source even closer, we don't get signal increases, in this case move the light source away to bring the maximum signal down by at least 20%.</p><p>The measurement of light in battery discharge must be done by covering the luxmeter and the light source with a box, this to avoid conditioning the measurement with ambient light.</p><p class="center"><a class="zoom-link" href="../IMAGES/lux_meter_06.jpg" title="Open the image at full resolution"><img alt="Small LED torch, under examination. Missing the dark box that shields the ambient light." class="is-photo" decoding="async" height="225" loading="lazy" src="../IMAGES/lux_meter_06_small.jpg" width="300"/></a>
+</p><p class="center">Small LED torch, under examination. Missing the dark box that shields the ambient light.
+</p><p><strong>Example of LED lamp flux acquisition, correlated to battery voltage.</strong></p><p class="center"><img alt="" class="is-photo" decoding="async" height="387" loading="lazy" src="../led/images/curva_luxeon_2w_3x2.jpg" width="559"/></p><p class="center">Flux curve as a function of battery discharge related to the 3W Luxeon powered at 2.16W 4x2700mA
+</p><p class="center">It is noted that with a voltage of 4.0V the luminous flux is still 50%.
+</p><p>The batteries still warm had just been recharged, this explains the initial voltage of 5.8V and the initial light peak.
+</p><hr color="#336699"/><p>Roberto Chirio is available for consulting in the lighting engineering field.</p><p class="right"> Contact: <a href="mailto:info@chirio.com">info@chirio.com</a></p>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Measurements &amp; laboratory"</h2>
+<ul>
+<li><a href="legge_di_ohm.htm"><span class="r-sec">Measurements &amp; laboratory</span>Ohm's law</a></li>
+<li><a href="bromografo_uv.htm"><span class="r-sec">Measurements &amp; laboratory</span>UV bromograph made with a scanner</a></li>
+<li><a href="cmos_cleaning.htm"><span class="r-sec">Measurements &amp; laboratory</span>Reflex sensor cleaning C-mos — CCD cleaning</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</a></li>
+<li><a href="#descrizione-circuito">Circuit description</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#collegamento-a-un-oscilloscopio-digitale">Connection to a digital oscilloscope.</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

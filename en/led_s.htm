@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>How to use an LED differently by Roberto Chirio</title>
+<meta content="How to use an LED differently by Roberto Chirio" name="description"/>
+<meta content="led, varicap, photo diode, light diode, high frequency diode, diodi, diode, power, power supply, alimentatore" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="led_s.htm" hreflang="en" rel="alternate"/><link href="../led_s.htm" hreflang="it" rel="alternate"/><link href="../led_s.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../led_s.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a aria-current="true" href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#led">LED &amp; lighting</a></li><li aria-current="page">Different LED use</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">LED &amp; lighting</p>
+<h1>LED</h1>
+<p class="subtitle">How to use an LED differently "Electronic design" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#led">LED &amp; lighting</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#premessa">Premise</a></li>
+<li><a href="#led-come-fotodiodo-o-photodiode">LED as photodiode or photodiode</a></li>
+<li><a href="#led-come-generatore-di-rumore-bianco">LED as white noise generator</a></li>
+<li><a href="#descrizione">Description</a></li>
+<li><a href="#oscillatore-rf-a-frequenza-variabile-led-come-un-varicap" title="RF oscillator at variable frequency (LED like a varicap)">Variable frequency RF oscillator</a></li>
+<li><a href="#radio-microfono-fm-led-come-un-varicap">FM radio microphone (LED as a varicap)</a></li></ol></nav></details>
+<div class="prose">
+<hr color="#336699"/>
+<h2 id="premessa">Premise</h2><p>February 2010</p><p>The LED diode is still a semiconductor and there are ways to use it differently than its main function of providing light....
+</p>
+<h2 id="led-come-fotodiodo-o-photodiode">LED as photodiode or photodiode</h2><p class="center">
+<img alt="" class="is-diagram" decoding="async" height="288" loading="lazy" src="../IMAGES/led_lux_meter_01.gif" width="529"/>
+</p><p>
+All LED diodes, in addition to emitting light, are also sensitive to light. They will not be as sensitive as photodiodes, or phototransistors, specifically designed for this purpose with enlarged surfaces, but also with LED diodes it is possible to read an electrical signal proportional to the light intensity.
+</p><p>A common 5mm clear red LED was used.</p><p>Connected directly to a multimeter or oscilloscope input it is already possible to read a signal in mV depending on the light source where it is directed.</p><p>If you want to have a sensitive signal even with very little light, implement the proposed circuit, where the LED signal in mV is amplified by the circuit with LM358 operational amplifier, the first stage is a variable-gain amplifier. With the trimmer you can vary the amplification of the LED signal, adapting it that is to the light intensity you want to measure.</p><p>The low-pass filter composed of R2 and C1 reduces noise and softens the signal. The final stage is a follower to match impedance and provide a conditioned signal on the output even with low impedances.</p><p>Connect the output to a Digital Voltmeter on the 2V or 20V range as we could have 7-8V pp amplitude in case of strong light intensity; with an oscilloscope we can verify the intensity and amplitude of the signal.</p><p> Waveform read directly on the terminals of a RED 5mm LED positioned 1m from a traditional 36W neon tube at 50 Hz .
+</p><p>We thus read a good signal that corresponds to the waveform of the light emitted by the tube.
+</p><p>In the case of low consumption electronic neon tubes, the 50 Hz pulse will be modulated by a frequency of 20-40kHz. 
+</p><p class="center"><a class="zoom-link" href="../IMAGES/led_s_neon_01.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="74" loading="lazy" src="../IMAGES/led_s_neon_01_small.jpg" width="100"/></a></p><p>All LEDs when struck by light give a signal, even power LEDs; clearly white LEDs will have a lower signal since they are optically filtered to give white emission. Try LEDs of various colors and also ultraviolet and infrared ones. Generally they present greater sensitivity towards the wavelength for which they were designed. So that using an LED for UV it is possible to read light with emission in the UV band.</p>
+<h2 id="led-come-generatore-di-rumore-bianco">LED as white noise generator</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="298" loading="lazy" src="../IMAGES/led_s_noiseg.gif" width="604"/>  </p><h2 id="descrizione">Description</h2><p>A reverse-biased LED is used, making it work with minimal reverse current, very weak, but sufficient to generate broadband electronic noise. (White noise)</p><p>Of course such a signal can also be obtained from a normal diode or Zener diode or even from a reverse-biased BJT junction. Here we want to demonstrate a different application of LEDs and therefore a white 5mm LED was used.</p><p>The signal is amplified by two wideband 2N2222A stages, so as to have at the output a signal of 2.5Vpp clearly visible on the oscilloscope. </p><p>This signal can be used to test BF amplifiers and also AF stages in the HF band.</p><p>
+The pk-pk signal value must be divided by 10 as the 10X probe was used.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/led_s_r_noise.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="74" loading="lazy" src="../IMAGES/led_s_r_noise_small.jpg" width="100"/></a>
+</p>
+<h2 id="oscillatore-rf-a-frequenza-variabile-led-come-un-varicap">RF oscillator at variable frequency (LED like a varicap)</h2><p class="center">
+<img alt="" class="is-diagram" decoding="async" height="317" loading="lazy" src="../IMAGES/led_s_varicap_03.gif" width="590"/>
+</p><p>
+This is a simple Colpitts oscillator designed to oscillate at approximately 100 MHz, by modifying the tuning capacitance it is possible to have a frequency shift of approximately 10 MHz.
+</p><p>The usual 0.5W RF transistor type 2N2222A or BC547 with fT 300 MHz is always used  </p><p>To change the oscillation frequency, one generally uses a variable capacitor or a small trimmer, but by using the junction capacitance of an LED it's possible to obtain a capacitance variation; simply by polarizing the LED junction with variable voltage, at 0V you get maximum capacitance, increasing the applied voltage decreases the capacitance.</p><div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="2" scope="col">
+<p class="center">Capacitance detected on common 5mm LEDs</p></th>
+</tr></thead>
+<tr>
+<td>
+<p class="center">Blue</p></td>
+<td>
+<p class="center">130pF</p></td>
+</tr>
+<tr>
+<td>
+<p class="center">White</p></td>
+<td>
+<p class="center">93pF</p></td>
+</tr>
+<tr>
+<td>
+<p class="center">Green</p></td>
+<td>
+<p class="center">56pF</p></td>
+</tr>
+<tr>
+<td>
+<p class="center">Red</p></td>
+<td>
+<p class="center">22pF</p></td>
+</tr>
+</tbody></table></div><p>In this application two red leds of 5mm were used, the capacitance on this led varies from 10 to 22pF two leds were used in parallel to have about 40pF.</p><p>By rotating trimmer R2 it is possible to have a frequency range from about 100 MHz to 110 MHz.</p><p>By adding a microphone and an audio preamplifier to this schematic, it's possible to build a sensitive and stable FM spy radio microphone, meaning listenable with a common frequency modulation radio. It's necessary to add a tuned circuit to connect an antenna cable.</p><p>Obviously, using Varicap or Varactor diodes, we obtain better and more linear and greater regulation, but this is the LED page.....</p><p>It is noted that despite being traversed by very weak current the LEDs tend to light up slightly, due to the direct effect of the radiated radiofrequency.</p><p class="center">  <a class="zoom-link" href="../IMAGES/led_s_varicap_01.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="64" loading="lazy" src="../IMAGES/led_s_varicap_01_small.jpg" width="100"/></a>
+</p><p>This is the circuit of the oscillator made on a stripboard. You can see the two Leds used as Varicap. On the left the trimmer to vary the frequency.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/led_s_varicap_02.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="67" loading="lazy" src="../IMAGES/led_s_varicap_02_small.jpg" width="100"/></a></p><p>This is the waveform detected between the collector of Q2 and ground. It is necessary to use an RF probe with low capacitance.</p><p>Minimum frequency 99.4 MHz maximum 111.9 MHz
+</p>
+<h2 id="radio-microfono-fm-led-come-un-varicap">FM radio microphone (LED as a varicap)</h2><p class="center">
+<img alt="" class="is-diagram" decoding="async" height="294" loading="lazy" src="../IMAGES/led_s_fmtx_01.gif" width="824"/>
+</p><p>
+Connecting a microphone to the previous Colpitts oscillator creates an excellent wireless microphone to use on the FM band.
+</p><p>The usual 0.5W RF transistor type 2N2222A or BC547 with fT 300 MHz is always used  </p><p>To change the oscillation frequency, you can put a 15pF capacitor in place of C4, or even just by spacing or reducing the spacing between the turns we obtain tuning across almost the entire FM band.</p><p>Using the two red LEDs gives a good modulation of +/- 75 kHz necessary for good FMW audio, but it is important to provide an audio signal of at least 2.5V RMS for this adjust the trimmer R2 to have the maximum modulation amplitude.</p><p>For narrow FM modulation (+/-3 kHz) just remove one of the LEDs and lower the audio signal until reception is good, without distortion.</p><p>The microphone must be a Condenser type with good sensitivity. </p><p>The RF circuit is about 10mW sufficient to radiate a good RF signal for 10-30m, to increase the range connect 75cm of cable to the antenna output.</p><p>If instead of the microphone we put the white noise generator circuit and amplify to maximum, we create an effective Jammer capable of sweeping across the entire FM frequency, jamming the whole range with noise and interference.</p><p>It is noted that despite being traversed by very weak current the LEDs tend to light up slightly, due to the direct effect of the radiated radiofrequency.</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "LED &amp; lighting"</h2>
+<ul>
+<li><a href="led_light_emitting_diodes.htm"><span class="r-sec">LED &amp; lighting</span>What is an LED</a></li>
+<li><a href="led_1_battery_AAA_.htm"><span class="r-sec">LED &amp; lighting</span>One LED with a 1.5V cell</a></li>
+<li><a href="led_6_220V.htm"><span class="r-sec">LED &amp; lighting</span>LED lamps with 220V</a></li>
+<li><a href="led_h4.htm"><span class="r-sec">LED &amp; lighting</span>LED lamp replacement H4</a></li>
+<li><a href="led_acquario.htm"><span class="r-sec">LED &amp; lighting</span>Illuminate an aquarium with LED</a></li>
+<li><a href="led_bk3_s.htm"><span class="r-sec">LED &amp; lighting</span>BK3/S — 10W LED projector</a></li>
+<li><a href="led_dimmer_rgb.htm"><span class="r-sec">LED &amp; lighting</span>RGB dimmer 3 channels 12 V 10 A</a></li>
+<li><a href="led_lamp_10w.htm"><span class="r-sec">LED &amp; lighting</span>Video illuminator 3× Seoul P7</a></li>
+<li><a href="led_video_3p7.htm"><span class="r-sec">LED &amp; lighting</span>Video lamp 3× LED P7</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#premessa">Premise</a></li>
+<li><a href="#led-come-fotodiodo-o-photodiode">LED as photodiode or photodiode</a></li>
+<li><a href="#led-come-generatore-di-rumore-bianco">LED as white noise generator</a></li>
+<li><a href="#descrizione">Description</a></li>
+<li><a href="#oscillatore-rf-a-frequenza-variabile-led-come-un-varicap" title="RF oscillator at variable frequency (LED like a varicap)">Variable frequency RF oscillator</a></li>
+<li><a href="#radio-microfono-fm-led-come-un-varicap">FM radio microphone (LED as a varicap)</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

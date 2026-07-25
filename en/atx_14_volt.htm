@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SWITCHING POWER SUPPLY ATX 13.8V. Simple modifications to increase the output voltage. How to Modify a Computer ATX Power Supply to a 13.80 Volt Supply by Roberto Chirio</title>
+<meta content="SWITCHING POWER SUPPLY ATX 13.8V. Simple modifications to increase the output voltage. How to Modify a Computer ATX Power Supply to a 13.80 Volt Supply by Roberto Chirio" name="description"/>
+<meta content="electronics design, switching power supply, step-down, step-up, buck converter, current mode supply, led driver, power led driver, led driver design, led driver pump, led driver flash" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="atx_14_volt.htm" hreflang="en" rel="alternate"/><link href="../atx_14_volt.htm" hreflang="it" rel="alternate"/><link href="../atx_14_volt.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../atx_14_volt.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a aria-current="true" href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#alimentatori">Power supplies</a></li><li aria-current="page">ATX 13.8V power supply</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Power supplies</p>
+<h1>SWITCHING POWER SUPPLY 13.8V</h1>
+<p class="subtitle">How to Modify an ATX. How to Modify a Computer ATX Power Supply to a 13.8V Power Supply "Electronics design" by Roberto Chirio</p>
+<p class="article-meta"><span><a href="index.html#alimentatori">Power supplies</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#schema-elettrico-atx-modifiche-per-13-8v-a-carico">CIRCUIT DIAGRAM ATX modifications for 13.8V under load.</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#prova-a-carico">Load test</a></li>
+<li><a href="#parallelo-alimentatori">Parallel power supplies</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<p>2008-2013</p><p>It is easy to get 13.8V from an ATX power supply, regardless of the type of driver used.</p><p>Following the easy instructions, it is possible to obtain a power supply suitable for loads that require a fixed voltage of 13.8V with currents up to 20A (Depends on the original characteristics of the ATX).</p><p>This modification was tested with ATX units that contain PWM regulators type TL494, KA7500, 2003, UC3843.</p><p><span class="hl-g">Attention: with PWM regulator at 20 pin type SG6105 and also with the 16 pin marked 2005 in some cases the modification is more complex and difficult to make work.</span></p><p class="MsoNormal center"><span class="hl"><strong> The modification of the Switching Power Supply ATX requires good knowledge of electronics, </strong></span></p><p class="MsoNormal center"><span class="hl"><strong> equipment and experience in electronic assembly is required. </strong></span></p><p class="MsoNormal center"><span class="hl"><strong> And clear expertise in the use of 220V devices.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p><p>Before starting the modification it's good to test the ATX in operation, and make sure it works under load. In this case you need to jumper the green cable (PS-ON) to ground, present on pin 14 of the main connector, and then supply mains power (220V AC).  </p><p>If OK you will hear the fan spin. </p><p>Caution: the fact that the fan is running is a good sign but it does not mean that the power section is working, you must measure the output voltages by connecting a load.</p><p> Measure the voltage on the white connectors and verify 5V (+/- 0.5V) between the red wire and the black wire, and then 12V between the yellow wire and the black wire. To test operation under load, connect a 20W 10 ohm power resistor across the 12V terminals and verify that the voltage does not drop below 12V. A 20W 12V lamp also works, provided it is not rated higher, otherwise the inrush current will lock up the ATX.</p><p> Leave the load connected for a while and check that there are no voltage drops or fan blockage or overheating.</p><p>If there is a noisy fan, it should be replaced with a new one, if it were to jam during operation under load, there could be damage even to the devices powered by the modified ATX.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="210" loading="lazy" src="../IMAGES/atx_013.jpg" width="370"/>
+</p><p class="center"><img alt="PS-ON jumper to ground to make an ATX work. Connect pin14 with pin 16" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_012_ps_on_small.jpg" width="300"/>
+</p><p>
+To know the maximum current we can draw, it is enough to read the value on the ATX nameplate.
+</p><p>In this case with the 12V the maximum current draw is 16A.</p><p>We can find 480-500W power supplies that provide 18-22A from 12V.
+</p><p>Beware that there are cheap power supplies that, despite showing good current values on the nameplate, are not able to reach those values..... good performance is obtained with heavy-duty power supplies..
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_14_000.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_14_000_small.jpg" width="300"/></a>
+</p><p>
+We can find many ATX diagrams on this website: <a href="http://danyk.cz/s_atx_en.html" rel="noopener">http://danyk.cz/s_atx_en.html</a>
+</p>
+<h2 id="schema-elettrico-atx-modifiche-per-13-8v-a-carico">CIRCUIT DIAGRAM ATX modifications for 13.8V under load.</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="507" loading="lazy" src="../IMAGES/atx_14_schema.gif" width="428"/>
+</p><p>As you can see from the diagram, the modifications are minimal, it is a matter of adding 1N4448 diodes in series to the 12V and 5V sensing, this to fool the control making it believe that the 5V and 12V voltage are OK while in practice we will have on the 12V a 12+0.6+0.6+0.6+0.6 equal to 14.5 Volt output unloaded.
+</p><p>Instead of the diodes it is also possible to insert a 10K cermet trimmer and then adjust the output voltage with +2-4V greater than 12V.
+</p><p>* Note that in some ATX units it is also necessary to put 1 diode 1N4448 in series with the 3.3V sensing
+</p>
+<h2 id="realizzazione">Realization</h2><p class="MsoNormal"><span class="hl"><strong>The realization of the Switching Power Supply involves having knowledge of electronics, equipment and experience in electronic assembly are necessary.</strong></span></p><p class="MsoNormal center"><span class="hl"><strong> And clear expertise in the use of 220V devices.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p><p class="center">Version 2008.1
+</p><ul class="dash-list"><li>Start by removing the CS from the metal container, unscrew the 4 fastening screws and unsolder the mains cables.
+</li><li>With a robust soldering iron disconnect all soldered cables on the CS, leave only the green PS-ON cable and the Purple 5VSB cable.</li><li>It should be noted that on this board (economical!) the mains filter is completely missing, for the producer's economy. To use the modified ATX with radio equipment, it's better that it's there.</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/atx_14_001.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_14_001_small.jpg" width="300"/></a></p><ul class="dash-list"><li>Board ready for modifications. </li><li>The green cable must be soldered to Ground to activate ATX operation</li><li>The Violet cable 5VSB can be used to power services that require 5V max 1A such as a Led Voltmeter or just the led for the power indicator.</li><li>The black cable is a ground and must be left without removing it.</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/atx_14_002.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_14_002_small.jpg" width="300"/></a></p><ul class="dash-list"><li>It is about interrupting two CS traces and adding the diodes.
+</li><li>It is suggested to also put 1 diode in series to the 3.3V sensing
+</li></ul><p class="center">
+<a class="zoom-link" href="../IMAGES/atx_14_003.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="194" loading="lazy" src="../IMAGES/atx_14_003_small.jpg" width="300"/></a>
+</p><ul class="dash-list"><li>The 1N4448 diodes mounted in place of track breaks.</li><li>Put insulating tape underneath to avoid contact with other traces.
+</li><li>It is necessary to put insulating tape also on the metal face of the container, to prevent the diodes from going to ground, once the CS is put back in place.
+</li><li>If we mount the trimmer instead of the diodes, the 5V one will be adjusted to a lower ohmic value than the 12V one, the values vary by ATX type therefore it is better to do some tests under load, to find the best adjustment.</li></ul><p>It was preferred to recommend the use of diodes as it is more versatile on various ATX.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_14_004.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="134" loading="lazy" src="../IMAGES/atx_14_004_small.jpg" width="300"/></a>
+</p><ul class="dash-list"><li>Use at least 4 original cables for the power outputs, red for the positive, to be inserted on the 12V pad and black for the connection to the negative terminal. In this case only three cables proved a bit insufficient with the maximum current of 14A, 4-5 cables of 1mmq represent a robust connection.</li><li>Note the RF filter coil made by winding the power cables directly on two ferrite toroids. Its function is to block the return radiofrequency that could disturb the ATX control. It's not essential though; recommended only for RF applications.</li><li>If used with radio equipment connect ceramic capacitors 100nF, 10nF and 1nF, all in parallel to the output socket. Also add 2 capacitors 0.1uF to ground from both sockets.
+</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/atx_14_005.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_14_005_small.jpg" width="300"/></a>
+</p><ul class="dash-list"><li>The mounted mains filter is noted, the blocking capacitor and the two capacitors to ground, added on this board.</li><li>The mains filter is used to block incoming interference and also to stop the propagation of disturbances generated by the ATX itself.
+</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/atx_14_006.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_14_006_small.jpg" width="300"/></a>
+</p><p>June 2008 - <strong>INCREASE OUTPUT CURRENT 16-20A  </strong></p><ul class="dash-list"><li>Using two SF1004 Fast diodes of 10A 400V it is possible to improve the current delivery of the modified 12V section.</li><li>Remove the single double diode of the 12V from its seat, (usually a 10A) and make two 3mm holes higher up on the heatsink. </li><li>Fasten the new diodes to the heatsink using the insulated sleeve and the conductive-thermal insulator.</li><li>Connect the diode inputs in parallel and put the positive in common on the central terminal.
+</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/atx_14_009.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_14_009_small.jpg" width="300"/></a>
+</p>
+<h2 id="prova-a-carico">Load test</h2><ul class="dash-list"><li>Connecting a <a href="electronic_load.htm">Electronic Load</a>
+at the output of the modified ATX it is possible to perform a load test and determine the curve of the output voltage as a function of current.</li><li>The ATX remained for 4 consecutive hours at constant 10A 13V (approximately 130W) without showing any failures, heating or notable drift.
+</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/atx_14_007.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_14_007_small.jpg" width="300"/></a>
+</p><p class="center"><img alt="" class="is-diagram" decoding="async" height="412" loading="lazy" src="../IMAGES/atx_14_diagram_1.gif" width="604"/>
+</p><ul class="dash-list"><li>Interesting the comparison <strong>first</strong>
+e <strong>after</strong>
+the modifications to Vout voltage. It is noted how the original power supply even with just 10A had difficulty reaching 10V.
+</li><li>After the modifications good behavior under load, still at 12 V with 14 A current draw, improvable, using larger gauge cables, at least 5 mm² and installing two diodes as suggested above.
+</li><li>The flexure between 6 and 7A is due to the internal configuration of the regulator and can vary between ATX types under test.</li></ul>
+<h2 id="parallelo-alimentatori">Parallel power supplies</h2><p>2013.</p><p>It is possible to connect multiple power supplies in parallel to increase the total current, you can reach 100A by putting 5-8 power supplies in parallel..</p><p>Important that they are all the same and with the same modifications, they should be tested one by one, to verify that under load they have the same delivery.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="310" loading="lazy" src="../IMAGES/atx_020.jpg" width="590"/></p><p>Using 45A 50V SCHOTTKY diodes you get a reduced voltage drop under load, they must be mounted on a heatsink and ventilated.</p><p>It is possible to use fast diodes, but the voltage drop will be higher.(&gt;1Volt)</p><p>Capacitor C1 is made up of 10 capacitors of 0.1uF put in parallel on the output terminal strip.
+</p><p>For connection cables stay around 3A/mmq to have little drop under load.
+</p>
+<h2 id="commenti-finali">Final thoughts</h2><p>These simple modifications are applicable to most ATX models, if the driver allows it.
+</p><p>The cost of implementation can be considered very low, very close to 0 euro.....</p><p>It's a good power supply, but without current limiting, if there's a short circuit on the output the supply is cut off. You need to turn it off, wait 15-30 seconds and then turn it back on.</p><p>It has been tested connected to FM radio bridge equipment at 13.8V 10A and the background noise is negligible. Not recommended with HF equipment.</p><p> Good performance with pulse current draw showing low voltage drops. However it is not suitable for powering 12V halogen lamps and refrigerators of a certain power.</p><p>By making the modification with two fast diodes, on certain specimens it is conceivable to reach 20A of almost continuous service.</p><p>This build is indicated for those who are already electronics experts and also for those who don't feel like building the other more complicated variable-output power supply project.</p><p class="center">.............................................................
+</p><hr color="#336699"/>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Power supplies"</h2>
+<ul>
+<li><a href="switching_power_supply_atx.htm"><span class="r-sec">Power supplies</span>ATX lab power supply</a></li>
+<li><a href="power_supply_12v_30A.htm"><span class="r-sec">Power supplies</span>ATX power supply 12V 30A</a></li>
+<li><a href="step_up_10a.htm"><span class="r-sec">Power supplies</span>Step-up 10A 16V</a></li>
+<li><a href="push_pull_20_16.htm"><span class="r-sec">Power supplies</span>Push-pull DC-DC 12V 20A 16V 250W</a></li>
+<li><a href="electronic_load.htm"><span class="r-sec">Power supplies</span>Electronic Load 20A 40V</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#schema-elettrico-atx-modifiche-per-13-8v-a-carico">CIRCUIT DIAGRAM ATX modifications for 13.8V under load.</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#prova-a-carico">Load test</a></li>
+<li><a href="#parallelo-alimentatori">Parallel power supplies</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

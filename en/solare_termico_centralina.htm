@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Differential controller for thermal solar panel control Heat Pipe by Roberto Chirio</title>
+<meta content="Differential controller for thermal solar panel control Heat Pipe by Roberto Chirio" name="description"/>
+<meta content="solar energy, solar thermal, solar heating, heat pipe panel, solar panel, solar control, energy saving, energy from the sun" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="solare_termico_centralina.htm" hreflang="en" rel="alternate"/><link href="../solare_termico_centralina.htm" hreflang="it" rel="alternate"/><link href="../solare_termico_centralina.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../solare_termico_centralina.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a aria-current="true" href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#batterie">Batteries &amp; energy</a></li><li aria-current="page">Solar thermal control unit</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Batteries &amp; energy</p>
+<h1>Control unit for differential control</h1>
+<p class="subtitle">solar thermal system temperature. Digital electronic circuit (2011). Analog electronic circuit (2006). "Do-it-yourself" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#batterie">Batteries &amp; energy</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#prefazione">Foreword</a></li>
+<li><a href="#schema-idraulico-semplificato">Simplified hydraulic diagram.</a></li>
+<li><a href="#schema-elettrico-sistema-digitale-arduino-2009-arduino-uno" title="Circuit diagram digital system Arduino 2009 / Arduino Uno">Circuit diagram digital system Arduino 2009 /...</a></li>
+<li><a href="#programma-per-scheda-arduino-2009-e-simili">program for Arduino board 2009 and similar</a></li>
+<li><a href="#schema-elettrico-sistema-anlogico-2006-2007">Circuit diagram analog system 2006/2007</a></li>
+<li><a href="#timer-3minuti-on-12-minuti-off-da-usare-nel-periodo-estivo-p" title="3 minute timer ON - 12 minute OFF (To be used during the warmest summer period)">Timer 3 minutes ON - 12 minutes OFF</a></li>
+<li><a href="#realizzazione-sonde-ntc-per-lettura-temperatura-tp-e-tb" title="Realization of NTC probes for temperature reading Tp and Tb">Realization of NTC probes for temperature reading Tp...</a></li>
+<li><a href="#utilizzo-di-sonde-commerciali">Use of commercial probes.</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#considerazioni-finali">Final thoughts</a></li>
+<li><a href="#consigli">Tips:</a></li></ol></nav></details>
+<div class="prose">
+<hr color="#336699"/>
+<h2 id="prefazione">Foreword</h2><p>January 2006-June 2011</p><p>A solar thermal system, suitable for heating water and producing hot sanitary water, is expensive, some savings are obtained by mounting thermal panels with heat pipe evacuated tubes of Chinese manufacture.</p><p class="center"><a class="zoom-link" href="../IMAGES/solare_02.jpg" title="Open the image at full resolution"><img alt="solar collector consisting of 24 heat pipe vacuum tubes" class="is-photo" decoding="async" height="233" loading="lazy" src="../IMAGES/solare_02_small.jpg" width="350"/></a></p><p class="center">Solar collector consisting of 24 heat pipe vacuum tubes.</p><p>Those skilled in electronic assembly can achieve further significant savings by building a simple differential temperature control unit necessary to manage the circulation pump, the only element to manage in a simple-type hot water heating system, not integrated with heating.</p><p>
+In practice the rule to respect is very simple, you measure the temperature of the water in the Storage Boiler and the temperature in the head of the solar panel.</p><p>When the temperature at the panel head (Tp) is higher than that of the boiler water (Tb) (by a few degrees) the control unit activates the circulation pump, if the temperature in the panel is lower than the boiler the pump must stop.</p><p>For safety, if the temperature in the storage boiler (Tmax) reaches a certain high value (&gt;70°) the pump must stop to prevent the water from reaching dangerous levels.</p><h2 id="schema-idraulico-semplificato">Simplified hydraulic diagram.</h2><p class="center">  <img alt="Functional diagram of a thermal solar panel with primary circuit on Boiler heat exchanger." class="is-photo" decoding="async" height="533" loading="lazy" src="../IMAGES/solare_00.jpg" width="750"/> </p><p>Practical diagram of the solar system for which the control unit described on this page was made.</p><p>We have a solar collector composed of 24 heat pipe vacuum tubes, positioned on the roof. </p><p>In the attic (floor joist) the hydraulic circuit is arranged connected to the 150Lt accumulation Boiler.</p><p>The primary circuit made with 12mm copper pipes, with a 220W 40VA circulation pump, expansion tank, safety valve. It is filled with specific glycol antifreeze liquid for solar systems with antifreeze characteristics and operating temperature up to 120°. The system is pre-pressurized to 2 BAR to prevent boiling.</p><p>
+The electronic system simply needs to compare two temperatures (panel and boiler), which are read by NTC resistances (see notes below) that convert temperature variation into current.
+</p><p>In practice, we don't care to know the exact value of temperatures, we know that panel temperatures can reach even 120° (full summer) and reach -10 at night in full winter. </p><p>If the water temperature inside the solar panel is higher than that of the boiler, the circulation pump is activated, so as to transfer heat inside the boiler. When the boiler temperature is higher than the panel, the pump stops, or rather the panel temperature drops to a value lower than that of the boiler.</p><p>For safety reaching 70° in the boiler the pump stays off.</p><p>To create a simple electronic control it will be enough to have two identical NTC and compare the voltage values applied to the fixed resistors.</p><p> Two solutions are proposed here, a recent 2011 version that uses a uP board type Arduino programmable USB with C++ language, this latest version lends itself to further sophisticated implementations, and the first version from 2006 made using an LM358 operational comparator and discrete components.</p>
+<h2 id="schema-elettrico-sistema-digitale-arduino-2009-arduino-uno">Circuit diagram digital system Arduino 2009 / Arduino Uno</h2><p class="center"><a class="zoom-link" href="../IMAGES/solare_schema_02.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="418" loading="lazy" src="../IMAGES/solare_schema_02_small.gif" width="750"/></a></p><p class="center">Circuit diagram thermal solar panel control. (June 2011) </p><p>Virtual differential bridge input configuration.</p><p> The input connection is the same as the previous version, so to replace only the control unit, without tampering with the cables and installation.</p><p>Capacitors C1 and C2 as well as diodes D5 and D4 provide protection for the inputs, resistors R4 and R5 together with the 2 NTCs form the voltage divider that will provide voltage values inversely proportional to temperature. The configuration chosen has one NTC terminal at ground to reduce the number of wires; just two shielded small-diameter wires (audio type) are needed to carry the signal from outside to the controller.</p><p>The two temperature signals are brought to the Arduino analog inputs, A0 and A1, where A0 will read the boiler water temperature and A1 the panel water temperature.</p><p>Depending on the program, we will have the D11 and D13 outputs enabled to control the high temperature LED (&gt;70°) and the pump relay command.</p><p>The Arduino board requires 12V power supply that we will take from the 7812 regulator output, a 5-10VA transformer will provide power to all the electronics.</p><p>The 12V relay must be of good quality with a 16A contact to guarantee long service life, better to use a socketed model to facilitate replacement.</p><p>For the assembly and system adjustment notes applies what is written further ahead for the 2006 system.</p><hr/>
+<h2 id="programma-per-scheda-arduino-2009-e-simili">program for Arduino board 2009 and similar</h2><p>
+/*<br/>
+Solar panel control<br/>
+June 2011<br/>
+Roberto Chirio
+</p><p>rev. 1.2</p><p><br/>
+*/
+<br/>
+// variables:
+<br/>
+int boiler = A0; // NTC Boiler connected to A0<br/>
+int pann = A1; // NTC Panel connected to A1<br/>
+int tempB = 0; // variable to store the boiler temperature in degree Celsius<br/>
+int tempP = 0; // variable to store the panel temperature in degree Celsius
+<br/>
+int BBB = 0; // variable <br/>
+int PPP = 0; // variable 
+
+<br/>
+void setup()<br/>
+{<br/>
+Serial.begin(9600); 
+<br/>
+pinMode(11, OUTPUT); // sets the pin 11<br/>
+pinMode(13, OUTPUT); // sets the pin 13
+<br/>
+digitalWrite(11, LOW); // set the 11 off
+<br/>
+digitalWrite(13, LOW); // set the 13 off
+<br/>
+}
+
+
+<br/>
+void loop()<br/>
+{<br/>
+BBB = analogRead(boiler); // read the boiler temperature<br/>
+PPP = analogRead(pann); // read the panel temperature<br/>
+tempB=16666/BBB;<br/>
+tempP=16666/PPP;
+<br/>
+Serial.println("Boiler");<br/>
+Serial.println(tempB, DEC); // monitor temperature BOILER<br/>
+Serial.println("Panel"); <br/>
+Serial.println(tempP, DEC); // monitor temperature PANEL
+<br/>
+delay(1000); // wait for a second
+
+<br/>
+// check if the Boiler temperature is to high &gt; 70°.<br/>
+// if it is, the ledTemp is HIGH and pompa off<br/>
+if (tempB &gt; 70) { <br/>
+// turn LED HItemp on:<br/>
+digitalWrite(11, HIGH); <br/>
+// turn pump OFF:<br/>
+digitalWrite(13, LOW); <br/>
+{ goto fineloop;}<br/>
+}
+
+
+<br/>
+// check if the panel temperature is &lt;= 20°.<br/>
+// if it is, the pompa is LOW:<br/>
+if (tempP &lt;= 20) { <br/>
+// turn pump off:<br/>
+digitalWrite(13, LOW); <br/>
+{ goto fineloop;}<br/>
+} 
+
+<br/>
+// check if the temp panel is &gt; of temp boiler<br/>
+// if it is, the pompa is on:<br/>
+if (tempP &gt; tempB) { <br/>
+// turn pump on:<br/>
+digitalWrite(13, HIGH); <br/>
+// turn LED OFF:<br/>
+digitalWrite(11, LOW);<br/>
+delay(15000); // wait for 15 second <br/>
+} 
+<br/>
+// check if the temp panel is &lt;= of temp boiler<br/>
+// if it is, the pompa is off:<br/>
+if (tempP &lt;= tempB) { <br/>
+// turn pump OFF:<br/>
+digitalWrite(13, LOW); <br/>
+// turn LED OFF:<br/>
+digitalWrite(11, LOW);
+<br/>
+} 
+<br/>
+fineloop:;
+<br/>
+}
+<br/>
+</p>
+<hr/>
+<h2 id="schema-elettrico-sistema-anlogico-2006-2007">Circuit diagram analog system 2006/2007</h2><p class="center"><a class="zoom-link" href="../IMAGES/controllo_solare_2.gif" title="Open the image at full resolution"><img alt="Circuit diagram thermal solar panel control. (New version Sept. 2007)" class="is-diagram" decoding="async" height="323" loading="lazy" src="../IMAGES/controllo_solare_2_small.gif" width="624"/></a></p><p class="center">Electrical circuit for thermal solar panel control. (New version Sept. 2007) (<a href="../IMAGES/solare_schema_00_x1.gif">Old diagram</a>)</p><p>Differential bridge input configuration; the first comparator changes its output state if temperature Tp increases because the NTC resistor drops, bringing the negative input lower and the positive higher; consequently transistor Q2 is driven, which excites the pump relay.</p><p>On the contrary, if Tb is higher the + input is brought low and the output goes to zero and the pump command transistor opens stopping the pump.</p><p>The second comparator reads the NTC Boiler voltage when the value reaches the preset value of P1, it commands Tr Q1 which blocks Q2, the relay interrupts the pump's power supply.</p><p>The capacitor and diodes on the input serve as protection for discharges that could come from the sensor cables, optionally use MOV or TVP from 24-40V.</p><p>The R10 resistor in series with the NTC TP serves to add about +6° of temperature to the panel, so that when the pump starts the water is definitely warmer than that in the accumulation boiler. The value is determined by the type of NTC used, therefore in case of uncertain behavior, either eliminate the R10 or replace it with a 2K trimmer and measure the operating temperature.</p><p>After the comparator we find the switch for the pump command full time or 3 minutes ON / 12 minutes OFF.</p><p>The astable timer realized with the NE555 receives power directly from the LM358 output (a few mA consumption). The 555 output goes high immediately and starts the ON cycle of about 3 minutes determined by R3 2.7M ohm while the OFF time is determined by R4 10M ohm. The C1 capacitor 100uF must be of good quality, preferably tantalum MIL version. If you want different activation times, act on the value of these components.</p><p>In case the panel temperature drops during the ON or OFF cycle, the timer is immediately reset as the power goes to 0V.</p><p>The 220V power circuit must be built separately with 220V/14V 5VA transformer, rectifier bridge and filter capacitor.</p><p>For the list of components refer to the enlarged circuit diagram. </p>
+<h2 id="timer-3minuti-on-12-minuti-off-da-usare-nel-periodo-estivo-p">3 minute timer ON - 12 minute OFF (To be used during the warmest summer period)</h2><p>In this improved version of the solar control unit, I have added the pump command timer which during the hot panel phase, therefore heat transfer, activates the pump for 3 minutes and for the following 12 remains stopped. This solution gives us some advantages during the summer period, more suitable for Heat-pipe type panels as they perform better if temperatures are higher. If the pump circulates continuously, the panel temperature will never be able to reach the heat peak, so the 12 minute pause allows the temperature to rise, then to transfer the accumulation of heat in the following 3 minutes. Another advantage is that of making the pump work less and consequently a lower electrical cost. The pump works only 1/4 of the time compared to Full. With a 60VA pump we save about 10 euros/year of energy, plus the pump will last longer.</p><p>I remind you that to have economic advantages on installation, the costs of this system should be amortized in 20 years, therefore a circuit costing 5 Euros will save us 200 euros in the coming years....</p><p class="center">
+<img alt="Timer 555 used for 3min ON - 12 min OFF" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/solare_09.jpg" width="300"/>
+</p>
+<h2 id="realizzazione-sonde-ntc-per-lettura-temperatura-tp-e-tb">Realization of NTC probes for temperature reading Tp and Tb</h2><p>If you don't want to buy temperature probes it's easy to make them.</p><p>I recovered NTC temperature sensors from motherboard traces; they are rated 10kΩ at 25°C, come in green or blue color with a white dot; it's important to recover two perfectly identical units, test the value with a multimeter. For a comparative measurement, immerse both NTCs in silicone grease and after 10 minutes measure the resistance of both; the difference must not exceed 2%.</p><p>For this realization I used two Blue NTC with white dot.</p><p class="center">
+<a class="zoom-link" href="../IMAGES/solare_03.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="199" loading="lazy" src="../IMAGES/solare_03_small.jpg" width="300"/></a>
+</p><p>
+These NTC thermistors are small, therefore suitable for making temperature probes, to be inserted in the solar panel in the appropriate 6mm hole near the water passage.
+</p><p>Note that the panel sensor is subjected to high temperatures, above 120°, the connecting cables in this case must be suitable for high temperatures, therefore with Teflon or Silicone insulation. Two wires of small-diameter enameled copper for windings can also work well for the hot part of the solar panel.</p><p>The small NTC does not suffer from these temperatures as it can be soldered at 220°.
+</p><p class="center">
+<a class="zoom-link" href="../IMAGES/solare_04.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="199" loading="lazy" src="../IMAGES/solare_04_small.jpg" width="300"/></a>
+</p><p>
+To finish and protect the probe, it must be covered with heat shrink tubing.
+</p><p>The best solution is to put some silicone grease (cover the NTC with conductive CPU grease) before heating the heat-shrink tubing. This grease prevents moisture entry and improves thermal distribution inside.</p><p>The final diameter must be less than 5 mm, to facilitate insertion in the appropriate slot of the panel and Boiler.</p><p>The sensor for the Boiler is subjected to lower temperatures, it is however not a reason not to make it carefully.
+</p><p class="center">
+<a class="zoom-link" href="../IMAGES/solare_05.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="199" loading="lazy" src="../IMAGES/solare_05_small.jpg" width="300"/></a>
+</p><p>
+The length of the temperature cables can also exceed 10 meters, in practice if there are no strong electric fields, there should be no problems. For the solar panel connection I used shielded cable type RG58, so as to have low voltage drops.
+</p>
+<h2 id="utilizzo-di-sonde-commerciali">Use of commercial probes.</h2><p><strong>PT1000 suitable for solar panel up to 180°</strong></p><p>PTC probe 1000 ohm at 25°C diam. 5.0mm</p><p>It is a PTC, but it can work with this circuit, you need to jumper R10.</p><p>The two identical probes must be swapped on the terminal block, being positive variation with temperature increase, they increase resistance; therefore the connection must be inverted. The boiler terminal block becomes the panel and vice versa. Eliminate or reverse the comparator for 70°.</p><p class="center">
+<img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/solare_s1.jpg" width="300"/>
+</p><p><strong>PT1000 suitable for solar panel up to 180°</strong></p><p>PTC probe in teflon and silicone, 1000 ohm at 25°C diam. 4.6mm</p><p>It is a PTC, but it can work with this circuit, you need to jumper R10.</p><p>The two identical probes must be swapped on the terminal block, being positive variation with temperature increase, they increase resistance; therefore the connection must be inverted. The boiler terminal block becomes the panel and vice versa. Also eliminate or reverse the comparator for 70°.</p><p class="center">
+<img alt="PT 1000 PTC 1000 ohm" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/solare_s3.jpg" width="300"/>
+</p><p><strong>NTC 10K</strong><strong>  suitable for solar panel up to 120°</strong></p><p>NTC probe 10000 ohm at 25°C diam. 6.5mm Length 32mm</p><p>The two identical probes work without modifications to the circuit.</p><p class="center">
+<img alt="NTC 10000 ohm" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/solare_s2.jpg" width="300"/>
+</p>
+<h2 id="realizzazione">Realization</h2><p class="MsoNormal"><strong><span class="hl">Building the solar differential temperature control unit requires good knowledge of electronics, equipment and experience in electronic assembly is necessary.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things, to people and for improper use of the implementation.</span></strong></p><p class="center"><a class="zoom-link" href="../IMAGES/solare_08.jpg" title="Open the image at full resolution"><img alt="The control unit running inside a protection box." class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/solare_08_small.jpg" width="300"/></a></p><p class="center">The control unit running inside a protection box.</p><p>On the front are placed the indication LEDs: Power, Panel hot, pump ON and Overtemperature 70°</p><p>An external switch to manually force the pump is useful during testing or for subsequent verifications.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="251" loading="lazy" src="../IMAGES/solare_07.jpg" width="300"/></p><p>Important a good ground connection, let us not forget that the solar panel is on the roof and in summer there are thunderstorms with electrical discharges.</p><p>The entire metal structure of the solar panel must be grounded with a large gauge conductor. </p><p>To know the water temperature I installed a digital thermometer that reads the temperature at the same point where the Boiler NTC is attached.</p>
+<h2 id="considerazioni-finali">Final thoughts</h2><p>The panel or rather the two 12-tube panels are installed in Turin and work excellently. </p><p> From late May the water temperature (Storage Boiler) is always above 45° with peaks at 65° in July. It is therefore necessary to intervene with the cold water mixer positioned at the outlet of the storage boiler.<br/>
+During winter, say December, January and February...you don't get anything done. (To get any result during winter you need a greater number of tubes, of better quality and position everything South with at least 45° elevation.)</p><p> <br/>
+The circulation pump is a normal 3-speed circulation pump, used in radiator heating systems, the smallest 220V one is fine, as it must move 10-20 liters of glycol..not<a class="zoom-link" href="../IMAGES/solare_06.jpg" title="Open the image at full resolution"><img alt="How to fill the system and pressurize with a pump connected to a 220V drill." class="is-photo" decoding="async" height="300" loading="lazy" src="../IMAGES/solare_06_small.jpg" width="212"/></a> or more. Ideally would be to use a 12V pump connected to a photovoltaic panel, in the sense that if there is sun, the pump runs, no sun, and no heat, everything is still, unfortunately a 12V pump costs over 500 euros...<br/>
+All tubes are copper; it's good to use the smallest possible tubes, 12mm, even 10mm is better, meaning less mass, less exposed surface, thus fewer losses. All the copper tubing is covered with black neoprene insulating tubes; externally, additional coverage with aluminum tape.
+<br/>
+Antifreeze glycol in 25-30 liter containers is found at hydraulic wholesalers that handle solar systems, almost all of them. In areas where minimum temperatures drop only slightly below zero, it is conceivable to dilute the glycol with water, this to make the pump work less, which with denser glycol tends to heat up more.
+<br/>
+In practice only 2Atm is used since the maximum temperatures are not so high. You must calibrate the expansion tank to 2Atm and the system filling is done with one of those small pumps that are fitted on the drill, the drill must be 220V and turn fast otherwise it doesn't reach the necessary pressure.
+<br/>
+To fill the system, you must have a faucet with valve, near the pump and a relief valve at the highest point of the system with a tube that brings back down into the glycol container, when the system is full, liquid will come out of the tube, let it bubble for a few minutes until the air bubbles are gone, then close the relief and continue pumping until the pressure rises and no longer moves from 2Atm. Quickly close the charging faucet and the system is ready. After a few hours of being pressurized, check if there are leaks and liquid dripping. If all the connections are good, the system must remain pressurized for a long time. Check periodically the maintenance of the pressure.</p><p>With the 3/12 timer function enabled, the water temperature will be lower, but still sufficient for daily use by three people. Optionally you can lengthen the ON time to 6 minutes (set R3 = 5.6M ohm), or also to 12 min. ON and 12 min. OFF (set R3 = 10M ohm), still achieving a 50% savings in pump energy consumption.<br/>
+</p><h2 id="consigli">Tips:</h2><p>
+Position the panels for the winter angle (where and when possible), this to recover something during winter, better to use panels with vacuum tubes of diameter 57 or 70mm. which have better efficiency than 47mm.
+
+<br/>
+System with circulation tubes as short as possible for low losses. Pay careful attention to thermal insulation of tubes, pump and valves; no hot metal element should be exposed. An infrared thermometer is useful for checking and finding heat losses.
+</p><p>  Use a daily timer to activate the general power supply, say from 10 to 17 in summer and 11 - 15 during winter, so at night no energy is consumed by the control unit. Furthermore during the summer by reducing the on times, you can save energy for the pump by keeping the system on for only a few hours.
+</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Batteries &amp; energy"</h2>
+<ul>
+<li><a href="battery_test.htm"><span class="r-sec">Batteries &amp; energy</span>How to test the runtime of Ni-Mh batteries</a></li>
+<li><a href="nimh_battery_charger.htm"><span class="r-sec">Batteries &amp; energy</span>Ni-Mh fast charger</a></li>
+<li><a href="lipo_battery_charger.htm"><span class="r-sec">Batteries &amp; energy</span>Lithium (Li-Po) charger</a></li>
+<li><a href="parkside_battery_pack.htm"><span class="r-sec">Batteries &amp; energy</span>Parkside battery pack 20V 15Ah</a></li>
+<li><a href="ebike_test_batterie.htm"><span class="r-sec">Batteries &amp; energy</span>E-bike — test batteries 36/48 V</a></li>
+<li><a href="ebike_extra_pack.htm"><span class="r-sec">Batteries &amp; energy</span>E-bike — extra pack 36/48 V</a></li>
+<li><a href="electric_bike_bms.htm"><span class="r-sec">Batteries &amp; energy</span>BMS 48V 4A</a></li>
+<li><a href="auto_elettrica.htm"><span class="r-sec">Batteries &amp; energy</span>Electric car: what to do?</a></li>
+<li><a href="home_save_energy.htm"><span class="r-sec">Batteries &amp; energy</span>How to save electrical energy at home</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#prefazione">Foreword</a></li>
+<li><a href="#schema-idraulico-semplificato">Simplified hydraulic diagram.</a></li>
+<li><a href="#schema-elettrico-sistema-digitale-arduino-2009-arduino-uno" title="Circuit diagram digital system Arduino 2009 / Arduino Uno">Circuit diagram digital system Arduino 2009 /...</a></li>
+<li><a href="#programma-per-scheda-arduino-2009-e-simili">program for Arduino board 2009 and similar</a></li>
+<li><a href="#schema-elettrico-sistema-anlogico-2006-2007">Circuit diagram analog system 2006/2007</a></li>
+<li><a href="#timer-3minuti-on-12-minuti-off-da-usare-nel-periodo-estivo-p" title="3 minute timer ON - 12 minute OFF (To be used during the warmest summer period)">Timer 3 minutes ON - 12 minutes OFF</a></li>
+<li><a href="#realizzazione-sonde-ntc-per-lettura-temperatura-tp-e-tb" title="Realization of NTC probes for temperature reading Tp and Tb">Realization of NTC probes for temperature reading Tp...</a></li>
+<li><a href="#utilizzo-di-sonde-commerciali">Use of commercial probes.</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#considerazioni-finali">Final thoughts</a></li>
+<li><a href="#consigli">Tips:</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

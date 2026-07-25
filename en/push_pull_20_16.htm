@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Switching Power Supply 20A Switching DC-DC push-pull power supply 16V 20A by Roberto Chirio</title>
+<meta content="Switching Power Supply 20A Switching DC-DC push-pull power supply 16V 20A by Roberto Chirio" name="description"/>
+<meta content="electronics design, switching power supply, step-down, step-up, buck converter, sepic switching. current mode supply, led driver, power led driver, led driver design, led driver pump, led driver flash" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="push_pull_20_16.htm" hreflang="en" rel="alternate"/><link href="../push_pull_20_16.htm" hreflang="it" rel="alternate"/><link href="../push_pull_20_16.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../push_pull_20_16.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a aria-current="true" href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#alimentatori">Power supplies</a></li><li aria-current="page">Push-pull DC-DC 12V 20A 16V 250W</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Power supplies</p>
+<h1>SWITCHING POWER SUPPLY PUSH-PULL</h1>
+<p class="subtitle">DC-DC in: 9-20V out: 5-18V max 20A "DIY" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#alimentatori">Power supplies</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#r4-p2-regolazione-tensione-uscita">R4 P2 output voltage regulation</a></li>
+<li><a href="#transistor-mos-fet-q1-q2">Transistor Mos-Fet Q1/Q2</a></li>
+<li><a href="#diodi-di-potenza-d1">Power diodes D1</a></li>
+<li><a href="#trasformatore-t1">Transformer T1</a></li>
+<li><a href="#induttore-l1">Inductor L1</a></li>
+<li><a href="#induttore-l2">Inductor L2</a></li>
+<li><a href="#circuito-stampato-driver-regolatore">Printed circuit board regulator driver.</a></li>
+<li><a href="#taratura">Calibration</a></li>
+<li><a href="#connessione-su-batteria-12v">Connection on 12v battery</a></li>
+<li><a href="#forme-d-onda">Waveforms</a></li>
+<li><a href="#gruppo-ingresso-220v-300va">Input group 220V 300VA</a></li>
+<li><a href="#realizzazione-finale-dentro-il-mobile">Final implementation inside the cabinet</a></li>
+<li><a href="#alimentatore-12v-uscita-40-40v-per-car-audio-amplifier-100-1" title="POWER SUPPLY 12V OUTPUT 40+40V for CAR AUDIO AMPLIFIER 100+100Watt rms">POWER SUPPLY 12V OUTPUT 40+40V for CAR AUDIO…</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<p class="center"><img alt="Working prototype of the 18V 20A Switching power supply" class="is-photo" decoding="async" height="357" loading="lazy" src="../IMAGES/ps_20a_000.jpg" width="472"/></p><p>February 2007</p><p>This DC-DC power supply is used to boost the 12v battery voltage and stabilize the output compensating for battery voltage drop during discharge. Being able to reach 15V-16V it's suitable for obtaining maximum performance from radio transmission equipment. </p><p>Regulation from 5 to 18Volt satisfies the requirements of many electronic loads.</p><p>The addition of a mains circuit with 220V/14V 250VA input transformer, rectifying bridge and filter capacitors, expands the possibilities of use.</p><p> The input voltage can be between 9.0 and 18V and the output voltage is adjustable from 5-18.0V When the input is greater than 12.0V the maximum output current can reach 20A (with fan). The output voltage is adjustable via potentiometer from a minimum value of 5 V to a maximum of 18V.</p><p>There is no continuous current adjustment on the output, (pay attention) there is only the tuning of the maximum current passing through the MosFet. </p><p> Best battery performance is obtained with 12-14V. Below 11.00Volt it still works fine, but maximum current is not achievable.</p><hr color="#FFFFFF" size="3"/><p class="center"><a href="http://www.datasheetarchive.com/datasheet.php?article=3407647" rel="noopener"><strong>UC3526</strong></a></p><p class="center"><img alt="UC3526 Regulating Pulse Width Modulator" class="is-photo" decoding="async" height="130" loading="lazy" src="../IMAGES/ps_20a_uc3526.jpg" width="200"/></p><p>This regulator was chosen because it starts operating at 8V. Symmetrical driver output to control BJT and Mos in Push-Pull configuration.  </p><p>
+Complete voltage and current control functions.</p><p> The working frequency is chosen 30 kHz to avoid large losses with ferrite N27. It is determined by (R5+P3) and C6.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="301" loading="lazy" src="../IMAGES/ps_20a_uc3526_1.jpg" width="300"/>
+</p><p>This DC-DC power supply can operate without a fan with an output up to 5A; above 70°C the Klixon thermal switch (to be fastened to the component that heats up the most) engages the fan to cool the power section made up of Mosfets, diodes, transformer, inductors and electrolytic capacitors. 
+</p><hr color="#336699" size="3"/><p>Roberto Chirio is available for consultation in designing and implementing Switching Power Supply</p><p class="right"> Contact: <a href="mailto:info@chirio.com">info@chirio.com</a></p>
+<h2 id="schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</h2><p class="center">
+<a class="zoom-link" href="../IMAGES/push_pull_20A_schema1.gif" title="Open the image at full resolution"><img alt="Click to enlarge the Push-pull circuit diagram 16V 20A" class="is-diagram" decoding="async" height="305" loading="lazy" src="../IMAGES/push_pull_20A_schema1_small.gif" width="744"/></a>
+</p>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="2" scope="col">
+<p>
+<strong> Material</strong>
+</p>
+</th>
+<th scope="col">
+<p>
+<strong> Where</strong>
+</p>
+</th>
+</tr></thead>
+<tr>
+<td class="center">
+<p><strong>IC1</strong></p>
+</td>
+<td>
+<p>
+● 1 IC UC3526 UNITRODE (Texas Instrument)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● terminal block input and output (30A type)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● 1 breadboard thousand holes fiberglass with tinned pads
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>S1</strong></p>
+</td>
+<td>
+<p>
+● 1 thermal Klixon 60-70° normally open
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R1</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 10 ohm 1/4W 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R2</strong></p>
+</td>
+<td>
+<p>
+● 2 resistor 0.04 ohm 5-10W 5% wire (parallel)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R3</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 1K5 ohm 1/4W 1% metal film
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R4</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 4k7 ohm 1/4W 1% metal film (see notes)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R5</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 2k5K ohm 1/4W 1% metal film
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R6</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 1K5 ohm 1/4W 1% metal film
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R7</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 10 ohm 1/4W 5%
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R8</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 10K ohm 1/4W 5%
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R9</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 10K ohm 1/4W 5%
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R11</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 12 ohm 2W 5%
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R12</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 330 ohm 2W 5%
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C1</strong></p>
+</td>
+<td>
+<p>
+● 1 electrolytic capacitor 4700uF 35V for switching
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C2</strong></p>
+</td>
+<td>
+<p>
+● 1 ceramic capacitor 220pF 100V 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C3</strong></p>
+</td>
+<td>
+<p>
+● 1 electrolytic capacitor 1uF 35V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C4</strong></p>
+</td>
+<td>
+<p>
+● 1 ceramic capacitor 470pF 100V 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C5</strong></p>
+</td>
+<td>
+<p>
+● 1 ceramic capacitor 470pF 100V 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C6</strong></p>
+</td>
+<td>
+<p>
+● 1 polyester capacitor 4.7nF 100V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C7</strong></p>
+</td>
+<td>
+<p>
+● 1 polycarbonate capacitor 1uF 63V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C8</strong></p>
+</td>
+<td>
+<p>
+● 6 electrolytic capacitor 1000uF 25V for switching
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C9</strong></p>
+</td>
+<td>
+<p>
+● 2 electrolytic capacitor 1000uF 25V for switching
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C10</strong></p>
+</td>
+<td>
+<p>
+● 1 polycarbonate capacitor 1uF 63V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C11</strong></p>
+</td>
+<td>
+<p>
+● 1 ceramic capacitor .1uF 63V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C12</strong></p>
+</td>
+<td>
+<p>
+● 1 ceramic capacitor .1uF 63V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C13</strong></p>
+</td>
+<td>
+<p>
+● 1 ceramic capacitor .1uF 63V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C14</strong></p>
+</td>
+<td>
+<p>
+● 1 polycarbonate capacitor 10nF 63V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>D1</strong></p>
+</td>
+<td>
+<p>
+● 1 double diode 200V 60A or Schottky diode type 60 A 50V (note)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>D2/D3</strong></p>
+</td>
+<td>
+<p>
+● 1 Schottky diode 1N5819 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>Q1/Q2</strong></p>
+</td>
+<td>
+<p>
+● 6 Mos-Fet type RFP50N06 To220 (see notes)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>T1</strong></p>
+</td>
+<td>
+<p>
+● Transformer with E55 Siemens core to be wound (see notes)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>L1</strong></p>
+</td>
+<td>
+<p>
+● 1 inductor 7.8uH (see notes)
+</p>
+</td>
+<td>
+<p class="center">
+??
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>L2</strong></p>
+</td>
+<td>
+<p>
+● 1 inductor 1.7uH (see notes)
+</p>
+</td>
+<td>
+<p class="center">
+??
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>P1</strong></p>
+</td>
+<td>
+<p>
+● 1 cermet trimmer 1Kohm
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>P2</strong></p>
+</td>
+<td>
+<p>
+● 1 cermet potentiometer 10 turns 22Kohm (see notes)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>P3</strong></p>
+</td>
+<td>
+<p>
+● 1 cermet trimmer 22Kohm
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>FAN</strong></p>
+</td>
+<td>
+<p>
+● 1 fan 12V computer type 12cm
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>Is1</strong></p>
+</td>
+<td>
+<p>
+● 1 ammeter panel meter 20A cc
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>Vs1</strong></p>
+</td>
+<td>
+<p>
+● 1 voltmeter panel meter 20V cc
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● 1 aluminum container
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● 3 aluminum heatsink finned 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+</tbody></table></div>
+<h2 id="realizzazione">Realization</h2><p class="MsoNormal"><strong><span class="hl">The realization of the Switching Power Supply involves having knowledge of electronics, equipment and experience in electronic assembly are necessary.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p><p class="center">
+<a class="zoom-link" href="../IMAGES/ps_20a_003.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="214" loading="lazy" src="../IMAGES/ps_20a_003_small.jpg" width="300"/></a></p><p> On the left the diode heatsink, in the center the three MosFets in parallel, the cooling fin is sufficient only if with forced ventilation, otherwise mount on a larger heatsink.</p><p class="center">
+<a class="zoom-link" href="../IMAGES/ps_20a_001.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="224" loading="lazy" src="../IMAGES/ps_20a_001_small.jpg" width="300"/></a>
+</p><p>The airflow of the 12 V fan should be directed at the components that heat up the most: the fast diodes on the output, filter capacitors and coils, transformer and power MosFet.
+</p><p>In the final version inside a metal cabinet, it is necessary to create an air flow channel that can cool all power components well.
+</p><h2 id="r4-p2-regolazione-tensione-uscita">R4 P2 output voltage regulation</h2><p>The minimum voltage obtainable at the output is equal to the reference voltage present on pin 18 of the 3526 equal to 5.00Volt, in this case the value of P2 is equal to 0 ohm. The maximum voltage is given by the divider formed by P2 on R4. To obtain a complete excursion of P2 from 5 to 18V, it is advisable to mount in place of R4 a 22-turn cermet trimmer of 5 or 10K ohm so as to do a preset of the end-of-travel of P2. With the system running bring the P2 value to end-of-travel and then adjust R4 to have either 16 or 18V full scale, so at minimum we will always have 5V at the output and the full voltage excursion on the linear value of P2. If you want to have an output voltage with excursion from 0V to 18V, you need an external voltage reference to the 3526 with a value of 0.6 lower than the negative.</p><h2 id="transistor-mos-fet-q1-q2">Transistor Mos-Fet Q1/Q2</h2><p> In this case I used RFP50N06 type Power MosFets, three are mounted in parallel for each symmetrical side.</p><p>They work fine with all power Mos-Fets with 60V 50A characteristics or higher. They should be mounted on the heatsink using thermal grease to improve heat transfer. Since all three are in parallel I would mount them without insulation towards the heatsink, then use a threaded screw for the common Drain connection directly on the heatsink. The entire heatsink must be fixed with insulating bushings towards the container frame. The two heatsinks must not touch each other.</p><h2 id="diodi-di-potenza-d1">Power diodes D1</h2><p> Diode D1 can be a dual Schottky type rated 60A 50V; unfortunately the working voltage is very close to the breakdown voltage because the spikes on the output for a half-bridge are on the order of 70–90V. Those who can properly design snubbers can attempt to reduce the spikes with a dedicated snubber on each diode. It's clear that using Schottky gives better efficiency and lower temperatures.</p><p>Optionally you can adopt 4 Schottky diodes from 60 A 50V in full bridge configuration and put in parallel the two output windings (With the same phase)</p><p>In the opposite case fast diodes of 200V 20/30A are mounted (as can be seen in the photo).</p><h2 id="trasformatore-t1">Transformer T1</h2><p> The ferrite core is a Siemens E55 material type N27. A dedicated bobbin is necessary to facilitate winding.</p><p>
+The primary winding is composed of 2+2 turns made with 12+12 wires of enameled copper rated 0.75mm. The winding must be made last on top of the secondary. The 24 wires must all be wound together to ensure the same length (equal inductance and resistance for each symmetrical winding). You must prepare the 24 segments 60/70cm long before starting to wind. 
+</p><p> The secondary winding consists of 4+4 turns made of 8 wires of 0.75mm enameled copper. The winding must be made first under the primary. The 16 wires must all be wound together to ensure the same length (equal inductance and resistance). You need to prepare 16 segments 100/110 cm long before starting to wind.
+</p><p>Between the windings isolate with 2 turns of Mylar tape or transformer insulating material.</p><p> After finishing winding, the turns must be secured with a few wraps of Mylar or Nomex tape for windings. Optional heat-shrink tubing to protect the output connection.</p><p> The finished transformer assembled with the ferrite should be impregnated under vacuum with transformer varnish, not so much for isolation problems, but to reduce the ultrasonic noise generated during operation.</p><p> The separation of the two primary and secondary windings must be done after removing the enamel for 10-15mm from the end part of the copper wire, then using the tester to identify the start-end of the winding, the 8 + 8 wires are separated to form the two windings.</p><p>The resulting terminals must be soldered together with a copper ring terminal.
+</p><h2 id="induttore-l1">Inductor L1</h2><p class="center"><img alt="High frequency filter group, from 20A" class="is-photo" decoding="async" height="383" loading="lazy" src="../IMAGES/ps_20a_002.jpg" width="240"/>
+</p><p> The filter inductor recovered from a 500W ATX power supply is used, the 5V section is used which is sized to support over 30A (ventilated).
+</p><p> The other windings with smaller diameter wire are not used and must be isolated from each other. The winding made up of three 1.2mm wires must handle all the output current. The three wires must be connected in parallel with each other on the input and output.
+</p><p>8/10 turns 3 x 1.2mm on a 35mm toroidal core.</p><h2 id="induttore-l2">Inductor L2</h2><p>In this case too, the second filter inductor from a 500W ATX power supply is used, a few turns of large diameter, wound on ferrite. It must handle all the output current. (max 20A)
+</p><p>8 turns of 2mm wire on a 10mm ferrite core.
+</p>
+<h2 id="circuito-stampato-driver-regolatore">Printed circuit board regulator driver.</h2><p>This is the printed circuit board of the driver section, it is suitable for complete implementation with a mains transformer, a small C1 is noted, in this case a 100uF 35V is sufficient, as there are already 47000uF upstream.</p><p class="center"><img alt="" class="is-diagram" decoding="async" height="417" loading="lazy" src="../IMAGES/push_pull_20A_cs1_component.gif" width="460"/></p><p class="center">Component arrangement.</p><p class="center"> <img alt="" class="is-diagram" decoding="async" height="417" loading="lazy" src="../IMAGES/push_pull_20A_cs1_rame.gif" width="460"/></p><p class="center">Component side traces, to be flipped for fabrication.</p><p class="center"><img alt="View of components mounted on the printed circuit board," class="is-photo" decoding="async" height="403" loading="lazy" src="../IMAGES/ps_20a_cs_driver_1.jpg" width="460"/></p><p class="center">View of mounted components.</p>
+<h2 id="taratura">Calibration</h2><p> Connect a variable power supply to the input and raise the voltage to 12V, we should have the circuit operating; adjust P2 to vary the output voltage. If good range from 5 to 18V is achieved, you can connect a load of at least 5A and retry the output voltage sweep which should reach up to 18V. Voltage shortfalls at the low and high end can depend on the potentiometer value itself and from </p><p> The P3 trimmer is used to calibrate the frequency to 30 kHz, remove the R1 and R7 on the MOS gate and power only the UC3526, we should have a 50% symmetric square wave, adjust the frequency to 30 kHz (+/-10%)</p><p> Trimmer P1 is used to set the maximum current limiting threshold, it must be adjusted under load to not let the output current exceed 20A when the input is 11.0V.</p><p> Test at maximum load:</p><p>For the test at 16V 20A we need a resistor of 16V/20A = 0.80 ohm 350W not easy to find.</p><p>If we don't have a variable electronic load (see my other pages), we can create a good load with 12V 55W automobile lamps.</p><p>Attention all halogen lamps when cold have a much lower resistance than when lit, therefore at startup they draw up to 5 times the rated current.</p><p>This power supply is capable of continuously powering 4 or even 5 lamps in parallel. </p><p>The output voltage must be regulated at no-load to 12.5 Volts. The only precaution is to turn on the lamps one after the other and not all together, this to avoid the strong inrush current that could trigger the battery fuse.</p><p>Another trick to use the lamp load is to set the current with the trimmer to the minimum value and then, when the lamps are just lit with a few volts, bring the adjustment to a high value so that the output control takes precedence with voltage regulation.</p><p>Read the output voltage at the load and check the voltage drop between load and no-load. Values of 0.5V are acceptable. Larger drops mean the conductors are not of adequate section and/or the input source is not powerful enough and causes internal voltage drop. Be careful that the two sensing wires from the 3526 must be positioned directly on the output terminal strip.</p>
+<h2 id="connessione-su-batteria-12v">Connection on 12v battery</h2><p>When it was tested in the laboratory and everything is OK, we can connect the power supply to a 12V battery, it must be a battery with a minimum capacity of 63A/h: </p><p>A 30A fuse is required in series with one of the battery cables. An automotive type fuse works fine and is much more economical.</p><p>Battery cables must be 10mmq and their length not exceeding 1.5m.</p><p>The output cables must also be 10mmq and max 1.5m.</p><p>..</p><p>.. </p><p>  ..
+</p><p class="center"><img alt="" class="is-diagram" decoding="async" height="295" loading="lazy" src="../IMAGES/push_pull_20A_schema1_b.gif" width="458"/></p><p class="center">Modification for Power ON/OFF</p><p>This avoids using a 30A main switch directly on the battery, since we're only removing power to the UC3526 Driver. The soft-start circuit prevents starting at maximum power.</p><h2 id="forme-d-onda">Waveforms</h2><p>UC3526 output gate Mosfet command, pins 13 CH1 pin 16 CH2</p><p>Power portion not powered. VB 12V</p><p>Frequency reading and symmetry verification.  </p><p class="center">
+<a class="zoom-link" href="../IMAGES/pp_20A_wave_001.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="74" loading="lazy" src="../IMAGES/pp_20A_wave_001_small.gif" width="100"/></a>
+</p><p>MosFet terminal voltage</p><p>Power portion powered. VB 12V</p><p>Verify variable dutycycle control, in this case current control. </p><p class="center">
+<a class="zoom-link" href="../IMAGES/pp_20A_wave_002.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="75" loading="lazy" src="../IMAGES/pp_20A_wave_002_small.gif" width="100"/></a>
+</p><p>UC3526 output gate control Mosfet, Q1 CH1 Q2 CH2</p><p>Power portion powered. VB 12V</p><p>Verify variable dutycycle control, in this case current control. </p><p class="center">
+<a class="zoom-link" href="../IMAGES/pp_20A_wave_003.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="75" loading="lazy" src="../IMAGES/pp_20A_wave_003_small.gif" width="100"/></a>
+</p><p>Voltage across diodes D1, partial command.  </p><p>You can see a difference in shape between the two diodes, they are not so equal to each other, you need a snubber for each with different settings to reduce spikes. If I had used Schottky diodes they would already be out.</p><p class="center">
+<a class="zoom-link" href="../IMAGES/pp_20A_wave_004_diode.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="75" loading="lazy" src="../IMAGES/pp_20A_wave_004_diode_small.gif" width="100"/></a>
+</p><p>Voltage across diodes D1, full wave command. </p><p>A smaller difference is noted compared to above.</p><p class="center">
+<a class="zoom-link" href="../IMAGES/pp_20A_wave_004_diode_full.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="75" loading="lazy" src="../IMAGES/pp_20A_wave_004_diode_full_small.gif" width="100"/></a>
+</p><h2 id="gruppo-ingresso-220v-300va">Input group 220V 300VA</h2><p class="center"><a class="zoom-link" href="../IMAGES/push_pull_20A__PS_schema1.gif" title="Open the image at full resolution"><img alt="Transformer group mains with rectifier bridge and filter capacitors." class="is-diagram" decoding="async" height="276" loading="lazy" src="../IMAGES/push_pull_20A__PS_schema1_s.gif" width="730"/></a></p><p>
+
+Diagram of the 220V/14V transformer group necessary to operate the 20A Power Supply from the mains.</p><p>At least 2000uF per Ampere current draw at output is necessary, this to ensure good voltage regulation. </p><p>I used 4 capacitors of 10000uF 35V in parallel, a 47000uF 35-50V capacitor also works but is harder to find.</p><p>The 300VA transformer would ideally be toroidal type with shield between primary and secondary. The electrostatic shield connected to ground is very useful to reduce interference from the mains.</p><p>The rectifier bridge must be mounted on a generously sized heatsink.</p><p>In case of maximum current draw for long periods, the entire group must have forced ventilation, ideal to take advantage of the same fan as the Switching.</p><p>Not essential, but useful a mains filter on the input and possibly transient suppressors between phases and to ground, to reduce the risk of discharges present in the grid.</p><p>The connections from the bridge to the capacitors and to the load should be made with 6/10 mm² cable, ideally a 10 mm copper strip 1 mm thick, directly on the terminals of the electrolytic capacitors.</p><h2 id="realizzazione-finale-dentro-il-mobile">Final implementation inside the cabinet</h2><p>
+continue.... 
+</p>
+<h2 id="alimentatore-12v-uscita-40-40v-per-car-audio-amplifier-100-1">POWER SUPPLY 12V OUTPUT 40+40V for CAR AUDIO AMPLIFIER 100+100Watt rms</h2><p class="center">
+<a class="zoom-link" href="../IMAGES/push_pull_40v_schema1.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="330" loading="lazy" src="../IMAGES/push_pull_40v_schema1_small.gif" width="700"/></a></p><p>
+May 2007.</p><p>
+Always using the driving base described above, the output stage is easily modifiable to have a higher voltage.</p><p>
+In this case 40+40V with a maximum current draw of 5A is required, the total output power can reach 400W. Therefore you need to beef up the input circuit by putting 5 Mosfets in parallel for each branch.</p><p>
+The transformer primary must also handle higher current so we will put 2+2 turns made of 24+24 enameled copper wires diameter 0.75mm the terminations are joined on a copper lug of appropriate size.</p><p>
+The bridge diodes must be super fast type, it is not possible to use Schottky as they stop at 50V.
+<br/>
+The output stage is double and symmetrical, the voltage is adjusted with R19 only on one branch, the other must be of equal voltage value by necessity.<br/>
+</p><hr color="#336699" size="3"/>
+<hr color="#336699" size="3"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Power supplies"</h2>
+<ul>
+<li><a href="switching_power_supply_atx.htm"><span class="r-sec">Power supplies</span>ATX lab power supply</a></li>
+<li><a href="power_supply_12v_30A.htm"><span class="r-sec">Power supplies</span>ATX power supply 12V 30A</a></li>
+<li><a href="atx_14_volt.htm"><span class="r-sec">Power supplies</span>ATX 13.8V power supply</a></li>
+<li><a href="step_up_10a.htm"><span class="r-sec">Power supplies</span>Step-up 10A 16V</a></li>
+<li><a href="electronic_load.htm"><span class="r-sec">Power supplies</span>Electronic Load 20A 40V</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#r4-p2-regolazione-tensione-uscita">R4 P2 output voltage regulation</a></li>
+<li><a href="#transistor-mos-fet-q1-q2">Transistor Mos-Fet Q1/Q2</a></li>
+<li><a href="#diodi-di-potenza-d1">Power diodes D1</a></li>
+<li><a href="#trasformatore-t1">Transformer T1</a></li>
+<li><a href="#induttore-l1">Inductor L1</a></li>
+<li><a href="#induttore-l2">Inductor L2</a></li>
+<li><a href="#circuito-stampato-driver-regolatore">Printed circuit board regulator driver.</a></li>
+<li><a href="#taratura">Calibration</a></li>
+<li><a href="#connessione-su-batteria-12v">Connection on 12v battery</a></li>
+<li><a href="#forme-d-onda">Waveforms</a></li>
+<li><a href="#gruppo-ingresso-220v-300va">Input group 220V 300VA</a></li>
+<li><a href="#realizzazione-finale-dentro-il-mobile">Final implementation inside the cabinet</a></li>
+<li><a href="#alimentatore-12v-uscita-40-40v-per-car-audio-amplifier-100-1" title="POWER SUPPLY 12V OUTPUT 40+40V for CAR AUDIO AMPLIFIER 100+100Watt rms">POWER SUPPLY 12V OUTPUT 40+40V for CAR AUDIO…</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

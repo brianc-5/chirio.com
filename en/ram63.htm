@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>RAM 63 geiger Counter improvements by Roberto Chirio</title>
+<meta content="RAM 63 Geiger Counter upgrade by Roberto Chirio" name="description"/>
+<meta content="scintillation counter, geiger, geiger counter, RAM 63, uranium counter, U238, geiger counter, scintillation counter" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="ram63.htm" hreflang="en" rel="alternate"/><link href="../ram63.htm" hreflang="it" rel="alternate"/><link href="../ram63.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../ram63.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a aria-current="true" href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radioattivita">Radioactivity</a></li><li aria-current="page">RAM 63 — improvements</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radioactivity</p>
+<h1>Geiger Counter RAM 63</h1>
+<p class="subtitle">How to improve a good surplus instrument "Instrumentation" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#radioattivita">Radioactivity</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#schema-originali-ram-63">RAM 63 original diagrams</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#schema-elettrico-alimentatore-stabilizzato-4-00v-200ma" title="Circuit diagram regulated power supply 4.00V 200mA">Circuit diagram regulated power supply 4.00V...</a></li>
+<li><a href="#morsettiera-batteria">Battery terminal block</a></li>
+<li><a href="#porta-batteria">Battery holder</a></li>
+<li><a href="#illuminazione-a-led">LED lighting</a></li>
+<li><a href="#scala-illuminata">Lit staircase</a></li>
+<li><a href="#alimentatore-4v">Power supply 4V</a></li>
+<li><a href="#inverter-hv">HV Inverter</a></li>
+<li><a href="#cavo-connessione-sonde">Probe connection cable</a></li>
+<li><a href="#uscita-segnale-buzzer">Buzzer signal output</a></li>
+<li><a href="#taratura">Calibration</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<p class="center"><img alt="RAM63 with Alpha and Beta/Gamma probes" class="is-photo" decoding="async" height="319" loading="lazy" src="../IMAGES/RAM63_001.jpg" width="479"/></p><p>July 2009</p><p>This excellent instrument produced in Berlin, in the 1970s is very widespread among mineral research enthusiasts, it is still possible to buy it on the Surplus market.</p><p>The two scintillation tubes of the photomultiplier type allow reaching high sensitivity in reading radiation, of the Alpha, Beta and Gamma values.</p><p>The original circuit diagram provided for the use of 4 flashlight Ni-Cd batteries 4A + 1 additional battery for lighting the index scale.<a class="zoom-link" href="../IMAGES/RAM63_002.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="162" loading="lazy" src="../IMAGES/RAM63_002_small.jpg" width="300"/></a></p><p>To stabilize battery variations a rheostat was provided to be calibrated at each power-on, this to compensate for the voltage drop during battery discharge. It was an imprecise system, it is possible to improve this operation using a stable low dropout linear power supply and with zero noise.</p><p>The modifications made to this RAM63 unit involve:</p><ul class="dash-list"><li>Use of only 4 flashlight batteries (type C) of 1.5V or 4 rechargeable Ni-Mh 1.2V</li><li>Implementation of a power supply stage capable of delivering 4,00V output, with input supply range from 4,20 to 16V</li><li>Replacement of filament lamp with a white LED.</li><li>Elimination of the unreliable battery clamp.</li><li>Improvement of overall ripple by adding capacitors.</li><li>Signal pickup for Buzzer and signal output for acquisition system.
+</li></ul><h2 id="schema-originali-ram-63">RAM 63 original diagrams</h2><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_schema_principale.jpg" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="70" loading="lazy" src="../IMAGES/RAM63_schema_principale_small.jpg" width="100"/></a></p><p class="center">Main diagram
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_schema_sonde.jpg" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="70" loading="lazy" src="../IMAGES/RAM63_schema_sonde_small.jpg" width="100"/></a></p><p class="center">Probe diagram
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_schema_inverter.jpg" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="120" loading="lazy" src="../IMAGES/RAM63_schema_inverter_small1.jpg" width="100"/></a></p><p class="center">HV Inverter diagram</p><p class="center">(only on latest versions)
+</p><p>
+Manual translated into Italian: 
+<a href="http://dl.dropbox.com/u/5592203/Textos/Manual-Ram-63-Ital.pdf" rel="noopener">http://www.danieleproietti.it/_radioactivity/doc/RAM63_manual_ita.pdf</a>
+</p>
+<h2 id="realizzazione">Realization</h2><p class="MsoNormal"><strong><span class="hl">Making the modifications requires knowledge of electronics, equipment and experience in electronic assembly is necessary.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p>
+<h2 id="schema-elettrico-alimentatore-stabilizzato-4-00v-200ma">Circuit diagram regulated power supply 4.00V 200mA</h2><p class="center">  <a class="zoom-link" href="../IMAGES/RAM63_schema_alimentazione.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="344" loading="lazy" src="../IMAGES/RAM63_schema_alimentazione_.gif" width="652"/></a>
+</p><p>
+The proposed circuit allows you to have an output voltage of 4.00V precisely adjustable via the R1 trimmer which must be Cermet 10-turn type. All resistors must be 1/8W metal film 1%.
+</p><p>Switch S1 is the general rotary switch of the RAM that interrupts the positive to ground.</p><p>The proposed MOSFET is not critical, all types of logic-level command MOSFET work fine, 60V working voltage and 3A current. The MOSFET is soldered directly to the CS, in case of input voltages greater than 6V it should be mounted on a small heatsink.</p><p>The output voltage must be calibrated to 4.00V by reading the value on the HV inverter input as explained below. The secondary voltage from the HV inverter must be 9.0V; otherwise adjust the internal trimmer of the HV inverter to get the correct value.</p><p>Outside the circuit the new connection for illuminating the instrument scale via white LED is visible; potentiometer R9 rated 100 ohm allows varying the LED brightness. In this case the LED's nominal current is 60mA equivalent to three SMD LEDs in parallel. Switch S2 is the original one for turning on the lamp, as is the potentiometer the original one for calibrating the battery value.
+</p>
+<h2 id="morsettiera-batteria">Battery terminal block</h2><p>
+The battery terminal strip may have oxidation and cause voltage drops, it should be removed completely, in its place two red/black wires 0.25 mm² will be soldered protected by a sheath. 
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_morsettiera.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_morsettiera_small.jpg" width="300"/></a>
+</p><h2 id="porta-batteria">Battery holder</h2><p> Here's how the battery holder looks with just 4 elements. The cable with sheath comes directly from the main switch and from the common negative.</p><p>It's all simpler and more reliable.</p><p>For convenience it is possible to use a male/female connector to interrupt the battery pack connection.
+</p><p>Whoever wants to drastically reduce the weight of the instrument can eliminate the heavy battery pack and battery holder entirely, and adopt a plastic battery case and use 4 good quality AA cells. The battery case can be fixed to the bottom of the Ram using velcro. 4 AA cells provide a runtime of over 50 hours.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_batteria.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_batteria_small.jpg" width="300"/></a>
+</p>
+<h2 id="illuminazione-a-led">LED lighting</h2><p>
+Here the SMD LED mounted in place of the 1.5V light bulb.</p><p>In this case the LED contains three elements that must be soldered in parallel.</p><p>The LED should be positioned in the center where the bulb was.</p><p>You can also put one or two traditional 5mm LEDs.</p><p>The resistors can also be mounted externally on the power supply path. 
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_lampada.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="132" loading="lazy" src="../IMAGES/RAM63_lampada_small.jpg" width="300"/></a>
+</p><h2 id="scala-illuminata">Lit staircase</h2><p>Now the staircase is illuminated by strong white light, clearly visible even in daylight.</p><p>It is possible to mount two LEDs spaced apart for better light distribution, and you can also put green or blue LEDs to give a more professional appearance... 
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_scala_illuminata.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_scala_illuminata_smal.jpg" width="133"/></a>
+</p>
+<h2 id="alimentatore-4v">Power supply 4V</h2><p>The finished power supply, compact and small in size.</p><p>You must glue an isolated L-bracket to fix it to the screws of the intermediate board. The position is possible below the flange of the tuning trimmers.</p><p>Or it can also be placed in the unused 5th battery compartment.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_006.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_006_small.jpg" width="300"/>
+</a>
+</p><p>
+Here we see the Mosfet placed directly on the copper traces which also act as a heatsink.
+</p><p>With 53mA current draw at 6V the dissipation is very low and there are no heating problems.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_007.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_007_small.jpg" width="300"/>
+</a>
+</p><p>
+Partial view of the power supply positioned under the trimmers, on the right the shielded high voltage inverter unit
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_003.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_003_small.jpg" width="300"/></a>
+</p><p>
+Main printed circuit board, raised, you can see the 3300 µF capacitor mounted between ground and the 6 V negative, it helps remove noise present on the power supply, but it's not essential.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_005.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_005_small.jpg" width="300"/>
+</a>
+</p>
+<h2 id="inverter-hv">HV Inverter</h2><p>Inside the shielded group we find the voltage multiplier circuit that provides 1250V to operate the scintillation tube.</p><p>It is not possible to measure HV voltage with traditional instruments, a voltmeter with very high input impedance is required. </p><p>For HV measurement see my very high impedance Voltmeter project.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_008.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_008_small.jpg" width="300"/>
+</a>
+</p><p>This is the low voltage section of the inverter.</p><p>The -4.0V enters from the blue wire and the -9 V exits from the yellow, black is ground.</p><p>On the left is the trimmer for adjusting 9V and also 1250V. Turn it slowly with great care.</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_009.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_009_small.jpg" width="300"/>
+</a>
+</p>
+<h2 id="cavo-connessione-sonde">Probe connection cable</h2><p>Unfortunately the probe connection cable is a problem.</p><p>It is large in diameter and very rigid, the fact of moving it often tends to make the solder point of the various cables jump.</p><p>You can restore the connection with a piece of flexible cable soldered to form a small loop. </p><p>Insulate everything with heat shrink tubing.
+</p><p>Take particular care with the central cable which represents HV.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_010.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_010_small.jpg" width="300"/></a>
+</p>
+<h2 id="uscita-segnale-buzzer">Buzzer signal output</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="364" loading="lazy" src="../IMAGES/RAM63_010.gif" width="500"/>
+</p><p> <strong><span class="hl-r">(S)</span>
+</strong>
+this is the best point to extract the signal to amplify, whether to apply it to the piezoelectric Buzzer or to the external counter.
+</p><p>A high impedance follower circuit must be used to not affect the signal at the sampling point.
+</p><p>
+....
+</p><p>
+....
+</p><p>
+<strong> CDV software: </strong><strong><a href="http://www.anythingradioactive.com/CDVCounter/help.html" rel="noopener">http://www.anythingradioactive.com/CDVCounter/help.html</a></strong>
+</p><p>This is a very useful program that converts the output pulses from Geiger counters (taken from the buzzer or headphone socket) into a graph showing the average values read over time. You can set very long times to verify weak variations in radiation values. The Help file is included with the program. </p>
+<h2 id="taratura">Calibration</h2><p>
+It is useful to mount two 47uF 16V Tantalum capacitors directly on the cables coming from the HV inverter. With this modification, the ripple present on the 9V changes from 150mV to about 20mV, a more than good value for not introducing noise.
+</p><p>Power the RAM 63 by connecting the Beta/Gamma probe.  </p><p>Measure on the Black (+) and Blue (-) cable terminals the value of 4,00V by adjusting the trimmer R1 on the 4V power supply.</p><p>Verify that between the Black cable (+) and Yellow cable (-) there is at least 9.0V</p><p>With the main switch on the first position (ABGLEICH) verify that the needle is in the red mark zone, if not adjust trimmer R25 to center the needle on the red mark, the RAM 63 must be in horizontal position, resting on a plane.</p><p>The R1 and R6 trimmers are used to calibrate the probes, you need to have a calibrated emission source, or send a precise square wave signal, otherwise avoid touching them.</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_tantalio.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_tantalio_small.jpg" width="300"/></a>
+</p><p class="center"><a class="zoom-link" href="../IMAGES/RAM63_004.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/RAM63_004_small.jpg" width="300"/></a>
+</p>
+<h2 id="commenti-finali">Final thoughts</h2><p>With these simple modifications the RAM should be much more stable and with 4 AA cells the operating duration is very long; the initial calibration is no longer necessary. When the needle no longer reaches the red mark, it means the batteries are dead.</p><p>The best measurements are made with the probe fixed on its support and the samples are placed under the probe in the sample holder.</p><p>Because of the weight and the index needle that is a bit wobbly, it is not a suitable instrument to be carried in a mine, it is better to use it as a fixed analysis instrument resting on a surface (table).
+</p><p>To reduce weight I recommend adopting for the power supply only 4 good-brand AA cells, eliminating the entire metal group of the original battery holder.
+</p><hr color="#336699"/><p>
+Always useful the notes of Prof. Andrea Bosi on radioactivity and Geiger:
+</p><p><a href="http://spazioinwind.libero.it/andrea_bosi/index.htm" rel="noopener">http://spazioinwind.libero.it/andrea_bosi/index.htm</a></p>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Radioactivity"</h2>
+<ul>
+<li><a href="geiger_counter.htm"><span class="r-sec">Radioactivity</span>Geiger Counter PC CDV</a></li>
+<li><a href="geiger_arduino.htm"><span class="r-sec">Radioactivity</span>Geiger counter with Arduino</a></li>
+<li><a href="geiger_counter_pulsar.htm"><span class="r-sec">Radioactivity</span>Geiger counter calibrator</a></li>
+<li><a href="geiger_counter_voltmeter.htm"><span class="r-sec">Radioactivity</span>HV Voltmeter 1000 MΩ</a></li>
+<li><a href="SV500.htm"><span class="r-sec">Radioactivity</span>FAG SV500 — upgrade</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#schema-originali-ram-63">RAM 63 original diagrams</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#schema-elettrico-alimentatore-stabilizzato-4-00v-200ma" title="Circuit diagram regulated power supply 4.00V 200mA">Circuit diagram regulated power supply 4.00V...</a></li>
+<li><a href="#morsettiera-batteria">Battery terminal block</a></li>
+<li><a href="#porta-batteria">Battery holder</a></li>
+<li><a href="#illuminazione-a-led">LED lighting</a></li>
+<li><a href="#scala-illuminata">Lit staircase</a></li>
+<li><a href="#alimentatore-4v">Power supply 4V</a></li>
+<li><a href="#inverter-hv">HV Inverter</a></li>
+<li><a href="#cavo-connessione-sonde">Probe connection cable</a></li>
+<li><a href="#uscita-segnale-buzzer">Buzzer signal output</a></li>
+<li><a href="#taratura">Calibration</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

@@ -381,8 +381,8 @@ def check_markup(out, out_files):
     for page in pages:
         text = open(os.path.join(out, page.replace("/", os.sep)), encoding="utf-8").read()
         soup = BeautifulSoup(text, "html.parser")
-        if page == "index.htm":
-            continue     # legacy redirect stub
+        if os.path.basename(page) == "index.htm":
+            continue     # legacy lowercase redirect stub, in either language
         if "<!DOCTYPE html>" not in text[:120]:
             finding("markup", "MAJOR", page, "missing HTML5 doctype", "add <!DOCTYPE html>")
         h = soup.find("html")

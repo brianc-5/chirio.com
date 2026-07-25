@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>FAG SV500 Geiger Counter upgrade by Roberto Chirio</title>
+<meta content="FAG SV500 Geiger Counter upgrade by Roberto Chirio" name="description"/>
+<meta content="FAG SV500, geiger, geiger counter, uranio counter, U238, U235, contatore geiger, SBM20" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="SV500.htm" hreflang="en" rel="alternate"/><link href="../SV500.htm" hreflang="it" rel="alternate"/><link href="../SV500.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../SV500.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a aria-current="true" href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radioattivita">Radioactivity</a></li><li aria-current="page">FAG SV500 — upgrade</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radioactivity</p>
+<h1>Geiger Counter FAG SV500</h1>
+<p class="subtitle">Connection with 2X SBM20 probe "Instrumentation" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#radioattivita">Radioactivity</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#realizzazione">Realization</a></li>
+<li><a href="#schema-elettrico-sonda-gm-con-amplificatore-esterno">Circuit diagram GM probe with external amplifier.</a></li>
+<li><a href="#montaggio-circuito">Circuit assembly</a></li>
+<li><a href="#sonde-sbm20">SBM20 probes</a></li>
+<li><a href="#sonda-pancake-48mm">Pancake probe 48mm</a></li>
+<li><a href="#campioni-per-taratura-geiger">Samples for Geiger calibration</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<p class="center"><img alt="" class="is-photo" decoding="async" height="312" id="i_vv4-0" loading="lazy" src="../IMAGES/SV500_0.jpg" width="500"/></p><p>October 2010</p><p>This instrument produced in Germany in the 80s, presents itself with very careful construction, components of excellent quality were used, both for electronics and mechanical details.</p><p>Suitable for applications in external environments even very cold and humid, water-resistant seals and Teflon cables allow maintaining performance even at the harsh temperatures of the North.</p><p>The battery extension cable gives the ability to extract the battery pack and place it under the jacket to take advantage of body heat.</p><p class="center"><a class="download" href="../SV-500-SchematicsAndBlockDiagram.pdf">SV500 manual and diagrams PDF</a> (thanks to prof. A. Scroccaro)</p><p>The gamma probe supplied in the basic configuration is a very weak probe, in practice it's useless, it doesn't detect background radiation and not even weak uranium stones.<img alt="Gamma probe connected to its cable." class="is-photo" decoding="async" height="230" loading="lazy" src="../IMAGES/sv500_gamma_extsensor.jpg" width="230"/></p><p>The modifications made to this SV500 specimen do not affect the meter group, but only the external probe cable.</p><p>The original Gamma probe can thus remain in its housing inside the instrument near the batteries.</p><p>Those who want to use the useless gamma probe can open it and use the connector applying it to a longer container, where to put the electronics and the SBM20 probe.</p><p>To increase reading sensitivity, 2 SBM20 tubes were used in parallel, it is however possible to put other tubes in parallel, achieving excellent search sensitivity. The reading scale must however be recalibrated.</p>
+<h2 id="realizzazione">Realization</h2><p class="MsoNormal"><strong><span class="hl">Making the modifications requires knowledge of electronics, equipment and experience in electronic assembly is necessary.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p>
+<h2 id="schema-elettrico-sonda-gm-con-amplificatore-esterno">Circuit diagram GM probe with external amplifier.</h2><p class="center">  <img alt="" class="is-diagram" decoding="async" height="328" loading="lazy" src="../IMAGES/sv500_schema.gif" width="721"/>
+</p><p>
+The proposed circuit allows connecting the Gm Probe referenced to ground, very convenient to avoid introducing noise, furthermore by putting a BNC connector it's possible to connect external tubes.
+</p><p>Any NPN signal transistor such as BC107B or 2N2222A is fine for the transistor</p><p>The C1 ceramic capacitor must be 900-1600V</p><p>With this configuration it is possible to connect the SV500 to any type of GM probe with working voltage from 4-500V.
+</p><p>*) To use critical probes, it is necessary to limit the voltage to 400V, therefore 4 Zener diodes rated 100V 400mW must be used. or reach even 440V with 4 Zeners rated 110V. With SBM20 tubes operation is correct at 400V.</p><p>For connection you must cut the probe connection cable, and connect the cables as indicated by the colors on the diagram, the braided shield must be connected to the probe container ground. Or you make a container and use the gamma probe connector.
+</p>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="2" scope="col">
+<strong> Waveform A</strong>
+</th>
+</tr></thead>
+<tr>
+<td>
+<p>
+The waveform detected at the transistor base input, notice the negative clipping performed by diode D1, without the diode we would have a -20V peak harmful to the transistor.
+</p></td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/sv500_001.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="67" loading="lazy" src="../IMAGES/sv500_001_small.gif" width="100"/></a>
+</p></td>
+</tr>
+<tr>
+<td colspan="2">
+<p> <strong>Waveform B</strong>
+</p></td>
+</tr>
+<tr>
+<td>
+<p> Here is how the signal appears at the output of the transistor emitter, the follower configuration allows the signal to be in phase with excellent impedance reduction.
+</p></td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/sv500_002.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="67" loading="lazy" src="../IMAGES/sv500_002_small.gif" width="100"/></a>
+</p></td>
+</tr>
+</tbody></table></div>
+<h2 id="montaggio-circuito">Circuit assembly</h2><p>The components were mounted on a small breadboard, the yellow 500V wire was insulated with silicone tubing.</p><p>In this case there are no Zener diodes.</p><p>The whole assembled inside the probe handle. </p><p>The handle is made with a U-shaped aluminum profile 20x20mm.</p><p>You can see the original cable, stripped of the connector and the cables with their respective colors connected as per diagram.
+</p><p>the shielded braid is connected directly to the aluminum handle which also acts as shield and insulator.</p><p>The circuit must be isolated from metal walls using a sheet of insulating tape or Mylar.
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="181" loading="lazy" src="../IMAGES/Sv500_03.jpg" width="400"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="181" loading="lazy" src="../IMAGES/Sv500_04.jpg" width="400"/>
+</p><h2 id="sonde-sbm20">SBM20 probes</h2><p> Here are the two SBM20 probes mounted in parallel to increase sensitivity. 
+</p><p>You can see the 1mm lead sheet attached to the internal walls of the box, the lead shields and reduces background radiation, not useful for the measurement. </p><p>The lead shield is connected to ground through the rear screws.
+</p><p>The two SBM20 probes are connected in parallel and a single load resistor of 3.3M ohm is used.</p><p>The probes are flush with the box, taking care to keep them 1mm more internal than the edges, this to avoid hitting and scratching the probe body. It is better to mount a protective grid if necessary.
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="201" loading="lazy" src="../IMAGES/Sv500_02.jpg" width="400"/>
+</p>
+<h2 id="sonda-pancake-48mm">Pancake probe 48mm</h2><p>By recovering a GM pancake probe, it is possible to make an excellent probe to give sensitivity to the SV500.
+</p><p> Here is the small circuit mounted inside the aluminum shell, which houses the pancake probe. 
+</p><p>The cables are always with the same colors, the little circuit has components mounted on the same side as the traces to stay as low as possible, this to facilitate closing the cover. </p><p>The cables pass directly inside the 20mm aluminum tube.</p><p>The handle is fixed at an angle to facilitate ground search.
+</p><p>The probe is protected by a hard plastic grid.</p><p>Good performance, with reading of Alpha as well.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="264" loading="lazy" src="../IMAGES/Sv500_08_pancake.jpg" width="400"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="264" loading="lazy" src="../IMAGES/Sv500_07_pancake.jpg" width="400"/>
+</p>
+<h2 id="campioni-per-taratura-geiger">Samples for Geiger calibration</h2><p>Pitchblende samples under lead available for Geiger Counter calibration.</p><p>Containers diam. 29mm or 20mm, values on request from 0.100 mRem to 2 mRem, emission Alpha, Beta + gamma.</p><p class="right">Contact: <a href="mailto:info@chirio.com">info@chirio.com</a></p><p class="center"><img alt="" class="is-photo" decoding="async" height="249" loading="lazy" src="../IMAGES/me_campione_u.jpg" width="336"/>
+</p>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="2" scope="col">
+<strong> Result verification</strong>
+</th>
+</tr></thead>
+<tr>
+<td>
+<p>Sample of 0.300mR/h read with Ludlum 44.9 probe, applied to the two SBM20 probes, the value read on the SV500 scale is 1.5 mrad/h equal to 700CPM</p>
+<p>- real value = value read /5</p>
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/Sv500_05.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="66" loading="lazy" src="../IMAGES/Sv500_05_small.jpg" width="100"/></a>
+</p></td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p>Sample of 15mR/h read with Ludlum 44.9 probe, applied to the two SBM20 probes, the value read on the SV500 scale is 50 mrad/h.</p>
+<p>- real value = value read /3.3</p>
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/Sv500_06.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="66" loading="lazy" src="../IMAGES/Sv500_06_small.jpg" width="100"/></a>
+</p></td>
+</tr>
+<tr>
+<td colspan="2">
+<p>Therefore if on the most sensitive scale, we read a value of 5mrad/h full scale the actual value of the sample will be only 1 mR/h, all this always using 2 x SBM20 probes, with other probes other comparison tests will need to be done.</p>
+<p>Keep in mind that the tolerances involved are wide, so the 1mR/h value can actually be within tolerances of 25-30% error.</p>
+</td>
+</tr>
+</tbody></table></div>
+<h2 id="commenti-finali">Final thoughts</h2><p>With these simple modifications the SV500 becomes an instrument for domestic use, with the possibility of using it to detect background radiation and make measurements within values of 10-30 mREM</p><p>It is necessary to have a calibrated source, to be able to perform measurements by recalibrating the scale reading with a correction factor.</p><p>All using the three lowest ranges, the most sensitive ones, the 3 upper ranges are not connected, as they correspond to the unused green wire.</p><hr color="#336699"/><p>
+Always useful the notes of Prof. Andrea Bosi on radioactivity and Geiger:
+</p><p><a href="http://spazioinwind.libero.it/andrea_bosi/index.htm" rel="noopener">http://spazioinwind.libero.it/andrea_bosi/index.htm</a></p>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Radioactivity"</h2>
+<ul>
+<li><a href="geiger_counter.htm"><span class="r-sec">Radioactivity</span>Geiger Counter PC CDV</a></li>
+<li><a href="geiger_arduino.htm"><span class="r-sec">Radioactivity</span>Geiger counter with Arduino</a></li>
+<li><a href="geiger_counter_pulsar.htm"><span class="r-sec">Radioactivity</span>Geiger counter calibrator</a></li>
+<li><a href="geiger_counter_voltmeter.htm"><span class="r-sec">Radioactivity</span>HV Voltmeter 1000 MΩ</a></li>
+<li><a href="ram63.htm"><span class="r-sec">Radioactivity</span>RAM 63 — improvements</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#realizzazione">Realization</a></li>
+<li><a href="#schema-elettrico-sonda-gm-con-amplificatore-esterno">Circuit diagram GM probe with external amplifier.</a></li>
+<li><a href="#montaggio-circuito">Circuit assembly</a></li>
+<li><a href="#sonde-sbm20">SBM20 probes</a></li>
+<li><a href="#sonda-pancake-48mm">Pancake probe 48mm</a></li>
+<li><a href="#campioni-per-taratura-geiger">Samples for Geiger calibration</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>RF Generator 20 MHz - 4 GHz harmonic comb generator by Roberto Chirio</title>
+<meta content="RF Generator 20Mhz - 4Ghz harmonic comb generator by Roberto Chirio" name="description"/>
+<meta content="RF, generator, quartz, harmonic comb generator, xtal" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="rf_gen_2014.htm" hreflang="en" rel="alternate"/><link href="../rf_gen_2014.htm" hreflang="it" rel="alternate"/><link href="../rf_gen_2014.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../rf_gen_2014.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a aria-current="true" href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antennas</a></li><li aria-current="page">RF Oscillator — generator 20 MHz – 4 GHz</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radio &amp; antennas</p>
+<h1>RF generator 25 MHz - 4000 MHz</h1>
+<p class="subtitle">Simple sweep RF generator, harmonic comb generator. Arduino RF beacon.</p>
+<p class="article-meta"><span><a href="index.html#radio">Radio &amp; antennas</a></span><span>Roberto Chirio</span><span>rubric "Radio Corner"</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#premessa">Premise</a></li>
+<li><a href="#s-chema-elettrico">Circuit diagram</a></li>
+<li><a href="#segnale-uscita">Output signal</a></li>
+<li><a href="#arduino-rf-generator">Arduino RF generator</a></li>
+<li><a href="#applicazioni">Applications</a></li></ol></nav></details>
+<div class="prose">
+<hr color="#336699"/>
+<h2 id="premessa">Premise</h2><p>June 2014 </p><p>This circuit is an RF harmonic generator, starting from a fixed and stable signal generated by a 5V 4-pin half-size quartz oscillator, compact and stable of the type used for microprocessor clocks.</p><p class="center"><img alt="Oscillator" class="is-photo" decoding="async" height="266" loading="lazy" src="../IMAGES/rf_gen_2014_oscillator.jpg" width="313"/>  
+<img alt="Video card with XCL quartz oscillator, 27.000Mhz" class="is-photo" decoding="async" height="266" loading="lazy" src="../IMAGES/rf_gen_2014_oscillator_2.jpg" width="399"/></p><p>It is possible to disassemble quartz oscillators from almost all motherboards or recent microprocessor circuits. From catalogs it is possible to order oscillators for frequencies ranging from 1 MHz to over 100 MHz.</p><p>The harmonics repeat starting from the fundamental frequency of the crystal up to exceeding 4000 MHz, in practice it's like having a sweep generator, useful for testing many devices.</p><p>At the output suitable for a 50 Ohm load there is a maximum signal of 16dB, it is of considerable intensity, suitable both for building small transmitters and for testing filters.</p><p>It is possible to narrow the bandwidth by making downstream one or more tuned stages, all while obtaining great frequency stability, thanks to the quartz.</p><p>If you want a tighter repetition you can use a crystal also from just 1 MHz, so as to have a narrow pulse every MHz up to over 2000 MHz still with a fair signal. Ideal for testing USB SDR receivers like the FUN-CUBE or similar ones....</p><p class="center"><img alt="" class="is-photo" decoding="async" height="330" loading="lazy" src="../IMAGES/rf_gen_2014_006.jpg" width="497"/></p><p>This is the prototype board of the RF generator; the components and diagram are optimized to have maximum output power with a single RF transistor type BFR91, some resistors and capacitors are not connected, they were used for testing. It is possible to use most quartz oscillators type KTS and other brands with frequencies from 1 to 120 MHz. The output signal is over one Volt and therefore suitable to drive the transistor directly.</p>
+<h2 id="s-chema-elettrico">Circuit diagram</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="286" loading="lazy" src="../IMAGES/rf_gen_2014_000.jpg" width="699"/>  </p><ul class="dash-list"><li>The crystal oscillator U2 must be powered at 5V through the regulator U3 78L05.</li><li>Capacitor C3 applies the signal at 25.00 MHz to the base of the RF amplifier transistor d 6 GHz, also used as Tunnel diode see <a href="tunnel_generator.htm">TUNNEL EFFECT</a></li><li>Resistor R2 limits the current of Q1 to a maximum of 40mA with 12V power supply, during testing I recommend not exceeding 9V otherwise you risk burning the transistor. </li><li>Capacitors C4 and C6 are essential to achieve almost 50mW output (9V), without capacitors the output power at 50 Ohm drops to 1-2mW</li><li>For the L1 choke inductor you can use a VK200, but also 20 turns wound on a 5-6mm ferrite work fine. In the final version a 1mH inductor was adopted to have more amplitude in the HF band.</li><li>Instead of L1 a tuned LC can be inserted, in this case we will have a larger signal peak at the resonance frequency.</li><li>Everything must be placed in a metal container to avoid direct radiation, which can interfere with radio transmissions.</li><li>The output signal if applied to a Discone type antenna is sufficient to be heard a few km away even without further amplification.</li><li>Using a 2N2222A type transistor similar results are obtained, but the bandwidth is limited to 500 MHz</li></ul><p class="center"><img alt="" class="is-photo" decoding="async" height="440" loading="lazy" src="../IMAGES/rf_gen_2014_007.jpg" width="656"/></p><p>This is the trial version inside the metal container, still with 25 MHz oscillator, inductor L1 has become 1mH.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="437" loading="lazy" src="../IMAGES/rf_gen_2014_008.jpg" width="656"/></p><p>Where possible, all components are SMD, C4 and C6 have become a single 20uF ceramic capacitor, as well as C1. Complete the group, the toggle switch and the LED to signal power on.</p><p>To achieve the lowest RF leakage, the cover must be closed and firmly fastened with screws...</p>
+<h2 id="segnale-uscita">Output signal</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="483" loading="lazy" src="../IMAGES/rf_gen_2014_001.jpg" width="656"/></p><p>This is the broadband signal present at the output, we still get -60dB at 3500 MHz equal to 0.224mVrms. The first impulses together with the fundamental exceed the 0dB line.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="483" loading="lazy" src="../IMAGES/rf_gen_2014_002.jpg" width="656"/></p><p>This is the fundamental signal at 25,000 MHz with +16dB equal to 2.69V on 50 Ohm. On each band the signal is very stable and clean. </p><p class="center"><img alt="" class="is-photo" decoding="async" height="483" loading="lazy" src="../IMAGES/rf_gen_2014_003.jpg" width="656"/></p><p> Here you can see very well, the repetition of harmonics one every 25 MHz, the amplitude is not always constant and linear is the mathematics of even and odd harmonics, it's always a simple circuit to build, you can't expect measurement instrument performance...</p><p class="center"><a class="zoom-link" href="../IMAGES/rf_gen_2014_009_b.jpg" title="Open the image at full resolution"><img alt="Click to see the whole image." class="is-photo" decoding="async" height="480" loading="lazy" src="../IMAGES/rf_gen_2014_005.jpg" width="640"/></a></p><p>Power Meter reading of output power, 16.94dB, referenced to the highest peak; not bad for a single transistor connected to a crystal oscillator. The RF generator is connected directly to the analyzer input to avoid cable losses. (click to enlarge)</p><h2 id="arduino-rf-generator">Arduino RF generator</h2><p>  Instead of a crystal or crystal oscillator, it's possible to use an Arduino board to generate the frequency; in this test an Arduino Pro Nano 5V with 16 MHz clock was used. The 9V power is drawn from the breadboard, but separate 5V USB power can also be used just for Arduino. RF output on pin out (8). The output is applied to the circuit described above, and Arduino acts as the crystal oscillator.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="317" loading="lazy" src="../IMAGES/rf_gen_2014_010.jpg" width="475"/></p><p>- To have a fundamental at 1,332 MHz (pin out 8) the program indicated on this page is used as a starting point: <a href="http://forum.arduino.cc/index.php/topic,8456.0.html" rel="noopener">http://forum.arduino.cc/index.php/topic,8456.0.html</a></p><p>The program in addition to running the loop for maximum output frequency uses interrupts to modulate the output with a Morse message, you can easily change the message with a more appropriate text. The harmonic signal at the output is present up to beyond 2000 MHz with a repetition of 1.332 MHz.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="476" loading="lazy" src="../IMAGES/rf_gen_2014_arduino_2a.jpg" width="656"/></p><p>This is the output signal on 50 Ohm, at 1000 MHz we are at -60dB still audible on a scanner at a few meters distance. Given the type of modulation it is listenable in both FM and AM, even better in the HF band with CW filtering.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="476" loading="lazy" src="../IMAGES/rf_gen_2014_arduino_2b.jpg" width="656"/></p><p>This is the fundamental at 1.332 MHz very disturbed around, due to Morse modulation and other disturbances generated internally by the Arduino board.</p><hr color="#336699"/><p>- The maximum output frequency with a fundamental at 4.0065 MHz (pinout 8) uses this more simplified and faster program that brings to all outputs the same signal which corresponds to 1/4 of the 16 MHz clock frequency.</p><p class="center"><a href="http://forum.arduino.cc/index.php/topic,36729.0.html" rel="noopener">http://forum.arduino.cc/index.php/topic,36729.0.html</a></p><p>Much simpler program than the previous one, it serves to reach the maximum available frequency on the output ports.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="476" loading="lazy" src="../IMAGES/rf_gen_2014_arduino_1a.jpg" width="656"/></p><p class="center">This is the output signal on 50 Ohm, at 1000 MHz we are at -50dB signal better cleaner than the previous program.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="476" loading="lazy" src="../IMAGES/rf_gen_2014_arduino_1b.jpg" width="656"/></p><p>This is the fundamental signal, measured at 4.0065 MHz very clean, and without modulation noise like on the previous program, the peaks follow regularly every 4 MHz up to over 2000 MHz.</p><p>Using Arduino 2 which runs with a higher clock it is conceivable to obtain a greater number of fundamentals in programming.....</p><p>...................</p><h2 id="applicazioni">Applications</h2><p>
+The RF generator is useful in many cases, you can test the input of a receiver to verify operation, and with the crystal oscillator you can check the accuracy of the reading on the radio scale for most bands exceeding 3000 MHz.
+</p><p>Using a 1 MHz crystal oscillator becomes ideal for testing SDR receivers.</p><p>To linearize the signal you can use a high-pass filter tuned to 700-1000 MHz followed by an attenuator, so as to reduce the lower frequencies, and have a signal of about -30 dB.</p><p>By greatly attenuating the signal and connecting the signal directly with cable it is possible to verify the input sensitivity for radio receivers.
+</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Radio &amp; antennas"</h2>
+<ul>
+<li><a href="mini_whip.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip — active HF/VLF antenna</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip SDR — active antenna</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip SDR+ — active antenna</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Loop — active antenna</a></li>
+<li><a href="antenna_40m.htm"><span class="r-sec">Radio &amp; antennas</span>40mt wire antenna band</a></li>
+<li><a href="yagi_pmr.htm"><span class="r-sec">Radio &amp; antennas</span>PMR Yagi antenna</a></li>
+<li><a href="rf_gen_2018.htm"><span class="r-sec">Radio &amp; antennas</span>RF generator 2700 MHz</a></li>
+<li><a href="rf_gen_VHF.htm"><span class="r-sec">Radio &amp; antennas</span>VHF generator 70–500 MHz</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#premessa">Premise</a></li>
+<li><a href="#s-chema-elettrico">Circuit diagram</a></li>
+<li><a href="#segnale-uscita">Output signal</a></li>
+<li><a href="#arduino-rf-generator">Arduino RF generator</a></li>
+<li><a href="#applicazioni">Applications</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

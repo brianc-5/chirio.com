@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Digital Geiger Counter radiation counter ARDUINO</title>
+<meta content="Digital Geiger Counter radiation counter ARDUINO" name="description"/>
+<meta content="geiger, geiger counter, radiation measurement, arduino, arduino system" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="geiger_arduino.htm" hreflang="en" rel="alternate"/><link href="../geiger_arduino.htm" hreflang="it" rel="alternate"/><link href="../geiger_arduino.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../geiger_arduino.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a aria-current="true" href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radioattivita">Radioactivity</a></li><li aria-current="page">Geiger counter with Arduino</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radioactivity</p>
+<h1>GEIGER COUNTER</h1>
+<p class="subtitle">made with ARDUINO Open Source "Electronics design" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#radioattivita">Radioactivity</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#caratteristiche">Characteristics:</a></li>
+<li><a href="#schema-elettrico-versione-semplificata-hv-fisso-400-e-900v" title="CIRCUIT DIAGRAM simplified version fixed HV 400 and 900V">CIRCUIT DIAGRAM simplified version fixed HV 400...</a></li>
+<li><a href="#descrizione">Description</a></li>
+<li><a href="#schema-elettrico-versione-hv-regolabile">CIRCUIT DIAGRAM adjustable HV version</a></li>
+<li><a href="#campioni-per-taratura-geiger">Samples for Geiger calibration</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<p class="center"><img alt="" class="is-photo" decoding="async" height="264" loading="lazy" src="../IMAGES/geiger_arduino_01.jpg" width="400"/></p><p>April 2011</p><p>Implementation of a sophisticated and complete Geiger Counter with rate-meter and scaler functions.</p><p>This page is for study and for hardware interface composed of HV generator, discriminator circuit and beep signal generator.</p><p>For display and digital part, the commercial board is used, called Arduino 2009 or Arduino Uno, consisting of board and 16 x 2 display</p><p>see:
+<a href="http://spazioinwind.libero.it/andrea_bosi/appunti/2010/geig_enotria.htm" rel="noopener">http://spazioinwind.libero.it/andrea_bosi/appunti/2010/geig_enotria.htm</a></p><p>see prof. Bosi's test: <a href="http://www.youtube.com/watch?v=VCso-0n558g" rel="noopener">http://www.youtube.com/watch?v=VCso-0n558g</a></p>
+<h2 id="caratteristiche">Characteristics:</h2><ul class="dash-list"><li>5V power supply consumption max 30mA (USB)</li><li>Fixed HV voltage at 400V and 900V</li><li>Discriminator circuit fixed parameters</li><li>Audio beeper at fixed volume</li><li>TTL pulse output for Arduino</li><li>Audio signal output for CDV</li></ul>
+<h2 id="schema-elettrico-versione-semplificata-hv-fisso-400-e-900v">CIRCUIT DIAGRAM simplified version fixed HV 400 and 900V</h2><p class="center"><a class="zoom-link" href="../IMAGES/geiger_counter_arduino_sche.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="506" loading="lazy" src="../IMAGES/geiger_counter_arduino_sche.gif" width="752"/></a>
+</p>
+<h2 id="descrizione">Description</h2><p>
+Diagram V. 1.1</p><ul class="dash-list"><li>5V power supply, available from the Arduino board or from 6-9V via a 7805 regulator, consumption is low, less than 30mA, a 78L05 is also sufficient.</li><li>The stage with U1 has the function of generating the frequency of about 2 kHz necessary to drive the HV circuit; the square wave signal exits pin 3 and goes to drive the MosFet type FQP2N60 or BSP300. Better HV results with 5V power supply are obtained by using a switching transistor instead of the Mos-fet.</li><li>High voltage is generated in Step-up configuration, recovering the opening pulses of inductor L1.</li><li>The doubler circuit formed by D1, D2 and D3 and by C5, C6 and C1 allows to get about 1000V no-load, sufficient for American probes at 900V.</li><li>Using groups of 400mW 100V Zener diodes (D6 and D7) it is possible to precisely control the output voltage by blocking the operation of the 555 oscillator when the voltage exceeds the preset threshold.</li><li>The S1 switch allows you to select the output voltage from 400V to 900V, a double-section switch must be used to ensure isolation.</li><li>The HV circuit ends at the connector for the Geiger Tube, suitable therefore to connect various probes, you can use a panel-mount BNC connecting the outer body to ground. Everything must be made with spacing to ensure 1000V isolation.</li><li>Through capacitor C11 it is possible to pick up the pulse signal and take it to the trigger circuit.</li><li>The trigger circuit uses a 4093 IC, where pulse detection is handled by the first section, the second section inverts the signal to get positive pulses.</li><li>The third and fourth sections generate the pulse suitable for driving the buzzer and LED that will flash for each pulse generated by the Geiger tube.</li><li>From the output of the first section of the 4093 we can take the signal with 5V TTL pulse suitable for entering the Arduino board, to perform pulse counting.</li><li>Any audio signal is always present at the output of the first section and can be connected to the PC audio input for diagram via CDV program.</li></ul>
+<h2 id="schema-elettrico-versione-hv-regolabile">CIRCUIT DIAGRAM adjustable HV version</h2><p class="center">
+<a class="zoom-link" href="../IMAGES/geiger_arduino_schema_HV_02.jpg" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="318" loading="lazy" src="../IMAGES/geiger_arduino_schema_02_sm.jpg" width="750"/></a>
+</p><ul class="dash-list"><li>Here's how to modify the HV section to get variable output from 100 to about 2000V.
+</li><li>The oscillator circuit remains similar to the previous one, the LM358 comparator is introduced which will be powered from 5V.</li><li>By adjusting with the R8 trimmer it's possible to vary the HV voltage from about 100 V to 2000 V, with its stability as the reading is done via the R6/R9 divider
+</li><li>For the rest of the circuit use the previous circuit replacing only the HV section
+</li><li>It has been seen in practice that better performance is obtained for HV conversion by going to 6V thus improving the MOSFET drive, modify the 7805 with a 7806 or use an adjustable LM317. Or use a switching transistor 5-600V 1A
+</li><li>Better HV results with 5V power are obtained using a switching transistor instead of the Mos-fet.
+</li></ul>
+<h2 id="campioni-per-taratura-geiger">Samples for Geiger calibration</h2><p>Pitchblende samples under lead available for Geiger Counter calibration.</p><p>Containers diam. 29mm, values on request from 0.100 mRh to 2 mRh, emission type: </p><ul class="dash-list"><li>Alpha, Beta + gamma (Free mineral)</li><li>Beta + Gamma (Mineral embedded in resin)</li><li>Only Gamma (Mineral shielded with aluminum 1mm)</li></ul><p class="right">Contact: <a href="mailto:info@chirio.com">info@chirio.com</a></p><p class="center"><img alt="" class="is-photo" decoding="async" height="249" loading="lazy" src="../IMAGES/me_campione_u.jpg" width="336"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="243" loading="lazy" src="../IMAGES/campioni_pecbl_2.jpg" width="326"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="243" loading="lazy" src="../IMAGES/sonda_pancake.jpg" width="365"/>
+</p><p>
+Two examples of samples with free mineral.
+</p><p>
+All samples are tested with Pancake probes type Eberline HP-260 or Ludlum 44-9
+</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Radioactivity"</h2>
+<ul>
+<li><a href="geiger_counter.htm"><span class="r-sec">Radioactivity</span>Geiger Counter PC CDV</a></li>
+<li><a href="geiger_counter_pulsar.htm"><span class="r-sec">Radioactivity</span>Geiger counter calibrator</a></li>
+<li><a href="geiger_counter_voltmeter.htm"><span class="r-sec">Radioactivity</span>HV Voltmeter 1000 MΩ</a></li>
+<li><a href="ram63.htm"><span class="r-sec">Radioactivity</span>RAM 63 — improvements</a></li>
+<li><a href="SV500.htm"><span class="r-sec">Radioactivity</span>FAG SV500 — upgrade</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#caratteristiche">Characteristics:</a></li>
+<li><a href="#schema-elettrico-versione-semplificata-hv-fisso-400-e-900v" title="CIRCUIT DIAGRAM simplified version fixed HV 400 and 900V">CIRCUIT DIAGRAM simplified version fixed HV 400...</a></li>
+<li><a href="#descrizione">Description</a></li>
+<li><a href="#schema-elettrico-versione-hv-regolabile">CIRCUIT DIAGRAM adjustable HV version</a></li>
+<li><a href="#campioni-per-taratura-geiger">Samples for Geiger calibration</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

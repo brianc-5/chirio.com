@@ -13,139 +13,232 @@ have actually opened and revised it.
   been applied. These pages are correct and consistent; they are not
   individually curated.
 
-**256 pages total — 3 curated, 253 on the system.**
+**512 pages total — 3 curated, 509 on the system.**
 
 ## By page family
 
 | Family | Pages | Curated | Notes |
 | --- | ---: | ---: | --- |
 | home | 1 | 1 | hand-built; the only page with a bespoke layout |
-| technical article | 66 | 1 | the archive proper — where the remaining work is |
-| legal page | 2 | 0 | short, stable, low risk |
+| technical article | 148 | 1 | the archive proper — where the remaining work is |
+| legal page | 4 | 0 | short, stable, low risk |
 | chaberton landing | 1 | 1 | hand-built section entry point |
 | chaberton article | 12 | 0 | prose pages of the historical archive |
-| gallery index | 8 | 0 | thumbnail grids, uniform |
-| photo page | 161 | 0 | one photograph plus prev/next, uniform |
-| panorama | 3 | 0 | JS viewer over the 6000 px originals |
+| gallery index | 16 | 0 | thumbnail grids, uniform |
+| photo page | 322 | 0 | one photograph plus prev/next, uniform |
+| panorama | 6 | 0 | JS viewer over the 6000 px originals |
 | error page | 1 | 0 | static 404 |
 | redirect | 1 | 0 | legacy lowercase URL stub |
 
 ## Priority queue
 
-- **P1 — revise next** — 30 pages
-- **P2 — review** — 37 pages
-- **P3 — spot-check** — 186 pages
+- **P1 — revise next** — 60 pages
+- **P2 — review** — 75 pages
+- **P3 — spot-check** — 374 pages
 - **done — hand-curated** — 3 pages
 
 Priority is computed from observable signals: page length, number of
 sections, over-long headings, table-of-contents size, centred blocks,
 headerless tables, external images, missing subtitle.
 
-### P1 — revise next (30)
+### P1 — revise next (60)
 
 | Page | Family | Words | Img | Needs a look at | Status |
 | --- | --- | ---: | ---: | --- | --- |
 | `fm_spy_bug.htm` | technical article | 3909 | 30 | long heading, long TOC, very long, centred blocks, no subtitle | system |
+| `en/fm_spy_bug.htm` | technical article | 3882 | 30 | long heading, long TOC, very long, centred blocks, no subtitle | system |
+| `en/mini_whip.htm` | technical article | 3114 | 28 | long heading, long TOC, very long, external image, centred blocks, many lists | system |
 | `solare_termico_centralina.htm` | technical article | 2974 | 14 | long heading, long TOC, very long, centred blocks | system |
 | `switching_power_supply_atx.htm` | technical article | 2899 | 23 | long heading, long TOC, very long, centred blocks | system |
+| `en/solare_termico_centralina.htm` | technical article | 2872 | 14 | long heading, long TOC, very long, centred blocks | system |
+| `en/switching_power_supply_atx.htm` | technical article | 2868 | 23 | long heading, long TOC, very long, centred blocks | system |
 | `push_pull_20_16.htm` | technical article | 2731 | 18 | long TOC, very long, centred blocks | system |
+| `en/push_pull_20_16.htm` | technical article | 2693 | 18 | long TOC, very long, centred blocks | system |
 | `mini_whip_tricks_and_tips.htm` | technical article | 2107 | 17 | long TOC, very long, external image, centred blocks, no subtitle | system |
+| `en/mini_whip_tricks_and_tips.htm` | technical article | 2099 | 17 | long TOC, very long, external image, centred blocks, no subtitle | system |
+| `en/drone_jammer.htm` | technical article | 2025 | 7 | long TOC, very long, external image, centred blocks | system |
 | `drone_jammer.htm` | technical article | 2011 | 7 | long TOC, very long, external image, centred blocks | system |
 | `battery_test.htm` | technical article | 1951 | 13 | centred blocks | system |
+| `en/battery_test.htm` | technical article | 1920 | 13 | centred blocks | system |
 | `geiger_counter.htm` | technical article | 1884 | 25 | long TOC, centred blocks, headerless table, many lists | system |
+| `en/geiger_counter.htm` | technical article | 1845 | 25 | long TOC, centred blocks, headerless table, many lists | system |
 | `electronic_load.htm` | technical article | 1669 | 15 | centred blocks, many lists | system |
+| `en/electronic_load.htm` | technical article | 1634 | 15 | centred blocks, many lists | system |
+| `en/atx_14_volt.htm` | technical article | 1609 | 14 | centred blocks, many lists | system |
 | `atx_14_volt.htm` | technical article | 1577 | 14 | centred blocks, many lists | system |
+| `en/ebike_extra_pack.htm` | technical article | 1557 | 8 | external image, centred blocks | system |
+| `en/ebike_test_batterie.htm` | technical article | 1557 | 8 | external image, centred blocks | system |
 | `ebike_extra_pack.htm` | technical article | 1548 | 8 | external image, centred blocks | system |
 | `ebike_test_batterie.htm` | technical article | 1548 | 8 | external image, centred blocks | system |
 | `cmos_cleaning.htm` | technical article | 1530 | 4 | long heading, centred blocks | system |
+| `en/cmos_cleaning.htm` | technical article | 1504 | 4 | long heading, centred blocks | system |
 | `ram63.htm` | technical article | 1471 | 20 | long TOC, centred blocks | system |
+| `en/ram63.htm` | technical article | 1469 | 20 | long TOC, centred blocks | system |
 | `rf_gen_VHF.htm` | technical article | 1413 | 9 | centred blocks, no subtitle | system |
 | `step_up_10a.htm` | technical article | 1405 | 9 | long TOC, centred blocks | system |
+| `en/rf_gen_VHF.htm` | technical article | 1401 | 9 | centred blocks, no subtitle | system |
+| `en/step_up_10a.htm` | technical article | 1400 | 9 | long TOC, centred blocks | system |
+| `en/home_save_energy.htm` | technical article | 1271 | 5 | long heading, long TOC, centred blocks, many lists | system |
 | `home_save_energy.htm` | technical article | 1257 | 5 | long heading, long TOC, centred blocks, many lists | system |
+| `en/auto_elettrica.htm` | technical article | 1038 | 2 | external image, centred blocks | system |
 | `auto_elettrica.htm` | technical article | 994 | 2 | external image, centred blocks | system |
 | `antenna_40m.htm` | technical article | 981 | 6 | external image, centred blocks | system |
+| `en/antenna_40m.htm` | technical article | 979 | 6 | external image, centred blocks | system |
 | `mini_loop.htm` | technical article | 975 | 7 | external image, centred blocks | system |
+| `en/mini_loop.htm` | technical article | 947 | 7 | external image, centred blocks | system |
 | `mini_whip_sdr.htm` | technical article | 940 | 11 | centred blocks, many lists | system |
+| `en/mini_whip_sdr.htm` | technical article | 924 | 11 | centred blocks, many lists | system |
 | `jeep_perego.htm` | technical article | 820 | 9 | centred blocks, many lists | system |
+| `en/jeep_perego.htm` | technical article | 808 | 9 | centred blocks, many lists | system |
 | `geiger_counter_voltmeter.htm` | technical article | 731 | 9 | long heading, centred blocks | system |
 | `led_1_battery_AAA_.htm` | technical article | 699 | 6 | long heading, centred blocks | system |
+| `en/led_1_battery_AAA_.htm` | technical article | 674 | 6 | long heading, centred blocks | system |
 | `steady_cam_simple.htm` | technical article | 648 | 7 | centred blocks, many lists | system |
+| `en/steady_cam_simple.htm` | technical article | 646 | 7 | centred blocks, many lists | system |
+| `en/test_magicshine.htm` | technical article | 611 | 19 | long TOC, centred blocks, many lists | system |
 | `test_magicshine.htm` | technical article | 604 | 19 | long TOC, centred blocks, many lists | system |
 | `led_video_3p7.htm` | technical article | 443 | 6 | long heading, centred blocks | system |
+| `en/led_video_3p7.htm` | technical article | 428 | 6 | long heading, centred blocks | system |
+| `en/led_bk3_s.htm` | technical article | 225 | 9 | centred blocks, headerless table | system |
 | `led_bk3_s.htm` | technical article | 224 | 9 | centred blocks, headerless table | system |
 | `led_light_emitting_diodes.htm` | technical article | 157 | 2 | long heading, centred blocks | system |
+| `en/led_light_emitting_diodes.htm` | technical article | 155 | 2 | long heading, centred blocks | system |
 | `power_supply_12v_30A.htm` | technical article | 56 | 0 | centred blocks, headerless table | system |
+| `en/power_supply_12v_30A.htm` | technical article | 55 | 0 | centred blocks, headerless table | system |
 
-### P2 — review (37)
+### P2 — review (75)
 
 | Page | Family | Words | Img | Needs a look at | Status |
 | --- | --- | ---: | ---: | --- | --- |
 | `lux_meter.htm` | technical article | 1452 | 9 | centred blocks | system |
+| `en/lux_meter.htm` | technical article | 1442 | 9 | centred blocks | system |
+| `en/luci_auto.htm` | technical article | 1430 | 7 | centred blocks | system |
 | `luci_auto.htm` | technical article | 1406 | 7 | centred blocks | system |
 | `rf_gen_2014.htm` | technical article | 1255 | 15 | centred blocks | system |
+| `en/rf_gen_2014.htm` | technical article | 1210 | 15 | centred blocks | system |
 | `led_s.htm` | technical article | 1110 | 8 | centred blocks | system |
+| `en/led_s.htm` | technical article | 1102 | 8 | centred blocks | system |
 | `SV500.htm` | technical article | 1100 | 13 | centred blocks | system |
+| `en/SV500.htm` | technical article | 1076 | 13 | centred blocks | system |
 | `tunnel_generator.htm` | technical article | 1076 | 7 | centred blocks | system |
+| `en/tunnel_generator.htm` | technical article | 1068 | 7 | centred blocks | system |
 | `lipo_battery_charger.htm` | technical article | 1023 | 5 | — | system |
 | `chirio_com_privacy.htm` | legal page | 1022 | 0 | no sections | system |
+| `en/chirio_com_privacy.htm` | legal page | 1015 | 0 | no sections | system |
+| `en/lipo_battery_charger.htm` | technical article | 996 | 5 | — | system |
 | `printer_3d.htm` | technical article | 979 | 7 | centred blocks | system |
+| `en/rf_gen_2018.htm` | technical article | 964 | 7 | centred blocks | system |
+| `en/printer_3d.htm` | technical article | 963 | 7 | centred blocks | system |
 | `rf_gen_2018.htm` | technical article | 962 | 7 | centred blocks | system |
 | `led_6_220V.htm` | technical article | 960 | 9 | centred blocks | system |
+| `en/led_6_220V.htm` | technical article | 937 | 9 | centred blocks | system |
 | `vfo_gen_2015.htm` | technical article | 896 | 7 | centred blocks | system |
 | `luci_auto_2.htm` | technical article | 888 | 10 | centred blocks | system |
 | `rf_field_meter.htm` | technical article | 884 | 5 | centred blocks | system |
+| `en/luci_auto_2.htm` | technical article | 883 | 10 | centred blocks | system |
+| `en/vfo_gen_2015.htm` | technical article | 883 | 7 | centred blocks | system |
+| `en/rf_field_meter.htm` | technical article | 871 | 5 | centred blocks | system |
 | `led_torcia_sub_p7.htm` | technical article | 865 | 10 | centred blocks | system |
+| `en/led_torcia_sub_p7.htm` | technical article | 853 | 10 | centred blocks | system |
 | `nimh_battery_charger.htm` | technical article | 851 | 3 | — | system |
+| `en/mtb_gomme_chiodate.htm` | technical article | 838 | 5 | centred blocks | system |
 | `mtb_gomme_chiodate.htm` | technical article | 835 | 5 | centred blocks | system |
+| `en/nimh_battery_charger.htm` | technical article | 834 | 3 | — | system |
 | `electric_bike_bms.htm` | technical article | 821 | 6 | centred blocks | system |
+| `en/electric_bike_bms.htm` | technical article | 810 | 6 | centred blocks | system |
+| `en/chaberton/storia_chaberton.htm` | technical article | 771 | 4 | no sections | system |
 | `chaberton/storia_chaberton.htm` | chaberton article | 763 | 4 | no sections | system |
+| `en/led_dimmer_rgb.htm` | technical article | 753 | 5 | centred blocks | system |
 | `led_dimmer_rgb.htm` | technical article | 742 | 5 | centred blocks | system |
+| `en/geiger_counter_voltmeter.htm` | technical article | 729 | 9 | centred blocks | system |
 | `led_seoul_zp4_mtb_3.htm` | technical article | 722 | 7 | centred blocks | system |
+| `en/led_seoul_zp4_mtb_3.htm` | technical article | 721 | 7 | centred blocks | system |
 | `geiger_arduino.htm` | technical article | 717 | 6 | centred blocks | system |
+| `en/geiger_arduino.htm` | technical article | 712 | 6 | centred blocks | system |
 | `led_torcia_sub_03.htm` | technical article | 687 | 10 | centred blocks | system |
+| `en/led_torcia_sub_03.htm` | technical article | 685 | 10 | centred blocks | system |
 | `bromografo_uv.htm` | technical article | 663 | 2 | centred blocks | system |
+| `en/bromografo_uv.htm` | technical article | 640 | 2 | centred blocks | system |
+| `en/mini_whip_sdr_p.htm` | technical article | 633 | 7 | centred blocks | system |
 | `flash_macro.htm` | technical article | 629 | 10 | centred blocks | system |
 | `mini_whip_sdr_p.htm` | technical article | 622 | 7 | centred blocks | system |
+| `en/flash_macro.htm` | technical article | 616 | 10 | centred blocks | system |
 | `led_acquario.htm` | technical article | 588 | 4 | centred blocks | system |
+| `en/led_acquario.htm` | technical article | 582 | 4 | centred blocks | system |
+| `en/parkside_battery_pack.htm` | technical article | 516 | 5 | centred blocks | system |
 | `parkside_battery_pack.htm` | technical article | 513 | 5 | centred blocks | system |
+| `en/led_h4.htm` | technical article | 471 | 6 | centred blocks | system |
 | `yagi_pmr.htm` | technical article | 468 | 8 | centred blocks | system |
+| `en/yagi_pmr.htm` | technical article | 462 | 8 | centred blocks | system |
 | `led_h4.htm` | technical article | 461 | 6 | centred blocks | system |
+| `en/led_test.htm` | technical article | 332 | 8 | centred blocks | system |
 | `led_test.htm` | technical article | 332 | 8 | centred blocks | system |
 | `legge_di_ohm.htm` | technical article | 324 | 3 | centred blocks | system |
+| `en/chaberton/pan_360.HTM` | technical article | 318 | 4 | centred blocks | system |
 | `chaberton/pan_360.HTM` | chaberton article | 317 | 4 | centred blocks | system |
+| `en/legge_di_ohm.htm` | technical article | 316 | 3 | centred blocks | system |
 | `chaberton/foto_chaberton.HTM` | chaberton article | 175 | 9 | centred blocks | system |
+| `en/chaberton/foto_chaberton.HTM` | technical article | 166 | 9 | centred blocks | system |
+| `en/chaberton/teleferica_chaberton.htm` | technical article | 137 | 9 | centred blocks | system |
 | `chaberton/teleferica_chaberton.htm` | chaberton article | 135 | 9 | centred blocks | system |
 | `chaberton/video_chaberton.HTM` | chaberton article | 79 | 1 | headerless table | system |
+| `en/chaberton/video_chaberton.HTM` | technical article | 78 | 1 | headerless table | system |
 | `chaberton/panorami_chaberton.htm` | chaberton article | 66 | 4 | centred blocks | system |
+| `en/chaberton/panorami_chaberton.htm` | technical article | 63 | 4 | centred blocks | system |
 
-### P3 — spot-check (186)
+### P3 — spot-check (374)
 
 | Page | Family | Words | Img | Needs a look at | Status |
 | --- | --- | ---: | ---: | --- | --- |
 | `monopiede_1.htm` | technical article | 761 | 7 | — | system |
+| `en/monopiede_1.htm` | technical article | 758 | 7 | — | system |
 | `433Mhz_sensor.htm` | technical article | 743 | 6 | — | system |
+| `en/433Mhz_sensor.htm` | technical article | 728 | 6 | — | system |
 | `geiger_counter_pulsar.htm` | technical article | 669 | 4 | — | system |
+| `en/geiger_counter_pulsar.htm` | technical article | 668 | 4 | — | system |
+| `en/attenuator_20dbm.htm` | technical article | 659 | 3 | — | system |
 | `attenuator_20dbm.htm` | technical article | 650 | 3 | — | system |
 | `chirio_com_disclaimer.htm` | legal page | 612 | 0 | — | system |
+| `en/chirio_com_disclaimer.htm` | legal page | 584 | 0 | — | system |
 | `chaberton/fortificazioni.htm` | chaberton article | 565 | 2 | — | system |
+| `en/chaberton/fortificazioni.htm` | technical article | 548 | 2 | — | system |
 | `chaberton/escursione_chaberton.htm` | chaberton article | 491 | 4 | — | system |
+| `en/chaberton/escursione_chaberton.htm` | technical article | 477 | 4 | — | system |
+| `en/chaberton/chab.htm` | technical article | 299 | 1 | — | system |
 | `chaberton/pan_02/Pan002.html` | panorama | 165 | 0 | — | system |
+| `en/chaberton/pan_02/Pan002.html` | panorama | 158 | 0 | — | system |
+| `en/led_lamp_10w.htm` | technical article | 153 | 1 | — | system |
 | `led_lamp_10w.htm` | technical article | 152 | 1 | — | system |
 | `chaberton/pan_01/Pan001.html` | panorama | 141 | 0 | — | system |
+| `en/chaberton/pan_01/Pan001.html` | panorama | 141 | 0 | — | system |
+| `en/chaberton/pan_03/Pan003.html` | panorama | 95 | 0 | — | system |
 | `chaberton/pan_03/Pan003.html` | panorama | 87 | 0 | — | system |
+| `en/chaberton/tunnel_chaberton.htm` | technical article | 74 | 3 | — | system |
 | `chaberton/tunnel_chaberton.htm` | chaberton article | 73 | 3 | — | system |
 | `chaberton/mappa_chaberton.htm` | chaberton article | 42 | 2 | — | system |
+| `en/chaberton/mappa_chaberton.htm` | technical article | 40 | 2 | — | system |
+| `en/chaberton/mappa_sito.htm` | technical article | 36 | 1 | — | system |
 | `chaberton/mappa_sito.htm` | chaberton article | 34 | 1 | — | system |
+| `en/404.html` | technical article | 32 | 0 | — | system |
 | `404.html` | error page | 30 | 0 | — | system |
 | `chaberton/2007_04_05/index.htm` | gallery index | 14 | 0 | — | system |
 | `chaberton/batteria_2003/batteria_2003.htm` | gallery index | 12 | 0 | — | system |
 | `chaberton/batteria_2003/index.htm` | gallery index | 12 | 0 | — | system |
+| `en/chaberton/2007_04_05/index.htm` | gallery index | 12 | 0 | — | system |
+| `en/chaberton/batteria_2003/batteria_2003.htm` | gallery index | 11 | 0 | — | system |
+| `en/chaberton/batteria_2003/index.htm` | gallery index | 11 | 0 | — | system |
 | `chaberton/foto_301204/index.htm` | gallery index | 9 | 0 | — | system |
 | `chaberton/cesana_40_42/index.htm` | gallery index | 8 | 0 | — | system |
+| `en/chaberton/cesana_40_42/index.htm` | gallery index | 8 | 0 | — | system |
+| `en/chaberton/foto_301204/index.htm` | gallery index | 8 | 0 | — | system |
 | `chaberton/centri_colle/index.htm` | gallery index | 5 | 0 | — | system |
+| `en/chaberton/centri_colle/index.htm` | gallery index | 5 | 0 | — | system |
 | `chaberton/foto_210804/index.htm` | gallery index | 4 | 0 | — | system |
+| `en/chaberton/foto_210804/index.htm` | gallery index | 4 | 0 | — | system |
 | `chaberton/pt_vallon/index.htm` | gallery index | 3 | 0 | — | system |
+| `en/chaberton/pt_vallon/index.htm` | gallery index | 3 | 0 | — | system |
 | `chaberton/testa.htm` | chaberton article | 1 | 1 | — | system |
+| `en/chaberton/testa.htm` | technical article | 1 | 1 | — | system |
 | `chaberton/2007_04_05/pages/IMG_1414.htm` | photo page | 0 | 1 | — | system |
 | `chaberton/2007_04_05/pages/IMG_1416.htm` | photo page | 0 | 1 | — | system |
 | `chaberton/2007_04_05/pages/IMG_1418.htm` | photo page | 0 | 1 | — | system |
@@ -307,6 +400,169 @@ headerless tables, external images, missing subtitle.
 | `chaberton/pt_vallon/pages/009.htm` | photo page | 0 | 1 | — | system |
 | `chaberton/pt_vallon/pages/009_a.htm` | photo page | 0 | 1 | — | system |
 | `chaberton/pt_vallon/pages/010.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1414.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1416.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1418.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1419.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1420.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1421.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1423.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1424.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1425.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/2007_04_05/pages/IMG_1426.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/000.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/001.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/002.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/003.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/004.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/005.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/006.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/007.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/008.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/009.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/010.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/011.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/012.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/013.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/014.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/015.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/016.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/017.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/018.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/019.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/020.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/021.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/022.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/023.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/024.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/025.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/026.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/027.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/028.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/029.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/030.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/031.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/032.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/033.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/034.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/035.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/036.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/037.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/038.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/039.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/040.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/041.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/042.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/043.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/044.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/045.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/046.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/047.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/048.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/049.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/050.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/051.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/052.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/053.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/054.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/055.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/056.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/057.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/058.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/059.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/060.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/061.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/062.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/063.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/064.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/065.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/066.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/067.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/068.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/069.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/070.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/071.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/072.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/batteria_2003/pages/073.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/001.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/001_b.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/002.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/003.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/004.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/005.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/006.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/007.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/008.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/009.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/010.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/011.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/centri_colle/pages/012.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/001.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/002.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/003.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/004.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/007.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/008.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/009.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/010.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/011.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/012.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/014.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/015.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/016.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/cesana_40_42/pages/017.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/000.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/001.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/002.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/003.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/004.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/005.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/006.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/007.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/008.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/009.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/010.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/011.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/012.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/013.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/014.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/015.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/016.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/017.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/018.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/019.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/020.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_210804/pages/021.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/000.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/001.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/002.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/003.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/004.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/005.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/005_b.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/006.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/007_a.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/007_b.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/008_a.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/008_b.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/009.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/010.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/011.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/013.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/foto_301204/pages/014.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/001.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/002.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/003.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/003_a.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/004.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/005.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/007.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/008.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/009.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/009_a.htm` | photo page | 0 | 1 | — | system |
+| `en/chaberton/pt_vallon/pages/010.htm` | photo page | 0 | 1 | — | system |
+| `en/index.htm` | technical article | 0 | 0 | — | system |
+| `en/index.html` | technical article | 0 | 0 | — | system |
 | `index.htm` | redirect | 0 | 0 | — | system |
 
 ### done — hand-curated (3)

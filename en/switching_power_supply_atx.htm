@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SWITCHING POWER SUPPLY ATX How to build a lab SPS. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply From 1.0 V to 15 V and from 0.15 A to 15 A (20 A) by Roberto Chirio</title>
+<meta content="SWITCHING POWER SUPPLY ATX How to obtain a lab SPS. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply From 1.0 V to 15 V and from 0.15 A to 15 A (20 A) by Roberto Chirio" name="description"/>
+<meta content="electronics design, switching power supply, step-down, step-up, buck converter, current mode supply, led driver, power led driver, led driver design, led driver pump, led driver flash" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="switching_power_supply_atx.htm" hreflang="en" rel="alternate"/><link href="../switching_power_supply_atx.htm" hreflang="it" rel="alternate"/><link href="../switching_power_supply_atx.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../switching_power_supply_atx.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a aria-current="true" href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#alimentatori">Power supplies</a></li><li aria-current="page">ATX lab power supply</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Power supplies</p>
+<h1>SWITCHING POWER SUPPLY ATX (2009)</h1>
+<p class="subtitle">How to build a lab SPS. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply From 0.1 V to 16 V (30 V) and from 0.15 A to 16 A (30 A) "Electronics design" by R. Chirio</p>
+<p class="article-meta"><span><a href="index.html#alimentatori">Power supplies</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#schema-elettrico-atx-200w">ELECTRICAL CIRCUIT DIAGRAM ATX 200W</a></li>
+<li><a href="#schema-elettrico-atx-per-modifiche-controllo-tensione-e-corr" title="ATX CIRCUIT DIAGRAM for voltage and current control modifications.">CIRCUIT DIAGRAM ATX for control modifications…</a></li>
+<li><a href="#atx-300-500w-modifiche-per-uscita-da-0-6v-a-20v-e-corrente-d" title="ATX 300/500W modifications for output from 0.6V to 20V and current from 0.15 to 20A">ATX 300/500W modifications for output from 0.6V to 20V and...</a></li>
+<li><a href="#atx-300-500w-modifiche-per-uscita-da-0-6v-a-30v-e-corrente-d" title="ATX 300/500W modifications for output from 0.6V to 30V and current from 0.1 to 12A">ATX 300/500W modifications for output from 0.6V to 30V and...</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#ventilazione-a-temperatura-controllata">Temperature controlled ventilation.</a></li>
+<li><a href="#miglioramenti">Improvements</a></li>
+<li><a href="#cause-guasti-atx">ATX failure causes</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<p> 2008-2013</p><p>After the switching power supply of a TV, the ATX power supply is certainly the most widely distributed switching power supply electronic product in the world, millions of pieces have been produced in the last 10 years.</p><p>The average lifespan of a PC does not exceed 3-5 years, so there are many PCs that are scrapped or upgraded, and a component that is often replaced even if it still works is the ATX power supply, replaced by a more powerful model.</p><p>As is known, the ATX power supply serves to convert 220V alternating energy to direct current, isolated from the mains and of low value such as 3.3V 5V and 12V, voltages necessary for the operation of microprocessor boards.</p><p>For use in an electronics lab most of the time you need to have continuously adjustable voltage values, to perform all the necessary tests. A power supply with such features is expensive, especially if it can also deliver 20A.</p><p>With relative simplicity it is possible to modify an ATX to vary the output voltage and also to limit and regulate the current.</p><p>Let us say right away that the 220V input section must not be touched or modified. Modifications must be made only on the secondary circuit as indicated. Opening the ATX cover the 220V power must never be connected, and before reconnecting it always put back and screw on the metal cover.</p><p class="MsoNormal center"><span class="hl"><strong> The modification of the Switching Power Supply ATX requires good knowledge of electronics, </strong></span></p><p class="MsoNormal center"><span class="hl"><strong> equipment and experience in electronic assembly is required. </strong></span></p><p class="MsoNormal center"><span class="hl"><strong> And clear expertise in the use of 220V devices.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p><p class="center"><img alt="" class="is-photo" decoding="async" height="375" loading="lazy" src="../IMAGES/atx_001.jpg" width="500"/>
+</p><p>
+350W ATX modified to make it a lab power supply; on the right the potentiometer (blue knob) for adjusting output voltage from 1 to 15V (20V in this case) and the yellow potentiometer for adjusting current from 0.15 to 15A. The voltage is read with a digital LED voltmeter powered by the internal section called +5V StandBy which has not been modified. 
+</p><p>With models over 450W, and depending on the type of ATX recovered, it is possible to achieve 20V 20A or even 30V 12A at the output, as a precaution the less powerful model will be described how to make.</p><p>Before you start modifying the ATX it is necessary to identify the most suitable model for implementation, the proposed modified schematic works with most ATX units that contain the TL494 regulator or the equivalent KA7500.</p><p class="center"><em><strong><span class="hl-g">Driver integrated circuits type 2003, 2005, SG6105, are not suitable for making a variable Power Supply.</span></strong></em></p><p class="center"><em><strong><span class="hl-g">With the </span></strong></em><em><strong><span class="hl-g">UC3843 can be done but the circuit proposed on this page is not suitable.</span></strong></em></p><p class="center"><strong>PWM driver:</strong></p><p class="center">(download PDF Data Sheet)</p><p class="center"><strong><a class="download" href="../IMAGES/DRIVER%20PWM%20KA7500C.pdf">KA7500</a>  or 
+<a class="download" href="../IMAGES/DRIVER%20PWM_TL494.pdf">TL494</a></strong></p><p class="center"><a class="zoom-link" href="../IMAGES/atx_011.jpg" title="Open the image at full resolution"><img alt="How to identify the TL494 PWM driver" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_011_small.jpg" width="300"/></a>
+</p><p>The TL494 IC is found in ATX power supplies built in China from 1997 to present day; even as power ratings increase, the driver remains the same; besides, it has good characteristics allowing use in ATX supplies from 200W to 600W. What changes inside the power supply is the rating of components such as the ferrite transformer, transistors, MOSFETs and power diodes as well as the value of the filter capacitors. </p><p>From model to model the configurations of the Power Good circuit and the OverVoltage circuit change, this is not a problem, since those circuits don't concern us because they must be isolated and disconnected, see the breaks in the general diagram.</p><p>Before starting the build it's good to test the ATX in operation, and make sure it works under load. In this case you need to jumper the green cable (PS-ON) to ground, present on pin 14 of the main connector, and then supply mains power.  </p><p>If OK you will hear the fan spin. </p><p>Caution the fact that the fan is running is a good sign but it does not mean that the power section is working, you must measure the output voltages by connecting a load.</p><p> Measure the voltage on the white connectors and verify 5V (+/- 0.5V) between the red wire and the black wire, and then 12V between the yellow wire and the black wire. To test operation under load, connect a 20W 10 ohm power resistor across the 12V terminals and verify that the voltage does not drop below 11.80V. A 20W 12V lamp also works, provided it is not rated higher, otherwise the inrush current will lock up the ATX.</p><p> Leave the load connected for a while and check that there are no voltage drops or fan blockage or overheating.</p><p>A noisy fan, if any, should be replaced with a new one, if it were to jam during operation under load, in many ATX units without thermal protection overtemperature damage could easily occur. </p><p class="center"><img alt="" class="is-photo" decoding="async" height="210" loading="lazy" src="../IMAGES/atx_013.jpg" width="370"/>
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_012_ps_on.jpg" title="Open the image at full resolution"><img alt="Jumper PS-ON to ground to make an ATX work." class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_012_ps_on_small.jpg" width="300"/></a>
+</p><p>
+To know the maximum current it can deliver, it is enough to read the value on the ATX nameplate.
+</p><p>In this case with the 12V the maximum current draw is 14A.</p><p>With no loads on the other outputs, it is reasonable to think that from the 12V you can draw a higher current. From 15 to 20A for periods not exceeding 15 minutes.</p><p>We can find 480-500W power supplies that provide 18-22A from 12V.
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="186" loading="lazy" src="../IMAGES/atx_010.jpg" width="336"/>
+</p><p>
+
+We can find many ATX diagrams on this website: <a href="http://danyk.cz/s_atx_en.html" rel="noopener">http://danyk.cz/s_atx_en.html</a>
+</p>
+<h2 id="schema-elettrico-atx-200w">ELECTRICAL CIRCUIT DIAGRAM ATX 200W</h2><p>  Diagram of a 200W ATX recovered from the net. (Note that the original diagram has some errors. )</p><p>Highlighted in red are the points where to isolate the connections and in green the components to remove.</p><p>The basic circuit is always similar, the PowerGood and Overvoltage circuits change (which we won't use and will isolate) moreover with different powers, the power components will change.
+</p><p> Identify the components to replace around the TL494 starting from the pins of the PWM regulator itself.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_psp_lab_schema_00.gif" title="Open the image at full resolution"><img alt="Electrical circuit diagram ATX 200W" class="is-diagram" decoding="async" height="61" loading="lazy" src="../IMAGES/atx_psp_lab_schema_00_small.gif" width="100"/></a>
+</p>
+<h2 id="schema-elettrico-atx-per-modifiche-controllo-tensione-e-corr">ATX CIRCUIT DIAGRAM for voltage and current control modifications.</h2><p class="center"><a class="zoom-link" href="../IMAGES/atx_psp_lab_schema_01_2011.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="476" loading="lazy" src="../IMAGES/atx_psp_lab_schema_01_2011_.jpg" width="750"/></a></p><p> (Version 2011/03)</p><p>Diagram of modifications to be made to the components around the TL494 regulator to achieve up to 30A output. </p><p>With this circuit there is better stability and precision in regulation.</p><p>Minimum adjustable voltage and maximum dropout are less than 0.10V</p><p>For the general circuit, refer to the two versions published further on.</p><p>R3 is the potentiometer that adjusts the current, R17 is the potentiometer that adjusts the voltage, for greater accuracy they should be 10-turn wirewound.</p><p>
+This is the most stable circuit, suitable for the various currents available depending on the ATX chosen. Use the value of R11 depending on the maximum current available at the output.
+</p><p>
+The pins refer to the TL494 IC soldered on the printed circuit board. For convenience, pins 15 and 16 must be isolated from the original schematic; the IC can be desoldered and before inserting it again, bend pins 15 and 16 upward, thus avoiding interrupting the CS traces.
+</p><p>
+Resistors R1, R4, R9 and R15 must be 2% metal-film type, while R11 must be a 10W wirewound power resistor. The value must be chosen according to the maximum obtainable output current. The thermal stability of the current value depends on the quality of the resistor used. Position R11 as much as possible in the airflow of the fan.
+</p><p>The resistor R11, capacitor C5 and the two potentiometers R3 and R17 must be placed outside the printed circuit board.</p><p>R10 is used to calibrate the maximum full-scale value for voltage (for example 16.0V compensating for potentiometer tolerances). </p><p>R16 is used to calibrate the maximum full-scale value for current (for example 16.0A compensating for potentiometer tolerances). </p><p>The inductances L1 and L2 are the originals present on the CS, verify that they can hold up to 30A.</p><p>Capacitors C3 and C4 replace the original 1000uF 16V ones, insufficient to withstand overvoltages and higher current.</p><p>The RC group C6 R12 serves to provide stability to the regulation, eliminating return noise on the output terminals for voltages greater than 9-10V.
+</p><p>The CS traces that bring the negative to ground must be isolated, instead connect a 0.1uF 400V capacitor, to avoid ground return on current regulation.
+</p><h2 id="atx-300-500w-modifiche-per-uscita-da-0-6v-a-20v-e-corrente-d">ATX 300/500W modifications for output from 0.6V to 20V and current from 0.15 to 20A</h2><p>Complete diagram of the modifications, eliminating the unused parts. </p><p>In red the new connections and components.
+</p><p>To connect the fan use the recommended diagram further ahead, using a separate transformer.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_schema_03.jpg" title="Open the image at full resolution"><img alt="atx diagram for 20V 20A" class="is-diagram" decoding="async" height="64" loading="lazy" src="../IMAGES/atx_schema_03_small.jpg" width="100"/></a></p><h2 id="atx-300-500w-modifiche-per-uscita-da-0-6v-a-30v-e-corrente-d">ATX 300/500W modifications for output from 0.6V to 30V and current from 0.1 to 12A</h2><p>Complete diagram of the modifications, eliminating the unused parts.</p><p>It is necessary to introduce a new rectifier bridge at the output, positioned on a new isolated heatsink. 
+</p><p> Eliminate the ground connection on the transformer output.
+</p><p>To connect the fan use the recommended diagram further ahead, using a separate transformer.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_schema_30v_2008_01.jpg" title="Open the image at full resolution"><img alt="atx diagram for 30V 10A" class="is-diagram" decoding="async" height="64" loading="lazy" src="../IMAGES/atx_schema_30v_2008_01_small.jpg" width="100"/></a>
+</p>
+<h2 id="realizzazione">Realization</h2><p class="MsoNormal"><span class="hl"><strong>The realization of the Switching Power Supply involves having knowledge of electronics, equipment and experience in electronic assembly are necessary.</strong></span></p><p class="MsoNormal center"><span class="hl"><strong> And clear expertise in the use of 220V devices.</strong></span></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p><p class="center">Photo Version 2007
+</p><ul class="dash-list"><li>Start by removing the CS from the metal container, unsolder the mains cables and unscrew the 4 fastening screws.
+</li><li>With a robust soldering iron disconnect all soldered cables on the CS, leave only the green PS-ON cable and the Purple 5VSB cable.</li><li>Disconnect unnecessary components from the various +5v and +3.3V sections and also the various resistors that will be replaced with new values.</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/atx_014.jpg" title="Open the image at full resolution"><img alt="ATX plate 300W without cables." class="is-photo" decoding="async" height="225" loading="lazy" src="../IMAGES/atx_014_small.jpg" width="300"/></a></p><p class="center">350W board ready for modifications.</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_002.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="../IMAGES/atx_002_small.jpg" width="300"/></a></p><p class="center">View of the interior after assembly completed.</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_003.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="../IMAGES/atx_003_small.jpg" width="300"/></a></p><p class="center">View of the interior after assembly completed.</p><ul class="dash-list"><li>Use at least 4 original cables for the power outputs, red for the positive directly to the output terminal. Black for the connection to the R11 Current Sensing resistor and from the resistor to the negative terminal.
+</li><li>Note the large 35V capacitors substituted for the original 16V ones, which are not suitable for withstanding higher voltages. If you build the 12V battery charger, we can keep the original 16V capacitors since they would only work at 14.50V.
+</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/atx_004.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="../IMAGES/atx_004_small.jpg" width="300"/></a>
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_005.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="../IMAGES/atx_005_small.jpg" width="300"/></a>
+</p><ul class="dash-list"><li>The white flat cable is for powering the digital voltmeter to be placed outside the container. (There's no room inside.)
+</li><li>The output terminal strip must be of 30A type so as to be able to fix 4/6mmq cables equipped with ferrule.</li></ul><p>- The 12V fan can no longer be connected as originally on the output outlet, in this case we will take positive power from pin 12 (+18V) of the TL494 and negative from the common negative. With a 7812 regulator we stabilize the power supply of the fan. The regulator does not need a dissipator, in this case it is fixed with a screw directly to the fan. (Verify the voltage upstream of the regulator that under normal conditions, that is with the fan running does not drop below 17V, otherwise use the solution with separate transformer explained below.)</p><p>
+- Detail on the current sensing resistor R11, made of constantan wire and attached to the 30A terminal block. The resistor is directly cooled by the air flow drawn by the fan, this keeps the temperature low we will therefore have a reduced drift of the values with increasing current. 
+</p><p>
+R11 can also be easily made with the parallel of n 3/5W resistors in parallel.</p><p>
+You can see the two 10-turn precision potentiometers, keep the connecting cables as short as possible, close to the metal of the container and away from the transformers, this to avoid interference.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_008.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="../IMAGES/atx_008_small.jpg" width="300"/></a>
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_007.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="225" loading="lazy" src="../IMAGES/atx_007_small.jpg" width="300"/></a>
+</p><p>
+- You can see the resistors soldered directly on pins 13,14 and 16 and the two resistors on the CS in place of R25 and R31 which represent the new 1.0V reference for voltage control. (2007 Version)
+</p>
+<h2 id="ventilazione-a-temperatura-controllata">Temperature controlled ventilation.</h2><p>Connecting the fan to the primary flyback circuit, as described above in the main schematic, in many cases reduces drive efficiency at maximum output current conditions. To cool the modified ATX, it's good to use a circuit with a separate transformer.
+</p><p class="center"><img alt="" class="is-diagram" decoding="async" height="279" loading="lazy" src="../IMAGES/sh_regolatore_ventola_sm.gif" width="610"/>
+</p><p>A small 220V-12/14V 5VA transformer is used. Followed by a rectifier and filter circuit.
+</p><ul class="dash-list"><li>The LM317 regulator allows us to precisely adjust the output voltage.
+</li><li>R2 determines the maximum operating voltage on the fan normally 12V. Also 16V where strong ventilation is required.
+</li><li>R5 determines the minimum fan voltage typ. 5.5V.</li><li>R4 determines the minimum operating temperature typ.40°</li></ul><p>By removing R5 the fan only activates when the intervention temperature is exceeded.</p><p>The NTC thermistor R3 must be fixed with silicone adhesive to the power rectifier diodes heatsink.</p><p>The values may vary depending on the fan used, it is recommended to use a better quality fan than the one usually mounted inside the ATX.</p><p>Using a transformer with 12V output it is possible to omit the LM317 regulator and connect the fan circuit directly across capacitor C5, verify that the no-load voltage is not higher than 16V.</p><p>Obviously during operation under load of our ATX, we will hear the fan operate at different speeds, depending on the temperatures reached.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_018.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="204" loading="lazy" src="../IMAGES/atx_018_small.jpg" width="300"/></a>
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_019.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="203" loading="lazy" src="../IMAGES/atx_019_small.jpg" width="300"/></a>
+</p>
+<h2 id="miglioramenti">Improvements</h2><p>With a 400-500W ATX it is possible to reach 20-22V output at 20-25A by replacing the 12V double rectifier diode with the 5V one suitable for 30A, moreover you must use the 5V section of the toroidal filter inductor, more suitable for handling high currents, as well as the second inductor with larger diameter wire.
+</p><p>Be aware that the 30A Schottky diode, operating at 20V, is at the limit of its threshold voltage, check the voltage across it, if needed increase the RC snubber to reduce spikes, or use a 60V SBL3060PT.</p><p><em>Better to use two fast diodes 200V 16A one for each branch.</em></p><p>With these simple substitutions and adequate and efficient cooling we should be able to have 20A and more in continuous operation, the operating temperatures must always be checked, in particular of the power transformer.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_017.jpg" title="Open the image at full resolution"><img alt="ATX version 20A. Diode STPS3045CW 30A 45V used to have over 20A output." class="float-left is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_017_small.jpg" width="300"/></a></p><p>For the more experienced I recommend increasing the working frequency of the TL494, an increase of not more than 20% but sufficient to squeeze a bit more out of the transformer. So if the nominal frequency is 50kHz bring it to 60 kHz by acting on the R and C present on pins 6 and 5 of the TL494 driver. It is good to use an oscilloscope and/or frequency meter to read the values. After this modification it is possible to obtain an increase in maximum output power; it is necessary to mount fast diodes 16A 200V at the output. 
+</p><p> All power connections must be carefully made, never less than 4mmq.
+</p><p>Check the efficiency of the fan, possibly adopt a model with greater flow rate.
+</p><p>The addition of a digital Voltmeter and a 20A digital Ammeter allows creating an excellent laboratory instrument. Recommended placement in a larger metal cabinet, suitable for containing all the electronic assembly with the instruments.
+</p><p>
+<a class="zoom-link" href="../IMAGES/atx_015.jpg" title="Open the image at full resolution"><img alt="Full view ATX modified 20V 20A version" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/atx_015_small.jpg" width="300"/>
+</a>
+</p><p>
+With the same schematic it's possible to build an excellent battery charger for 12V or also for 24V simply by mounting two trimmers inside in place of the potentiometers and calibrating the output voltage to 14.5Volt (29V), the voltage corresponding to a fully charged battery.
+</p><p>In this case I inserted external current adjustment, from 1 to 18A, while the voltage is fixed at 14.50V.
+</p><p class="center"><a class="zoom-link" href="../IMAGES/atx_016.jpg" title="Open the image at full resolution"><img alt="Battery charger 1 to 18A made with an ATX power supply" class="is-photo" decoding="async" height="202" loading="lazy" src="../IMAGES/atx_016.jpg" width="300"/></a>
+</p>
+<h2 id="cause-guasti-atx">ATX failure causes</h2><p>
+- 90% of ATX supplies are replaced after 3-4 years because they don't have sufficient inrush power following video card and motherboard upgrades, generally working ATX supplies are thrown away.
+<br/>
+- Second cause is overheating following fan blockage, dust enters and slows or blocks the fan, so components overheat, sometimes they come off from CS, usually the electrolytic capacitors fail first.<br/>
+It would be enough to open the case every 6 months and blow out and clean the dust. Good practice to keep the Tower and miniTower raised from the floor. Those who smoke a lot also contribute to blocking the fan prematurely...
+<br/>
+- The driver rarely fails, if anything the first stage of the 5V standby that supplies power to the driver. The first stage is self-oscillating and is always under voltage and supplies a few Watts to the system to start up....
+<br/>
+Often it is also the poor construction quality that pushes the most stressed internal components to their limit...<br/>
+</p>
+<h2 id="commenti-finali">Final thoughts</h2><p>Certainly an excellent and powerful power supply. The original design, backed by millions of units produced, is optimized, efficient and reliable. Under test conditions, 20V and 20A equal to 400W is easily reached; not suitable for continuous service, but convenient for short-duration loads. 
+</p><p>The cost of construction can be considered very low, especially if multi-turn potentiometers and digital voltmeter are not used.</p><p>The ATX modified to 13.8V 20A was tested connected to VHF radio transmitter equipment and the background noise is negligible. Not suitable for HF as it has considerable noise. Good behavior with impulse current draws; the switching topology presents low impedance at the output.</p><p>The implementation is indicated for those who are already an expert in electronics and experienced with 220V systems.</p><p>Remember that not all ATX with TL494 driver accept the modification, therefore they might work poorly or even blow the fuse, to be tested with other models...</p><p class="center">............................................</p><p class="center"><img alt="ATX power supplies from 300 to 480W, suitable for modification and becoming SPS LAB." class="is-photo" decoding="async" height="333" loading="lazy" src="../IMAGES/atx_009.jpg" width="500"/>
+</p><hr color="#336699"/>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Power supplies"</h2>
+<ul>
+<li><a href="power_supply_12v_30A.htm"><span class="r-sec">Power supplies</span>ATX power supply 12V 30A</a></li>
+<li><a href="atx_14_volt.htm"><span class="r-sec">Power supplies</span>ATX 13.8V power supply</a></li>
+<li><a href="step_up_10a.htm"><span class="r-sec">Power supplies</span>Step-up 10A 16V</a></li>
+<li><a href="push_pull_20_16.htm"><span class="r-sec">Power supplies</span>Push-pull DC-DC 12V 20A 16V 250W</a></li>
+<li><a href="electronic_load.htm"><span class="r-sec">Power supplies</span>Electronic Load 20A 40V</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#schema-elettrico-atx-200w">ELECTRICAL CIRCUIT DIAGRAM ATX 200W</a></li>
+<li><a href="#schema-elettrico-atx-per-modifiche-controllo-tensione-e-corr" title="ATX CIRCUIT DIAGRAM for voltage and current control modifications.">CIRCUIT DIAGRAM ATX for control modifications…</a></li>
+<li><a href="#atx-300-500w-modifiche-per-uscita-da-0-6v-a-20v-e-corrente-d" title="ATX 300/500W modifications for output from 0.6V to 20V and current from 0.15 to 20A">ATX 300/500W modifications for output from 0.6V to 20V and...</a></li>
+<li><a href="#atx-300-500w-modifiche-per-uscita-da-0-6v-a-30v-e-corrente-d" title="ATX 300/500W modifications for output from 0.6V to 30V and current from 0.1 to 12A">ATX 300/500W modifications for output from 0.6V to 30V and...</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#ventilazione-a-temperatura-controllata">Temperature controlled ventilation.</a></li>
+<li><a href="#miglioramenti">Improvements</a></li>
+<li><a href="#cause-guasti-atx">ATX failure causes</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

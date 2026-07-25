@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Tunnel Effect microwave generator 1000 - 4000 MHz by Roberto Chirio</title>
+<meta content="Tunnel Effect microwave generator 1000 - 4000 Mhz by Roberto Chirio" name="description"/>
+<meta content="tunnel diode, tunnel" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="tunnel_generator.htm" hreflang="en" rel="alternate"/><link href="../tunnel_generator.htm" hreflang="it" rel="alternate"/><link href="../tunnel_generator.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../tunnel_generator.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a aria-current="true" href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antennas</a></li><li aria-current="page">Tunnel effect — microwave generator</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radio &amp; antennas</p>
+<h1>TUNNEL effect</h1>
+<p class="subtitle">Microwave generator 1000 - 4000 MHz</p>
+<p class="article-meta"><span><a href="index.html#radio">Radio &amp; antennas</a></span><span>Roberto Chirio</span><span>rubric "Radio Corner"</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#premessa">Premise</a></li>
+<li><a href="#s-chema-elettrico">Circuit diagram</a></li>
+<li><a href="#circuito-assemblato-in-aria">Circuit assembled in air</a></li>
+<li><a href="#verifica-emissione-uscita-su-50-ohm">Verification of output emission on 50 Ohm</a></li>
+<li><a href="#applicazioni">Applications</a></li></ol></nav></details>
+<div class="prose">
+<hr color="#336699"/>
+<h2 id="premessa">Premise</h2><p>October 2013</p><p>I arrived at this simple microwave generator almost by chance, I was trying various transistors to find the one that emitted the best HF band in white noise, and the BFR91A, transistor used on UHF amplifiers, connected in reverse did not give significant emissions in HF, but by inverting it and increasing the current, suddenly it started to oscillate at 1500 MHz with excellent signal and stability, I therefore modified the schematic to best exploit its emission, called Tunnel Effect, clearly there are diodes designed to work in this specific mode, but using the transistor is interesting, I refer you to the following sites for further information on the tunnel effect:</p><p><a href="http://en.wikipedia.org/wiki/Tunnel_diode" rel="noopener">http://en.wikipedia.org/wiki/Tunnel_diode</a>
+</p><p><a href="http://it.wikipedia.org/wiki/Effetto_tunnel" rel="noopener">http://it.wikipedia.org/wiki/Effetto_tunnel</a>
+</p><p>Tunnel effect devices are all RF diodes at very high frequency, greater than 1000 MHz and reaching beyond 20 GHz. Given the simplicity to obtain signal at high frequency, tunnel diodes are also used for small microspies, beacon transmitters, small circuits and low power consumption.</p>
+<h2 id="s-chema-elettrico">Circuit diagram</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="249" loading="lazy" src="../IMAGES/tunnel_001.jpg" width="517"/>  </p><p>To avoid interference the circuit should be positioned inside a metal enclosure connected to the BNC connector or preferably SMA since the harmonic frequencies generated can reach 10 GHz.
+</p><p>Transistor is used <a class="download" href="../BFR91A%20%206Ghz%20%2012V%2030mA.pdf">BFR91A data sheet</a> but also other BJT RF amplifiers can work.
+</p><p>As can be seen the base of the BJT is connected to the collector as if it were a single diode, with approximately 1-2mA current the transistor, begins to oscillate in AF, increasing the current up to 25mA increases the emitted power and the fundamental frequency drops.</p><p>I did not go beyond 25mA since the transistor is rated at 50mA maximum and it's easy to break it, with 25mA we already get signals at 0dB equal to 220mV across 50ohm not bad for a single diode.</p><p>Power supply with 9V battery, the current is regulated by potentiometer R3, the maximum current is given by R2 + R1, it is possible to increase power by using other types of transistors or directly Tunnel diodes like the 1N3716 or others...</p><p>Capacitor C1 acts as a block for RF on the power supply side, while the variation of the transmission frequency is controlled by C2 with a value from 1 to 10pf, it's not so critical since you can split it with C3 in series to get a minimum value of 1pF.</p><p>With these values the output range goes from 800 MHz to 1500 MHz.</p><p>It also depends a lot on distributed capacity and type of support.</p><p>In this case the assembly was done in air, therefore the capacitances referred to ground are very low.</p><p>To visualize the generated frequency a Spectrum Analyzer is necessary, as it is somewhat difficult to reach with an oscilloscope.</p><p>The resistor R1 represents the RF load and must be of the non-inductive type, so easy to use an SMD component.</p><p>In place of R1 it's possible to put a tuned circuit made up of a variable capacitor and inductor, thus eliminating C2 and C3, however many higher harmonics are eliminated which can be useful for circuits tuned to much higher frequencies.</p><p>By removing the capacitive circuit C2 and C3 the fundamental frequency is approximately 1500 MHz, which can still rise by removing some capacitance. Very interesting the harmonics which can be used for circuits up to and beyond 10 GHz....
+</p>
+<h2 id="circuito-assemblato-in-aria">Circuit assembled in air</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="419" loading="lazy" src="../IMAGES/tunnel_003.jpg" width="628"/></p><p>Here the circuit assembled in air, an additional ceramic capacitor was added to the battery terminals. Radio and cellular signals still enter, ideal to put everything inside a metal container and stay as close as possible to the Spectrum Analyser.</p><p>Resistor R1 is of the SMD type, to avoid wire-wound resistors which would have had inductive effect, given the frequencies involved.</p><p>Turning the trimmer you reach the point of triggering oscillations, where the current variation also causes intensity increase and decrease in emitted frequency, while with the capacitive trimmer, you can vary the frequency from approximately 800 to 1600 MHz.</p><p>Interesting about this circuit is the simplicity and signal transmission which, if connected to an antenna, can reach hundreds of meters (tested at 1280 MHz) all with just one active component and no tuning coil.</p><h2 id="verifica-emissione-uscita-su-50-ohm">Verification of output emission on 50 Ohm</h2><p>
+The 50 Ohm load is represented by the input of the Spectrum Analyser, the connection should be as short as possible
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="480" loading="lazy" src="../IMAGES/tunnel_002_c.jpg" width="720"/></p><p>This is the detected signal, with current trimmer at maximum and frequency trimmer fully open, where the fundamental is 855 MHz, the subsequent harmonic signals can be seen very well, 1710, 2565, 3420 MHz, and beyond...</p><p class="center"><img alt="" class="is-photo" decoding="async" height="480" loading="lazy" src="../IMAGES/tunnel_002_b.jpg" width="720"/></p><p>This is the detected signal, with current trimmer at maximum and frequency trimmer fully closed, where the fundamental is 580 MHz, you can clearly see the signals of the subsequent harmonics, up to 2900 MHz, and beyond... In this case, the value of capacitor C4 should be brought to 30pF, as the fundamental has less amplitude than the subsequent harmonics...</p><p class="center"><img alt="" class="is-photo" decoding="async" height="479" loading="lazy" src="../IMAGES/tunnel_002_a.jpg" width="720"/></p><p>This is the fundamental emission powering with 9V and current trimmer fully closed, the current is 22mA and the output signal is very clean. The bandwidth occupied is almost 1 MHz. The C2 capacitor trimmer is fully open.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="474" loading="lazy" src="../IMAGES/tunnel_004.jpg" width="720"/></p><p>This is the output on 1 MΩ load viewed with HP 54100 oscilloscope we get 0.92 V RMS excellent signal to enter an RF amplifier and boost the signal before applying it to an antenna.</p><h2 id="applicazioni">Applications</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="284" loading="lazy" src="../IMAGES/tunnel_005.jpg" width="627"/></p><p class="center">Wireless microphone 900-1200 MHz</p><p>
+This is the recommended circuit for making a simple 900 MHz spy microphone.
+</p><p>The audio signal from the condenser microphone is amplified by transistor Q2 and applied to resistor R1, this resistor also provides current limiting for the tunnel diode, so the slight voltage variation due to the audio signal modifies the current of Q1, the result is frequency modulation of the RF signal.</p><p>If not sensitive enough, a second transistor stage can be added or an adjustable amplifier as suggested on the page <a href="led_s.htm">Different LED use</a>.</p><p>The L1 coil is made with 1, 2 or 3 turns depending on the frequency you want to obtain at the output, it needs to be tested which is best for performance, by adjusting the C5.</p><p>A Class A amplifier stage perhaps using the same BFR91 transistor can give signal boost.</p><p>In case of RF instability, a Vk200 impedance can be added between C6 and Q1.
+</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Radio &amp; antennas"</h2>
+<ul>
+<li><a href="mini_whip.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip — active HF/VLF antenna</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip SDR — active antenna</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip SDR+ — active antenna</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Loop — active antenna</a></li>
+<li><a href="antenna_40m.htm"><span class="r-sec">Radio &amp; antennas</span>40mt wire antenna band</a></li>
+<li><a href="yagi_pmr.htm"><span class="r-sec">Radio &amp; antennas</span>PMR Yagi antenna</a></li>
+<li><a href="rf_gen_2014.htm"><span class="r-sec">Radio &amp; antennas</span>RF Oscillator — generator 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="r-sec">Radio &amp; antennas</span>RF generator 2700 MHz</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#premessa">Premise</a></li>
+<li><a href="#s-chema-elettrico">Circuit diagram</a></li>
+<li><a href="#circuito-assemblato-in-aria">Circuit assembled in air</a></li>
+<li><a href="#verifica-emissione-uscita-su-50-ohm">Verification of output emission on 50 Ohm</a></li>
+<li><a href="#applicazioni">Applications</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

@@ -73,6 +73,34 @@ ICON_MENU = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
              'stroke-linecap="round" aria-hidden="true" focusable="false">'
              '<path d="M4 7h16M4 12h16M4 17h16"/></svg>')
 
+
+def lang_switch(rel, current="it"):
+    """IT / EN switch, top right of every page.
+
+    The English mirror has the same shape as the Italian tree, so the
+    counterpart of any page is the same relative path under /en/.
+    """
+    depth = rel.count("/")
+    if current == "it":
+        it_href, en_href = "", "../" * depth + "en/" + rel
+    else:
+        inner = rel[len("en/"):] if rel.startswith("en/") else rel
+        depth = inner.count("/")
+        it_href, en_href = "../" * (depth + 1) + inner, ""
+
+    def item(code, label, href, is_current):
+        if is_current:
+            return (f'<span class="lang-current" lang="{code}" aria-current="true">'
+                    f'{label}</span>')
+        return (f'<a href="{href}" lang="{code}" hreflang="{code}">{label}</a>')
+
+    return ('<div class="lang-switch">'
+            '<span class="visually-hidden" id="lang-label">Lingua / Language</span>'
+            '<div class="lang-group" role="group" aria-labelledby="lang-label">'
+            + item("it", "IT", it_href, current == "it")
+            + item("en", "EN", en_href, current == "en")
+            + '</div></div>')
+
 #: one-line descriptions shown in the mobile category menu
 NAV_DESC = {
     "radio": "Antenne attive, generatori RF, misure di campo",
@@ -94,7 +122,8 @@ def note(kind, msg):
 # shared chrome
 # --------------------------------------------------------------------------- #
 
-def build_header(root, meta, section=None, chaberton=False, chab_prefix=""):
+def build_header(root, meta, section=None, chaberton=False, chab_prefix="",
+                 rel="index.html", lang="it"):
     if chaberton:
         brand = (f'<a class="brand" href="{chab_prefix}chab.htm">{BRAND_MARK}'
                  f'<span class="brand-text"><span class="brand-name">Chaberton</span>'
@@ -126,7 +155,8 @@ def build_header(root, meta, section=None, chaberton=False, chab_prefix=""):
   <div class="wrap header-bar">
     {brand}
     <a class="icon-btn icon-btn--search" href="{root}index.html#cerca">{ICON_SEARCH}<span class="visually-hidden">Cerca nell’archivio</span></a>
-    <button class="icon-btn icon-btn--menu" type="button" aria-expanded="false" aria-controls="site-nav">{ICON_MENU}<span>Categorie</span></button>
+    <button class="icon-btn icon-btn--menu" type="button" aria-expanded="false" aria-controls="site-nav">{ICON_MENU}<span class="btn-label">Categorie</span></button>
+    {lang_switch(rel, lang)}
   </div>
   <div class="nav-panel" id="site-nav">
     <div class="wrap">
@@ -505,12 +535,22 @@ def retrofit_page(site, rel, meta, section_of):
     if head is not None:
         for m in head.find_all("meta", attrs={"name": "color-scheme"}):
             m["content"] = "light dark"
+        for l in head.find_all("link", rel="alternate"):
+            l.decompose()
+        depth = rel.count("/")
+        for code, href in (("it", os.path.basename(rel)),
+                           ("en", "../" * depth + "en/" + rel),
+                           ("x-default", os.path.basename(rel))):
+            tag = soup.new_tag("link", rel="alternate", href=href)
+            tag["hreflang"] = code
+            head.append(tag)
 
     # ---- chrome -----------------------------------------------------------
     old_header = body.find("header", class_="site-header")
     if old_header is not None:
         new = BeautifulSoup(build_header(root, meta, section, chaberton,
-                                         chab_prefix(rel) if chaberton else ""),
+                                         chab_prefix(rel) if chaberton else "",
+                                         rel=rel, lang="it"),
                             "html.parser")
         old_header.replace_with(new)
         STATS["header"] += 1
@@ -613,7 +653,9 @@ def main():
 
     pages = []
     for dirpath, dirnames, filenames in os.walk(site):
-        dirnames[:] = [d for d in dirnames if d != "_dev"]
+        # "en" is the generated English mirror: it is produced by i18n_build.py
+        # from the finished Italian pages, never retrofitted directly.
+        dirnames[:] = [d for d in dirnames if d not in ("_dev", "en")]
         for fn in filenames:
             if os.path.splitext(fn)[1].lower() in (".htm", ".html"):
                 rel = os.path.relpath(os.path.join(dirpath, fn), site).replace(os.sep, "/")

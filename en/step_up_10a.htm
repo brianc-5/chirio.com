@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Switching step-up power supply 12V 10A by Roberto Chirio</title>
+<meta content="Switching step-up power supply 12V 10A by Roberto Chirio" name="description"/>
+<meta content="electronics design, switching power supply, step-down, step-up, buck converter, sepic switching. current mode supply, led driver, power led driver, led driver design, led driver pump, led driver flash" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="step_up_10a.htm" hreflang="en" rel="alternate"/><link href="../step_up_10a.htm" hreflang="it" rel="alternate"/><link href="../step_up_10a.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../step_up_10a.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a aria-current="true" href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#alimentatori">Power supplies</a></li><li aria-current="page">Step-up 10A 16V</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Power supplies</p>
+<h1>POWER SUPPLY SWITCHING STEP-UP</h1>
+<p class="subtitle">DC-DC in: 9-14V out: 12-18V max 10A "DIY" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#alimentatori">Power supplies</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#induttore-l5">Inductor L5</a></li>
+<li><a href="#induttore-l1-l4">Inductor L1-L4</a></li>
+<li><a href="#forme-d-onda">Waveforms</a></li>
+<li><a href="#taratura">Calibration</a></li>
+<li><a href="#versione-ridotta-5a-18v-out">Reduced version 5A 18V out</a></li>
+<li><a href="#schema-elettrico-2">ELECTRICAL CIRCUIT DIAGRAM</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<p class="center"><img alt="" class="is-photo" decoding="async" height="368" loading="lazy" src="../IMAGES/step_up_10a_IMG_4713_x.jpg" width="550"/></p><p>February 2007</p><p>This DC-DC power supply is a 1989 design of mine, still relevant today, and serves to raise 12V battery voltage and stabilize the output compensating for battery voltage drop during discharge. Capable of reaching 15V–16V it is indicated for obtaining maximum performance from radio transmission equipment. Also, with output voltage at 18V it can power Notebooks from car battery voltage.</p><p>Filters are present on the input and output to avoid interference from and to the radio equipment.</p><p> The input voltage must be between 9.0 and 14.9V and the output voltage is adjustable from 14.0-18.0V When the input is 14.0V the maximum output current can reach 10A (5-10min without fan). The output voltage is adjustable via potentiometer from a minimum value of 12-14 V to a maximum of 18V.</p><p>There is no load limiting on the output (pay attention), there is only control of the maximum current through the MosFet. The 16A type T fuse protects the output from overload and short circuit.</p><p> The best performance is obtained with 12-14V. Below 11.00Volt a battery-low alert occurs, to avoid completely discharging the battery.</p><p class="center"><a href="http://www.datasheetarchive.com/datasheet.php?article=3405751" rel="noopener"><strong>UC1843</strong></a></p><p>This regulator was chosen because it starts operating at 8.4V and stops at 7.6V. Perfect therefore for use with 12V batteries.</p><p> The operating frequency is determined by:</p><p class="center">f=1.72/(R8
+C6)</p><p class="center"><a class="zoom-link" href="../IMAGES/UC1843_block_diagram.gif" title="Open the image at full resolution"><img alt="UC1843_block_diagram" class="is-diagram" decoding="async" height="62" loading="lazy" src="../IMAGES/UC1843_block_diagram_small.gif" width="100"/></a>
+</p><p>This DC-DC power supply as you can see in the photo can reach 7A output in continuous service and 10A for a few minutes. If you plan to use it with maximum currents a small fan is necessary to cool the power section made up of Mosfet, Schottky diode, inductor and electrolytic capacitor.</p><p>Simplification:</p><p>For those who are not interested in the battery-low alert, just remove the LM358 circuit, the 4 inductors/capacitors on the input and output are also removable, in case radio equipment is not used.</p>
+<h2 id="schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</h2><p class="center">  <a class="zoom-link" href="../IMAGES/step_up_10A_schema.gif" title="Open the image at full resolution"><img alt="Click to enlarge the step-up circuit diagram 12v10A" class="is-diagram" decoding="async" height="365" loading="lazy" src="../IMAGES/step_up_10A_schema_small.gif" width="760"/></a>
+</p>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="2" scope="col">
+<p>
+<strong> Material</strong>
+</p>
+</th>
+<th scope="col">
+<p>
+<strong> Where</strong>
+</p>
+</th>
+</tr></thead>
+<tr>
+<td class="center">
+<p><strong>IC1</strong></p>
+</td>
+<td>
+<p>
+● 1 IC UC1843 (3843) UNITRODE
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>IC2</strong></p>
+</td>
+<td>
+<p>
+● 1 integrated LM358
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>Q1</strong></p>
+</td>
+<td>
+<p>
+● 1 MOSFET type BUK 436-50A or equivalent 50V 50A
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>U1-4</strong></p>
+</td>
+<td>
+<p>
+
+● terminal block input and output (16A type)
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+
+● 1 breadboard thousand-holes fiberglass with tinned pads
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>S1</strong></p>
+</td>
+<td>
+<p>
+
+● 1 toggle switch 16A (optional)
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R1</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 150K ohm 1/4W 
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R2/14</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 0.1 ohm 2W 5% wire
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R3</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 1K ohm 1/4W 5%
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R4</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 10K ohm 1/4W 1% metal film
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R5</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 4.7K ohm 1/4W 1% metal film
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R6</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 27 ohm 1/4W 5%
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R7</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 10K ohm 1/4W 5%
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R8</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 12K ohm 1/4W 5%
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R9</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 4.7M ohm 1/4W 5%
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R10</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 4.7K ohm 1/4W 1% metal film
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R11</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 4.7K ohm 1/4W 1% metal film
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R12</strong></p>
+</td>
+<td>
+<p>
+● 1 resistor 1.5K ohm 1/4W 5%
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>R11</strong></p>
+</td>
+<td>
+<p>
+
+● 1 resistor 1.5K ohm 1/4W 5%
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C1-C4</strong></p>
+</td>
+<td>
+<p>
+● 1 ceramic capacitor 0.1uF 100V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C5</strong></p>
+</td>
+<td>
+<p>
+
+● 1 electrolytic capacitor 4700uF 35V for switching
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C6</strong></p>
+</td>
+<td>
+<p>
+
+● 1 capacitor 560 pF 100V polyester
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C7</strong></p>
+</td>
+<td>
+<p>
+
+● 1 capacitor 2.2 nF 100V polyester
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C8</strong></p>
+</td>
+<td>
+<p>
+
+● 1 electrolytic capacitor 2200uF 25V for switching
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C9</strong></p>
+</td>
+<td>
+<p>
+
+● 1 ceramic capacitor 0.1uF 100V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C10</strong></p>
+</td>
+<td>
+<p>
+
+● 1 ceramic capacitor 0.1uF 100V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>C11</strong></p>
+</td>
+<td>
+<p>
+
+● 1 ceramic capacitor 0.1uF 100V
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>D1</strong></p>
+</td>
+<td>
+<p>
+
+● 1 diode 1N5834 or Schottky type diode 60 A 40V 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>D2</strong></p>
+</td>
+<td>
+<p>
+
+● 1 Schottky diode USD1120 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>L1/L4</strong></p>
+</td>
+<td>
+<p>
+● 4 filter coil 10 turns diam 1.5 on ferrite diam 10mm.
+</p>
+</td>
+<td>
+<p>
+to be done
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>L5</strong></p>
+</td>
+<td>
+<p>
+● 1 inductor 60uH 18 turns 0.75 x 4 on core L6A-55925-A (<a href="http://www.mag-inc.com/" rel="noopener">MAGNETICS</a>)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+<p>to be wound by hand
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>P1</strong></p>
+</td>
+<td>
+<p>
+
+● 1 trimmer cermet 15 turns 10Kohm
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>P2</strong></p>
+</td>
+<td>
+<p>
+
+● 1 potentiometer cermet 10Kohm
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>LED1</strong></p>
+</td>
+<td>
+<p>
+
+● 1 LED red 3mm
+
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>LED2</strong></p>
+</td>
+<td>
+<p>
+
+● 1 LED green 3mm
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+<p><strong>Buzz</strong></p>
+</td>
+<td>
+<p>
+● 1 buzzer 12V with built-in oscillator (optional)
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● 1 aluminum container
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+<tr>
+<td class="center">
+</td>
+<td>
+<p>
+● aluminum heatsink finned 
+</p>
+</td>
+<td>
+<p>
+electronics store
+</p>
+</td>
+</tr>
+</tbody></table></div>
+<h2 id="realizzazione">Realization</h2><p class="MsoNormal"><strong><span class="hl">The realization of the Switching Power Supply involves having knowledge of electronics, equipment and experience in electronic assembly are necessary.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p><p class="center">
+<img alt="View of internal component assembly." class="is-photo" decoding="async" height="366" loading="lazy" src="../IMAGES/step_up_10a_IMG_4711_x.jpg" width="550"/>
+</p><p>
+Here is how the prototype appears mounted inside the metal box, it is possible to make a printed circuit board to better arrange the components and facilitate assembly, you can see the large electrolytic capacitor glued to the bottom. The filter coils are directly soldered to the input and output connectors.
+</p><p>The MosFet and Schottky Diode are fixed with a 3mm screw to the heatsink, for both it is necessary to put the insulating sheet underneath on the metal side to avoid electrical conduction on the aluminum heatsink. </p><p>The fuse holder is fixed with a 3mm screw on the rear panel, or more easily use a flying fuse holder, automotive type to solder on the battery power cable; power cables must be at least 4mm² in red and black color. Maximum length of 1.5m.</p><h2 id="induttore-l5">Inductor L5</h2><p>
+The winding is made of 18 turns of enameled copper wire for a total of 4 wires diameter 0,75 on core L6A-55925-A. (<a href="http://www.mag-inc.com/" rel="noopener">MAGNETICS</a>)
+</p><p>Arrange the winding around the entire circumference of the toroid, strip and solder together the start and end winding terminals.</p><p>The inductance has a value of 60 µH, during operation at current over 6 A it tends to heat up quite a bit, if not cooled it's good to make the winding with 7 copper wires diameter 0.75.</p><p>The inductor is soldered firmly on one end to the fuse holder terminal and on the other to the Drain of the Mosfet. To fix it to the bottom of the box, silicone can be used. It's good to keep it away from metal parts to avoid losses from stray induced currents.
+</p><h2 id="induttore-l1-l4">Inductor L1-L4</h2><p>
+These coils serve to block switching noise from the switching towards the power cables. Such interference can be heard in certain radio transceivers and on certain frequencies.
+</p><p>They are made with 10 turns of copper diam. 1.5-1.8 on ferrite with diameter 8-10mm, the winding is blocked with epoxy resin, it is possible instead to use the blocking coils present at the output of ATX power supplies.
+</p><p>The coils and related capacitors are also effective in blocking the radiofrequency that could interfere with the 1843 regulator. 
+</p>
+<h2 id="forme-d-onda">Waveforms</h2><p> Waveform detected with 10X probe between the Gate and common negative.</p><p>Input voltage 12,50V output voltage 18,00 V load 20ohm</p><p class="center">
+<a class="zoom-link" href="../IMAGES/step_up_10a_osc0.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="62" loading="lazy" src="../IMAGES/step_up_10a_osc0_small.jpg" width="100"/></a>
+</p><p> Waveform detected with 10X probe between the Drain and common negative.</p><p>Input voltage 12,50V output voltage 18,00 V load 20ohm</p><p class="center">
+<a class="zoom-link" href="../IMAGES/step_up_10a_osc1.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="62" loading="lazy" src="../IMAGES/step_up_10a_osc1_small.jpg" width="100"/></a>
+</p>
+<h2 id="taratura">Calibration</h2><p> Connect a variable power supply to the input and raise the voltage up to 12V, we should have the circuit working, adjust P2 to vary the output voltage. </p><p>Connect a load of at least 3A and test the output voltage swing that must reach up to 18V.</p><p>Trimmer P1 is used to set the low battery warning threshold, reduce voltage down to 11.0 Volt and turn the trimmer to make the LED and buzzer light up (if used).</p><p>Load test, 12V 36A/h battery</p><p>Values read:</p><p>● input Vb 11.65V Ib 7.88A</p><p>● Output Vout 17.00V Iout 5.00A</p><p>efficiency: 0.92 (very good value, improvable by eliminating the 4 inductors for those who don't use radio) </p><p>
+<img alt="" class="float-right is-photo" decoding="async" height="302" loading="lazy" src="../IMAGES/step_up_10a_IMG_4712_x.jpg" width="203"/>
+</p>
+<h2 id="versione-ridotta-5a-18v-out">Reduced version 5A 18V out</h2><p>March 2009</p><p>With this reduced version I wanted to satisfy the requests of those who have the need to power the notebook from the car battery at 12V. We have 5A output and a 18V voltage suitable therefore to power most laptop computers. With the trimmer, the voltage is however adjustable from 16 to 35V.</p><p>Furthermore the RF filters and the low battery indicator circuit have been removed from the circuit.</p><p>The circuit is simple, the size of electrolytic capacitors has been reduced, as well as the inductor. For dissipation as well, a small aluminum heatsink is sufficient. </p><p class="center"><a class="zoom-link" href="../IMAGES/step_up_IMG_9586.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="267" loading="lazy" src="../IMAGES/step_up_IMG_9586_small.jpg" width="400"/></a>
+</p><h2 id="schema-elettrico-2">ELECTRICAL CIRCUIT DIAGRAM</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="434" loading="lazy" src="../IMAGES/step_up_5A_schema.gif" width="763"/>
+</p><hr/>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Power supplies"</h2>
+<ul>
+<li><a href="switching_power_supply_atx.htm"><span class="r-sec">Power supplies</span>ATX lab power supply</a></li>
+<li><a href="power_supply_12v_30A.htm"><span class="r-sec">Power supplies</span>ATX power supply 12V 30A</a></li>
+<li><a href="atx_14_volt.htm"><span class="r-sec">Power supplies</span>ATX 13.8V power supply</a></li>
+<li><a href="push_pull_20_16.htm"><span class="r-sec">Power supplies</span>Push-pull DC-DC 12V 20A 16V 250W</a></li>
+<li><a href="electronic_load.htm"><span class="r-sec">Power supplies</span>Electronic Load 20A 40V</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#induttore-l5">Inductor L5</a></li>
+<li><a href="#induttore-l1-l4">Inductor L1-L4</a></li>
+<li><a href="#forme-d-onda">Waveforms</a></li>
+<li><a href="#taratura">Calibration</a></li>
+<li><a href="#versione-ridotta-5a-18v-out">Reduced version 5A 18V out</a></li>
+<li><a href="#schema-elettrico-2">ELECTRICAL CIRCUIT DIAGRAM</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

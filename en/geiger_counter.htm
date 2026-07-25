@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>System for environmental radiation measurement by Roberto Chirio</title>
+<meta content="System for environmental radiation measurement by Roberto Chirio" name="description"/>
+<meta content="geiger, geiger counter, radiation measurement, theremino geiger" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="geiger_counter.htm" hreflang="en" rel="alternate"/><link href="../geiger_counter.htm" hreflang="it" rel="alternate"/><link href="../geiger_counter.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../geiger_counter.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a aria-current="true" href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radioattivita">Radioactivity</a></li><li aria-current="page">Geiger Counter PC CDV</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radioactivity</p>
+<h1>GEIGER COUNTER connected to computer.</h1>
+<p class="subtitle">Simple system for measuring background radiation. Use of Theremino geiger software "Electronics design" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#radioattivita">Radioactivity</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</a></li>
+<li><a href="#descrizione">Description</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#induttore-l1">Inductor L1</a></li>
+<li><a href="#tubo-geiger">Geiger tube</a></li>
+<li><a href="#taratura">Calibration</a></li>
+<li><a href="#campioni-per-taratura-geiger">Samples for Geiger calibration</a></li>
+<li><a href="#misura-dei-valori-di-fondo-tramite-theremino-geiger-counter" title="Measurement of background values via THEREMINO Geiger Counter">Measurement of background values via THEREMINO Geiger...</a></li>
+<li><a href="#misura-dei-valori-su-cenere-di-pellet">Measurement of values on pellet ash</a></li>
+<li><a href="#misura-dei-valori-di-fondo-tramite-cdv-counter-di-david-honi" title="Measurement of background values via CDV Counter by David Honig">Measurement of background values via CDV Counter by...</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<p>
+<img alt="Radioactive fallout stops above the waterproof box and allows measurement of values." class="is-photo" decoding="async" height="267" loading="lazy" src="../IMAGES/geiger_pc_000.jpg" width="400"/>
+</p><p>March 2011/June 2015</p><p>Following the failure of the Japanese Fukushima plant in March 2011, radioactivity alarm rises worldwide. </p><p>This relatively simple system is used to monitor ambient radioactivity, apart from sourcing the Geiger tube, the implementation does not involve particular difficulties.</p><p>Reading data on PC is based on Theremino Geiger software program (2013) or the older CDV by David Honig (2004), both freely distributed.</p><p>For those passionate about electronics and who have a Geiger tube at home, you can quickly activate a radiation monitoring system and with a probe mounted outside the house, monitor the background level.</p><p class="center">Video radioactive rain:  <a href="https://youtu.be/qHlzF3xIY3E" rel="noopener">https://youtu.be/qHlzF3xIY3E</a></p>
+<h2 id="schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="384" loading="lazy" src="../IMAGES/geiger_pc_schema.gif" width="760"/>
+</p>
+<h2 id="descrizione">Description</h2><ul class="dash-list"><li>The HV is generated with the inductor charge and subsequent fast opening technique (Step-up); having virtually no output consumption, it's possible to exploit all the opening voltage generated by the inductor and thus reach over 400V. (600V at no load without Zener)</li><li>The circuit operates with 5V supply voltage, easily tapped from a USB port, using a USB cable, of the 4 conductors the outer ones are the 5V, verify with a tester the positive (red wire) and the negative (black wire).</li><li>The circuit shown draws less than 10mA so it doesn't even load the output of a laptop running on battery. Suitable therefore also for field measurements.</li><li>The driver used is the well-known 555 CMOS version, in this case used as a blocked astable oscillator, operation is inhibited by the closure of transistor Tr1 2N2222 or any generic NPN.</li><li>The operating frequency is approximately 2 kHz, the optimal operating point is found for minimum current draw from the 5V precisely by varying R7</li><li>The MosFet must be able to work at 600 V therefore the FQP2N60 or BSP300 type is recommended. Good results are also obtained with 2N13005 transistors and similar easily available from the same neon inductor circuit.</li></ul><p>- The divider with 4 100V 400mW Zeners on the output serves to stabilize the voltage value; if the voltage rises above 400V the transistor conducts, blocking the 555 and consequently shutting down the step-up operation; in this manner the stabilization of the HV voltage is very good, better than 5%. Turning off the driver is the best way to lower power consumption.</p><ul class="dash-list"><li>With 400V it is possible to power most Russian manufactured tubes like the SBM-20 and many pancake.</li><li>Using 50V Zener or others it is possible to adjust the voltage to 450 or 500V at will as required by the probes in use.</li><li>The tube's external connection must be made with RG58 or RG59 cable and BNC type connectors or better PL259 connectors. The cable impedance of 50 or 75 Ohm is not important, but the insulation must be greater than 700/1000V. Also important to ensure proper insulation of the connectors.</li></ul><p>- The 1000pF 3kV capacitor is used to block the HV, (a ceramic type is fine, but MKP types are better, also for the multiplier circuit) and to detect audio pulses via the R12/R11 divider, the two diodes have the task of protecting the PC input from possible electrostatic atmospheric discharges. You can mount an optional 100/330pF capacitor across R11 to reduce noise or double switching. Alternatively, to better adjust the audio signal, install a trimmer in volume configuration in place of R11.</p><p>- For PC audio output, use a good quality shielded audio cable, to connect to the PC input preferably on AUX, the Microphone input is not recommended as it is too sensitive and can pick up noise.</p>
+<h2 id="realizzazione">Realization</h2><p class="MsoNormal"><strong><span class="hl">Building a Geiger counter for environmental measurements requires electronics knowledge, necessary equipment and experience in electronic assembly.</span></strong></p><p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p><p class="MsoNormal"><strong><span class="hl">Attention there is a 400V voltage at the output even if very low energy, it can be dangerous for the inexperienced.</span></strong></p><p class="center">
+<img alt="" class="is-photo" decoding="async" height="264" loading="lazy" src="../IMAGES/geiger_pc_004.jpg" width="400"/>
+</p><p>
+Here's how the prototype mounted on a breadboard looks.
+</p><p>
+For the low voltage section, there are no particular problems in arranging the components, while in the HV section pay attention to distances and component arrangement and soldering on pads that must have greater distance between them, leave at least 1 hole free between two HV points.
+</p><h2 id="induttore-l1">Inductor L1</h2><p> The 3.3mH inductor is used to generate high-voltage pulses up to 400V peak, it is easy to find as it is present inside the driver of all low-power neon tubes, energy saving.
+</p><p class="center"> <img alt="" class="is-photo" decoding="async" height="264" loading="lazy" src="../IMAGES/step_up_HV_2000_4.jpg" width="400"/></p><p>The inductance present in low-power lamps can have a value from 1 to 4mH, generally values from 2 to 4 mH work very well for this application. Important that it be a coil impregnated with varnish and resin, to ensure good insulation. </p><h2 id="tubo-geiger">Geiger tube</h2><p>
+- SBM-20 HOT DOG type probe sensitive to Beta and Gamma
+<br/>
+- Nominal voltage : 400-450V<br/>
+- Sensitivity Cs137 : 800 CPM/mR/h<br/>
+- Manufacturing year 1991
+<br/>
+- Other characteristics you will find on the internet.
+</p><p>- It is easily available on Ebay.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="267" loading="lazy" src="../IMAGES/geiger_pc_007.jpg" width="400"/>
+</p><ul class="dash-list"><li>All of it is fastened to the balcony via an aluminum bracket of 80cm length.
+</li><li>It is recommended to stay as far away as possible from the dwelling, as many building materials are slightly radioactive and can distort the measurement.</li><li>There are no problems with the length of RG58 or RG59 cable, important that it be new and good quality to avoid HV losses.
+</li><li>For convenience TV or satellite cable can also be used, important to maintain insulation that must hold over 400V in the presence of water.
+</li></ul><p class="center"><img alt="" class="is-photo" decoding="async" height="267" loading="lazy" src="../IMAGES/geiger_pc_002.jpg" width="400"/>
+</p><ul class="dash-list"><li>Version with 2 x SBM20
+</li><li>The probes are held high near the cover, to better read the rain that stops on the cover.</li><li>With 2 SBM20 the background radiation value is 70-90 CPM.
+</li><li>The probes are connected in parallel with only 1 series 4M7 resistor.
+</li></ul><p class="center"><img alt="" class="is-photo" decoding="async" height="266" loading="lazy" src="../IMAGES/geiger_pc_006.jpg" width="400"/>
+</p><ul class="dash-list"><li>Version with 3 x SBM20
+</li><li>The probes are held high, to better read the fallout that stops on the cover.</li><li>The probes are connected in parallel with 1 series resistor of 4M7 for each tube.</li><li>In this case the entire circuit is mounted inside the waterproof box.
+</li><li>With shielded cable you bring power and signal output.
+</li></ul><p class="center"><img alt="" class="is-photo" decoding="async" height="267" loading="lazy" src="../IMAGES/geiger_pc_008.jpg" width="400"/>
+</p>
+<h2 id="taratura">Calibration</h2><ul class="dash-list"><li>Connect a high impedance voltmeter (300-1000Mohm) to the output and supply 5V power. See <a href="geiger_counter_voltmeter.htm">HV Voltmeter 1000Mohm</a></li><li>The circuit requires no particular adjustments, it must work immediately, the voltage must rise to 400V and stabilize.</li><li>The resistor R7 must be adjusted to obtain minimum current draw from the 5V, always reading 400V with high impedance voltmeter.</li><li>Connect the audio cable to the AUX input of the PC.</li></ul><p class="center"><img alt="" class="is-photo" decoding="async" height="270" loading="lazy" src="../IMAGES/geiger_pc_005.jpg" width="339"/></p>
+<p>In the absence of a high impedance voltmeter you can build an excellent instrument using a multimeter with 10M ohm input impedance, adding the high voltage divider of the circuit that follows.</p><p class="center"><img alt="" class="is-diagram" decoding="async" height="311" loading="lazy" src="../IMAGES/voltmeter_1000_simple.gif" width="505"/></p><p>Simplified version of the HV voltmeter, to be connected directly to a Multimeter (DMM). On the 2,000V range, we will read x1000 so 2KVolt fs. The multi-turn cermet trimmer is used to precisely calibrate the 1000:1 ratio.
+</p><p>Important: the DDM must have 10Mohm input impedance, some cheap ones have only 1Mohm, generally reading is still possible, remove R1 and leave only the trimmer, in this case use the 200mV range and calibrate for a 10000:1 ratio.
+</p><p>The 300Mohm resistor can be purchased but is difficult to find, it can be easily made by putting 30 10Mohm resistors in series, better if SMD. 
+</p><p class="center"><a class="zoom-link" href="../IMAGES/voltmeter_1000_02.jpg" title="Open the image at full resolution"><img alt="300Mohm resistor made with SMD and covered with insulating resin." class="is-photo" decoding="async" height="50" loading="lazy" src="../IMAGES/voltmeter_1000_02_small.jpg" width="100"/></a>
+</p>
+<h2 id="campioni-per-taratura-geiger">Samples for Geiger calibration</h2><p>Pitchblende samples under lead available for Geiger Counter calibration.</p><p>Containers diam. 29mm, values on request from 0.100 mRh to 2 mRh, emission type: </p><ul class="dash-list"><li>Alpha, Beta + gamma (Free mineral)</li><li>Beta + Gamma (Mineral embedded in resin)</li><li>Only Gamma (Mineral shielded with aluminum 1mm)</li></ul><p class="right">Contact: <a href="mailto:info@chirio.com">info@chirio.com</a></p><p class="center"><img alt="" class="is-photo" decoding="async" height="249" loading="lazy" src="../IMAGES/me_campione_u.jpg" width="336"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="243" loading="lazy" src="../IMAGES/campioni_pecbl_2.jpg" width="326"/>
+</p><p class="center"><img alt="" class="is-photo" decoding="async" height="243" loading="lazy" src="../IMAGES/sonda_pancake.jpg" width="365"/>
+</p><p>
+Two examples of samples with free mineral.
+</p><p>
+All samples are tested with Pancake probes type Eberline HP-260 or Ludlum 44-9
+</p>
+<h2 id="misura-dei-valori-di-fondo-tramite-theremino-geiger-counter">Measurement of background values via THEREMINO Geiger Counter</h2>
+<ul class="dash-list"><li>Download program from:  <a href="http://www.theremino.com/downloads/radioactivity" rel="noopener">http://www.theremino.com/downloads/radioactivity</a>
+</li><li>Excellent program, more recent (2013) than CVD (2004). Graphical display with analog instrument interface and programmable continuous curve trace also for many hours.</li><li>Already in memory the parameters of the most used probes by enthusiasts.</li></ul><p class="center"><img alt="" class="is-photo" decoding="async" height="574" loading="lazy" src="../IMAGES/theremino_geiger_00.jpg" width="752"/></p><p>- It works perfectly with the circuit proposed on this page. Follow carefully the instructions provided in the program's Help.</p><h2 id="misura-dei-valori-su-cenere-di-pellet">Measurement of values on pellet ash</h2><ul class="dash-list"><li>The measurement should be made on wood pellet ash just removed from the stove, better to use that from oven cleaning as it is heavier.
+</li><li>Ash must be compressed in a small box, here an aluminum candle base was used.
+</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/TH_geiger_pellet_004.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="75" loading="lazy" src="../IMAGES/TH_geiger_pellet_004_small.jpg" width="100"/></a>
+</p><ul class="dash-list"><li>Read the background radiation value for 15-20 minutes.
+</li><li>In this case a Russian 58mm pancake probe was used, with good sensitivity comparable to the LND 7312</li><li>Lead shielding reduced the background value by 70%, still improvable if you make a completely closed furnace with 2-3 cm lead.
+</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/TH_geiger_pellet_002.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="75" loading="lazy" src="../IMAGES/TH_geiger_pellet_002_small.jpg" width="100"/></a>
+</p><ul class="dash-list"><li>The difference between the background (shielded) and the reading on the pellet container is very noticeable.
+</li><li>They are not dangerous values, but nonetheless slightly radioactive, when wood pellet should not give any reading....
+</li></ul><p class="center"><a class="zoom-link" href="../IMAGES/TH_geiger_pellet_003.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="62" loading="lazy" src="../IMAGES/TH_geiger_pellet_003_small.jpg" width="100"/></a>
+</p>
+<h2 id="misura-dei-valori-di-fondo-tramite-cdv-counter-di-david-honi">Measurement of background values via CDV Counter by David Honig</h2>
+<p>
+- Download the program from various sites:
+</p><p><a href="http://sourceforge.net/projects/cdvcounter/files/cdvcounter/SRC/CDVCounter_EXE.zip/download" rel="noopener">Download cdvcounter from sourceforge.net</a></p><p>or </p><p><a href="http://www.anythingradioactive.com/downloads/DSRB88%20instructions.bak" rel="noopener">http://www.anythingradioactive.com/downloads/DSRB88%20instructions.bak</a></p><p>- At this point the CDV Counter program opens, which does not need installation, just run the cdvcounter.exe file from 212K, it can also run from a USB stick.</p><p><img alt="" class="is-photo" decoding="async" height="350" loading="lazy" src="../IMAGES/geiger1.jpg" width="481"/></p><p>Set Sample time to 60s, Repeat to 999999 (Forever) and Detection threshold to a low value that allows recognizing all clicks, in my case 10 works well, but it depends very much on the available audio signal and whether you are using the mic input.</p><p>Sensitivity should be set to the value of the probe in use, for example, the SBM20 has a sensitivity of 700-800 cpm/mR/h using 2 x SBM20 we set 1400 cpm/mR/h</p><p><img alt="" class="is-photo" decoding="async" height="334" loading="lazy" src="../IMAGES/geiger2.jpg" width="482"/></p><p>Go to Options and set Scroll Width to 1200 or similar values, to be tried depending on the screen used, in that case the scale will have a time view of approximately 24h</p><p><img alt="" class="is-photo" decoding="async" height="350" loading="lazy" src="../IMAGES/geiger3.jpg" width="481"/></p><p>start by pressing Start and then Graph to display the diagram </p>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><tr>
+<td>
+April 15 2011 high background values, rain with radioactive traces
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/geiger_fondo_15_aprile_2011.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="24" loading="lazy" src="../IMAGES/geiger_fondo_15_aprile_2011_small.gif" width="100"/></a>
+</p></td>
+</tr>
+<tr>
+<td>
+April 2, 2011 low background values, clear, hot sun
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/geiger_fondo_2_aprile_2011.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="24" loading="lazy" src="../IMAGES/geiger_fondo_2_aprile_2011_small.gif" width="100"/></a>
+</p></td>
+</tr>
+<tr>
+<td>
+April 1, 2011 low background values, clear, hot sun
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/geiger_fondo_1_aprile_2011.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="24" loading="lazy" src="../IMAGES/geiger_fondo_1_aprile_2011_small.gif" width="100"/></a>
+</p></td>
+</tr>
+<tr>
+<td>
+March 29 2011 high background values, rain with radioactive traces
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/geiger_29_30_valori%20fondo.gif" title="Open the image at full resolution"><img alt="" class="is-diagram" decoding="async" height="20" loading="lazy" src="../IMAGES/geiger_29_30_valori_fondo_small.gif" width="100"/></a>
+</p></td>
+</tr>
+</tbody></table></div>
+<h2 id="commenti-finali">Final thoughts</h2>
+<ul class="dash-list"><li>The configuration, although simple, allows remarkable results, always hoping that it is only for educational purposes and should not detect dangerous values. In case of doubt, consult a sector expert.
+</li><li>Better results with the latest Theremino geiger program.</li><li>By building this Geiger Counter PC, with the aid of a small oven with lead shielding it is possible to perform analysis of food items like fruit and vegetables. Position it in contact with the probe; after some tens of minutes, if there are higher values it means the food has absorbed some radioactivity; if so, contact the USL or ARPA for a more detailed analysis.</li></ul><p>
+Always useful the notes of Prof. Andrea Bosi on radioactivity and Geiger:
+</p><p><a href="http://spazioinwind.libero.it/andrea_bosi/index.htm" rel="noopener">http://spazioinwind.libero.it/andrea_bosi/index.htm</a></p>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Radioactivity"</h2>
+<ul>
+<li><a href="geiger_arduino.htm"><span class="r-sec">Radioactivity</span>Geiger counter with Arduino</a></li>
+<li><a href="geiger_counter_pulsar.htm"><span class="r-sec">Radioactivity</span>Geiger counter calibrator</a></li>
+<li><a href="geiger_counter_voltmeter.htm"><span class="r-sec">Radioactivity</span>HV Voltmeter 1000 MΩ</a></li>
+<li><a href="ram63.htm"><span class="r-sec">Radioactivity</span>RAM 63 — improvements</a></li>
+<li><a href="SV500.htm"><span class="r-sec">Radioactivity</span>FAG SV500 — upgrade</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#schema-elettrico">ELECTRICAL CIRCUIT DIAGRAM</a></li>
+<li><a href="#descrizione">Description</a></li>
+<li><a href="#realizzazione">Realization</a></li>
+<li><a href="#induttore-l1">Inductor L1</a></li>
+<li><a href="#tubo-geiger">Geiger tube</a></li>
+<li><a href="#taratura">Calibration</a></li>
+<li><a href="#campioni-per-taratura-geiger">Samples for Geiger calibration</a></li>
+<li><a href="#misura-dei-valori-di-fondo-tramite-theremino-geiger-counter" title="Measurement of background values via THEREMINO Geiger Counter">Measurement of background values via THEREMINO Geiger...</a></li>
+<li><a href="#misura-dei-valori-su-cenere-di-pellet">Measurement of values on pellet ash</a></li>
+<li><a href="#misura-dei-valori-di-fondo-tramite-cdv-counter-di-david-honi" title="Measurement of background values via CDV Counter by David Honig">Measurement of background values via CDV Counter by...</a></li>
+<li><a href="#commenti-finali">Final thoughts</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

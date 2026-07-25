@@ -8,6 +8,11 @@
   var doc = document;
   var root = doc.documentElement;
   var base = root.getAttribute('data-root') || '';
+  /* Where this language's pages live, and which index describes them. On the
+     Italian tree both equal the site root; on /en/ they do not. */
+  var pageBase = root.getAttribute('data-lang-root');
+  if (pageBase === null) pageBase = base;
+  var searchIndex = root.getAttribute('data-search-index') || 'assets/search-index.json';
   root.classList.add('has-js');
 
   var reduce = window.matchMedia
@@ -85,7 +90,7 @@
       if (data) return Promise.resolve(data);
       if (loading) return loading;
       if (status) status.textContent = 'Caricamento indice…';
-      loading = fetch(base + 'assets/search-index.json')
+      loading = fetch(base + searchIndex)
         .then(function (r) { return r.json(); })
         .then(function (j) {
           data = j.map(function (p) {
@@ -122,7 +127,7 @@
       hits.forEach(function (p) {
         var li = doc.createElement('li');
         var a = doc.createElement('a');
-        a.href = base + p.u;
+        a.href = pageBase + p.u;
         var t = doc.createElement('span'); t.className = 'r-title'; t.textContent = p.t;
         var s = doc.createElement('span'); s.className = 'r-sec';
         s.textContent = p.s + (p.d ? ' — ' + p.d : '');

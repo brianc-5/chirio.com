@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SWITCHING POWER SUPPLY ATX How to build a lab SPS. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply From 1.0 V to 15 V and from 0.15 A to 15 A (20 A) by Roberto Chirio</title>
+<meta content="SWITCHING POWER SUPPLY ATX How to obtain a lab SPS. How to Convert a Computer ATX Power Supply to a Laboratory Power Supply From 1.0 V to 15 V and from 0.15 A to 15 A (20 A) by Roberto Chirio" name="description"/>
+<meta content="electronics design, switching power supply, step-down, step-up, buck converter, current mode supply, led driver, power led driver, led driver design, led driver pump, led driver flash" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="power_supply_12v_30A.htm" hreflang="en" rel="alternate"/><link href="../power_supply_12v_30A.htm" hreflang="it" rel="alternate"/><link href="../power_supply_12v_30A.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../power_supply_12v_30A.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a aria-current="true" href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#alimentatori">Power supplies</a></li><li aria-current="page">ATX power supply 12V 30A</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Power supplies</p>
+<h1>POWER SUPPLY 13.8V 30A</h1>
+<p class="subtitle">Low noise linear power supply "Electronics design" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#alimentatori">Power supplies</a></span><span>Roberto Chirio</span></p>
+</header>
+<div class="prose">
+<hr/>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><tr>
+<td colspan="3">
+<p class="center">In preparation</p>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<p class="MsoNormal center"><span class="hl"><strong> The construction of a power supply requires good knowledge of electronics, </strong></span></p>
+<p class="MsoNormal center"><span class="hl"><strong> equipment and experience in electronic assembly is required. </strong></span></p>
+<p class="MsoNormal center"><span class="hl"><strong> And clear expertise in the use of 220V devices.</strong></span></p>
+<p class="MsoNormal center"><strong><span class="hl">No liability is accepted for damage to things and people and for improper use of the implementation.</span></strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+</td>
+</tr>
+<tr>
+<td colspan="3">
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+</td>
+</tr>
+<tr>
+<td colspan="2" rowspan="3">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+</td>
+</tr>
+<tr>
+<td colspan="3">
+</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"> © Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Power supplies"</h2>
+<ul>
+<li><a href="switching_power_supply_atx.htm"><span class="r-sec">Power supplies</span>ATX lab power supply</a></li>
+<li><a href="atx_14_volt.htm"><span class="r-sec">Power supplies</span>ATX 13.8V power supply</a></li>
+<li><a href="step_up_10a.htm"><span class="r-sec">Power supplies</span>Step-up 10A 16V</a></li>
+<li><a href="push_pull_20_16.htm"><span class="r-sec">Power supplies</span>Push-pull DC-DC 12V 20A 16V 250W</a></li>
+<li><a href="electronic_load.htm"><span class="r-sec">Power supplies</span>Electronic Load 20A 40V</a></li>
+</ul>
+</section>
+</main></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

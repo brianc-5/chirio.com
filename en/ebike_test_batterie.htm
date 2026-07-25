@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Test batteries 36-48V E-bike by Roberto Chirio</title>
+<meta content="Test batteries 36V - 48V E-bike by Roberto Chirio" name="description"/>
+<meta content="electric load, battery recycling, custom batteries, electronic load, battery runtime, e-bike runtime, runtime verification, e-bike battery tests, e-bike batteries, e-bike runtime, how to test batteries, constant current, constant voltage, constant power, costant current, electronic load, electronic load" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="ebike_test_batterie.htm" hreflang="en" rel="alternate"/><link href="../ebike_test_batterie.htm" hreflang="it" rel="alternate"/><link href="../ebike_test_batterie.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../ebike_test_batterie.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a aria-current="true" href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#batterie">Batteries &amp; energy</a></li><li aria-current="page">E-bike — test batteries 36/48 V</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Batteries &amp; energy</p>
+<h1>E-bike - Test batteries 36V 48V</h1>
+<p class="subtitle">Simple system for testing the capacity of Lithium Ion batteries. "DIY" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#batterie">Batteries &amp; energy</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#prefazione">Foreword</a></li>
+<li><a href="#elementi-che-compongono-il-sistema-pacco-batteria-e-bike" title="Components that make up the E-bike battery pack system">Components that make up the battery pack system...</a></li>
+<li><a href="#lettura-valori-pacco-batteria">Reading battery pack values.</a></li>
+<li><a href="#carico-resistivo-per-test-batterie-36-e-48v">Resistive load for 36 and 48V battery tests</a></li></ol></nav></details>
+<div class="prose">
+<hr color="#336699"/>
+<p class="center">CHIRIO.com is available to test and validate your battery packs.</p>
+<p class="center">send an email to 
+<a href="mailto:info@chirio.com">info@chirio.com</a></p>
+<p class="center"><img alt="" class="is-photo" decoding="async" height="408" loading="lazy" src="../IMAGES/ebike_battery_pack_01.jpg" width="546"/></p>
+<h2 id="prefazione">Foreword</h2><p>
+July 2020 - November 2021</p><p>
+With the spread of electric bicycles (e-bikes), scooters and hoverboards and more; there is a growing need to test the capacity of supplied batteries, both to know the actual capacity and to perform precise diagnostics in case of poor runtime.</p><p>
+This proposal is to build a simple resistive load able to verify how much current over time the battery under test can provide, or better, to verify the Ah, which is the battery's rated data, or also the Wh, which is the energy the battery can deliver.</p><p>
+All recent E-bikes have battery packs assembled with 18650 Li-ion (Lithium-ion) elements from various manufacturers, from there the duration and quality of the batteries can vary greatly, there are high quality elements that can easily last 5 years, while other poor elements don't even last the two years warranty. I would like to add that the lifetime of the battery pack is indeed due to the individual elements batteries assembled, but the reliability is also given by the BMS, type of soldering of individual batteries, output connector, charging connector, as well as by the quality and type of the battery charger.</p><p>
+Let's say right away that from my tests very few packs reach the capacity values declared on the specifications, pretty much all manufacturers tend to write optimistic figures, since there are few users able to verify the real capacity of the packs.</p><p>
+The capacity measurement is the same as used for lead-acid batteries, that is the test discharge must be 0.2C, which is one fifth of the stated capacity. For example if the battery is 10Ah the test discharge must occur at one fifth equal to 2A and last 5 hours until the BMS disconnect at minimum voltage reached. However, many (Chinese manufacturers) to provide slightly greater capacity prefer to discharge at 0.1C, which is one tenth; clearly stressing and heating the battery less during discharge so that a bit more can be squeezed out.</p><p>
+A defect I am noticing that can also become dangerous is water ingress into the battery pack and worse into the motor, it is strongly inadvisable to wash the e-bike, scooter with a water jet and worse with a pressure washer, much damage is done. I recommend cleaning mud from the battery and motor only with a damp cloth, do not use anything else.</p><h2 id="elementi-che-compongono-il-sistema-pacco-batteria-e-bike">Components that make up the E-bike battery pack system</h2><p class="center"><img alt="3.7 v 2200 mah lithium ion battery cell icr18650 ..." class="is-photo" decoding="async" height="173" loading="lazy" src="../IMAGES/92f0779fe478b8d527a90708f953b0e8_medium.jpg" width="274"/>
+</p><p><strong>- Single cell 18650 Lithium Ion, </strong>is the most important element that makes up the pack, the cell is 3.6V value and the single capacity can vary from 1.8 to 3.5Ah, they are always series/parallel and to reach the required voltage 10 cells are connected in series to have 36V and 13 cells to have 48V, to increase the current multiple cells are also put in parallel equal to the sum of individual capacities, a 36V 12Ah pack is made up of the parallel of 4 batteries 18650 of 3.0Ah for a series of 10 groups total 40 batteries. But it can also be made up of 60 batteries of 2.0Ah and so on. Obviously prefer packs with high quality batteries such as manufacturers Samsung, LG, Panasonic and Tesla. Batteries without brand name work, but tend to last little.</p><p>It is preferable to use packs that use plastic cages, leaving some air between the cells so that ventilation between the cells is improved, furthermore the propagation is reduced in case of overheated cells. Moreover the pack better absorbs vibrations, always present on a vehicle traveling on the road.</p><p class="center"><img alt="Party in Bike - Battery packs with #Samsung 18650 cells... | Facebook" class="is-photo" decoding="async" loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSGX8bDJlt204o6N_eAarwMfPNw1qxleAT1Xg&amp;usqp=CAU"/></p><p><strong>- <span class="hl-g">Cell soldering</span>, </strong>it seems obvious they should all be soldered well, but defective soldering of a single cell over time degrades the pack's duration and capacity; obviously if we lose a single cell the total capacity will be reduced only by the number of active cells; if there were 4 cells of 3Ah in parallel and we have only 3, the total capacity drops to 9Ah because the BMS will shut down the pack when the single cell's voltage is too low.</p><p class="center"><img alt="36V 37V 42V 10S 60A 10x 3.6V Lithium ion LiPolymer Battery BMS ..." class="is-photo" decoding="async" height="187" loading="lazy" src="../IMAGES/XzC_vFyJ-M9okk2UtefSwprhPBVmymaLfF_WHKwcsOLcA0FZzoYBKhxldghcm5krOfVzkKP8hkwifq32-g_3xbKel36CkuYiEH3wRIbNBFPgOq_6r97Z5Rf4i1aedQTpyA.jpg" width="308"/></p><p><strong>- BMS (Battery Management System)</strong>, is the circuit that controls and manages the battery pack, shuts down the power output if an overload occurs, generally above 25A, shuts down the output if the voltage of a single cell or total value drops below the set value, shuts down charging if the voltage equals 4.20V on each of the cells, it can also intervene if the battery pack temperature exceeds a certain threshold (&gt;70°). It also performs cell balancing at end of charge (very important). Since the BMS is an electronic board it has its own reliability, which if poor can contribute to making the battery pack defective. E-bike manufacturers tend to install a custom BMS with additional complications such as Bluetooth control that communicates battery data and also the lock code via Android or other, as well as communication between battery and control unit via serial can cable, where every time you change the battery you must connect the E-bike to the service computer, all circuit and software complications that reduce system reliability. (Many battery packs get replaced under warranty, because the BMS is defective, while the battery cells are fine...how many people has this happened to?)</p><p class="center"><img alt="" class="is-photo" decoding="async" height="146" loading="lazy" src="../IMAGES/ebike_battery_03.jpg" width="603"/></p><p><strong>- <span class="hl-g">Battery pack connector</span></strong>, also the battery pack connector can cause problems, it has already happened that they make poor contact heating and melting the plastic, or defective soldering interrupts the circuit, as well as unstable contacts tend to wear the contact part, as well as loss of contact due to moisture, keep in mind that you are reading values of over 10A current draw in the worst conditions, there must be good sizing of the sections and also of the insulation, as 36-48V in the presence of salty water and mud can create discharges. It is always better to prefer E-bikes where the cables, connectors and electrical elements have waterproof seals. Bosch, Brose, Yamaha, Panasonic and others use waterproof cabling, of proven quality.</p><p class="center"><img alt="BATTERY CHARGER ATALA 24V - ECOSTREET, ECOWAY, ELEMENT, E-LIGHT, X ..." class="is-photo" decoding="async" height="125" loading="lazy" src="../IMAGES/caricabatterie-ebike.jpg" width="350"/></p><p><strong>- Battery charger</strong>, after the battery cell is the most important element, as it determines the quality of charging and thus the duration of the battery pack over time. If defective, it charges little limiting the full capacity of the pack, if you choose a fast charger of 5-7A, it's convenient for charging in a few hours, but the pack will suffer over time lasting less and the BMS can burn if not set up for fast charging, as well as burn the charging connector if not adequate, it is always better to prefer a 2A charge to leave all night charging, the BMS will take care of turning off the charge when all elements are balanced. Check the charging connectors carefully, because they are often the problem of malfunction or failure to charge. If they heat up at the contact during charging, they are not good....</p><p class="center">
+....................................................
+
+</p><p>All these elements are important to achieve quality and long life of the battery pack.</p><h2 id="lettura-valori-pacco-batteria">Reading battery pack values.</h2>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="4" scope="col"><strong>Lithium pack values 36V - 48V</strong></th>
+</tr></thead>
+<tr>
+<td>
+</td>
+<td>
+<p class="center"><strong>n cells</strong></p></td>
+<td>
+<p class="center"><strong>Vmin</strong></p></td>
+<td>
+<p class="center"><strong>Vmax</strong></p></td>
+</tr>
+<tr>
+<td>
+<p class="center"><strong>36V</strong></p></td>
+<td>
+<p class="center"><strong>10</strong></p></td>
+<td>
+<p class="center"><strong>28,5V</strong></p></td>
+<td>
+<p class="center"><strong>42,0V</strong></p></td>
+</tr>
+<tr>
+<td>
+<p class="center"><strong>48V</strong></p></td>
+<td>
+<p class="center"><strong>13</strong></p></td>
+<td>
+<p class="center"><strong>37,5V</strong></p></td>
+<td>
+<p class="center"><strong>54,6V</strong></p></td>
+</tr>
+<tr>
+<td>
+</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table></div><p>These are the minimum and maximum values we can have on Lithium Ion battery packs, the BMS must intervene for both low and high values protecting the pack. The Vmin correspond to the completely discharged battery and Vmax to the fully charged battery.</p><p>Generally the calibration of the minimum value is higher, we will thus have 36V packs that disconnect at 32V, like 48V packs that disconnect at 43V, being values already at the limit of the discharge curve, it changes little for the total capacity count.</p><p>Testing is done by connecting the load resistors directly to the battery connector, where not possible the pack is opened and connected to the internal (+) and (-) terminals of the battery pack.</p>
+<h2 id="carico-resistivo-per-test-batterie-36-e-48v">Resistive load for 36 and 48V battery tests</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="263" loading="lazy" src="../IMAGES/ebike_battery_01.jpg" width="386"/></p><p class="center">
+This is the simple load circuit for E-bike battery testing.</p><p>R1 is composed of a parallel of 10 resistors of 20W with a value of 150 ohm, all fixed on an aluminum heatsink, while resistor R2 of 5 ohm is formed by a parallel of 4 resistors of 22 ohm for a value of 5.5 ohm.</p><p>With this load you can do a discharge test for both 36V and 48V packs, it works well for a capacity of 12Ah but can also be used to test packs with greater capacity (clearly it will no longer be a 0.2C discharge but something less, the relative results will still be reliable for determining the capacity value of the pack)</p><p class="center"><img alt="" class="is-photo" decoding="async" height="325" loading="lazy" src="../IMAGES/electric_bike_008.jpg" width="553"/></p><p>To read the discharge, to know the capacity you must use a Watt-Meter with Wh indication or better Ah indication; an instrument with autonomous power must be used because at the end of discharge the battery pack disconnects and the instrument would also be turned off, erasing the displayed values.</p><hr color="#336699"/><p class="center">CHIRIO.com is available to test and validate your battery packs.</p><p class="center">
+....................................................
+
+</p>
+<pre>LINK relativi a test su batterie Litio</pre>
+<pre><a href="https://youtu.be/Qzt9RZ0FQyM" rel="noopener">https://youtu.be/Qzt9RZ0FQyM</a></pre>
+<pre> </pre>
+<pre><a href="https://lygte-info.dk/review/batteries2012/Common18650IndividualTest%20UK.html" rel="noopener">https://lygte-info.dk/review/batteries2012/Common18650IndividualTest%20UK.html</a></pre>
+<pre> </pre>
+<pre> </pre>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Batteries &amp; energy"</h2>
+<ul>
+<li><a href="battery_test.htm"><span class="r-sec">Batteries &amp; energy</span>How to test the runtime of Ni-Mh batteries</a></li>
+<li><a href="nimh_battery_charger.htm"><span class="r-sec">Batteries &amp; energy</span>Ni-Mh fast charger</a></li>
+<li><a href="lipo_battery_charger.htm"><span class="r-sec">Batteries &amp; energy</span>Lithium (Li-Po) charger</a></li>
+<li><a href="parkside_battery_pack.htm"><span class="r-sec">Batteries &amp; energy</span>Parkside battery pack 20V 15Ah</a></li>
+<li><a href="ebike_extra_pack.htm"><span class="r-sec">Batteries &amp; energy</span>E-bike — extra pack 36/48 V</a></li>
+<li><a href="electric_bike_bms.htm"><span class="r-sec">Batteries &amp; energy</span>BMS 48V 4A</a></li>
+<li><a href="auto_elettrica.htm"><span class="r-sec">Batteries &amp; energy</span>Electric car: what to do?</a></li>
+<li><a href="home_save_energy.htm"><span class="r-sec">Batteries &amp; energy</span>How to save electrical energy at home</a></li>
+<li><a href="solare_termico_centralina.htm"><span class="r-sec">Batteries &amp; energy</span>Solar thermal control unit</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#prefazione">Foreword</a></li>
+<li><a href="#elementi-che-compongono-il-sistema-pacco-batteria-e-bike" title="Components that make up the E-bike battery pack system">Components that make up the battery pack system...</a></li>
+<li><a href="#lettura-valori-pacco-batteria">Reading battery pack values.</a></li>
+<li><a href="#carico-resistivo-per-test-batterie-36-e-48v">Resistive load for 36 and 48V battery tests</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

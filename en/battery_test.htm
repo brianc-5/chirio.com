@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>1.5V 1.2V D C AA AAA battery size How to measure the capacity of rechargeable Ni-Mh accumulators by Roberto Chirio</title>
+<meta content="1.5V 1.2V D C AA AAA battery size How to measure the capacity of rechargeable Ni-Mh accumulators by Roberto Chirio" name="description"/>
+<meta content="accumulator test, rechargeable batteries, rechargeable accumulators, rechargeable cells, lead batteries, Ni-Cd batteries, Ni-Mh batteries, battery test, discharge test, discharge current, current verification, dummy load for battery cell" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="battery_test.htm" hreflang="en" rel="alternate"/><link href="../battery_test.htm" hreflang="it" rel="alternate"/><link href="../battery_test.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../battery_test.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a aria-current="true" href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#batterie">Batteries &amp; energy</a></li><li aria-current="page">How to test the runtime of Ni-Mh batteries</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Batteries &amp; energy</p>
+<h1>How to test the runtime of</h1>
+<p class="subtitle">rechargeable Ni-Mh accumulators "DIY" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#batterie">Batteries &amp; energy</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#test-su-batterie-commerciali">Tests on commercial batteries</a></li>
+<li><a href="#schema-elettrico-sistema-test-batterie-corrente-costante" title="CIRCUIT DIAGRAM battery test system constant current.">CIRCUIT DIAGRAM battery current test system…</a></li>
+<li><a href="#conclusioni">Conclusions</a></li></ol></nav></details>
+<div class="prose">
+<hr/>
+<h2 id="test-su-batterie-commerciali">Tests on commercial batteries</h2><p>
+2006-2009 In recent years we've seen remarkable growth in battery capacity, in 1995 there were only Ni-CD accumulators and their capacity in AA format was only 600mAh and already gave savings in the use of flash and various battery-powered devices.
+</p><p> Currently Ni-MH AA cells are available at a maximum rated capacity of 2900mAh and it suggests capacity will rise further. The improvement in these performances is due in turn to the fact that millions of mobile phones use such batteries; therefore manufacturers, in technological competition, continually find and invent new solutions and the quantity produced lowers prices and improves quality. </p><p> Personally with photography flashes and LED lamps I use many rechargeable batteries and often need to know their actual capacity to plan operating time.</p><p> How are accumulators characterized?... few know that the capacity mentioned as Ampere x hour is characterized at 0.2C What does this mean? It simply means that such a battery is not capable of delivering, for example, 2500mA for 1 hour, but 2500mA x 0.2 x 5 hours because discharging the battery in short times requires a lot of current which due to internal resistance and Joule heating degrades the capacity with increasing current draw.</p><p>In practice, if our current draw approaches the rated value of the batteries, we must rely on a capacity much lower than the one we purchased the rechargeables for.</p><p> This measurement method is also valid for car batteries, always characterized at 0.2C. In this case, it is clear that one needs a <a href="electronic_load.htm"> electronic load</a> which allows discharge control with constant current of 10-15A....but this is another of my electronic projects.</p>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>PANASONIC ENELOOP PRO batteries 2500 mAh Ni-Mh AA mod. </strong><strong>BK-3HCDE/4BE</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="7">
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_11_16_b.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="../IMAGES/Battery_test_11_16.jpg" width="200"/></a></p>
+</td>
+<td rowspan="7">
+</td>
+<td class="center">
+</td>
+<td class="center">
+<strong>discharge time</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>mAh value</strong>
+</td>
+<td rowspan="7">
+<p class="center"><strong>average value=2396mAh</strong>
+</p><p class="center"><strong>Evaluation:</strong></p><p class="center"><strong><span class="hl-g">EXCELLENT</span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 25m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2208</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 30m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2250</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>4h 50m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2415</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>4</strong>
+</td>
+<td class="center">
+<strong>4h 50m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2415</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>5</strong>
+</td>
+<td class="center">
+<strong>5h 01m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2508</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>6</strong>
+</td>
+<td class="center">
+<strong>5h 10m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>18°</strong>
+</td>
+<td class="center">
+<strong>2580</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+November 2016<p>New generation batteries just released on the market, with a good guaranteed minimum capacity of 2500mAh, showing a residual capacity of up to 85% after 1 year, therefore very low self-discharge definitely superior to all others tested previously.</p>
+<p>For the test two packs of 4 accumulators were used, after several formation charges/discharges, the last 6 values detected were taken (*)</p>
+<p>Battery highly recommended, ideal for any use. To be kept in the drawer like an alkaline since always charged.</p>
+<p>Excellent for Flash and any application requiring starting current, such as motorized toys.</p>
+<p>(*) The batteries 
+
+<strong> PANASONIC ENELOOP PRO BK-3HCDE </strong>They have engraved the production date on the packaging and battery body; I recommend purchasing batteries with a more recent date. In our case, the batteries that arrived had a production date of 5/2015, so 18 months old. Two packs tested; as soon as the package was opened, 2h 15m and 2h 30m of residual charge were detected, therefore a charge (50%) still sufficient to operate a flash or run a toy.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>Batteries SANYO 2700 mA/h Ni-Mh AA mod. HR 3U</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="../IMAGES/Battery_test_11_09_small.jpg" width="200"/></p>
+</td>
+<td rowspan="4">
+</td>
+<td class="center">
+</td>
+<td class="center">
+<strong>discharge time</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>mA/h value</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>average value=2634mA/h</strong>
+</p><p class="center"><strong>Evaluation:</strong></p><p class="center"><strong><span class="hl-g">EXCELLENT</span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 45m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2565</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 50m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2610</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>5h 03m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2727</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+November 2009<p>New-generation batteries with good capacity and guaranteed minimum of 2500mAh, with low self-discharge, definitely superior to all others tested previously.</p>
+<p>Very recommended battery, it has good capacity, corresponding to the rated data. Ideal for every flash use application or to power Power Led.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>SONIC ENERGY 2500 mAh Ni-Mh AA batteries sold only in LIDL supermarkets</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_05_08.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="../IMAGES/Battery_test_05_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+</td>
+<td class="center">
+</td>
+<td class="center">
+<strong>discharge time</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>mAh value</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>average value=1561mAh</strong>
+</p><p class="center"><strong>Evaluation:</strong></p><p class="center"><strong>Insufficient</strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>3h 00m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>21°</strong>
+</td>
+<td class="center">
+<strong>1500</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>3h 05m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1560</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>3h 15m</strong>
+</td>
+<td class="center">
+<strong>0,50</strong>
+</td>
+<td class="center">
+<strong>21°</strong>
+</td>
+<td class="center">
+<strong>1625</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+June 2008<p>Batteries with optimistic nameplate rating were tested in over 4 charge/discharge cycles without showing performance improvements.</p>
+<p>Sold only as a promotion in LIDL supermarkets, the capacity is very low compared to the 2500 claimed.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>GP battery 2700mAh Ni-Mh AA  </strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_04_08_b.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="../IMAGES/Battery_test_04_08_b_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+</td>
+<td class="center">
+</td>
+<td class="center">
+<strong>discharge time</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>mAh value</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>average value=2445mAh</strong>
+</p><p class="center"><strong>Evaluation:</strong></p><p class="center"><strong><span class="hl-g"><em>Good</em></span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 20m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>2340</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 30m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>2430</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>4h 45m</strong>
+</td>
+<td class="center">
+<strong>0,54</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>2565</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="7">
+April 2008<p>Batteries with reasonable effective capacity, still improving after 5 charge/discharge cycles.</p>
+<p>Approach the minimum guaranteed 2600mAh.</p>
+<p>Very valid and efficient the POWER BANK V800C battery charger capable of charging 4 AA cells in less than 60 minutes. The controller manages each battery individually and cuts off the charging current once the rated value is reached. During the charging phase, to reduce heating, a small fan cools the accumulators. Charger very suitable for those in a hurry to recharge accumulators, good performance with all accumulators from 2000 to 2900mAh even from other brands. </p>
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_04_08_b1.jpg" title="Open the image at full resolution"><img alt="GP Power Bank V800C" class="is-photo" decoding="async" height="200" loading="lazy" src="../IMAGES/Battery_test_04_08_b1_small.jpg" width="200"/>
+</a>
+</p></td>
+</tr>
+</tbody></table></div>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>Batteries ANSMANN 2850mAh Ni-Mh AA </strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_04_08_c.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="../IMAGES/Battery_test_04_08_c_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+</td>
+<td class="center">
+</td>
+<td class="center">
+<strong>discharge time</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>mAh value</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>average value=2390mAh</strong>
+</p><p class="center"><strong>Evaluation:</strong></p><p class="center"><strong>Sufficient</strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 00m</strong>
+</td>
+<td class="center">
+<strong>0,57</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>2280</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 30m</strong>
+</td>
+<td class="center">
+<strong>0,57</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2565</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>4h 05m</strong>
+</td>
+<td class="center">
+<strong>0,57</strong>
+</td>
+<td class="center">
+<strong>21°</strong>
+</td>
+<td class="center">
+<strong>2327</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+April 2008<p>Batteries with optimistic nameplate rating were tested in over 6 charge/discharge cycles without showing performance improvements.</p>
+<p>Positive the fact that they are sold with 2 years warranty, unusual for rechargeable batteries.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>Batteries SANYO ENELOOP 2000mAh Ni-Mh AA HR-3UTG</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_04_08.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="133" loading="lazy" src="../IMAGES/Battery_test_04_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+</td>
+<td class="center">
+</td>
+<td class="center">
+<strong>discharge time</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>mAh value</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>average value=1788mAh</strong>
+</p><p class="center"><strong>Evaluation:</strong></p><p class="center"><strong>sufficient</strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>4h 15m</strong>
+</td>
+<td class="center">
+<strong>0,40</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1700</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>4h 30m</strong>
+</td>
+<td class="center">
+<strong>0,40</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1800</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>4h 40m</strong>
+</td>
+<td class="center">
+<strong>0,40</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1864</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="7">
+March 2008<p>Eco-friendly batteries, (similar to GP) are sold already charged, and once charged they are maintained for several months, as they have a very low self-discharge, they have a rated capacity of 2000mAh.  <a href="http://www.it.eneloop.info/gamma_di_prodotti.html" rel="noopener">http://www.panasonic-eneloop.eu/it/prodotti</a></p>
+<p>From Sanyo I expected better performance, in the three tests it does not reach the rated data, nor even the minimum guaranteed 1900mAh.</p>
+<p>Economical the battery charger supplied with the ENELOOP, the recommended charging time is 10-12 hours, a bit long for heavy use of rechargeables.</p>
+</td>
+<td>
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_04a_08.jpg" title="Open the image at full resolution"><img alt="" class="is-photo" decoding="async" height="150" loading="lazy" src="../IMAGES/Battery_test_04a_08_s.jpg" width="118"/></a>
+</p></td>
+</tr>
+</tbody></table></div>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>Batteries GP Recyko+ 2050mAh Ni-Mh AA</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_03_08.jpg" title="Open the image at full resolution"><img alt="Batteries GP Recyko+ 2050mA/h Ni-Mh" class="is-photo" decoding="async" height="133" loading="lazy" src="../IMAGES/Battery_test_03_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+</td>
+<td class="center">
+</td>
+<td class="center">
+<strong>discharge time</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>mAh value</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>average value=1978mAh</strong>
+</p><p class="center"><strong>Evaluation:</strong></p><p class="center"><strong><span class="hl-g">excellent</span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>3h 15m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>19°</strong>
+</td>
+<td class="center">
+<strong>1885</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>3h 20m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1931</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>3h 40m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>2120</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+February 2008<p>Ecological batteries, are sold already charged, and once charged they stay charged for several months, as they have very low self-discharge, they have a rated capacity of 2050 mAh</p>
+<p><a href="http://www.gpbatteries.it/batterie-ricaricabili/" rel="noopener">http://www.gpbatteries.it/batterie-ricaricabili/</a></p>
+<p>For convenience of testing, they were discharged at a current higher than 0.20C, therefore the already good results obtained, must be considered excellent, better than the rated specifications.</p>
+<p>Highly recommended battery, it doesn't have the highest capacity, but the data is very honest. Ideal to keep for long times in the camera bag for any flash use eventuality.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>Batteries EYEPOWER 2950mAh Ni-Mh AA</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_02_08.jpg" title="Open the image at full resolution"><img alt="Batteries EYEPOWER 2950mA/h Ni-Mh" class="is-photo" decoding="async" height="133" loading="lazy" src="../IMAGES/Battery_test_02_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+</td>
+<td class="center">
+</td>
+<td class="center">
+<strong>discharge time</strong>
+</td>
+<td class="center">
+<strong>Is</strong>
+</td>
+<td class="center">
+<strong>tb</strong>
+</td>
+<td class="center">
+<strong>mAh value</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>average value=1334mAh</strong>
+</p><p class="center"><strong>Evaluation:</strong></p><p class="center"><strong><span class="hl-r">insufficient</span></strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>1h 55m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>22°</strong>
+</td>
+<td class="center">
+<strong>1110</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>2h 20m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1351</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>2h 40m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>20°</strong>
+</td>
+<td class="center">
+<strong>1542</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+January 2008
+<p>I was attracted by the low purchase price of these Chinese accumulators, unfortunately the disappointment is great in finding the very low capacity demonstrated. Even after several charge-discharge cycles they never exceeded 1550mAh</p>
+<p>I strongly advise against purchasing such products on the Internet.</p>
+</td>
+</tr>
+</tbody></table></div>
+<div aria-label="Data table" class="table-wrap" role="region" tabindex="0"><table class="data-table">
+<tbody><thead><tr>
+<th colspan="8" scope="col">
+<strong>Batteries Alcava 2900mAh Ni-Mh AA</strong>
+</th>
+</tr></thead>
+<tr>
+<td rowspan="4">
+<p class="center"><a class="zoom-link" href="../IMAGES/Battery_test_01_08.jpg" title="Open the image at full resolution"><img alt="Batteries Alcava 2900mA/h Ni-Mh" class="is-photo" decoding="async" height="133" loading="lazy" src="../IMAGES/Battery_test_01_08_small.jpg" width="200"/></a></p>
+</td>
+<td rowspan="4">
+</td>
+<td class="center">
+</td>
+<td class="center">
+<strong>discharge time</strong>
+</td>
+<td class="center">
+<strong> Is </strong>
+</td>
+<td class="center">
+<p class="center"><strong>tb</strong>
+</p></td>
+<td class="center">
+<strong>mAh value</strong>
+</td>
+<td rowspan="4">
+<p class="center"><strong>average value=2181mAh</strong>
+</p><p class="center"><strong>Evaluation:</strong></p><p class="center"><strong>barely sufficient</strong>
+</p></td>
+</tr>
+<tr>
+<td class="center">
+<strong>1</strong>
+</td>
+<td class="center">
+<strong>3h 33m</strong>
+</td>
+<td class="center">
+<strong>0,58 </strong>
+</td>
+<td class="center">
+<strong>25°</strong>
+</td>
+<td class="center">
+<strong>2059</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>2</strong>
+</td>
+<td class="center">
+<strong>3h 45m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>24°</strong>
+</td>
+<td class="center">
+<strong>2175</strong>
+</td>
+</tr>
+<tr>
+<td class="center">
+<strong>3</strong>
+</td>
+<td class="center">
+<strong>3h 59m</strong>
+</td>
+<td class="center">
+<strong>0,58</strong>
+</td>
+<td class="center">
+<strong>25°</strong>
+</td>
+<td class="center">
+<strong>2310</strong>
+</td>
+</tr>
+<tr>
+<td colspan="8">
+</td>
+</tr>
+<tr>
+<td colspan="8">
+<p>
+May 2007
+</p>
+<p>
+Verification data on new Alcava Ni-Mh 2900mAh batteries. (Prior to this measurement three formation charge/discharge cycles were performed).
+</p>
+<p>
+It can be seen that the rated data of the accumulators is somewhat optimistic, we'll see later if those accumulators will increase capacity and by how much after a certain number of charge-discharge cycles. 
+</p>
+<p>January 2008</p>
+<p>The batteries (accumulators) were retested after 9 months of operation, during this period they were charged approximately 20 times, the average capacity now measured is 2070mAh.</p>
+</td>
+</tr>
+</tbody></table></div>
+<hr color="#336699" size="4"/>
+<p> September 2007
+</p>
+<h2 id="schema-elettrico-sistema-test-batterie-corrente-costante">CIRCUIT DIAGRAM battery test system constant current.</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="230" loading="lazy" src="../led/images/battery_test_01.gif" width="620"/></p><p class="center">Circuit diagram to test Ni-Mh rechargeable batteries.</p><p> Using the LM317 IC in constant current configuration we can make a circuit that guarantees battery current control for the entire discharge duration. </p><p><span class="hl-g"><strong> Note well</strong></span>, this configuration is suitable for a minimum of 4 batteries, with fewer batteries it doesn't work because the working voltage is too low to compensate for the voltage drops on the LM317 + 1.25V of the load.</p><p>Having identified the accumulators to test, we must calibrate the output current as a function of the accumulator current.</p><p>Example:</p><p class="center">accu Ni-Mh of 2900mAh the R becomes 1.25/ (2900/5) = 2.155 ohm 1W for an I=0.580A</p><p> This 2,155 ohm R must be as precise as possible, alternatively you can put a 10W 5-10ohm rheostat in place of R1 and adjust the current value by reading the precise numerical value on the ammeter in series.</p><p>The LM317 regulator must be mounted on a heatsink, as it must dissipate the battery discharge energy. I remind you that LM317 supports dissipation up to 20W.</p><p>You also need a digital voltmeter to read the battery voltage.</p><p class="center"><img alt="Capacity test Ni-Mh accumulators" class="is-photo" decoding="async" height="343" loading="lazy" src="../led/images/battery_test_02.jpg" width="500"/></p><p class="center">Arrangement of components during the test.</p><p>On the left the multimeter in ammeter configuration, in this case the constant current read is 0.580 A. On the right the voltmeter reading the voltage of 4 batteries, <em><strong> the test ends when the voltage reaches 4.00Volt.</strong></em></p><p>The stopwatch is essential to measure the discharge time. Also the battery temperature can be measured for comparison with future measurements.</p><p>In the center the LM317 regulator with series resistor of 2.155 ohm obtained with a series parallel.</p><p>For those who need to make many measurements, the circuit is easily automated with the use of logic components or better with an Arduino system.</p><p>Test execution.</p><p>Charge the batteries fully, when charged wait for them to reach room temperature. It's always good to charge the accumulators slowly, to avoid overheating them, 6-8 hours of charging is the right time for long accumulator life.</p><p>Connect the battery pack to the discharge system and start the timer.</p><p>The measurement ends when the battery voltage corresponds to 4.00 Volts total (test of 4 batteries in series), read the time and write the value in the table.</p><p>For reliable data it is advisable to repeat the measurement three times and calculate the average value of the three measurements.</p><hr color="#336699"/><h2 id="conclusioni">Conclusions</h2><p>From what can be seen from the tests, it is better to buy batteries with only 2000-2200mAh rated, but more honest and matching the stated values.</p><p>It is always advisable to recharge discharged batteries immediately, do not leave them discharged for a long time. Important, do not let the batteries heat up above 40° otherwise they will degrade very quickly.
+</p><p>Battery life can exceed three years, generally they should be monitored for any oxidation and electrolyte leakage, in which case all four must be disposed of, do not leave batteries in equipment for long periods, if you do not use the toy or flash, it is better to keep the batteries in a dry place inside a plastic battery holder.
+</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Batteries &amp; energy"</h2>
+<ul>
+<li><a href="nimh_battery_charger.htm"><span class="r-sec">Batteries &amp; energy</span>Ni-Mh fast charger</a></li>
+<li><a href="lipo_battery_charger.htm"><span class="r-sec">Batteries &amp; energy</span>Lithium (Li-Po) charger</a></li>
+<li><a href="parkside_battery_pack.htm"><span class="r-sec">Batteries &amp; energy</span>Parkside battery pack 20V 15Ah</a></li>
+<li><a href="ebike_test_batterie.htm"><span class="r-sec">Batteries &amp; energy</span>E-bike — test batteries 36/48 V</a></li>
+<li><a href="ebike_extra_pack.htm"><span class="r-sec">Batteries &amp; energy</span>E-bike — extra pack 36/48 V</a></li>
+<li><a href="electric_bike_bms.htm"><span class="r-sec">Batteries &amp; energy</span>BMS 48V 4A</a></li>
+<li><a href="auto_elettrica.htm"><span class="r-sec">Batteries &amp; energy</span>Electric car: what to do?</a></li>
+<li><a href="home_save_energy.htm"><span class="r-sec">Batteries &amp; energy</span>How to save electrical energy at home</a></li>
+<li><a href="solare_termico_centralina.htm"><span class="r-sec">Batteries &amp; energy</span>Solar thermal control unit</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#test-su-batterie-commerciali">Tests on commercial batteries</a></li>
+<li><a href="#schema-elettrico-sistema-test-batterie-corrente-costante" title="CIRCUIT DIAGRAM battery test system constant current.">CIRCUIT DIAGRAM battery current test system…</a></li>
+<li><a href="#conclusioni">Conclusions</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

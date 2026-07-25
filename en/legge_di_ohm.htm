@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Ohm's law for beginners by Roberto Chirio</title>
+<meta content="Ohm's law for beginners by Roberto Chirio" name="description"/>
+<meta content="voltage, voltage, current, current, load, resistance, resistance, power, watt, volt, ampere, ohm, volts, amperes, watts, R=V/I, P=VxI, Ohm's law, electric power, electric power, resistance calculation, how to calculate power" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="legge_di_ohm.htm" hreflang="en" rel="alternate"/><link href="../legge_di_ohm.htm" hreflang="it" rel="alternate"/><link href="../legge_di_ohm.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../legge_di_ohm.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a aria-current="true" href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#misure">Measurements &amp; laboratory</a></li><li aria-current="page">Ohm's law</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Measurements &amp; laboratory</p>
+<h1>Ohm's Law (tips for beginners)</h1>
+<p class="subtitle">"DIY" by R.Chirio</p>
+<p class="article-meta"><span><a href="index.html#misure">Measurements &amp; laboratory</a></span><span>Roberto Chirio</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#considerazioni">Considerations</a></li>
+<li><a href="#schema-di-principio">Diagram of principle:</a></li>
+<li><a href="#relazione-tra-i-parametri-v-i-r-e-p">Relationship between Parameters V, I, R and P</a></li>
+<li><a href="#alcuni-esempi">Some examples:</a></li></ol></nav></details>
+<div class="prose">
+<hr color="#336699"/>
+<h2 id="considerazioni">Considerations</h2><p>March 2007</p><p>Based on what I read on the web and also on the content of some emails I receive, it seems to me that the simple Ohm's law is not so clear to everyone.....</p><p>...Ohm's Law establishes that, in every conductor crossed by an electric current, a potential difference (or voltage drop) is produced between its ends, this depends on the resistance of the conductor itself (resistivity).</p><p>High resistances correspond to high voltage drops, while low resistances correspond to small voltage drops, all this with equal current flowing.....</p><h2 id="schema-di-principio">Diagram of principle:</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="295" loading="lazy" src="../IMAGES/legge_di_ohm_00.gif" width="539"/></p><p>Given a DC voltage source B, and a load R connected in series. A current I will flow through the load. The product between Voltage and Current determines the power P on the load R.</p><p>The voltage (V) must be measured across the load, therefore in parallel, the current (I) passing through the load must be measured in series with the load.</p><p>If we measure current in parallel with the load, the ammeter is generally destroyed, if we measure voltage in series with the load, nothing happens.....the circuit opens because Voltmeters have high input resistance.</p><h2 id="relazione-tra-i-parametri-v-i-r-e-p">Relationship between Parameters V, I, R and P</h2><p class="center"><img alt="Relationship between the parameters of Ohm's law To print and always keep in evidence." class="is-diagram" decoding="async" height="1050" loading="lazy" src="../IMAGES/legge_di_ohm_01.gif" width="600"/></p><p class="center"><img alt="" class="is-diagram" decoding="async" height="562" loading="lazy" src="../IMAGES/legge_di_ohm_table.jpg" width="528"/></p><h2 id="alcuni-esempi">Some examples:</h2><p>Let's connect a 12 ohm resistor to a 12V battery, what is the power on the resistor?</p><p class="center">from the Power relationship we obtain (V x V) / R from which (12 x12)/12 = 12Watt</p><hr color="#336699"/><p>Always with a 12V battery, what resistor should I put to have a current of 10A and what power must the resistor dissipate?</p><p class="center">R=V/I 12V/10A=1.2 ohm the power is: V x I = 12 x 10= 120W</p><hr color="#336699"/><p class="center">Simple software to calculate all Ohm's Law parameters
+</p><p class="center"><a href="http://sss-mag.com/exe/ohmslaw.exe" rel="noopener">http://sss-mag.com/exe/ohmslaw.exe</a>
+</p><p class="center">Interesting site that offers automatic calculations with Ohm's Law:</p><p class="center"><a href="http://www.csgnetwork.com/ohmslaw2.html" rel="noopener">http://www.csgnetwork.com/ohmslaw2.html</a>
+</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Measurements &amp; laboratory"</h2>
+<ul>
+<li><a href="lux_meter.htm"><span class="r-sec">Measurements &amp; laboratory</span>LUX-METER ANALOG</a></li>
+<li><a href="bromografo_uv.htm"><span class="r-sec">Measurements &amp; laboratory</span>UV bromograph made with a scanner</a></li>
+<li><a href="cmos_cleaning.htm"><span class="r-sec">Measurements &amp; laboratory</span>Reflex sensor cleaning C-mos — CCD cleaning</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#considerazioni">Considerations</a></li>
+<li><a href="#schema-di-principio">Diagram of principle:</a></li>
+<li><a href="#relazione-tra-i-parametri-v-i-r-e-p">Relationship between Parameters V, I, R and P</a></li>
+<li><a href="#alcuni-esempi">Some examples:</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

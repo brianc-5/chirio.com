@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html data-lang-root="" data-root="../" data-search-index="assets/search-index.en.json" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Simple 2 FET VFO RF generator, HF band by Roberto Chirio</title>
+<meta content="VFO generator by FET - by Roberto Chirio" name="description"/>
+<meta content="RF, FET, VFO generator, quartz, harmonic generator, xtal" name="keywords"/>
+<meta content="Roberto Chirio" name="author"/>
+<meta content="light dark" name="color-scheme"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="vfo_gen_2015.htm" hreflang="en" rel="alternate"/><link href="../vfo_gen_2015.htm" hreflang="it" rel="alternate"/><link href="../vfo_gen_2015.htm" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main">Go to main content</a>
+<header class="site-header">
+<div class="wrap header-bar">
+<a class="brand" href="index.html"><svg aria-hidden="true" class="brand-mark" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 21V9"></path><circle cx="12" cy="6.5" r="2.2"></circle><path d="M6.6 4.2a7.6 7.6 0 0 0 0 10.6M17.4 4.2a7.6 7.6 0 0 1 0 10.6"></path><path d="M8.9 6.6a3.5 3.5 0 0 0 0 5.8M15.1 6.6a3.5 3.5 0 0 1 0 5.8"></path><path d="M8.5 21h7"></path></svg><span class="brand-text"><span class="brand-name">Chirio<i>.com</i></span><span class="brand-sub">Technical archive</span></span></a>
+<a class="icon-btn icon-btn--search" href="index.html#cerca"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg><span class="visually-hidden">Search the archive</span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="icon-btn icon-btn--menu" type="button"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="btn-label">Categories</span></button>
+<div class="lang-switch"><span class="visually-hidden" id="lang-label">Lingua / Language</span><div aria-labelledby="lang-label" class="lang-group" role="group"><a href="../vfo_gen_2015.htm" hreflang="it" lang="it">IT</a><span aria-current="true" class="lang-current" lang="en">EN</span></div></div>
+</div>
+<div class="nav-panel" id="site-nav">
+<div class="wrap">
+<nav aria-label="Archive categories">
+<ul class="nav-list">
+<li><a aria-current="true" href="index.html#radio"><span><span class="n-label">Radio</span><span class="n-desc">Active antennas, RF generators, field measurements</span></span><span class="count">17</span></a></li>
+<li><a href="index.html#alimentatori"><span><span class="n-label">Power supplies</span><span class="n-desc">Laboratory switching supplies, ATX, step-up, loads</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#batterie"><span><span class="n-label">Batteries</span><span class="n-desc">Capacitance, battery chargers, BMS, home energy</span></span><span class="count">12</span></a></li>
+<li><a href="index.html#led"><span><span class="n-label">LED</span><span class="n-desc">Power LED, torches, projectors, dimmer, tests</span></span><span class="count">15</span></a></li>
+<li><a href="index.html#radioattivita"><span><span class="n-label">Radioactivity</span><span class="n-desc">Geiger counters, high voltage, calibration</span></span><span class="count">6</span></a></li>
+<li><a href="index.html#misure"><span><span class="n-label">Measurements</span><span class="n-desc">Homemade instruments and fundamentals</span></span><span class="count">4</span></a></li>
+<li><a href="index.html#progetti"><span><span class="n-label">Projects</span><span class="n-desc">Photography, 3D printing, mechanics</span></span><span class="count">6</span></a></li>
+<li><a href="chaberton/chab.htm"><span><span class="n-label">Chaberton</span><span class="n-desc">Historical archive of the battery</span></span><span class="count">185</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<nav aria-label="Navigation path" class="breadcrumb"><div class="wrap"><ol><li><a href="index.html">Chirio.com</a></li><li><a href="index.html#radio">Radio &amp; antennas</a></li><li aria-current="page">RF VFO Oscillator with 2 FET</li></ol></div></nav>
+<div class="wrap page">
+<div class="layout layout--toc"><main id="main">
+<article class="article">
+<header class="article-head">
+<p class="kicker">Radio &amp; antennas</p>
+<h1>VFO RF Generator 100 kHz - 30 MHz</h1>
+<p class="subtitle">Simple VFO RF generator, HF band.</p>
+<p class="article-meta"><span><a href="index.html#radio">Radio &amp; antennas</a></span><span>Roberto Chirio</span><span>rubric "Radio Corner"</span></p>
+</header>
+<details class="toc-mobile"><summary>Page index</summary><nav aria-labelledby="toc-title-m" class="toc"><p class="toc-title" id="toc-title-m">On this page</p><ol><li><a href="#premessa">Premise</a></li>
+<li><a href="#s-chema-elettrico">Circuit diagram</a></li>
+<li><a href="#frequenza-in-funzione-dei-valori-lx-cx">Frequency as a function of LX + CX values</a></li>
+<li><a href="#costuzione-bobine-di-accordo">Construction of tuning coils.</a></li>
+<li><a href="#segnale-uscita">Output signal</a></li>
+<li><a href="#applicazioni">Applications</a></li></ol></nav></details>
+<div class="prose">
+<hr color="#336699"/>
+<h2 id="premessa">Premise</h2><p>July 2015</p><p>This circuit is an RF generator with variable frequency. The field of use ranges from VLF to over 50 MHz.</p><p>The circuit is very simple to build using traditional discrete components, which can be easily found or even recovered from old boards or at the bottom of the laboratory drawer.</p><p>The oscillator is a tuned circuit composed of an inductor and capacitor which determine the oscillation frequency. Two FETs in cascade make up the active part of the variable oscillator. The configuration is little known but has frequency stability that is to say exceptional; in steady state the frequency variation is a few Hz/MHz close to a quartz oscillator. Important are a stable power supply and the use of quality components.</p><p>Let's say the frequency is not affected by changes in supply voltage, voltage is important if you want to get maximum output power which at 12 V exceeds 100 mW on 50 ohm load.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="339" loading="lazy" src="../IMAGES/vfo_001.jpg" width="508"/></p><p>This is the prototype on breadboard of the VFO generator; the 20-turn coil is connected, alongside the 90-turn one; the components and circuit are optimized to get maximum output power with a single RF transistor type 2N2222A; Varicaps can be used instead of the variable capacitor. The whole thing must be mounted inside a box, even non-metal, leaving space for the coils.</p>
+<h2 id="s-chema-elettrico">Circuit diagram</h2><p class="center"><img alt="" class="is-diagram" decoding="async" height="395" loading="lazy" src="../IMAGES/vfo_schema_000.gif" width="886"/></p><ul class="dash-list"><li>The circuit can be powered from 5V to 12V. It still works reasonably well down to 2.4V.</li><li>The tuned circuit is composed of a variable capacitor and a tuning coil, with just three types of coils it is possible to cover frequencies from 100 kHz to 30 MHz (see table below for component values).</li><li>With 12V power supply, the FET oscillator stage provides at output a power of about 2mW equal to 0dBm.</li><li>The stage made up of 2N2222A has the function of decoupling the oscillator from the output and amplifying the signal by 15-20 dB bringing the output to +18 dBm under optimal conditions on 50 Ohm load </li><li>With 12V power it is advisable to always have a 50 ohm load on the output as when unloaded the transistor Q3 heats up a lot.</li><li>L1 and L3 are 1mH inductors but to go below 500 kHz it is advisable to increase the value up to 10mH to avoid reductions in the output signal value.</li><li>Variable capacitor CX I used an old air-variable dual section for AM 350+350pF connected in parallel or single section for higher frequencies.</li></ul><p>....</p>
+<h2 id="frequenza-in-funzione-dei-valori-lx-cx">Frequency as a function of LX + CX values</h2><p class="center">Range</p><p class="center">
+LX</p><p class="center">CX</p><p class="center">100 kHz - 1 MHz</p><p class="center">
+150 turns</p><p class="center">350+350 pF + 1nf</p><p class="center">200 kHz - 2.7 MHz</p><p class="center">
+90 turns</p><p class="center">350+350 pF + 470pf</p><p class="center">2.0 MHz - 8.0 MHz</p><p class="center">
+20 turns</p><p class="center">350pF (1 section)</p><p class="center">6.0 MHz - 30 MHz</p><p class="center">
+6 turns</p><p class="center">350pF (1 section)</p><p>The formula for calculating parallel resonance is as follows: </p><p class="center"> <img alt="" class="is-photo" decoding="async" height="94" loading="lazy" src="../IMAGES/vfo_00x.jpg" width="471"/></p><p>Where F is in Hertz, C in Farads and L in Henrys</p>
+<h2 id="costuzione-bobine-di-accordo">Construction of tuning coils.</h2><ul class="dash-list"><li>For good stability in the oscillator the tuning coils must have a high "Q", they must therefore be made with a size to have low resistance.</li><li>In the test three windings were made to cover frequencies from 200 kHz to 30 MHz.</li><li>For lower frequencies 90 turns of wire diam. 0,45 on diameter 32mm. It is possible to reach 150 turns to go down to 100 kHz.</li><li>Intermediate frequencies obtained with 20 turns on diam. 32mm</li><li>Frequencies up to 30 MHz with 6 turns on diameter 32mm.</li><li>A single coil of 90, or better 150 turns with taps at the 6th and 20th turn can reduce dimensions in case of insertion in final enclosure, a changeover switch will allow you to insert the desired coil section. </li></ul><p> For convenience the variable capacitor remains the same for all frequencies, capacitors are added in parallel to go to lower frequencies.</p><p>
+<img alt="" class="is-photo" decoding="async" height="369" loading="lazy" src="../IMAGES/vfo_002.jpg" width="192"/></p>
+<h2 id="segnale-uscita">Output signal</h2><p class="center"><img alt="" class="is-photo" decoding="async" height="478" loading="lazy" src="../IMAGES/vfo_008_12v.jpg" width="717"/></p><p>This is the 5 MHz signal present at the output, we get 16.5 dB at 12V supply.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="475" loading="lazy" src="../IMAGES/vfo_008_5v.jpg" width="713"/></p><p>This is the 5 MHz signal present at the output, we get 12 dB at 5V supply.</p><p class="center"><img alt="" class="is-photo" decoding="async" height="476" loading="lazy" src="../IMAGES/vfo_007.jpg" width="714"/></p><p> Here you can see very well, the repetition of harmonics one every 5 MHz, for a fixed output frequency without harmonics it is good to adopt a three-section low-pass filter, tuned to the frequency needed.</p><h2 id="applicazioni">Applications</h2><p>
+For beginners without a generator, the RF VFO generator is useful in many cases, it serves to test the receiver input to verify the operating band, to apply the signal to a receiver input it is necessary to reduce the signal to -90 dBm values via an attenuator or even just a noninductive resistive divider.</p><p>By applying the output signal to an antenna, internal or external, it is possible to radiate the generated signal, you always need an antenna tuned for 50 ohm load to avoid stressing the amplifier transistor.</p><p>By adding a further amplifier stage or more amplifier stages it is possible to easily reach 1, 10W at the output already sufficient for a CW transmission activity.</p><p>It is easy to modulate the signal via the audio output of a PC thus creating a transmitter for voice or music, entering for example on an old tube radio in the Medium Wave band or shortwave band.</p>
+<hr color="#336699"/>
+<p class="center"> <a href="http://www.chirio.com" rel="noopener" target="_blank">www.chirio.com</a>
+</p>
+<p class="center"><br/>
+© Roberto Chirio: all rights reserved.</p>
+</div>
+</article>
+<section aria-labelledby="related-h" class="related">
+<h2 id="related-h">Other pages in "Radio &amp; antennas"</h2>
+<ul>
+<li><a href="mini_whip.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip — active HF/VLF antenna</a></li>
+<li><a href="mini_whip_sdr.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip SDR — active antenna</a></li>
+<li><a href="mini_whip_sdr_p.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip SDR+ — active antenna</a></li>
+<li><a href="mini_whip_tricks_and_tips.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Whip — tricks &amp; tips</a></li>
+<li><a href="mini_loop.htm"><span class="r-sec">Radio &amp; antennas</span>Mini Loop — active antenna</a></li>
+<li><a href="antenna_40m.htm"><span class="r-sec">Radio &amp; antennas</span>40mt wire antenna band</a></li>
+<li><a href="yagi_pmr.htm"><span class="r-sec">Radio &amp; antennas</span>PMR Yagi antenna</a></li>
+<li><a href="rf_gen_2014.htm"><span class="r-sec">Radio &amp; antennas</span>RF Oscillator — generator 20 MHz – 4 GHz</a></li>
+<li><a href="rf_gen_2018.htm"><span class="r-sec">Radio &amp; antennas</span>RF generator 2700 MHz</a></li>
+</ul>
+</section>
+</main><aside aria-label="Page index" class="toc-rail"><nav aria-labelledby="toc-title" class="toc"><p class="toc-title" id="toc-title">On this page</p><ol><li><a href="#premessa">Premise</a></li>
+<li><a href="#s-chema-elettrico">Circuit diagram</a></li>
+<li><a href="#frequenza-in-funzione-dei-valori-lx-cx">Frequency as a function of LX + CX values</a></li>
+<li><a href="#costuzione-bobine-di-accordo">Construction of tuning coils.</a></li>
+<li><a href="#segnale-uscita">Output signal</a></li>
+<li><a href="#applicazioni">Applications</a></li></ol></nav></aside></div>
+</div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-id">
+<p class="footer-name">Chirio.com</p>
+<p>Roberto Chirio's technical archive: electronics, radio and antennas, power supplies, batteries, LED lighting, laboratory measurements, and the historical archive of the Chaberton Battery.</p>
+<p><a href="mailto:info@chirio.com">info@chirio.com</a></p>
+</div>
+<div class="footer-nav">
+<h2>Archive</h2>
+<ul>
+<li><a href="index.html#radio">Radio</a></li>
+<li><a href="index.html#alimentatori">Power supplies</a></li>
+<li><a href="index.html#batterie">Batteries</a></li>
+<li><a href="index.html#led">LED</a></li>
+<li><a href="index.html#radioattivita">Radioactivity</a></li>
+<li><a href="index.html#misure">Measurements</a></li>
+<li><a href="index.html#progetti">Projects</a></li>
+<li><a href="chaberton/chab.htm">Chaberton</a></li>
+<li><a href="chaberton/storia_chaberton.htm">History</a></li>
+<li><a href="chaberton/fortificazioni.htm">Fortifications</a></li>
+<li><a href="chaberton/tunnel_chaberton.htm">Tunnel</a></li>
+<li><a href="chaberton/teleferica_chaberton.htm">Cable car</a></li>
+<li><a href="chaberton/panorami_chaberton.htm">Panoramas</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<p>Unauthorized use of photos, videos, images, diagrams and texts is prohibited. Photos and videos are copyright © Roberto Chirio: all rights reserved.</p>
+<p><a href="chirio_com_privacy.htm">Privacy</a> ·
+         <a href="chirio_com_disclaimer.htm">Disclaimer</a></p>
+</div>
+</div>
+<button aria-label="Back to top of page" class="to-top" type="button">↑</button>
+</footer>
+<script defer="" src="../assets/site.js"></script>
+</body>
+</html>

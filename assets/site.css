@@ -900,3 +900,30 @@ a.zoom-link:hover img { outline: 2px solid var(--accent); outline-offset: 2px; }
 .valle img { width: 100px; height: auto; border-radius: var(--radius); flex: none; }
 .valle figcaption { margin: 0; text-align: left; max-width: 58ch; }
 @media (max-width: 30rem) { .valle { flex-direction: column; align-items: flex-start; } }
+
+/* -- language switch (top right of every page) ---------------------------- */
+.lang-switch { flex: none; }
+.lang-group {
+  display: inline-flex; align-items: stretch; overflow: hidden;
+  border: var(--hair) solid var(--rule-2); border-radius: var(--radius);
+}
+.lang-group > * {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 2.25rem; min-height: var(--tap); padding: .3rem .5rem;
+  font: 600 var(--fs-micro)/1 var(--font-sans); letter-spacing: .06em;
+  text-decoration: none;
+}
+.lang-group a { color: var(--ink-2); }
+.lang-group a:visited { color: var(--ink-2); }
+.lang-group a:hover { background: var(--surface-2); color: var(--accent); }
+.lang-group .lang-current { background: var(--accent); color: var(--surface); cursor: default; }
+@media (prefers-color-scheme: dark) { .lang-group .lang-current { color: #10201f; } }
+body[data-site="chaberton"] .lang-group .lang-current { color: var(--surface); }
+@media (prefers-color-scheme: dark) {
+  body[data-site="chaberton"] .lang-group .lang-current { color: #1f1808; }
+}
+/* at the narrowest widths the menu keeps its icon and drops its label */
+@media (max-width: 26em) {
+  .icon-btn--menu .btn-label { display: none; }
+  .lang-group > * { min-width: 2rem; padding: .3rem .35rem; }
+}
